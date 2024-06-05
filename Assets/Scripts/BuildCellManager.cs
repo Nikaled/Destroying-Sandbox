@@ -10,7 +10,14 @@ public class BuildCellManager : MonoBehaviour
     public LayerMask AbleToBuildMask;
     private GameObject currentCell;
     [SerializeField] private GameObject BlockPrefab;
-    void Update()
+    private Player player;
+    public static BuildCellManager instance;
+    private void Start()
+    {
+        player = Player.instance;
+        instance = this;
+    }
+    public void BuildUpdate()
     {
         CrosshairWorldPosition = Vector3.zero;
         Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
@@ -25,16 +32,25 @@ public class BuildCellManager : MonoBehaviour
             CrosshairWorldPosition = ray.GetPoint(1998);
             currentCell = null;
         }
-        if(currentCell != null)
+        if (currentCell != null)
         {
-            if(currentCell.GetComponent<BuildCellSide>() != null)
+            if (currentCell.GetComponent<BuildCellSide>() != null)
             {
-                if(Input.GetKeyDown(KeyCode.B))
+                if (player.CurrentBlock != null)
                 {
-                    Vector3 pos = currentCell.GetComponent<BuildCellSide>().GetPositionToPlace(BlockPrefab);
-                    //Instantiate(BlockPrefab, pos, Quaternion.identity);
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Vector3 pos = currentCell.GetComponent<BuildCellSide>().GetPositionToPlace();
+                        Instantiate(player.CurrentBlock, pos, Quaternion.identity);
+                    }
                 }
+               
             }
         }
     }
+    void Update()
+    {
+        
+    }
+
 }

@@ -43,15 +43,15 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject UpLeftButtons;
     [SerializeField] public Button DoButton;
     [SerializeField] public Button InteracteButton;
-    [SerializeField]  Button BuildingButton;
-    [SerializeField]  Image BuildingButtonImage;
-    [SerializeField]  Button DeletingButton;
-    [SerializeField]  Image DeletingButtonImage;
-    [SerializeField]  Button RotatingButton;
-    [SerializeField]  Image RotatingButtonImage;
-    [SerializeField]  Image[] InteracteSymbolInButton;
-    [SerializeField]  Image DoButtonImageInIdle;
-    [SerializeField]  Image DoButtonImageInMode;
+    [SerializeField] Button BuildingButton;
+    [SerializeField] Image BuildingButtonImage;
+    [SerializeField] Button DeletingButton;
+    [SerializeField] Image DeletingButtonImage;
+    [SerializeField] Button RotatingButton;
+    [SerializeField] Image RotatingButtonImage;
+    [SerializeField] Image[] InteracteSymbolInButton;
+    [SerializeField] Image DoButtonImageInIdle;
+    [SerializeField] Image DoButtonImageInMode;
     [Header("Rotating Mode")]
     [SerializeField] GameObject _rotatingChosenObjectModeInstruction;
     [SerializeField] Slider[] RotatingModeSlidersScale;
@@ -70,7 +70,7 @@ public class CanvasManager : MonoBehaviour
     }
     private void Update()
     {
-        if(Player.instance.currentState == Player.PlayerState.Idle)
+        if (Player.instance.currentState == Player.PlayerState.Idle)
         {
             if (Input.GetKeyDown(KeyCode.I))
             {
@@ -182,11 +182,11 @@ public class CanvasManager : MonoBehaviour
     {
         if (Geekplay.Instance.mobile)
         {
-        CanvasMobileInterface.SetActive(Is);
+            CanvasMobileInterface.SetActive(Is);
         }
         else
         {
-        CanvasPCInterface.SetActive(Is);
+            CanvasPCInterface.SetActive(Is);
         }
         MultiplatformUI.SetActive(Is);
     }
@@ -196,7 +196,7 @@ public class CanvasManager : MonoBehaviour
         SaveMapUI.SetActive(Is);
         if (Is)
         {
-        Player.instance.examplePlayer.LockCursor(false);
+            Player.instance.examplePlayer.LockCursor(false);
         }
         else
         {
@@ -226,20 +226,28 @@ public class CanvasManager : MonoBehaviour
     }
     public void CheckActiveUnlockCursorWindows()
     {
+        StartCoroutine(DelayDeactivateInterface(false));
         if (Geekplay.Instance.mobile == true)
         {
             Cursor.lockState = CursorLockMode.None;
+
             return;
         }
         Cursor.lockState = CursorLockMode.Locked;
 
         for (int i = 0; i < UnlockCursorWindows.Count; i++)
         {
-            if(UnlockCursorWindows[i].activeInHierarchy == true)
+            if (UnlockCursorWindows[i].activeInHierarchy == true)
             {
                 Cursor.lockState = CursorLockMode.None;
+                StartCoroutine(DelayDeactivateInterface(true));
             }
         }
+    }
+    private IEnumerator DelayDeactivateInterface(bool Is)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Player.instance.InterfaceActive = Is;
     }
     private void ChangeCoinsText(int NewValue)
     {
@@ -254,7 +262,7 @@ public class CanvasManager : MonoBehaviour
         _EnterTransportInstruction.SetActive(Is);
         if (Is)
         {
-        ShowObjectInteructInstruction(false);
+            ShowObjectInteructInstruction(false);
             ShowCitizenEnterInstruction(false);
         }
     }
@@ -270,7 +278,7 @@ public class CanvasManager : MonoBehaviour
         InAppShop.SetActive(Is);
         if (Is)
         {
-       Player.instance.examplePlayer.LockCursor(false);
+            Player.instance.examplePlayer.LockCursor(false);
         }
         else
         {
@@ -293,6 +301,16 @@ public class CanvasManager : MonoBehaviour
     public void ShowBuildingMenu(bool Is)
     {
         BuildingMenu.SetActive(Is);
+        CheckActiveUnlockCursorWindows();
+        if (Is)
+        {
+            Player.instance.SwitchPlayerState(Player.PlayerState.InBuildingMenu);
+        }
+        else
+        {
+            Player.instance.SwitchPlayerState(Player.PlayerState.Building);
+        }
+
     }
     public void ShowObjectInteructInstruction(bool Is)
     {
@@ -334,7 +352,7 @@ public class CanvasManager : MonoBehaviour
         }
         if (Geekplay.Instance.mobile)
         {
-        ShowMobileIdleButtons(!Is);
+            ShowMobileIdleButtons(!Is);
             UpLeftButtons.SetActive(!Is);
         }
 

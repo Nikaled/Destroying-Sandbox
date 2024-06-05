@@ -11,26 +11,26 @@ public class WeaponSlotManager : MonoBehaviour
     }
     private void Start()
     {
-        OnWeaponSwitched(4);
-        Player.instance.SwitchedWeapon += OnWeaponSwitched;
+        OnBlockSwitched(1);
+        Player.instance.SwitchedBlock += OnBlockSwitched;
     }
     private void OnEnable()
     {
         if (Geekplay.Instance != null)
-            Player.instance.SwitchedWeapon += OnWeaponSwitched;
+            Player.instance.SwitchedBlock += OnBlockSwitched;
     }
 
     private void OnDisable()
     {
-        Player.instance.SwitchedWeapon -= OnWeaponSwitched;
+        Player.instance.SwitchedBlock -= OnBlockSwitched;
     }
-    private void OnWeaponSwitched(int PressedNumber)
+    private void OnBlockSwitched(int PressedNumber)
     {
         for (int i = 0; i < WeaponSlots.Length; i++)
         {
-            WeaponSlots[i].WeaponIsInactive();
+            WeaponSlots[i].BlockIsInactive();
         }
         int ActiveWeaponIndex = PressedNumber - 1;
-        WeaponSlots[ActiveWeaponIndex].WeaponIsActive();
+        WeaponSlots[ActiveWeaponIndex].BlockIsActive();
     }
 }

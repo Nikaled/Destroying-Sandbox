@@ -21,11 +21,11 @@ public class WeaponSlot : MonoBehaviour
     {
         Player.instance.SwitchWeapon(WeaponNumber);
     }
-    public void WeaponIsActive()
+    public void BlockIsActive()
     {
         ActiveWeaponImage.enabled = true;
     }
-    public void WeaponIsInactive()
+    public void BlockIsInactive()
     {
         ActiveWeaponImage.enabled = false;
     }
