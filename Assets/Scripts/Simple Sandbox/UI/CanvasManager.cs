@@ -81,11 +81,6 @@ public class CanvasManager : MonoBehaviour
                 ShowSaveMapUI(!SaveMapUIActive);
             }
         }
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(0);
-        }
     }
     private void Start()
     {

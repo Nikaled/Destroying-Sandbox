@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public WeaponType CurrentWeapon;
     public event Action PistolFire;
     public event Action<int> SwitchedBlock;
+    public event Action<int, Sprite> SwitchedBlockFromShop;
     [SerializeField] public Animator animator;
 
     [SerializeField] public ExamplePlayer examplePlayer;
@@ -73,6 +74,7 @@ public class Player : MonoBehaviour
     {
         instance = this;
         CurrentBlock = BlocksInSlots[0];
+        CurrentBlockIndex = 0;
     }
     public int FindCurrentBlockIndex()
     {
@@ -102,9 +104,12 @@ public class Player : MonoBehaviour
            
         }
     }
-    public void ChooseNewCurrentBlock(Block newBlockPrefab)
+    public void ChooseNewCurrentBlockFromShop(Block newBlockPrefab, Sprite BlockSprite)
     {
         CurrentBlock = newBlockPrefab;
+        BlocksInSlots[CurrentBlockIndex] = CurrentBlock;
+        SwitchedBlockFromShop?.Invoke(CurrentBlockIndex, BlockSprite);
+
     }
     public void SwitchPlayerState(PlayerState newPlayerState, float Delay = 0.1f)
     {
@@ -177,7 +182,8 @@ public class Player : MonoBehaviour
         //        break;
 
         //}
-        CurrentBlock = BlocksInSlots[PressedNumber-1];
+        CurrentBlockIndex = PressedNumber - 1;
+        CurrentBlock = BlocksInSlots[CurrentBlockIndex];
         SwitchedBlock?.Invoke(PressedNumber);
         //SwitchPlayerState(PlayerState.Idle);
     }
@@ -283,6 +289,26 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             SwitchWeapon(5);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            SwitchWeapon(6);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            SwitchWeapon(7);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            SwitchWeapon(8);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            SwitchWeapon(9);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SwitchWeapon(10);
         }
     }
 
