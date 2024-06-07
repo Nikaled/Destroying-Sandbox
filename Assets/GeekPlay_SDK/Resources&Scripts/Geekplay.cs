@@ -124,7 +124,7 @@ public class Geekplay : MonoBehaviour
 
     private void Start()
     {
-        //GameReady();
+        GameReady();
 
         //ShowInterstitialAd();
     }

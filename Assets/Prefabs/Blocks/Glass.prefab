@@ -12,9 +12,13 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c25858f1b4b7924da68d9b3be3b51ee, type: 2}
+    - target: {fileID: 3579412333073881886, guid: 6bd3ee0aa3aa1db47aa1795da47626b1, type: 3}
+      propertyPath: outlineWidth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6952303015656572758, guid: 6bd3ee0aa3aa1db47aa1795da47626b1, type: 3}
       propertyPath: m_Name
-      value: GridCellCube 1 1
+      value: Glass
       objectReference: {fileID: 0}
     - target: {fileID: 7083281733461717702, guid: 6bd3ee0aa3aa1db47aa1795da47626b1, type: 3}
       propertyPath: m_LocalPosition.x

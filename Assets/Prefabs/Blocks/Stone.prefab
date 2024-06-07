@@ -50,7 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3635578941832670326, guid: f25587904375ec34bbe2667d5d772b00, type: 3}
       propertyPath: m_Name
-      value: GridCellCube 1
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179583908114116670, guid: f25587904375ec34bbe2667d5d772b00, type: 3}
+      propertyPath: outlineWidth
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8525994562729186789, guid: f25587904375ec34bbe2667d5d772b00, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -8,7 +8,7 @@ public class BuildCellManager : MonoBehaviour
     private Vector3 CrosshairWorldPosition;
     public Image Crosshair;
     public LayerMask AbleToBuildMask;
-    private GameObject currentCell;
+    private BuildCellSide currentCell;
     [SerializeField] private GameObject BlockPrefab;
     private Player player;
     public static BuildCellManager instance;
@@ -23,14 +23,26 @@ public class BuildCellManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 5000, AbleToBuildMask))
         {
+            if(currentCell != null)
+            {
+                currentCell.parentBlock.HideBlockOutline();
+            }
             CrosshairWorldPosition = raycastHit.point;
-            currentCell = raycastHit.collider.gameObject;
+            currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
+            if(currentCell != null)
+            {
+            currentCell.parentBlock.ShowBlockOutline(); 
+            }
             Debug.Log(currentCell.name);
         }
         else
         {
-            CrosshairWorldPosition = ray.GetPoint(1998);
-            currentCell = null;
+            if (currentCell != null)
+            {
+                currentCell.parentBlock.HideBlockOutline();
+                CrosshairWorldPosition = ray.GetPoint(1998);
+                currentCell = null;
+            }
         }
         if (currentCell != null)
         {

@@ -210,18 +210,26 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if (currentState == PlayerState.InBuildingMenu)
+        switch (currentState)
         {
-            ChangeActiveBlockInput();
-            if (Input.GetKeyDown(BuildingModeButton))
-            {
-                ActivateBuildingMenu(false);
-            }
-        }
-        if(currentState == PlayerState.Building)
-        {
-            BuildCellManager.instance.BuildUpdate();
-        }
+            case PlayerState.InBuildingMenu:
+                ChangeActiveBlockInput();
+                if (Input.GetKeyDown(BuildingModeButton))
+                {
+                    ActivateBuildingMenu(false);
+                }
+                break;
+            case PlayerState.Building:
+                BuildCellManager.instance.BuildUpdate();
+                break;
+            case PlayerState.DeletingBuilding:
+                DeleteCellManager.instance.DeleteUpdate();
+                if (Input.GetKeyDown(DeletingModeButton))
+                {
+                    SwitchPlayerState(PlayerState.Building);
+                }
+                break;
+        }   
         if (currentState == PlayerState.Sitting || AdWarningActive|| InterfaceActive || currentState == PlayerState.InBuildingMenu)
         {
             return;
@@ -242,6 +250,7 @@ public class Player : MonoBehaviour
         {
             ChangeActiveBlockInput();
         }
+     
         if (currentState == PlayerState.Aiming)
         {
             RotatePlayerOnShoot(playerShooting.AimDirection);
