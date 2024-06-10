@@ -23,25 +23,15 @@ public class BuildCellManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 5000, AbleToBuildMask))
         {
-            if(currentCell != null)
-            {
-                currentCell.parentBlock.HideBlockOutline();
-            }
+
             CrosshairWorldPosition = raycastHit.point;
             currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
-            if(currentCell != null)
-            {
-            currentCell.parentBlock.ShowBlockOutline(); 
-            }
-            Debug.Log(currentCell.name);
         }
         else
         {
             if (currentCell != null)
             {
-                currentCell.parentBlock.HideBlockOutline();
                 CrosshairWorldPosition = ray.GetPoint(1998);
-                currentCell = null;
             }
         }
         if (currentCell != null)
@@ -52,17 +42,20 @@ public class BuildCellManager : MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        Vector3 pos = currentCell.GetComponent<BuildCellSide>().GetPositionToPlace();
-                        Instantiate(player.CurrentBlock, pos, Quaternion.identity);
+                        Vector3 pos = currentCell.GetPositionToPlace();
+                        Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
+                        newBlock.AddBlockToSaveList();
+                        
                     }
                 }
-               
+                if (Input.GetMouseButtonDown(1))
+                {
+                    if(currentCell.parentBlock.CompareTag("Undestructable")== false)
+                    {
+                        currentCell.parentBlock.DeleteBlock();
+                    }
+                }
             }
         }
     }
-    void Update()
-    {
-        
-    }
-
 }

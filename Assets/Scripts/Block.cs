@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-
-    // Update is called once per frame
-    void Update()
+    public string NameToSerializing;
+    public SaveBlockData SaveBlock()
     {
-        
+        int blockPrefabIndex = FindIndexInPrefabList();
+        Vector3Int pos = Vector3Int.CeilToInt(transform.position);
+       return  new SaveBlockData(blockPrefabIndex, pos);
     }
-    public void ShowBlockOutline()
+    public void AddBlockToSaveList()
     {
-        //BlockOutlineScript.SetNewMaterialWidth(10);
+        SerializeBlockManager.instance.AddBlockToSaveList(this);
     }
-    public void HideBlockOutline()
+    private int FindIndexInPrefabList()
     {
-        //BlockOutlineScript.SetNewMaterialWidth(0);
+        return SerializeBlockManager.instance.FindIndex(this);
+    }
+    public void DeleteBlock()
+    {
+        SerializeBlockManager.instance.BlocksOnScene.Remove(this);
+        Destroy(gameObject);
     }
 }

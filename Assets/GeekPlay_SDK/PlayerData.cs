@@ -26,6 +26,7 @@ public class PlayerData
 
     public bool IsFirstPlay;
 
+    public List<SaveBlockData> SavedBlocks;
     public int DestroyCount;
 
     public List<int> Codes;

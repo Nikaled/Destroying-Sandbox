@@ -20,7 +20,7 @@ public class WeaponSlot : MonoBehaviour
     }
     public void TakeWeapon()
     {
-        Player.instance.SwitchWeapon(WeaponNumber);
+        Player.instance.SwitchActiveBlockSlot(WeaponNumber);
     }
     public void ChangeSpriteInSlot(Sprite blockSprite)
     {

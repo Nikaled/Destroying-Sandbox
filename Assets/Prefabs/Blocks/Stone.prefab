@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 348962574241665264, guid: f25587904375ec34bbe2667d5d772b00, type: 3}
+      propertyPath: NameToSerializing
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 3477762142973352422, guid: f25587904375ec34bbe2667d5d772b00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.68

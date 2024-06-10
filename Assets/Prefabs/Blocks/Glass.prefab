@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: outlineWidth
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6257860086439443408, guid: 6bd3ee0aa3aa1db47aa1795da47626b1, type: 3}
+      propertyPath: NameToSerializing
+      value: Glass
+      objectReference: {fileID: 0}
     - target: {fileID: 6952303015656572758, guid: 6bd3ee0aa3aa1db47aa1795da47626b1, type: 3}
       propertyPath: m_Name
       value: Glass

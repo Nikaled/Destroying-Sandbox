@@ -76,18 +76,6 @@ public class Player : MonoBehaviour
         CurrentBlock = BlocksInSlots[0];
         CurrentBlockIndex = 0;
     }
-    public int FindCurrentBlockIndex()
-    {
-        for (int i = 0; i < BlocksInSlots.Length; i++)
-        {
-            if(CurrentBlock == BlocksInSlots[i])
-            {
-                return i;
-            }
-        }
-        Debug.LogError("Текущий блок не найден в списке");
-        return -1;
-    }
     private void Start()
     {
         if (Geekplay.Instance.mobile)
@@ -151,41 +139,11 @@ public class Player : MonoBehaviour
 
         AfterSwitchState(newPlayerState);
     }
-    public void SwitchWeapon(int PressedNumber)
+    public void SwitchActiveBlockSlot(int PressedNumber)
     {
-        //GunModel.SetActive(false);
-        //PistolModel.SetActive(false);
-        //KnifeModel.SetActive(false);
-        //GrenadeModel.SetActive(false);
-        //switch (PressedNumber)
-        //{
-        //    case 1:
-        //        CurrentWeapon = WeaponType.Gun;
-        //        GunModel.SetActive(true);
-
-        //        break;
-        //    case 2:
-        //        CurrentWeapon = WeaponType.Pistol;
-        //        PistolModel.SetActive(true);
-        //        break;
-        //    case 3:
-        //        CurrentWeapon = WeaponType.Knife;
-        //        KnifeModel.SetActive(true);
-        //        break;
-        //    case 4:
-        //        CurrentWeapon = WeaponType.Hand;
-        //        break;
-        //    case 5:
-        //        CurrentWeapon = WeaponType.Grenade;
-        //        GrenadeModel.SetActive(true);
-
-        //        break;
-
-        //}
         CurrentBlockIndex = PressedNumber - 1;
         CurrentBlock = BlocksInSlots[CurrentBlockIndex];
         SwitchedBlock?.Invoke(PressedNumber);
-        //SwitchPlayerState(PlayerState.Idle);
     }
     private void SwitchView()
     {
@@ -221,13 +179,6 @@ public class Player : MonoBehaviour
                 break;
             case PlayerState.Building:
                 BuildCellManager.instance.BuildUpdate();
-                break;
-            case PlayerState.DeletingBuilding:
-                DeleteCellManager.instance.DeleteUpdate();
-                if (Input.GetKeyDown(DeletingModeButton))
-                {
-                    SwitchPlayerState(PlayerState.Building);
-                }
                 break;
         }   
         if (currentState == PlayerState.Sitting || AdWarningActive|| InterfaceActive || currentState == PlayerState.InBuildingMenu)
@@ -281,43 +232,43 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SwitchWeapon(1);
+            SwitchActiveBlockSlot(1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SwitchWeapon(2);
+            SwitchActiveBlockSlot(2);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SwitchWeapon(3);
+            SwitchActiveBlockSlot(3);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            SwitchWeapon(4);
+            SwitchActiveBlockSlot(4);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            SwitchWeapon(5);
+            SwitchActiveBlockSlot(5);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            SwitchWeapon(6);
+            SwitchActiveBlockSlot(6);
         }
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            SwitchWeapon(7);
+            SwitchActiveBlockSlot(7);
         }
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            SwitchWeapon(8);
+            SwitchActiveBlockSlot(8);
         }
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            SwitchWeapon(9);
+            SwitchActiveBlockSlot(9);
         }
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            SwitchWeapon(10);
+            SwitchActiveBlockSlot(10);
         }
     }
 

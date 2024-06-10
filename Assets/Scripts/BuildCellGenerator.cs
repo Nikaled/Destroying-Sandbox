@@ -12,12 +12,12 @@ public class BuildCellGenerator : MonoBehaviour
     GameObject[,] Cells;
     [SerializeField] GameObject GridParent;
     private float boundsSizeLenght;
-    void Start()
-    {
-        Cells = new GameObject[Lenght, Widht];
-        boundsSizeLenght = BuildCell.GetComponent<MeshRenderer>().bounds.size.x;
-        GenerateStartCell();
-    }
+    //void Start()
+    //{
+    //    Cells = new GameObject[Lenght, Widht];
+    //    boundsSizeLenght = BuildCell.GetComponent<MeshRenderer>().bounds.size.x;
+    //    GenerateStartCell();
+    //}
 
     [ContextMenu("Do Something")]
     private void GenerateStartCell()
@@ -34,6 +34,7 @@ public class BuildCellGenerator : MonoBehaviour
             {
                 Cells[x, z] = Instantiate(BuildCell, new Vector3(x* boundsSizeLenght, 0, boundsSizeLenght * z), Quaternion.identity);
                 Cells[x, z].transform.parent = NewGridParent.transform;
+                Cells[x, z].tag = "Undestructable";
             }
         }
     }
