@@ -32,8 +32,17 @@ public class CitizenMovement : MonoBehaviour
     {
         gameObject.transform.position += new Vector3(0, 100, 0);
     }
+    private IEnumerator UpdateDestination()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(5f);
+            FindNewDestination();
+        }
+    }
     private void Start()
     {
+        StartCoroutine(UpdateDestination());
         ChildrenStartLocalPosition = ChildrenUnit.transform.localPosition;
         Sequence WalkSequence = DOTween.Sequence();
         WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f)).SetEase(WalkTweenTypeUp);

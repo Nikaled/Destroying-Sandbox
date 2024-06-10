@@ -24,9 +24,10 @@ public class CitizenNavMeshManager : MonoBehaviour
     public Vector3? MoveCheckerToNewPoint(GameObject sphere, Transform UnitTransform)
     {
         sphere.SetActive(false);
-        int RandomX = Random.Range(-10, 10);
-        int RandomZ = Random.Range(-10, 10);
-        sphere.transform.position = UnitTransform.position + new Vector3(RandomX, 0, RandomZ);
+        int RandomX = Random.Range(-1, 1);
+        int RandomZ = Random.Range(-1, 1);
+        int RandomY = Random.Range(-1, 1);
+        sphere.transform.position = UnitTransform.position + new Vector3(RandomX, RandomY, RandomZ);
         //Debug.Log("sphere.transform.position"+sphere.transform.position);
         sphere.SetActive(true);
         return sphere.transform.position;
