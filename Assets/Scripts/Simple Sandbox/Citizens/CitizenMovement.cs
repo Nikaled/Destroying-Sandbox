@@ -35,10 +35,10 @@ public class CitizenMovement : MonoBehaviour
     private void Start()
     {
         ChildrenStartLocalPosition = ChildrenUnit.transform.localPosition;
-        //Sequence WalkSequence = DOTween.Sequence();
-        //WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f)).SetEase(WalkTweenTypeUp);
-        //WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenStartLocalPosition, 1f).SetEase(WalkTweenTypeDown));
-        //WalkSequence.SetLoops(1000);
+        Sequence WalkSequence = DOTween.Sequence();
+        WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f)).SetEase(WalkTweenTypeUp);
+        WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenStartLocalPosition, 1f).SetEase(WalkTweenTypeDown));
+        WalkSequence.SetLoops(1000);
         checker = Instantiate(CitizenNavMeshManager.instance.Checker, gameObject.transform.position, Quaternion.identity);
         checker.citizen = this;
         checker.GetComponent<SphereCollider>().enabled = true;
