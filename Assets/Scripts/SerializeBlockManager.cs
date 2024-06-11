@@ -44,6 +44,7 @@ public class SerializeBlockManager : MonoBehaviour
         {
             Block LoadedBlock = Instantiate(BlocksPrefab[BlocksData[i].PrefabIndex]);
             LoadedBlock.transform.position = BlocksData[i].Position;
+            BlocksOnScene.Add(LoadedBlock);
         }
     }
     public void AddBlockToSaveList(Block blockToSave)
