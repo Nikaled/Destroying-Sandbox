@@ -36,11 +36,11 @@ public class CitizenMovement : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             FindNewDestination();
         }
     }
-    private void Start()
+    private void OnActivatedDestroyingPhase()
     {
         StartCoroutine(UpdateDestination());
         ChildrenStartLocalPosition = ChildrenUnit.transform.localPosition;
@@ -52,6 +52,10 @@ public class CitizenMovement : MonoBehaviour
         checker.citizen = this;
         checker.GetComponent<SphereCollider>().enabled = true;
         FindNewDestination();
+    }
+    private void Start()
+    {
+      
         //hpSystem.OnDied += CitizenDie;
     }
     public void MoveToPosition(Vector3 DestinationPosition)
@@ -94,12 +98,11 @@ public class CitizenMovement : MonoBehaviour
         if(IsDying == false)
         {
             MoveToPosition(checker.transform.position);
-            if (Vector3.Distance(gameObject.transform.position, checker.transform.position) < 1)
+            if (Vector3.Distance(gameObject.transform.position, checker.transform.position) < 3)
             {
                 StopMoving();
                 FindNewDestination();
             }
         }
-
     }
 }

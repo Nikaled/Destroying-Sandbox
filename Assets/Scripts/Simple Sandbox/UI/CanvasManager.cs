@@ -57,6 +57,10 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] Slider[] RotatingModeSlidersScale;
     [SerializeField] Slider[] RotatingModeSlidersRotation;
 
+
+    [Header("DestroyingSandbox")]
+    [SerializeField] GameObject BlockSlots;
+    [SerializeField] GameObject WeaponSlots;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
     [Header("Unlock cursor Windows")]
@@ -64,6 +68,22 @@ public class CanvasManager : MonoBehaviour
 
     private readonly string LoadedInGameplay = "LoadedInGameplay";
 
+    public void ShowBlockSlotsAndHideWeapons(bool Is)
+    {
+        BlockSlots.SetActive(Is);
+        if (Is)
+        {
+            ShowWeaponSlotsAndHideBlocks(false);
+        }
+    }
+    public void ShowWeaponSlotsAndHideBlocks(bool Is)
+    {
+        WeaponSlots.SetActive(Is);
+        if (Is)
+        {
+            ShowWeaponSlotsAndHideBlocks(false);
+        }
+    }
     private void Awake()
     {
         instance = this;

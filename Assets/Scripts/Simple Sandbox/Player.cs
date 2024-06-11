@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        CycleManager.instance.DestroyingPhaseStarted += OnDestroyingPhaseActivated;
         if (Geekplay.Instance.mobile)
         {
             examplePlayer.Mobile = true;
@@ -88,8 +89,7 @@ public class Player : MonoBehaviour
         else
         {
             examplePlayer.Mobile = false;
-            examplePlayer.PC = true;
-           
+            examplePlayer.PC = true;     
         }
     }
     public void ChooseNewCurrentBlockFromShop(Block newBlockPrefab, Sprite BlockSprite)
@@ -112,7 +112,12 @@ public class Player : MonoBehaviour
                 break;
             case PlayerState.Idle:
                 animator.SetBool("PistolAiming", false);
+                CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(true);
                 break;
+            case PlayerState.Building:
+                CanvasManager.instance.ShowBlockSlotsAndHideWeapons(true); 
+                break;
+
         }
         if (currentState == PlayerState.Aiming && newPlayerState != PlayerState.Aiming)
         {
@@ -154,6 +159,10 @@ public class Player : MonoBehaviour
     {
         examplePlayer.SwitchCamera();
         SwitchView();
+    }
+    private void OnDestroyingPhaseActivated()
+    {
+        SwitchPlayerState(PlayerState.Idle);
     }
     private void FixedUpdate()
     {

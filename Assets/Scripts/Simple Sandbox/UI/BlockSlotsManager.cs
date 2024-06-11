@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockSlotsManager : MonoBehaviour
 {
-    [SerializeField] WeaponSlot[] WeaponSlots;
+    [SerializeField] BlockSlot[] WeaponSlots;
     private void Awake()
     {
         
