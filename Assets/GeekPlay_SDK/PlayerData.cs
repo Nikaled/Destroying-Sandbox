@@ -20,6 +20,7 @@ public class PlayerData
     public bool IsCloesChangeRewardTaked;
     public bool IsSlapBattleRewardTaked;
     public bool IsTwoPlayerGameRewardTaked;
+    public bool IsGeometryDashRewardTaked;
 
     public event Action<int> CoinsChanged;
     public int _coinsDontUse;
@@ -27,6 +28,7 @@ public class PlayerData
     public bool IsFirstPlay;
 
     public List<SaveBlockData> SavedBlocks;
+    public List<MapData> MapaDataList;
     public int DestroyCount;
 
     public List<int> Codes;
@@ -34,5 +36,4 @@ public class PlayerData
     public string lastBuy;
 
     public int downloadsCount2;
-    internal bool IsGeometryDashRewardTaked;
 }

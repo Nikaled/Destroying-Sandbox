@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class ChooseBlockCell : MonoBehaviour
 {
-    [SerializeField] private Block blockPrefab;
+    [SerializeField] public Block blockPrefab;
 
     [SerializeField] private Image blockSprite;
     public void ChooseBlock()

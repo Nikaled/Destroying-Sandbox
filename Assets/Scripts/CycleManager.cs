@@ -12,6 +12,13 @@ public class CycleManager : MonoBehaviour
     {
         instance = this;
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            ActivateDestroyingPhase();
+        }
+    }
     public void ActivateDestroyingPhase()
     {
        DestroyingPhaseStarted?.Invoke();

@@ -204,9 +204,6 @@ PrefabInstance:
       addedObject: {fileID: 418320272248895796}
     - targetCorrespondingSourceObject: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2263791434063305614}
-    - targetCorrespondingSourceObject: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8776341791896897748}
     - targetCorrespondingSourceObject: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       insertIndex: -1
@@ -239,27 +236,6 @@ NavMeshAgent:
   m_BaseOffset: 0.6
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
---- !u!114 &2263791434063305614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5626961988973238541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f5f26ca9c9d554485ce7737e364538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 418320272248895796}
-  animator: {fileID: 0}
-  CurrentDestination: {fileID: 0}
-  hpSystem: {fileID: 0}
-  DieAnimationTime: 2
-  ChildrenUnit: {fileID: 5376617509828290757}
-  ChildrenStartLocalPosition: {x: 0, y: 0, z: 0}
-  WalkTweenTypeUp: 17
-  WalkTweenTypeDown: 19
 --- !u!114 &8776341791896897748
 MonoBehaviour:
   m_ObjectHideFlags: 0

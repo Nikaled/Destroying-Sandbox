@@ -13,6 +13,7 @@ public class CitizenMovement : MonoBehaviour
     private Vector3? CurrentDest;
     private NavMeshChecker checker;
     private bool IsDying;
+    private bool DestroyPhaseStarted;
     [SerializeField] HpSystem hpSystem;
     public float DieAnimationTime = 2f;
     [SerializeField] GameObject ChildrenUnit;
@@ -52,11 +53,16 @@ public class CitizenMovement : MonoBehaviour
         checker.citizen = this;
         checker.GetComponent<SphereCollider>().enabled = true;
         FindNewDestination();
+        DestroyPhaseStarted = true;
     }
     private void Start()
     {
-      
+        CycleManager.instance.DestroyingPhaseStarted += OnActivatedDestroyingPhase;
         //hpSystem.OnDied += CitizenDie;
+    }
+    private void OnDestroy()
+    {
+        CycleManager.instance.DestroyingPhaseStarted -= OnActivatedDestroyingPhase;
     }
     public void MoveToPosition(Vector3 DestinationPosition)
     {
@@ -95,10 +101,14 @@ public class CitizenMovement : MonoBehaviour
     }
     void Update()
     {
+        if(DestroyPhaseStarted == false)
+        {
+            return;
+        }
         if(IsDying == false)
         {
             MoveToPosition(checker.transform.position);
-            if (Vector3.Distance(gameObject.transform.position, checker.transform.position) < 3)
+            if (Vector3.Distance(gameObject.transform.position, checker.transform.position) < 5)
             {
                 StopMoving();
                 FindNewDestination();
