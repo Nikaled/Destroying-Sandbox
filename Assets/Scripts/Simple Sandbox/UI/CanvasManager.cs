@@ -90,7 +90,7 @@ public class CanvasManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Player.instance.currentState == Player.PlayerState.Idle)
+        if (Player.instance.currentState == Player.PlayerState.Idle || Player.instance.currentState == Player.PlayerState.Building)
         {
             if (Input.GetKeyDown(KeyCode.I))
             {

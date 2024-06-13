@@ -141,6 +141,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1434500518688969406, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: NameToSerializing
+      value: Pig
+      objectReference: {fileID: 0}
     - target: {fileID: 1851644914505885186, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Layer
       value: 6

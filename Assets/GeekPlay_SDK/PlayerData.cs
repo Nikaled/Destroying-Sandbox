@@ -27,8 +27,14 @@ public class PlayerData
 
     public bool IsFirstPlay;
 
+    public bool IsLoadingMapFromSlot;
+    public int MapSlotToLoad;
+    public bool IsLoadingDestructionMap;
+    public string CurrentDestructionMapName;
+
     public List<SaveBlockData> SavedBlocks;
-    public List<MapData> MapaDataList;
+    public MapData[] MapDataArray;
+
     public int DestroyCount;
 
     public List<int> Codes;

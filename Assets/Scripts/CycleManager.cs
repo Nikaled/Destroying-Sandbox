@@ -21,6 +21,8 @@ public class CycleManager : MonoBehaviour
     }
     public void ActivateDestroyingPhase()
     {
+        SerializeBlockManager.instance.SaveBlocks();
+        CitizenNavMeshManager.instance.BuildNavMesh();
        DestroyingPhaseStarted?.Invoke();
     }
     public void ActivateBuildingPhase()

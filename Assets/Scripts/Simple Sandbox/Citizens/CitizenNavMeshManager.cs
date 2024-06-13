@@ -18,19 +18,36 @@ public class CitizenNavMeshManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            navMeshSurface.BuildNavMesh();
+            BuildNavMesh();
         }
+    }
+    public void BuildNavMesh()
+    {
+        navMeshSurface.BuildNavMesh();
     }
     public Vector3? MoveCheckerToNewPoint(GameObject sphere, Transform UnitTransform)
     {
-        sphere.SetActive(false);
-        int RandomX = Random.Range(-1, 1);
-        int RandomZ = Random.Range(-1, 1);
-        int RandomY = Random.Range(0, 0);
-        sphere.transform.position = UnitTransform.position + new Vector3(RandomX, RandomY, RandomZ);
-        //Debug.Log("sphere.transform.position"+sphere.transform.position);
-        sphere.SetActive(true);
-        return sphere.transform.position;
+       int RPath =  Random.Range(0, 2);
+        if(RPath == 0)
+        {
+            sphere.SetActive(false);
+            int RandomX = Random.Range(-1, 1);
+            int RandomZ = Random.Range(-1, 1);
+            int RandomY = Random.Range(-1, 1);
+            sphere.transform.position = UnitTransform.position + new Vector3(RandomX, RandomY, RandomZ);
+            //Debug.Log("sphere.transform.position"+sphere.transform.position);
+            sphere.SetActive(true);
+            return sphere.transform.position;
+        }
+        else
+        {
+            sphere.SetActive(false);
+            sphere.transform.position = RandomPointInBounds(teleportArea.bounds);
+            //Debug.Log("sphere.transform.position"+sphere.transform.position);
+            sphere.SetActive(true);
+            return sphere.transform.position;
+        }
+      
     }
     public Vector3 RandomPointInBounds(Bounds bounds)
     {

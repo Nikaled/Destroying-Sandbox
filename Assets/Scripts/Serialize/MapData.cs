@@ -6,5 +6,6 @@ using UnityEngine;
 public class MapData 
 {
     public string MapName;
+    public string SaveDate;
     public List<SaveBlockData> SavedBlocks;
 }

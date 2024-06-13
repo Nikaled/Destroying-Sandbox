@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1434500518688969406, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: NameToSerializing
-      value: Dirt
+      value: cobbled_deepslate
       objectReference: {fileID: 0}
     - target: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Name

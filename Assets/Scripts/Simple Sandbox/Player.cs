@@ -112,16 +112,20 @@ public class Player : MonoBehaviour
                 break;
             case PlayerState.Idle:
                 animator.SetBool("PistolAiming", false);
-                CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(true);
-                break;
-            case PlayerState.Building:
-                CanvasManager.instance.ShowBlockSlotsAndHideWeapons(true); 
                 break;
 
         }
         if (currentState == PlayerState.Aiming && newPlayerState != PlayerState.Aiming)
         {
             GoToNormalCamera();
+        }
+        if(currentState == PlayerState.Building && newPlayerState == PlayerState.Idle)
+        {
+            CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(true);
+        }
+        if (currentState == PlayerState.Idle && newPlayerState == PlayerState.Building)
+        {
+            CanvasManager.instance.ShowBlockSlotsAndHideWeapons(true);
         }
         if (Delay > 0)
         {
@@ -177,6 +181,10 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        if ( AdWarningActive)
+        {
+            return;
+        }
         switch (currentState)
         {
             case PlayerState.InBuildingMenu:
@@ -187,10 +195,14 @@ public class Player : MonoBehaviour
                 }
                 break;
             case PlayerState.Building:
+                if (InterfaceActive)
+                {
+                    return;
+                }
                 BuildCellManager.instance.BuildUpdate();
                 break;
         }   
-        if (currentState == PlayerState.Sitting || AdWarningActive|| InterfaceActive || currentState == PlayerState.InBuildingMenu)
+        if (InterfaceActive)
         {
             return;
         }

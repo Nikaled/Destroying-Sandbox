@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 60ca186ed620e3c44a44ebdf834bb318, type: 2}
     - target: {fileID: 1434500518688969406, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: NameToSerializing
-      value: Dirt
+      value: TNT
       objectReference: {fileID: 0}
     - target: {fileID: 1468221624889404042, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Enabled

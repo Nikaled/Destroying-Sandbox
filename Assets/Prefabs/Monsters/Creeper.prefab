@@ -94,6 +94,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1434500518688969406, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: NameToSerializing
+      value: Creeper
+      objectReference: {fileID: 0}
     - target: {fileID: 1960265210550887327, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Size.x
       value: 0.40676808
