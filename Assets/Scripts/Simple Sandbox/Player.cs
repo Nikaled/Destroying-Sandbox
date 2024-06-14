@@ -20,7 +20,9 @@ public class Player : MonoBehaviour
     public WeaponType CurrentWeapon;
     public event Action PistolFire;
     public event Action<int> SwitchedBlock;
+    public event Action<int> SwitchedWeapon;
     public event Action<int, Sprite> SwitchedBlockFromShop;
+    public event Action<int, Sprite> SwitchedWeaponFromShop;
     [SerializeField] public Animator animator;
 
     [SerializeField] public ExamplePlayer examplePlayer;
@@ -46,6 +48,9 @@ public class Player : MonoBehaviour
     public Block[] BlocksInSlots;
     public Block CurrentBlock;
     public int CurrentBlockIndex;
+    public Weapon[] WeaponsInSlots;
+    //public Weapon CurrentWeapon;
+    public int CurrentWeaponIndex;
     public bool InterfaceActive;
     public enum PlayerState
     {
@@ -78,7 +83,6 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        CycleManager.instance.DestroyingPhaseStarted += OnDestroyingPhaseActivated;
         if (Geekplay.Instance.mobile)
         {
             examplePlayer.Mobile = true;
@@ -97,7 +101,6 @@ public class Player : MonoBehaviour
         CurrentBlock = newBlockPrefab;
         BlocksInSlots[CurrentBlockIndex] = CurrentBlock;
         SwitchedBlockFromShop?.Invoke(CurrentBlockIndex, BlockSprite);
-
     }
     public void SwitchPlayerState(PlayerState newPlayerState, float Delay = 0.1f)
     {
@@ -154,6 +157,12 @@ public class Player : MonoBehaviour
         CurrentBlock = BlocksInSlots[CurrentBlockIndex];
         SwitchedBlock?.Invoke(PressedNumber);
     }
+    public void SwitchActiveWeaponSlot(int PressedNumber)
+    {
+        CurrentBlockIndex = PressedNumber - 1;
+        CurrentBlock = BlocksInSlots[CurrentBlockIndex];
+        SwitchedBlock?.Invoke(PressedNumber);
+    }
     private void SwitchView()
     {
         IsFirstView = !IsFirstView;
@@ -164,9 +173,13 @@ public class Player : MonoBehaviour
         examplePlayer.SwitchCamera();
         SwitchView();
     }
-    private void OnDestroyingPhaseActivated()
+    public void OnDestroyingPhaseActivated()
     {
         SwitchPlayerState(PlayerState.Idle);
+    }
+    public void OnBuildingPhaseActivated()
+    {
+        SwitchPlayerState(PlayerState.Building);
     }
     private void FixedUpdate()
     {
@@ -212,6 +225,7 @@ public class Player : MonoBehaviour
             {
                 FireInput();
                 ChangeActiveBlockInput();
+                ChangeWeaponInput();
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
                     SwitchView();
@@ -237,8 +251,75 @@ public class Player : MonoBehaviour
         }
       
     }
+    private void ChangeWeaponInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SwitchWeapon(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwitchWeapon(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SwitchWeapon(3);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SwitchWeapon(4);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SwitchWeapon(5);
+        }
+    }
 
-    public void ActivateBuildingMenu(bool Is)
+
+    public void SwitchWeapon(int PressedNumber)
+    {
+        GunModel.SetActive(false);
+        PistolModel.SetActive(false);
+        KnifeModel.SetActive(false);
+        GrenadeModel.SetActive(false);
+
+        if (CurrentWeapon == WeaponType.Grenade)
+        {
+            animator.SetBool("AimingGrenade", false);
+            grenadeLauncher.ClearTrajectory();
+        }
+
+        switch (PressedNumber)
+        {
+            case 4:
+                CurrentWeapon = WeaponType.Gun;
+                GunModel.SetActive(true);
+                CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
+                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+
+                break;
+            case 3:
+                CurrentWeapon = WeaponType.Pistol;
+                PistolModel.SetActive(true);
+                break;
+            case 2:
+                CurrentWeapon = WeaponType.Knife;
+                KnifeModel.SetActive(true);
+                break;
+            case 1:
+                CurrentWeapon = WeaponType.Hand;
+                break;
+            case 5:
+                CurrentWeapon = WeaponType.Grenade;
+                GrenadeModel.SetActive(true);
+                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+                break;
+
+        }
+        SwitchedWeapon?.Invoke(PressedNumber);
+        SwitchPlayerState(PlayerState.Idle);
+    }
+        public void ActivateBuildingMenu(bool Is)
     {
         if (Is)
         {
@@ -415,7 +496,7 @@ public class Player : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 animator.SetBool("AimingGrenade", true);
-                currentState = PlayerState.AimingGrenade;
+                //currentState = PlayerState.AimingGrenade;
             }
             if (Input.GetMouseButton(0))
             {

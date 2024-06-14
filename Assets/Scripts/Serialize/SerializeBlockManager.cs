@@ -17,8 +17,6 @@ public class SerializeBlockManager : MonoBehaviour
     public Block[] BlocksPrefab;
     private void Awake()
     {
-        //Geekplay.Instance.PlayerData.IsLoadingDestructionMap = true;
-        //Geekplay.Instance.PlayerData.CurrentDestructionMapName = "AmethystWall";
         instance = this;
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
@@ -92,20 +90,16 @@ public class SerializeBlockManager : MonoBehaviour
        Debug.Log($"Geekplay.Instance.PlayerData.MapaDataList[{MapDataSlotIndex}].SavedBlocks:" + Geekplay.Instance.PlayerData.MapDataArray[MapDataSlotIndex].SavedBlocks.Count);
         Geekplay.Instance.Save();
     }
-    private int FindMapSlotIndexByName(string SlotName)
-    {
-        for (int i = 0; i < Geekplay.Instance.PlayerData.MapDataArray.Length; i++)
-        {
-           if(Geekplay.Instance.PlayerData.MapDataArray[i].MapName == SlotName)
-            {
-                return i;
-            }
-        }
-        Debug.Log("Не найден слот по имени:" + SlotName);
-        return -1;
-    }
     public void LoadBlocks()
     {
+        if (BlocksOnScene.Count > 0)
+        {
+            for (int i = 0; i < BlocksOnScene.Count; i++)
+            {
+                Destroy(BlocksOnScene[i]);
+            }
+            BlocksOnScene = new();
+        }
         BlocksData = new();
         BlocksData = Geekplay.Instance.PlayerData.SavedBlocks;
         Debug.Log("Geekplay.Instance.PlayerData.SavedBlocks:" + Geekplay.Instance.PlayerData.SavedBlocks.Count);

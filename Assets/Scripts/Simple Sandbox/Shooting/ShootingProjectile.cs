@@ -8,7 +8,6 @@ public class ShootingProjectile : MonoBehaviour
     [SerializeField] Rigidbody bulletRigidbody;
     public float speed = 300;
   public  int bulletDamage = 1;
-    public GameObject ProjectileSource;
    public bool TankProjectile;
     [SerializeField] GameObject DestroyAnimation;
 
@@ -20,39 +19,31 @@ public class ShootingProjectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other == ProjectileSource)
-        {
-            return;
-        }
         Debug.Log(other.name);
-        if (other.GetComponent<HpSystemCollision>() != null)
+        if (other.GetComponent<DestroyCollision>() != null)
         {
-            other.GetComponent<HpSystemCollision>().TakeDamage(bulletDamage);
-            if (TankProjectile)
-            {
-                var fx = Instantiate(DestroyAnimation, transform.position, Quaternion.identity);
-                fx.transform.parent = null;
-                fx.transform.DOScale(DestroyAnimation.transform.localScale * 5, 0);
-            }
+            other.GetComponent<DestroyCollision>().TakeDamage(transform.position);
+            //if (TankProjectile)
+            //{
+            //    var fx = Instantiate(DestroyAnimation, transform.position, Quaternion.identity);
+            //    fx.transform.parent = null;
+            //    fx.transform.DOScale(DestroyAnimation.transform.localScale * 5, 0);
+            //}
         Destroy(gameObject);
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == ProjectileSource)
-        {
-            return;
-        }
         Debug.Log(collision.gameObject);
-        if (collision.gameObject.GetComponent<HpSystemCollision>() != null)
+        if (collision.gameObject.GetComponent<DestroyCollision>() != null)
         {
-            collision.gameObject.GetComponent<HpSystemCollision>().TakeDamage(bulletDamage);
+            collision.gameObject.GetComponent<DestroyCollision>().TakeDamage(transform.position);
         }
         Destroy(gameObject);
     }
     private IEnumerator DestroyObj()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 }

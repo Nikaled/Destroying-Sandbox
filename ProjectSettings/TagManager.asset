@@ -19,9 +19,9 @@ TagManager:
   - GridCell
   - GridCellSide
   - Unit
-  - 
-  - 
-  - 
+  - Texture
+  - ShootingProjectile
+  - Player
   - 
   - 
   - 

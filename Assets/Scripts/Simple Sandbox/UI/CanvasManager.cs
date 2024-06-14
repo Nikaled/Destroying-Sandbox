@@ -73,7 +73,8 @@ public class CanvasManager : MonoBehaviour
         BlockSlots.SetActive(Is);
         if (Is)
         {
-            ShowWeaponSlotsAndHideBlocks(false);
+            WeaponSlots.SetActive(false);
+            //ShowWeaponSlotsAndHideBlocks(false);
         }
     }
     public void ShowWeaponSlotsAndHideBlocks(bool Is)
@@ -81,7 +82,7 @@ public class CanvasManager : MonoBehaviour
         WeaponSlots.SetActive(Is);
         if (Is)
         {
-            ShowWeaponSlotsAndHideBlocks(false);
+            BlockSlots.SetActive(false);
         }
     }
     private void Awake()

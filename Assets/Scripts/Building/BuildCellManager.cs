@@ -21,7 +21,7 @@ public class BuildCellManager : MonoBehaviour
     {
         CrosshairWorldPosition = Vector3.zero;
         Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 5000, AbleToBuildMask))
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 26, AbleToBuildMask))
         {
 
             CrosshairWorldPosition = raycastHit.point;
@@ -31,8 +31,9 @@ public class BuildCellManager : MonoBehaviour
         {
             if (currentCell != null)
             {
-                CrosshairWorldPosition = ray.GetPoint(1998);
+                CrosshairWorldPosition = ray.GetPoint(19);
             }
+            currentCell = null;
         }
         if (currentCell != null)
         {

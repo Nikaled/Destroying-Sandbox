@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 192342, guid: 3183c916f57298a4896169b76ffef5be, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 447904, guid: 3183c916f57298a4896169b76ffef5be, type: 3}
       propertyPath: m_RootOrder
@@ -157,4 +157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRigidbody: {fileID: 868298532}
   speed: 50
-  ProjectileSource: {fileID: 0}
+  bulletDamage: 1
+  TankProjectile: 0
+  DestroyAnimation: {fileID: 0}

@@ -18,15 +18,22 @@ public class CycleManager : MonoBehaviour
         {
             ActivateDestroyingPhase();
         }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            ActivateBuildingPhase();
+        }
     }
     public void ActivateDestroyingPhase()
     {
         SerializeBlockManager.instance.SaveBlocks();
         CitizenNavMeshManager.instance.BuildNavMesh();
-       DestroyingPhaseStarted?.Invoke();
+        Player.instance.OnDestroyingPhaseActivated();
+        DestroyingPhaseStarted?.Invoke();
     }
     public void ActivateBuildingPhase()
     {
+        SerializeBlockManager.instance.LoadBlocks();
+        Player.instance.OnBuildingPhaseActivated();
         BuildingPhaseStarted?.Invoke();
     }
 }

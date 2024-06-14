@@ -195,7 +195,7 @@ public class SelectionOutlineController : MonoBehaviour
     {
         Ray ray = cam.ScreenPointToRay(CanvasManager.instance.Crosshair.transform.position);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, TurnWhiteColliderMask))
+        if (Physics.Raycast(ray, out hit, 26, TurnWhiteColliderMask))
         {
             //if (hit.collider.gameObject.layer != 7 || hit.collider.gameObject.layer != 6)
             //{

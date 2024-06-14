@@ -18,7 +18,6 @@ public class GrenadeLauncher : MonoBehaviour
     public float GrenadeMass = 1;
     public void GrenadeInput()
     {
-
         crossPosition = PlayerShooting.instance.CrosshairWorldPosition;
         aimDirection = (crossPosition - LaunchPoint.position).normalized;
 
@@ -36,6 +35,7 @@ public class GrenadeLauncher : MonoBehaviour
     }
     public void LaunchGrenade()
     {
+        Debug.Log("Launch grenade");
         var _projectile = Instantiate(Projectile, LaunchPoint.transform.position, LaunchPoint.transform.rotation);
         //_projectile.GetComponent<Rigidbody>().velocity = LaunchSpeed * LaunchPoint.up;
         _projectile.GetComponent<Rigidbody>().velocity = LaunchSpeed * Camera.main.transform.forward + (Vector3.up * 10);
