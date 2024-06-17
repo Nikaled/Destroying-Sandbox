@@ -22,13 +22,12 @@ public class Player : MonoBehaviour
     public event Action<int> SwitchedBlock;
     public event Action<int> SwitchedWeapon;
     public event Action<int, Sprite> SwitchedBlockFromShop;
-    public event Action<int, Sprite> SwitchedWeaponFromShop;
     [SerializeField] public Animator animator;
 
     [SerializeField] public ExamplePlayer examplePlayer;
     [SerializeField] ExampleCharacterCamera normalCamera;
 
-    [SerializeField] GameObject GunModel;
+    [SerializeField] GameObject FlameThrowerModel;
     [SerializeField] GameObject PistolModel;
     [SerializeField] GameObject KnifeModel;
     [SerializeField] GameObject GrenadeModel;
@@ -49,6 +48,7 @@ public class Player : MonoBehaviour
     public Block CurrentBlock;
     public int CurrentBlockIndex;
     public Weapon[] WeaponsInSlots;
+    public GameObject[] WeaponModelsInHand;
     //public Weapon CurrentWeapon;
     public int CurrentWeaponIndex;
     public bool InterfaceActive;
@@ -72,7 +72,8 @@ public class Player : MonoBehaviour
         Gun,
         Knife,
         Hand,
-        Grenade
+        Grenade,
+        FlameThrower
     }
 
     private void Awake()
@@ -278,10 +279,10 @@ public class Player : MonoBehaviour
 
     public void SwitchWeapon(int PressedNumber)
     {
-        GunModel.SetActive(false);
-        PistolModel.SetActive(false);
-        KnifeModel.SetActive(false);
-        GrenadeModel.SetActive(false);
+        for (int i = 0; i < WeaponModelsInHand.Length; i++)
+        {
+            WeaponModelsInHand[i].SetActive(false);
+        }
 
         if (CurrentWeapon == WeaponType.Grenade)
         {
@@ -291,28 +292,29 @@ public class Player : MonoBehaviour
 
         switch (PressedNumber)
         {
-            case 4:
-                CurrentWeapon = WeaponType.Gun;
-                GunModel.SetActive(true);
-                CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
-                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
-
-                break;
-            case 3:
+            case 1:
                 CurrentWeapon = WeaponType.Pistol;
                 PistolModel.SetActive(true);
                 break;
             case 2:
-                CurrentWeapon = WeaponType.Knife;
-                KnifeModel.SetActive(true);
-                break;
-            case 1:
-                CurrentWeapon = WeaponType.Hand;
-                break;
-            case 5:
                 CurrentWeapon = WeaponType.Grenade;
                 GrenadeModel.SetActive(true);
+                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;             
+                break;
+            case 3:
+                CurrentWeapon = WeaponType.FlameThrower;
+                FlameThrowerModel.SetActive(true);
+                CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
                 CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+                break;
+            case 4:
+                CurrentWeapon = WeaponType.Gun;
+                CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
+                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+                break;   
+            case 5:
+                CurrentWeapon = WeaponType.Knife;
+                KnifeModel.SetActive(true);
                 break;
 
         }
@@ -452,6 +454,25 @@ public class Player : MonoBehaviour
     #endregion
     private void FireInput()
     {
+        if(CurrentWeapon == WeaponType.FlameThrower)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                playerShooting.Fire(CurrentWeapon);
+            }
+            if (Input.GetMouseButton(0))
+            {
+                animator.SetTrigger("GunFire");
+                if (motor.GroundingStatus.IsStableOnGround)
+                {
+                    motor.SetPosition(transform.position);
+                }
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                playerShooting.EndFire(CurrentWeapon);
+            }
+        }
         if (CurrentWeapon == WeaponType.Pistol)
         {
             if (Input.GetMouseButtonDown(0))

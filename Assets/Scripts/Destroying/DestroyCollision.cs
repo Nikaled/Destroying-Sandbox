@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyCollision : MonoBehaviour
 {
-    [SerializeField] DestroySystem destroySystem;
+    public DestroySystem destroySystem;
 
     public void TakeDamage(Vector3 projectilePosition)
     {
@@ -15,5 +15,11 @@ public class DestroyCollision : MonoBehaviour
     {
         if (destroySystem != null)
             destroySystem.ExplosionForce(Force);
+    }
+    public void TakeFire()
+    {
+        Debug.Log("TakedFire");
+        if (destroySystem != null)
+            destroySystem.FireObject();
     }
 }

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class SerializeBlockManager : MonoBehaviour
@@ -15,6 +14,7 @@ public class SerializeBlockManager : MonoBehaviour
     //public GameObject CellParent;
     //public ContentGridManager CurrentManagerForSetPrefabs;
     public Block[] BlocksPrefab;
+    public bool OnlyDestroyingMap;
     private void Awake()
     {
         instance = this;
@@ -30,6 +30,7 @@ public class SerializeBlockManager : MonoBehaviour
                     break;
                 }
             }
+            OnlyDestroyingMap = true;
         }
     }
     private void Start()
@@ -39,6 +40,11 @@ public class SerializeBlockManager : MonoBehaviour
             Geekplay.Instance.PlayerData.IsLoadingMapFromSlot = false;
             LoadBlocksFromSlot(Geekplay.Instance.PlayerData.MapSlotToLoad);
             Geekplay.Instance.Save();
+            CycleManager.instance.ActivateDestroyingPhase();
+        }
+        if (OnlyDestroyingMap)
+        {
+            CycleManager.instance.ActivateDestroyingPhase();
         }
     }
 
@@ -96,7 +102,11 @@ public class SerializeBlockManager : MonoBehaviour
         {
             for (int i = 0; i < BlocksOnScene.Count; i++)
             {
-                Destroy(BlocksOnScene[i]);
+                if(BlocksOnScene[i] != null)
+                {
+                    Destroy(BlocksOnScene[i].gameObject);
+                    Debug.Log("Удален объект:" + BlocksOnScene[i].name);
+                }
             }
             BlocksOnScene = new();
         }

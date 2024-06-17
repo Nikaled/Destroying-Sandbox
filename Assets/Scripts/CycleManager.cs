@@ -25,15 +25,23 @@ public class CycleManager : MonoBehaviour
     }
     public void ActivateDestroyingPhase()
     {
+        DestroyCounter.instance.DestroyPhaseStarted();
         SerializeBlockManager.instance.SaveBlocks();
         CitizenNavMeshManager.instance.BuildNavMesh();
         Player.instance.OnDestroyingPhaseActivated();
+        CanvasManager.instance.ShowCurrentDestroyInterface(true);
         DestroyingPhaseStarted?.Invoke();
     }
     public void ActivateBuildingPhase()
     {
+        if (SerializeBlockManager.instance.OnlyDestroyingMap)
+        {
+            return;
+        }
         SerializeBlockManager.instance.LoadBlocks();
         Player.instance.OnBuildingPhaseActivated();
+        CanvasManager.instance.ShowWinMapUI(false);
+       CanvasManager.instance.ShowCurrentDestroyInterface(false);
         BuildingPhaseStarted?.Invoke();
     }
 }

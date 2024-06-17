@@ -8,7 +8,6 @@ public class Grenade : MonoBehaviour
     List<DestroyCollision> targetsInExplosion = new();
     [SerializeField] float DelayBeforeExplosion;
     [SerializeField] GameObject DestroyAnimation;
-    [SerializeField] int GrenadeDamage = 10;
     [SerializeField] int ExplosionScale = 3;
     [SerializeField] AudioExplosion Source;
     [SerializeField] ExplosionForceChecker explosionForceChecker;
@@ -32,7 +31,7 @@ public class Grenade : MonoBehaviour
             if (targetsInExplosion[i] !=null)
             targetsInExplosion[i].TakeDamage(transform.position);
         }
-        Destroy(explosionForceChecker);
+        Destroy(explosionForceChecker.gameObject);
         Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)

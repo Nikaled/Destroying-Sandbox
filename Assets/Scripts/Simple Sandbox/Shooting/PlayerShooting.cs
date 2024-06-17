@@ -15,6 +15,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] public Image Crosshair;
     [SerializeField] Player player;
     [SerializeField] MeleeAttackHitbox handHitbox;
+    [SerializeField] Flamethrower flameThrower;
    public Vector3 AimDirection;
     [HideInInspector] public Vector3 CrosshairWorldPosition;
     [HideInInspector] public Vector3 MouseWorldPosition;
@@ -80,7 +81,17 @@ public class PlayerShooting : MonoBehaviour
             FireGun();
             LockPlayerMovement(0.4f);
         }
-
+        if(currentWeapon == Player.WeaponType.FlameThrower)
+        {
+            flameThrower.StartFire();
+        }
+    }
+    public void EndFire(Player.WeaponType currentWeapon)
+    {
+        if (currentWeapon == Player.WeaponType.FlameThrower)
+        {
+            flameThrower.EndFire();
+        }
     }
     public void LockPlayerMovement(float HoldingTime = 1f)
     {

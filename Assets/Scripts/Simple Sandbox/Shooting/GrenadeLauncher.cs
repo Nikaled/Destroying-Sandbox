@@ -41,7 +41,10 @@ public class GrenadeLauncher : MonoBehaviour
         _projectile.GetComponent<Rigidbody>().velocity = LaunchSpeed * Camera.main.transform.forward + (Vector3.up * 10);
         _projectile.GetComponent<CapsuleCollider>().enabled = true;
         _projectile.GetComponent<Rigidbody>().useGravity = true;
+        if (_projectile.GetComponent<Grenade>() != null)
+        {
         _projectile.GetComponent<Grenade>().OnLaunch();
+        }
         lineRenderer.enabled = false;
         Player.instance.RotatePlayerOnShoot(aimDirection);
         PlayerShooting.instance.FireAudioSource.clip = PlayerShooting.instance.GrenadeThrowSound;

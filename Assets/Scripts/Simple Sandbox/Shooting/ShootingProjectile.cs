@@ -23,12 +23,6 @@ public class ShootingProjectile : MonoBehaviour
         if (other.GetComponent<DestroyCollision>() != null)
         {
             other.GetComponent<DestroyCollision>().TakeDamage(transform.position);
-            //if (TankProjectile)
-            //{
-            //    var fx = Instantiate(DestroyAnimation, transform.position, Quaternion.identity);
-            //    fx.transform.parent = null;
-            //    fx.transform.DOScale(DestroyAnimation.transform.localScale * 5, 0);
-            //}
         Destroy(gameObject);
         }
     }

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -61,6 +62,10 @@ public class CanvasManager : MonoBehaviour
     [Header("DestroyingSandbox")]
     [SerializeField] GameObject BlockSlots;
     [SerializeField] GameObject WeaponSlots;
+    [SerializeField] GameObject CurrentDestroyBarUI;
+    [SerializeField] GameObject CurrentDestroyBarFilledImage;
+    [SerializeField] GameObject OnWinMapUI;
+    [SerializeField] TextMeshProUGUI CurrentDestroyedText;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
     [Header("Unlock cursor Windows")]
@@ -68,6 +73,24 @@ public class CanvasManager : MonoBehaviour
 
     private readonly string LoadedInGameplay = "LoadedInGameplay";
 
+    private void DestroyCountChanged(int CurrentDestroyed)
+    {
+        CurrentDestroyedText.text = $"{CurrentDestroyed} / {DestroyCounter.instance.DestroyedMax}";
+        CurrentDestroyBarFilledImage.transform.DOScaleX((float)CurrentDestroyed / DestroyCounter.instance.DestroyedMax, 0);
+    }
+    public void OnWinMap()
+    {
+        ShowWinMapUI(true);
+    }
+    public void ShowWinMapUI(bool Is)
+    {
+        OnWinMapUI.SetActive(Is);
+            CheckActiveUnlockCursorWindows();
+    }
+    public void ShowCurrentDestroyInterface(bool Is)
+    {
+        CurrentDestroyBarUI.SetActive(Is);
+    }
     public void ShowBlockSlotsAndHideWeapons(bool Is)
     {
         BlockSlots.SetActive(Is);
@@ -106,6 +129,8 @@ public class CanvasManager : MonoBehaviour
     private void Start()
     {
         ChangeCoinsText(Geekplay.Instance.PlayerData.Coins);
+        DestroyCounter.instance.DestroyBlockCountChanged += DestroyCountChanged;
+        DestroyCounter.instance.AllBlockDestroyed += OnWinMap;
         if (Geekplay.Instance.mobile)
         {
             CanvasMobileInterface.SetActive(true);

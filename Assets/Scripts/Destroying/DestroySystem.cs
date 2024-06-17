@@ -10,15 +10,17 @@ public class DestroySystem : MonoBehaviour
     [SerializeField] GameObject DestroyAnimation;
     [SerializeField] AudioExplosion AudioExplosionPrefab;
     [SerializeField] Material UnitDieMaterial;
+    [SerializeField] GameObject FireAnimation;
     private readonly string AnalyticsDestroyObject = "ObjectDestroyed";
     public bool IsFireable;
     public bool IsUnit;
     public event Action OnDied;
     public bool ObjectIsDestroying;
     private Vector3 ProjectilePosition;
+
     private void Awake()
     {
-       
+
     }
     public void DamageTaked(Vector3 position)
     {
@@ -29,13 +31,13 @@ public class DestroySystem : MonoBehaviour
             return;
         }
         ObjectIsDestroying = true;
-        if(IsUnit == false)
+        if (IsUnit == false)
         {
-        BlocksAnimation();
+            BlocksAnimation();
         }
         else
         {
-
+            UnitDieAnimation();
         }
         ObjectDies();
     }
@@ -45,21 +47,76 @@ public class DestroySystem : MonoBehaviour
         {
             return;
         }
+        if (ObjectIsDestroying)
+        {
+            return;
+        }
+        ObjectIsDestroying = true;
+        var Fire = Instantiate(FireAnimation, transform.position, transform.rotation);
+        Fire.transform.parent = MeshObject.transform;
+
+        GameObject ParentPivot = new GameObject();
+        ParentPivot.transform.position = transform.position - new Vector3(0, 1f, 0);
+        gameObject.transform.parent = ParentPivot.transform;
+        float ResizeModifier = 2;
+        ParentPivot.transform.DOScale(ParentPivot.transform.localScale / ResizeModifier, 1.7f).OnComplete(OnEndFire);
+
+
+        void OnEndFire()
+        {
+            ParentPivot.transform.parent = null;
+            Destroy(ParentPivot);
+            if (IsUnit)
+            {
+                Fire.transform.parent = null;
+                Destroy(Fire);
+                UnitDieAnimation(ResizeModifier);
+            }
+            ObjectDies();
+        }
     }
-    private void UnitDieAnimation()
+    private void UnitDieAnimation(float BodyScaleModifier = 1)
     {
         GameObject GhostUnit = Instantiate(MeshObject, MeshObject.transform.position, MeshObject.transform.rotation);
+        GhostUnit.transform.parent = MeshObject.transform;
+        GhostUnit.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        GhostUnit.transform.localScale *= BodyScaleModifier;
+        GhostUnit.transform.parent = null;
         GhostUnit.GetComponent<BoxCollider>().enabled = false;
         GhostUnit.GetComponent<Rigidbody>().useGravity = false;
         GhostUnit.GetComponent<Rigidbody>().isKinematic = true;
-        for (int i = 0; i < GhostUnit.GetComponent<MeshRenderer>().materials.Length; i++)
+
+        MeshRenderer[] Renderers = GhostUnit.GetComponentsInChildren<MeshRenderer>();
+        for (int j = 0; j < Renderers.Length; j++)
         {
-            GhostUnit.GetComponent<MeshRenderer>().materials[i] = UnitDieMaterial;
+            Renderers[j].material = UnitDieMaterial;
+            //for (int i = 0; i < Renderers[j].materials.Length; i++)
+            //{
+            //    Renderers[j].materials[i] = UnitDieMaterial;
+            //    Renderers[j].materials[i] = null;
+            //}
+            //Material[] RedMats = new Material[Renderers[j].materials.Length];
+            //for (int i = 0; i < Renderers[j].materials.Length; i++)
+            //{
+            //    RedMats[i] = UnitDieMaterial;
+            //}
         }
+
+        var DieScirpt = GhostUnit.AddComponent<UnitDieAnimation>();
+        DieScirpt.DieAnimation();
     }
     public void ExplosionForce(Vector3 force)
     {
+        if (IsUnit)
+        {
+            return;
+        }
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            AddRigidbodyWhenForcing();
+            rb = gameObject.GetComponent<Rigidbody>();
+        }
         rb.useGravity = true;
         rb.isKinematic = false;
         rb.AddForce(force);
@@ -76,8 +133,9 @@ public class DestroySystem : MonoBehaviour
             smallBlock.transform.parent = null;
             smallBlock.transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 0);
             smallBlock.GetComponent<DestroyCollision>().enabled = false;
-            smallBlock.GetComponent<Rigidbody>().isKinematic = false;
-            smallBlock.GetComponent<Rigidbody>().useGravity = true;
+            var rb = smallBlock.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.useGravity = true;
             smallBlock.layer = 2;
             Vector3 PosDifference = (transform.position - ProjectilePosition).normalized;
             smallBlock.GetComponent<Rigidbody>().AddForce((PosDifference + Vector3.down) * 5);
@@ -88,19 +146,24 @@ public class DestroySystem : MonoBehaviour
         smallBlockParent.smallBlocks = smallBlocks;
         smallBlockParent.BlockDisappearing();
     }
+    private void AddRigidbodyWhenForcing()
+    {
+        var rb = gameObject.AddComponent<Rigidbody>();
+        rb.angularDrag = 0.3f;
+        rb.drag = 0.3f;
+    }
     private void ObjectDies()
     {
         OnDied?.Invoke();
+        DestroyCounter.instance.ObjectDestroyed();
         if (MeshObject != null)
         {
-            DestroyObjectAnimation(MeshObject);
             Destroy(RootObject);
         }
         else
         {
             Debug.Log("Не назначен родитель удаления");
             MeshObject = RootObject;
-            DestroyObjectAnimation(RootObject);
             if (RootObject != null)
                 Destroy(RootObject);
         }
@@ -113,7 +176,7 @@ public class DestroySystem : MonoBehaviour
     }
     private void DestroyObjectAnimation(GameObject rootObject)
     {
-       
+
         //AudioExplosion audioExplosion = Instantiate(AudioExplosionPrefab, transform.position, Quaternion.identity);
         //audioExplosion.PlayExplosionSound();
         //var fx = Instantiate(DestroyAnimation, transform.position, Quaternion.identity);
