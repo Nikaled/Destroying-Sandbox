@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SphereExplosionRange: {fileID: 4686330744608851058}
-  VecolityModifier: 400
+  VecolityModifier: 200
   HasFireEffect: 1
 --- !u!1 &4312549039841502563
 GameObject:

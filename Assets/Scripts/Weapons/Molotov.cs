@@ -7,7 +7,7 @@ public class Molotov : MonoBehaviour
 {
     List<DestroyCollision> targetsInExplosion = new();
     [SerializeField] float DelayBeforeExplosion;
-    [SerializeField] ExplosionEffect DestroyAnimation;
+    [SerializeField] DestroyEffect DestroyAnimation;
     [SerializeField] float ExplosionScale = 3;
     [SerializeField] AudioExplosion Source;
     [SerializeField] ExplosionForceChecker explosionForceChecker;

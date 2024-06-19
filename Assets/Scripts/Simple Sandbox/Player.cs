@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
     public Block[] BlocksInSlots;
     public Block CurrentBlock;
     public int CurrentBlockIndex;
-    public Weapon[] WeaponsInSlots;
     public GameObject[] WeaponModelsInHand;
     //public Weapon CurrentWeapon;
     public int CurrentWeaponIndex;
@@ -73,7 +72,8 @@ public class Player : MonoBehaviour
         Knife,
         Hand,
         Grenade,
-        FlameThrower
+        FlameThrower,
+        None
     }
 
     private void Awake()
@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
         instance = this;
         CurrentBlock = BlocksInSlots[0];
         CurrentBlockIndex = 0;
+        CurrentWeaponIndex = 1;
     }
     private void Start()
     {
@@ -177,6 +178,7 @@ public class Player : MonoBehaviour
     public void OnDestroyingPhaseActivated()
     {
         SwitchPlayerState(PlayerState.Idle);
+        SwitchWeapon(CurrentWeaponIndex);
     }
     public void OnBuildingPhaseActivated()
     {
@@ -224,8 +226,7 @@ public class Player : MonoBehaviour
         {
             if (Geekplay.Instance.mobile == false)
             {
-                FireInput();
-                ChangeActiveBlockInput();
+                FireInput();            
                 ChangeWeaponInput();
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
@@ -274,6 +275,26 @@ public class Player : MonoBehaviour
         {
             SwitchWeapon(5);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            SwitchWeapon(6);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            SwitchWeapon(7);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            SwitchWeapon(8);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            SwitchWeapon(9);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SwitchWeapon(10);
+        }
     }
 
 
@@ -283,15 +304,19 @@ public class Player : MonoBehaviour
         {
             WeaponModelsInHand[i].SetActive(false);
         }
-
+      
         if (CurrentWeapon == WeaponType.Grenade)
         {
             animator.SetBool("AimingGrenade", false);
             grenadeLauncher.ClearTrajectory();
         }
-
+        if (CurrentWeapon == WeaponType.None)
+        {
+            WeaponSelector.instance.HideAllWeapons();
+        }
         switch (PressedNumber)
         {
+
             case 1:
                 CurrentWeapon = WeaponType.Pistol;
                 PistolModel.SetActive(true);
@@ -313,11 +338,23 @@ public class Player : MonoBehaviour
                 CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
                 break;   
             case 5:
-                CurrentWeapon = WeaponType.Knife;
-                KnifeModel.SetActive(true);
+                CurrentWeapon = WeaponType.None;
+                WeaponSelector.instance.SelectWeapon(0);
                 break;
-
+            case 6:
+                CurrentWeapon = WeaponType.None;
+                WeaponSelector.instance.SelectWeapon(1);
+                break;
+            case 8:
+                CurrentWeapon = WeaponType.None;
+                WeaponSelector.instance.SelectWeapon(2);
+                break;
+            default:
+                CurrentWeapon = WeaponType.None;
+                break;
         }
+
+        CurrentWeaponIndex = PressedNumber;
         SwitchedWeapon?.Invoke(PressedNumber);
         SwitchPlayerState(PlayerState.Idle);
     }

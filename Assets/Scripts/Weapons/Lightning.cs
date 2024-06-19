@@ -17,6 +17,7 @@ public class Lightning : MonoBehaviour
     {       
             StartCoroutine(Explosion());
     }
+
     private IEnumerator Explosion()
     {
         DestroyArea.GetComponent<CapsuleCollider>().enabled = true;

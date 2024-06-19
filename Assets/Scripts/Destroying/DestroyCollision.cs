@@ -9,7 +9,10 @@ public class DestroyCollision : MonoBehaviour
     public void TakeDamage(Vector3 projectilePosition)
     {
         if (destroySystem != null)
+        {
             destroySystem.DamageTaked(projectilePosition);
+            Debug.Log("DamageTaked");
+        }
     }
     public void TakeExplosion(Vector3 Force)
     {

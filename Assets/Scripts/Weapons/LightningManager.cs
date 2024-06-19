@@ -37,7 +37,11 @@ public class LightningManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(2))
+        if (Player.instance.InterfaceActive)
+        {
+            return;
+        }
+        if (Input.GetMouseButtonDown(0))
         {
             TryFire();
         }

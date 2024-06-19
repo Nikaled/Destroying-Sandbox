@@ -12,7 +12,7 @@ public class WeaponSlotManager : MonoBehaviour
     private void Start()
     {
         OnWeaponSwitched(1);
-        Player.instance.SwitchedBlock += OnWeaponSwitched;
+        Player.instance.SwitchedWeapon += OnWeaponSwitched;
     }
     private void OnEnable()
     {
@@ -24,10 +24,14 @@ public class WeaponSlotManager : MonoBehaviour
     }
     private void OnDisable()
     {
-        Player.instance.SwitchedBlock -= OnWeaponSwitched;
+        if (Player.instance != null)
+        {
+            Player.instance.SwitchedBlock -= OnWeaponSwitched;
+        }
     }
     private void OnWeaponSwitched(int PressedNumber)
     {
+        Debug.Log("Weapon Switched:" + PressedNumber);
         for (int i = 0; i < WeaponSlots.Length; i++)
         {
             WeaponSlots[i].WeaponIsInactive();
