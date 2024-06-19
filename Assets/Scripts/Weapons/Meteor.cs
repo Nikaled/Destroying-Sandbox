@@ -15,9 +15,19 @@ public class Meteor : MonoBehaviour
     [SerializeField] ExplosionForceChecker explosionForceChecker;
     [SerializeField] Rigidbody MeteorRb;
     Vector3 CurrentDestination;
+
+
+    public void SubscribeOnSwitchState()
+    {
+        MeteorManager.StateSwitched += DestroyingOnSwitch;
+    }
     private void DestroyingOnSwitch()
     {
-
+        Destroy(gameObject);
+    }
+    private void OnDestroy()
+    {
+        MeteorManager.StateSwitched -= DestroyingOnSwitch;
     }
     private void Update()
     {

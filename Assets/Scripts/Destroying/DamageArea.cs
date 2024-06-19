@@ -8,9 +8,10 @@ public class DamageArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<DestroyCollision>() != null)
+        var DestrCol = other.GetComponent<DestroyCollision>();
+        if (DestrCol != null)
         {
-            targetsInExplosion.Add(other.GetComponent<DestroyCollision>());
+            targetsInExplosion.Add(DestrCol);
         }
     }
 }

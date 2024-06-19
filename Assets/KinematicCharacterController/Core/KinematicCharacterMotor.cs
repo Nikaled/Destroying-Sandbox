@@ -1269,7 +1269,6 @@ namespace KinematicCharacterController
             {
                 probingDistance = MinimumGroundProbingDistance;
             }
-
             int groundSweepsMade = 0;
             RaycastHit groundSweepHit = new RaycastHit();
             bool groundSweepingIsOver = false;
@@ -1332,7 +1331,6 @@ namespace KinematicCharacterController
                 {
                     groundSweepingIsOver = true;
                 }
-
                 groundSweepsMade++;
             }
         }

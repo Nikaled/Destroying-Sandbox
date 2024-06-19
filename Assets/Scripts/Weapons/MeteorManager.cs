@@ -13,7 +13,16 @@ public class MeteorManager : MonoBehaviour
     Vector3 CrosshairWorldPosition;
     [SerializeField] private LayerMask aimColliderLayerMask;
     public static Action StateSwitched;
+    public static MeteorManager instance;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+    private void OnDisable()
+    {
+        StateSwitched?.Invoke();
+    }
     public void TryFire()
     {
         //CurrentReloadTime = 0; // стереть для перезарядки
@@ -29,6 +38,7 @@ public class MeteorManager : MonoBehaviour
                 Vector3 MeteorUpPosition = new Vector3(20, 50, 20);
                 var Meteor = Instantiate(MeteorPrefab, CrosshairWorldPosition+ MeteorUpPosition, Quaternion.identity);
                 Meteor.Fire(CrosshairWorldPosition);
+                Meteor.SubscribeOnSwitchState();
             }
         }
     }

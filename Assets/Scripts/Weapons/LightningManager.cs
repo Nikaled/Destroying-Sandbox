@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 public class LightningManager : MonoBehaviour
 {
     [SerializeField] Lightning LightningPrefab;
@@ -11,6 +11,7 @@ public class LightningManager : MonoBehaviour
     public float SecondsBetweenHits;
     private float CurrentReloadTime;
     Vector3 CrosshairWorldPosition;
+    public static Action StateSwitched;
     [SerializeField] private LayerMask aimColliderLayerMask;
     public void TryFire()
     {
@@ -26,8 +27,13 @@ public class LightningManager : MonoBehaviour
                 CrosshairWorldPosition = raycastHit.point;
                 var lightning = Instantiate(LightningPrefab, CrosshairWorldPosition, Quaternion.identity);
                 lightning.Fire();
+                lightning.SubscribeOnSwitchState();
             }
         }
+    }
+    private void OnDisable()
+    {
+        StateSwitched?.Invoke();
     }
     void Start()
     {

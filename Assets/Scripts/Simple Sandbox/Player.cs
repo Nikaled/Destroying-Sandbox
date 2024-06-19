@@ -31,7 +31,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject PistolModel;
     [SerializeField] GameObject KnifeModel;
     [SerializeField] GameObject GrenadeModel;
-    [SerializeField] GameObject CharacterModel;
+    [SerializeField] public GameObject CharacterModel;
+    [SerializeField] public GameObject CreeperModel;
     [SerializeField] public AudioSource SwapCitizenAudioSource;
     
     public KeyCode DeletingModeButton = KeyCode.N;
@@ -97,6 +98,12 @@ public class Player : MonoBehaviour
             examplePlayer.Mobile = false;
             examplePlayer.PC = true;     
         }
+        SetFlyMode();
+    }
+    private void SetFlyMode()
+    {
+        motor.AllowSteppingWithoutStableGrounding = true;
+        characterController.TransitionToState(CharacterState.Flying);
     }
     public void ChooseNewCurrentBlockFromShop(Block newBlockPrefab, Sprite BlockSprite)
     {
@@ -197,6 +204,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        motor.ForceUnground();
         if ( AdWarningActive)
         {
             return;
@@ -348,6 +356,10 @@ public class Player : MonoBehaviour
             case 8:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(2);
+                break;
+            case 10:
+                CurrentWeapon = WeaponType.None;
+                WeaponSelector.instance.SelectWeapon(3);
                 break;
             default:
                 CurrentWeapon = WeaponType.None;

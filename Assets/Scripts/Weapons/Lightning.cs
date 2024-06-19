@@ -17,7 +17,18 @@ public class Lightning : MonoBehaviour
     {       
             StartCoroutine(Explosion());
     }
-
+    public void SubscribeOnSwitchState()
+    {
+        LightningManager.StateSwitched += DestroyOnSwitchState;
+    }
+    private void OnDestroy()
+    {
+        LightningManager.StateSwitched -= DestroyOnSwitchState;
+    }
+    private void DestroyOnSwitchState()
+    {
+        Destroy(gameObject);
+    }
     private IEnumerator Explosion()
     {
         DestroyArea.GetComponent<CapsuleCollider>().enabled = true;
