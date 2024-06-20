@@ -9,6 +9,9 @@ TagManager:
   - Car
   - Ground
   - Undestructable
+  - Stone
+  - Grass
+  - Street
   layers:
   - Default
   - TransparentFX

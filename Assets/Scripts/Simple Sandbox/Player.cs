@@ -102,8 +102,8 @@ public class Player : MonoBehaviour
     }
     private void SetFlyMode()
     {
-        motor.AllowSteppingWithoutStableGrounding = true;
-        characterController.TransitionToState(CharacterState.Flying);
+        //motor.AllowSteppingWithoutStableGrounding = true;
+        //characterController.TransitionToState(CharacterState.Flying);
     }
     public void ChooseNewCurrentBlockFromShop(Block newBlockPrefab, Sprite BlockSprite)
     {
@@ -124,6 +124,9 @@ public class Player : MonoBehaviour
                 break;
             case PlayerState.Idle:
                 animator.SetBool("PistolAiming", false);
+                break;
+            case PlayerState.Building:
+                HideAllWeapons();
                 break;
 
         }
@@ -155,9 +158,7 @@ public class Player : MonoBehaviour
     }
     private IEnumerator DelaySwitchState(Player.PlayerState newPlayerState, float Delay)
     {
-
         yield return new WaitForSeconds(Delay);
-
         AfterSwitchState(newPlayerState);
     }
     public void SwitchActiveBlockSlot(int PressedNumber)
@@ -189,7 +190,7 @@ public class Player : MonoBehaviour
     }
     public void OnBuildingPhaseActivated()
     {
-        SwitchPlayerState(PlayerState.Building);
+        SwitchPlayerState(PlayerState.Building,0);
     }
     private void FixedUpdate()
     {
@@ -204,7 +205,6 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        motor.ForceUnground();
         if ( AdWarningActive)
         {
             return;
@@ -261,7 +261,7 @@ public class Player : MonoBehaviour
         }
       
     }
-    private void ChangeWeaponInput()
+    public void ChangeWeaponInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -305,14 +305,18 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    public void SwitchWeapon(int PressedNumber)
+    private void HideAllWeapons()
     {
         for (int i = 0; i < WeaponModelsInHand.Length; i++)
         {
             WeaponModelsInHand[i].SetActive(false);
         }
-      
+    }
+    public void SwitchWeapon(int PressedNumber)
+    {
+        HideAllWeapons();
+
+
         if (CurrentWeapon == WeaponType.Grenade)
         {
             animator.SetBool("AimingGrenade", false);
@@ -341,9 +345,8 @@ public class Player : MonoBehaviour
                 CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
                 break;
             case 4:
-                CurrentWeapon = WeaponType.Gun;
-                CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
-                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+                CurrentWeapon = WeaponType.None;
+                WeaponSelector.instance.SelectWeapon(5);
                 break;   
             case 5:
                 CurrentWeapon = WeaponType.None;
@@ -353,9 +356,17 @@ public class Player : MonoBehaviour
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(1);
                 break;
+            case 7:
+                CurrentWeapon = WeaponType.None;
+                WeaponSelector.instance.SelectWeapon(4);
+                break;
             case 8:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(2);
+                break;
+            case 9:
+                CurrentWeapon = WeaponType.None;
+                WeaponSelector.instance.SelectWeapon(6);
                 break;
             case 10:
                 CurrentWeapon = WeaponType.None;
@@ -368,7 +379,10 @@ public class Player : MonoBehaviour
 
         CurrentWeaponIndex = PressedNumber;
         SwitchedWeapon?.Invoke(PressedNumber);
+        if(currentState != PlayerState.Idle)
+        {
         SwitchPlayerState(PlayerState.Idle);
+        }
     }
         public void ActivateBuildingMenu(bool Is)
     {

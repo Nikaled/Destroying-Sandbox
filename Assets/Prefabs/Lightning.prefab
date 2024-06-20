@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7916327023085666494}
   - component: {fileID: 4686330744608851058}
   - component: {fileID: 6772258199841421036}
-  m_Layer: 0
+  - component: {fileID: 935305244074006917}
+  m_Layer: 3
   m_Name: ForceArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,6 +70,33 @@ MonoBehaviour:
   SphereExplosionRange: {fileID: 4686330744608851058}
   VecolityModifier: 200
   HasFireEffect: 1
+--- !u!54 &935305244074006917
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844441822343882225}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4312549039841502563
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +108,8 @@ GameObject:
   - component: {fileID: 2533823404819230724}
   - component: {fileID: 8532818947038133583}
   - component: {fileID: 7182013641979342111}
-  m_Layer: 0
+  - component: {fileID: 1387599257301780058}
+  m_Layer: 3
   m_Name: DestroyingArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,6 +167,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetsInExplosion: []
+--- !u!54 &1387599257301780058
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312549039841502563}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7398340692404539599
 GameObject:
   m_ObjectHideFlags: 0

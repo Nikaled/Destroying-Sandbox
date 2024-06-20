@@ -394,7 +394,7 @@ namespace KinematicCharacterController.Examples
                 case CharacterState.Flying:
                     {
                         // Ground movement
-                        if (Motor.GroundingStatus.IsStableOnGround)
+                        if (true)
                             {
                             float currentVelocityMagnitude = currentVelocity.magnitude;
 
@@ -452,7 +452,7 @@ namespace KinematicCharacterController.Examples
                             }
 
                             // Gravity
-                            //Gravity = Vector3.zero;
+                            Gravity = Vector3.zero;
 
 
                             currentVelocity += Gravity * deltaTime;

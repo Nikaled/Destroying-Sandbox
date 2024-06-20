@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class BlockSlotsManager : MonoBehaviour
 {
-    [SerializeField] BlockSlot[] WeaponSlots;
-    private void Awake()
-    {
-        
-    }
+    [SerializeField] BlockSlot[] BlockSlots;
     private void Start()
     {
         OnBlockSwitched(1);
@@ -26,20 +22,24 @@ public class BlockSlotsManager : MonoBehaviour
     }
     private void ChangeBlockInSlotSprite(int Index, Sprite blockSprite)
     {
-        WeaponSlots[Index].ChangeSpriteInSlot(blockSprite);
+        BlockSlots[Index].ChangeSpriteInSlot(blockSprite);
     }
     private void OnDisable()
     {
-        Player.instance.SwitchedBlock -= OnBlockSwitched;
-        Player.instance.SwitchedBlockFromShop -= ChangeBlockInSlotSprite;
+        if (Player.instance != null)
+        {
+            Player.instance.SwitchedBlock -= OnBlockSwitched;
+            Player.instance.SwitchedBlockFromShop -= ChangeBlockInSlotSprite;
+        }
+        
     }
     private void OnBlockSwitched(int PressedNumber)
     {
-        for (int i = 0; i < WeaponSlots.Length; i++)
+        for (int i = 0; i < BlockSlots.Length; i++)
         {
-            WeaponSlots[i].BlockIsInactive();
+            BlockSlots[i].BlockIsInactive();
         }
         int ActiveWeaponIndex = PressedNumber - 1;
-        WeaponSlots[ActiveWeaponIndex].BlockIsActive();
+        BlockSlots[ActiveWeaponIndex].BlockIsActive();
     }
 }

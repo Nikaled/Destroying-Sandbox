@@ -12,12 +12,12 @@ public class BuildCellGenerator : MonoBehaviour
     GameObject[,] Cells;
     [SerializeField] GameObject GridParent;
     private float boundsSizeLenght;
-    //void Start()
-    //{
-    //    Cells = new GameObject[Lenght, Widht];
-    //    boundsSizeLenght = BuildCell.GetComponent<MeshRenderer>().bounds.size.x;
-    //    GenerateStartCell();
-    //}
+    void Start()
+    {
+        Cells = new GameObject[Lenght, Widht];
+        boundsSizeLenght = 2;
+        GenerateStartCell();
+    }
 
     [ContextMenu("Create Floor")]
     private void GenerateStartCell()
@@ -42,5 +42,6 @@ public class BuildCellGenerator : MonoBehaviour
         bc.size = new Vector3(100, 2, 100);
         bc.center = new Vector3(50, 0, 50);
         bc.isTrigger = true;
+        NewGridParent.transform.position = new Vector3(Widht, 0, Lenght);
     }
 }

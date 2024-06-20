@@ -10,9 +10,10 @@ public class DestroyEffect : MonoBehaviour
    
     public void ShowEffectAndDestroyAfterDelay()
     {
+        transform.parent = null;
         var  Eff = Instantiate(Effect, transform.position, transform.rotation);
         Eff.transform.localScale *= EffectScale;
-
+        Eff.transform.parent = gameObject.transform;
         StartCoroutine(WaitForDestroy());
     }
     private IEnumerator WaitForDestroy()

@@ -76,6 +76,7 @@ public class CanvasManager : MonoBehaviour
     private void DestroyCountChanged(int CurrentDestroyed)
     {
         CurrentDestroyedText.text = $"{CurrentDestroyed} / {DestroyCounter.instance.DestroyedMax}";
+        if(DestroyCounter.instance.DestroyedMax > 0)
         CurrentDestroyBarFilledImage.transform.DOScaleX((float)CurrentDestroyed / DestroyCounter.instance.DestroyedMax, 0);
     }
     public void OnWinMap()
@@ -114,6 +115,10 @@ public class CanvasManager : MonoBehaviour
     }
     private void Update()
     {
+        if(Player.instance == null)
+        {
+            return;
+        }
         if (Player.instance.currentState == Player.PlayerState.Idle || Player.instance.currentState == Player.PlayerState.Building)
         {
             if (Input.GetKeyDown(KeyCode.I))

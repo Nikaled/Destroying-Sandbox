@@ -86,8 +86,9 @@ public class Creeper : MonoBehaviour
         ExplosionCreeperAnimation();
         yield return new WaitForSeconds(DelayBeforeExplosion);
         //Source.PlayExplosionSound();
-        ExplosionAnimation.enabled = true;
-        ExplosionAnimation.ShowEffectAndDestroyAfterDelay();
+        DestroyEffect explosionAnim = Instantiate(ExplosionAnimation, ExplosionAnimation.transform.position, ExplosionAnimation.transform.rotation);
+        explosionAnim.enabled = true;
+        explosionAnim.ShowEffectAndDestroyAfterDelay();
 
         explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
         targetsInExplosion = DestroyArea.targetsInExplosion;
