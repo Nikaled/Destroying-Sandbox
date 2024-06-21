@@ -62,6 +62,10 @@ public class CitizenMovement : MonoBehaviour
     }
     private void OnDestroy()
     {
+        if(checker != null)
+        {
+        Destroy(checker.gameObject);
+        }
         CycleManager.instance.DestroyingPhaseStarted -= OnActivatedDestroyingPhase;
     }
     public void MoveToPosition(Vector3 DestinationPosition)

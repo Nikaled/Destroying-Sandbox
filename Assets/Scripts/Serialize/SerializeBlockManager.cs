@@ -7,6 +7,7 @@ using UnityEngine;
 public class SerializeBlockManager : MonoBehaviour
 {
     public DestructionMapData destructionMapData;
+    public ParkourMapsData parkourMapsData;
     public List<Block> BlocksOnScene = new();
     public static SerializeBlockManager instance;
    [SerializeField] public List<SaveBlockData> BlocksData;
@@ -15,8 +16,11 @@ public class SerializeBlockManager : MonoBehaviour
     //public ContentGridManager CurrentManagerForSetPrefabs;
     public Block[] BlocksPrefab;
     public bool OnlyDestroyingMap;
+    public bool OnlyParkourMap;
+    public string CurrentParkourMapName;
     private void Awake()
     {
+
         instance = this;
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
@@ -25,13 +29,31 @@ public class SerializeBlockManager : MonoBehaviour
             {
                 if(Geekplay.Instance.PlayerData.CurrentDestructionMapName == destructionMapData.DestructionMaps[i].MapName)
                 {
-                    BlocksData = destructionMapData.DestructionMaps[i].SavedBlocks;
+                    Geekplay.Instance.PlayerData.SavedBlocks = destructionMapData.DestructionMaps[i].SavedBlocks;
                     LoadBlocks();
                     break;
                 }
             }
             OnlyDestroyingMap = true;
         }
+        else
+        {
+            if (Geekplay.Instance.PlayerData.IsLoadingParkourMap)
+            {
+                Geekplay.Instance.PlayerData.IsLoadingParkourMap = false;
+                for (int i = 0; i < parkourMapsData.ParkourMaps.Count; i++)
+                {
+                    if (Geekplay.Instance.PlayerData.CurrentParkourMapName == parkourMapsData.ParkourMaps[i].MapName)
+                    {
+                        Geekplay.Instance.PlayerData.SavedBlocks = parkourMapsData.ParkourMaps[i].SavedBlocks;
+                        LoadBlocks();
+                        break;
+                    }
+                }
+                OnlyParkourMap = true;
+            }
+        }
+       
     }
     private void Start()
     {
@@ -55,6 +77,7 @@ public class SerializeBlockManager : MonoBehaviour
         return MapDate;
     }
 
+#if UNITY_EDITOR
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -66,6 +89,7 @@ public class SerializeBlockManager : MonoBehaviour
             LoadBlocks();
         }
     }
+#endif
     public void SaveBlocks()
     {
         BlocksData = new();

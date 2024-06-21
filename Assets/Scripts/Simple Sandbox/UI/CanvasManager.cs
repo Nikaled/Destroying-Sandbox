@@ -65,6 +65,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject CurrentDestroyBarUI;
     [SerializeField] GameObject CurrentDestroyBarFilledImage;
     [SerializeField] GameObject OnWinMapUI;
+    [Header("Parkour")]
+    [SerializeField] GameObject ParkourUI;
+    [SerializeField] GameObject OnWinParkourMapUI;
     [SerializeField] TextMeshProUGUI CurrentDestroyedText;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
@@ -73,11 +76,17 @@ public class CanvasManager : MonoBehaviour
 
     private readonly string LoadedInGameplay = "LoadedInGameplay";
 
+    #region DestroyingSandbox
+    public void ShowWinParkourUI(bool Is)
+    {
+        OnWinParkourMapUI.SetActive(Is);
+        CheckActiveUnlockCursorWindows();
+    }
     private void DestroyCountChanged(int CurrentDestroyed)
     {
         CurrentDestroyedText.text = $"{CurrentDestroyed} / {DestroyCounter.instance.DestroyedMax}";
-        if(DestroyCounter.instance.DestroyedMax > 0)
-        CurrentDestroyBarFilledImage.transform.DOScaleX((float)CurrentDestroyed / DestroyCounter.instance.DestroyedMax, 0);
+        if (DestroyCounter.instance.DestroyedMax > 0)
+            CurrentDestroyBarFilledImage.transform.DOScaleX((float)CurrentDestroyed / DestroyCounter.instance.DestroyedMax, 0);
     }
     public void OnWinMap()
     {
@@ -86,7 +95,7 @@ public class CanvasManager : MonoBehaviour
     public void ShowWinMapUI(bool Is)
     {
         OnWinMapUI.SetActive(Is);
-            CheckActiveUnlockCursorWindows();
+        CheckActiveUnlockCursorWindows();
     }
     public void ShowCurrentDestroyInterface(bool Is)
     {
@@ -109,17 +118,22 @@ public class CanvasManager : MonoBehaviour
             BlockSlots.SetActive(false);
         }
     }
+    private void OnWinParkourMap()
+    {
+        ShowWinParkourUI(true);
+    }
+    #endregion
     private void Awake()
     {
         instance = this;
     }
     private void Update()
     {
-        if(Player.instance == null)
+        if (Player.instance == null)
         {
             return;
         }
-        if (Player.instance.currentState == Player.PlayerState.Idle || Player.instance.currentState == Player.PlayerState.Building)
+        if ( Player.instance.currentState == Player.PlayerState.Building)
         {
             if (Input.GetKeyDown(KeyCode.I))
             {
@@ -128,6 +142,14 @@ public class CanvasManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.K))
             {
                 ShowSaveMapUI(!SaveMapUIActive);
+            }
+        }
+        if(Player.instance.InterfaceActive == false)
+        {
+            if (Input.GetKeyDown(KeyCode.J)&& Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Cursor.lockState = CursorLockMode.None; 
+                SceneManager.LoadScene(0);
             }
         }
     }
@@ -151,6 +173,17 @@ public class CanvasManager : MonoBehaviour
         }
         Geekplay.Instance.PlayerData.CoinsChanged += ChangeCoinsText;
         Geekplay.Instance.LockCursorAfterAd += CheckActiveUnlockCursorWindows;
+
+        if (SerializeBlockManager.instance.OnlyParkourMap)
+        {
+            ParkourUI.SetActive(true);
+            ParkourWinZone.instance.WinParkour += OnWinParkourMap;
+        }
+        else
+        {
+            ParkourUI.SetActive(false);
+        }
+
     }
     #region Mobile
     public void ChangeDoButtonImageToMode(bool Mode)
@@ -294,6 +327,11 @@ public class CanvasManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         Player.instance.InterfaceActive = Is;
+        if (Is)
+        {
+            Player.instance.examplePlayer.LockCursor(false);
+            Debug.Log("Lock cursor false");
+        }
     }
     private void ChangeCoinsText(int NewValue)
     {

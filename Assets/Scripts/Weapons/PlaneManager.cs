@@ -20,7 +20,7 @@ public class PlaneManager : MonoBehaviour
         Destroy(currentPlane);
         }
         Player.instance.gameObject.SetActive(true);
-        Player.instance.examplePlayer.LockCursor(true);
+        //Player.instance.examplePlayer.LockCursor(true);
     }
     public void OnPlaneDestroyed()
     {

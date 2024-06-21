@@ -42,6 +42,6 @@ public class BuildCellGenerator : MonoBehaviour
         bc.size = new Vector3(100, 2, 100);
         bc.center = new Vector3(50, 0, 50);
         bc.isTrigger = true;
-        NewGridParent.transform.position = new Vector3(Widht, 0, Lenght);
+        NewGridParent.transform.position = new Vector3(-Widht, 0, -Lenght);
     }
 }

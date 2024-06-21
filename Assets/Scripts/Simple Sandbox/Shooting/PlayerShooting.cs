@@ -16,7 +16,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] Player player;
     [SerializeField] MeleeAttackHitbox handHitbox;
     [SerializeField] Flamethrower flameThrower;
-   public Vector3 AimDirection;
+    public Vector3 AimDirection;
     [HideInInspector] public Vector3 CrosshairWorldPosition;
     [HideInInspector] public Vector3 MouseWorldPosition;
     float GunTimer;
@@ -61,7 +61,7 @@ public class PlayerShooting : MonoBehaviour
             CrosshairWorldPosition = ray.GetPoint(1998);
         }
 
-         AimDirection = (CrosshairWorldPosition - PistolProjectileSpawnPoint.position).normalized;
+        AimDirection = (CrosshairWorldPosition - PistolProjectileSpawnPoint.position).normalized;
 
     }
     public void Fire(Player.WeaponType currentWeapon)
@@ -81,7 +81,7 @@ public class PlayerShooting : MonoBehaviour
             FireGun();
             LockPlayerMovement(0.4f);
         }
-        if(currentWeapon == Player.WeaponType.FlameThrower)
+        if (currentWeapon == Player.WeaponType.FlameThrower)
         {
             flameThrower.StartFire();
         }
@@ -115,7 +115,7 @@ public class PlayerShooting : MonoBehaviour
         if (Reloading == false)
         {
             Reloading = true;
-           
+
             ShootingProjectile proj = Instantiate(projectile, GunProjectileSpawnPoint.position, Quaternion.LookRotation(aimDirection, Vector3.up));
             GunTimer = Time.time;
             FireAudioSource.clip = GunSound;
@@ -134,39 +134,20 @@ public class PlayerShooting : MonoBehaviour
             targets.AddRange(handHitbox.GetEnemies());
         }
         int meleeDamage = 1;
-        if (meleeWeapon == Player.WeaponType.Knife)
-        {
-            meleeDamage = 2;
-        }
         if (targets.Count > 0)
         {
             for (int i = 0; i < targets.Count; i++)
             {
                 targets[i].TakeDamage(meleeDamage);
             }
-            if (meleeWeapon == Player.WeaponType.Knife)
-            {
-                FireAudioSource.clip = KnifeAttackHitObjectSound;
-                FireAudioSource.Play();
-            }
-            else
-            {
-                FireAudioSource.clip = HandAttackHitObjectSound;
-                FireAudioSource.Play();
-            }
+            FireAudioSource.clip = HandAttackHitObjectSound;
+            FireAudioSource.Play();
         }
         else
         {
-            if (meleeWeapon == Player.WeaponType.Knife)
-            {
-                FireAudioSource.clip = KnifeAttackSound;
-                FireAudioSource.Play();
-            }
-            else
-            {
-                FireAudioSource.clip = HandAttackSound;
-                FireAudioSource.Play();
-            }
+
+            FireAudioSource.clip = HandAttackSound;
+            FireAudioSource.Play();
 
         }
 

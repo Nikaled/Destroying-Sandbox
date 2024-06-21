@@ -8,6 +8,7 @@ public class CycleManager : MonoBehaviour
     public static CycleManager instance;
     public Action DestroyingPhaseStarted;
     public Action BuildingPhaseStarted;
+    public Action ParkourPhaseStarted;
     private void Awake()
     {
         instance = this;
@@ -16,11 +17,13 @@ public class CycleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            ActivateDestroyingPhase();
+            if (Player.instance.currentState == Player.PlayerState.Building)
+                ActivateDestroyingPhase();
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
-            ActivateBuildingPhase();
+            if (Player.instance.currentState == Player.PlayerState.Idle)
+                ActivateBuildingPhase();
         }
     }
     public void ActivateDestroyingPhase()
@@ -32,6 +35,14 @@ public class CycleManager : MonoBehaviour
         CanvasManager.instance.ShowCurrentDestroyInterface(true);
         DestroyingPhaseStarted?.Invoke();
     }
+
+
+    public void ActivateParkourPhase()  // if player taked restart
+    {
+        CanvasManager.instance.ShowWinParkourUI(false);
+        ParkourManager.instance.StartParkour();
+        ParkourPhaseStarted?.Invoke();
+    }
     public void ActivateBuildingPhase()
     {
         if (SerializeBlockManager.instance.OnlyDestroyingMap)
@@ -41,7 +52,7 @@ public class CycleManager : MonoBehaviour
         SerializeBlockManager.instance.LoadBlocks();
         Player.instance.OnBuildingPhaseActivated();
         CanvasManager.instance.ShowWinMapUI(false);
-       CanvasManager.instance.ShowCurrentDestroyInterface(false);
+        CanvasManager.instance.ShowCurrentDestroyInterface(false);
         BuildingPhaseStarted?.Invoke();
     }
 }

@@ -10,6 +10,8 @@ public class BuildCellManager : MonoBehaviour
     public LayerMask AbleToBuildMask;
     private BuildCellSide currentCell;
     [SerializeField] private GameObject BlockPrefab;
+    [SerializeField] GameObject ParkourWinBlock;
+
     private Player player;
     public static BuildCellManager instance;
     private void Start()
@@ -46,16 +48,25 @@ public class BuildCellManager : MonoBehaviour
                         Vector3 pos = currentCell.GetPositionToPlace();
                         Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
                         newBlock.AddBlockToSaveList();
-                        
                     }
                 }
                 if (Input.GetMouseButtonDown(1))
                 {
-                    if(currentCell.parentBlock.CompareTag("Undestructable")== false)
+                    if (currentCell.parentBlock.CompareTag("Undestructable") == false)
                     {
                         currentCell.parentBlock.DeleteBlock();
                     }
                 }
+#if UNITY_EDITOR
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    Vector3 pos = currentCell.GetPositionToPlace();
+                    GameObject WinParkourBlock = Instantiate(ParkourWinBlock, pos, Quaternion.identity);
+                    WinParkourBlock.GetComponent<Block>().AddBlockToSaveList();
+                }
+
+#endif
+
             }
         }
     }

@@ -138,6 +138,9 @@ MonoBehaviour:
   ExplosionScale: 3
   Source: {fileID: 0}
   explosionForceChecker: {fileID: 9196094358496458425}
+  IsExploding: 0
+  CreeperWhiteMaterial: {fileID: 0}
+  creeperModel: {fileID: 0}
 --- !u!1 &6354640667732850418
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,10 +219,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7218592269722759472}
-  - component: {fileID: 7011014244890443967}
   - component: {fileID: 5337105638010332862}
   - component: {fileID: 3370581709633865081}
-  - component: {fileID: 1777007031075174888}
+  - component: {fileID: 7011014244890443967}
   m_Layer: 0
   m_Name: DestroyingArea
   m_TagString: Untagged
@@ -242,19 +244,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2668378338693439552}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7011014244890443967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6519677431167255383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6355f107f4d66040b34ebdb6f8163da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetsInExplosion: []
 --- !u!135 &5337105638010332862
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -303,7 +292,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1777007031075174888
+--- !u!114 &7011014244890443967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

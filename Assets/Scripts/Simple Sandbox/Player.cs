@@ -49,28 +49,27 @@ public class Player : MonoBehaviour
     public Block CurrentBlock;
     public int CurrentBlockIndex;
     public GameObject[] WeaponModelsInHand;
-    //public Weapon CurrentWeapon;
     public int CurrentWeaponIndex;
     public bool InterfaceActive;
+    private Vector3 parkourStartPosition;
+    private Quaternion parkourStartRotation;
     public enum PlayerState
     {
         InTransport,
-        Aiming,
         Shooting,
         Idle,
         Sitting,
         Building,
-        DeletingBuilding,
-        RotatingBuilding,
         AimingGrenade,
-        InBuildingMenu
+        InBuildingMenu,
+        Parkour
     }
     float startTime;
     public enum WeaponType
     {
         Pistol,
         Gun,
-        Knife,
+        Plane,
         Hand,
         Grenade,
         FlameThrower,
@@ -98,7 +97,18 @@ public class Player : MonoBehaviour
             examplePlayer.Mobile = false;
             examplePlayer.PC = true;     
         }
+        if (SerializeBlockManager.instance.OnlyParkourMap)
+        {
+            SwitchPlayerState(PlayerState.Parkour);
+            parkourStartPosition = transform.position;
+            parkourStartRotation = transform.rotation;
+            CycleManager.instance.ParkourPhaseStarted += OnParkourPhaseStarted;
+        }
         SetFlyMode();
+    }
+    private void OnParkourPhaseStarted()
+    {
+        motor.SetPositionAndRotation(parkourStartPosition, parkourStartRotation);
     }
     private void SetFlyMode()
     {
@@ -115,24 +125,17 @@ public class Player : MonoBehaviour
     {
         switch (newPlayerState)
         {
-            case PlayerState.Aiming:
-                if (currentState != PlayerState.Aiming)
-                {
-                    animator.SetBool("PistolAiming", true);
-                    GoToAimCamera();
-                }
-                break;
             case PlayerState.Idle:
                 animator.SetBool("PistolAiming", false);
                 break;
             case PlayerState.Building:
                 HideAllWeapons();
                 break;
+            case PlayerState.Parkour:
+                CanvasManager.instance.ShowBlockSlotsAndHideWeapons(false);
+                CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(false);
+                break;
 
-        }
-        if (currentState == PlayerState.Aiming && newPlayerState != PlayerState.Aiming)
-        {
-            GoToNormalCamera();
         }
         if(currentState == PlayerState.Building && newPlayerState == PlayerState.Idle)
         {
@@ -173,16 +176,6 @@ public class Player : MonoBehaviour
         CurrentBlock = BlocksInSlots[CurrentBlockIndex];
         SwitchedBlock?.Invoke(PressedNumber);
     }
-    private void SwitchView()
-    {
-        IsFirstView = !IsFirstView;
-        GoToNormalCamera();
-    }
-    public void SwitchCamera()
-    {
-        examplePlayer.SwitchCamera();
-        SwitchView();
-    }
     public void OnDestroyingPhaseActivated()
     {
         SwitchPlayerState(PlayerState.Idle);
@@ -209,6 +202,10 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        if(currentState == PlayerState.Parkour)
+        {
+            return;
+        }
         switch (currentState)
         {
             case PlayerState.InBuildingMenu:
@@ -230,29 +227,19 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        if (currentState == PlayerState.Idle || currentState == PlayerState.Aiming)
+        if (currentState == PlayerState.Idle)
         {
             if (Geekplay.Instance.mobile == false)
             {
                 FireInput();            
                 ChangeWeaponInput();
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                    SwitchView();
-                }
             }
         }
         if(currentState == PlayerState.Building || currentState == PlayerState.InBuildingMenu)
         {
             ChangeActiveBlockInput();
         }
-     
-        if (currentState == PlayerState.Aiming)
-        {
-            RotatePlayerOnShoot(playerShooting.AimDirection);
-            playerShooting.LockPlayerMovement(0.05f);
-        }
-        if(currentState == PlayerState.Idle || currentState == PlayerState.Building)
+        if(currentState == PlayerState.Building)
         {
             if (Input.GetKeyDown(BuildingModeButton))
             {
@@ -315,16 +302,16 @@ public class Player : MonoBehaviour
     public void SwitchWeapon(int PressedNumber)
     {
         HideAllWeapons();
-
+        WeaponSelector.instance.HideAllWeapons();
 
         if (CurrentWeapon == WeaponType.Grenade)
         {
             animator.SetBool("AimingGrenade", false);
             grenadeLauncher.ClearTrajectory();
         }
-        if (CurrentWeapon == WeaponType.None)
+        if(CurrentWeapon == WeaponType.Plane && InterfaceActive == false)
         {
-            WeaponSelector.instance.HideAllWeapons();
+            examplePlayer.LockCursor(true);
         }
         switch (PressedNumber)
         {
@@ -345,7 +332,7 @@ public class Player : MonoBehaviour
                 CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
                 break;
             case 4:
-                CurrentWeapon = WeaponType.None;
+                CurrentWeapon = WeaponType.Plane;
                 WeaponSelector.instance.SelectWeapon(5);
                 break;   
             case 5:
@@ -474,12 +461,6 @@ public class Player : MonoBehaviour
             motor.SetPosition(transform.position);
             playerShooting.Fire(CurrentWeapon);
         }
-        if (CurrentWeapon == WeaponType.Knife)
-        {
-
-            animator.SetTrigger("Stab");
-            playerShooting.HandAttack(WeaponType.Knife);
-        }
         if (CurrentWeapon == WeaponType.Hand)
         {
             animator.SetBool("IsRun", false);
@@ -498,22 +479,6 @@ public class Player : MonoBehaviour
         //    AimingGrenadeOnMobile();
         //}
     } // Used by Fire Button
-    public void MobileAiming()// Used by Aim Button
-    {
-        if (currentState != PlayerState.Aiming)
-        {
-            if (CurrentWeapon == WeaponType.Pistol || CurrentWeapon == WeaponType.Gun)
-            {
-                SwitchPlayerState(PlayerState.Aiming, 0);
-                return;
-            }
-        }
-        if (currentState == PlayerState.Aiming)
-        {
-            Debug.Log("Stop Aiming");
-            SwitchPlayerState(PlayerState.Idle, 0);
-        }
-    }
     #endregion
     private void FireInput()
     {
@@ -543,15 +508,6 @@ public class Player : MonoBehaviour
                 animator.SetTrigger("PistolFire");
                 motor.SetPosition(transform.position);
                 playerShooting.Fire(CurrentWeapon);
-            }
-        }
-        if (CurrentWeapon == WeaponType.Knife)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                animator.SetTrigger("Stab");
-
-                playerShooting.HandAttack(WeaponType.Knife);
             }
         }
         if (CurrentWeapon == WeaponType.Hand)
@@ -596,56 +552,11 @@ public class Player : MonoBehaviour
                 examplePlayer.MyLockOnShoot = false;
             }
         }
-        if (currentState != PlayerState.Aiming)
-        {
-            if (CurrentWeapon == WeaponType.Pistol || CurrentWeapon == WeaponType.Gun)
-            {
-                if (Input.GetMouseButton(1))
-                {
-
-                    SwitchPlayerState(PlayerState.Aiming, 0);
-                }
-            }
-        }
-        if (currentState == PlayerState.Aiming)
-        {
-            if (Input.GetMouseButtonUp(1))
-            {
-                Debug.Log("Stop Aiming");
-                SwitchPlayerState(PlayerState.Idle, 0);
-            }
-        }
-
     }
     public void RotatePlayerOnShoot(Vector3 aimDirection)
     {
         Quaternion targetRotation = Quaternion.LookRotation(aimDirection);
         Quaternion OnlyY = new Quaternion(0, targetRotation.y, 0, targetRotation.w);
         motor.RotateCharacter(OnlyY);
-    }
-    private void GoToAimCamera()
-    {
-        if (IsFirstView)
-        {
-            normalCamera.Camera.fieldOfView = 20;
-            normalCamera.FollowPointFraming = new Vector2(0f, 0f);
-        }
-        else
-        {
-            normalCamera.Camera.fieldOfView = 30;
-        }
-    }
-    private void GoToNormalCamera()
-    {
-        if (IsFirstView == false)
-        {
-            normalCamera.FollowPointFraming = new Vector2(1.8f, 1.8f);
-            normalCamera.Camera.fieldOfView = 55;
-        }
-        else
-        {
-            normalCamera.FollowPointFraming = new Vector2(-0.2f, 0.69f);
-            normalCamera.Camera.fieldOfView = 40;
-        }
     }
 }

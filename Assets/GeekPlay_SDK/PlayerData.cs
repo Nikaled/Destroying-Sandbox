@@ -30,11 +30,12 @@ public class PlayerData
     public bool IsLoadingMapFromSlot;
     public int MapSlotToLoad;
     public bool IsLoadingDestructionMap;
+    public bool IsLoadingParkourMap;
     public string CurrentDestructionMapName;
-
+    public string CurrentParkourMapName;
     public List<SaveBlockData> SavedBlocks;
     public MapData[] MapDataArray;
-
+    public List<ParkourMapPlayerData> parkourMapPlayerDataList;
     public int DestroyCount;
 
     public List<int> Codes;
