@@ -389,6 +389,7 @@ MonoBehaviour:
   Speed: 18
   RotatingSpeed: 200
   rotor: {fileID: 5255901320478170071}
+  IsExploding: 0
   ExplosionAnimation: {fileID: 1193787603551711114}
   ParentObject: {fileID: 4526245508032928243}
   DestroyArea: {fileID: 7612916462740022106}
@@ -397,6 +398,9 @@ MonoBehaviour:
   Source: {fileID: 0}
   explosionForceChecker: {fileID: 437236948576368589}
   rb: {fileID: 4175618190581035671}
+  Meshes: []
+  planeManager: {fileID: 0}
+  joystick: {fileID: 0}
 --- !u!65 &103949384231416277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,7 +609,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5667718583647971744}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &7734531397343062001
 GameObject:
   m_ObjectHideFlags: 0

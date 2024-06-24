@@ -345,7 +345,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 531488755263295102, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: EffectScale
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2349537945447355841, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_Name

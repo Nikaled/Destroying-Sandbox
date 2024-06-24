@@ -37,21 +37,15 @@ public class Press : MonoBehaviour
             pressCollider.size = new Vector3(1, 1, 1);
             StartPosFounded = true;
             StartTransformPosition = transform.position;
-            //transform.position = StartTransformPosition;
             Debug.Log("Start position:" + StartTransformPosition);
             Debug.Log("Start position");
             rb.velocity = Vector3.zero;
-            //rb.isKinematic = true;
             gameObject.transform.position = StartTransformPosition + new Vector3(0, 10, 0);
             DestroyingBlocksState = true;
             for (int i = 0; i < pressMeshes.Length; i++)
             {
-            pressMeshes[i].enabled = true;
+                pressMeshes[i].enabled = true;
             }
-        }
-        if (other.gameObject.CompareTag("Undestructable"))
-        {
-            Destroy(gameObject);
         }
     }
     IEnumerator ActivateColliderWithDelay()

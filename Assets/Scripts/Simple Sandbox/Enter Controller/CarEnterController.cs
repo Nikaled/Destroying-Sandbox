@@ -33,7 +33,6 @@ public class CarEnterController : EnterController
         {
             CanvasManager.instance.ShowCarMobileInstruction(true);
             vehicleControl.MyInitializeButtons();
-            //CarButtons.instance.GetOutButton.onClick.AddListener(delegate { GetOutTransport(); });
             CarButtons.instance.ShootButton.gameObject.SetActive(false);
         }
         if (tankShooting != null)
@@ -47,6 +46,17 @@ public class CarEnterController : EnterController
             }
         }
     }
+    private void OnDisable()
+    {
+        CanvasManager.instance.ShowControlCarInstruction(false, IsTank);
+        if (Geekplay.Instance.mobile)
+        {
+            vehicleControl.MyClearButtons();
+            CanvasManager.instance.ShowCarMobileInstruction(false);
+            CarButtons.instance.ShootButton.onClick.RemoveAllListeners();
+            CarButtons.instance.ShootButton.gameObject.SetActive(false);
+        }
+    }
     protected  void DeactivateTransport()
     {
         CanvasManager.instance.ShowControlCarInstruction(false, IsTank);
@@ -56,7 +66,6 @@ public class CarEnterController : EnterController
         if (Geekplay.Instance.mobile)
         {
             vehicleControl.MyClearButtons();
-            CarButtons.instance.GetOutButton.onClick.RemoveAllListeners();
             CanvasManager.instance.ShowCarMobileInstruction(false);
             CarButtons.instance.ShootButton.gameObject.SetActive(false);
         }

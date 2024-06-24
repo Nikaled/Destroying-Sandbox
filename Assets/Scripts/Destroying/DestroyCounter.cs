@@ -28,12 +28,18 @@ public class DestroyCounter : MonoBehaviour
         DestroyedMax = SerializeBlockManager.instance.BlocksOnScene.Count;
         DestroyedCurrent = 0;
     }
+    private IEnumerator DelayToWin()
+    {
+        yield return new WaitForSeconds(0.5f);
+        AllBlockDestroyed?.Invoke();
+    }
     public void ObjectDestroyed()
     {
         DestroyedCurrent++;
         if(DestroyedCurrent == DestroyedMax)
         {
-            AllBlockDestroyed?.Invoke();
+            StartCoroutine(DelayToWin());
+           
         }
     }
 }

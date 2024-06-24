@@ -7,7 +7,7 @@ using Unity.AI.Navigation;
 public class CitizenNavMeshManager : MonoBehaviour
 {
     public static CitizenNavMeshManager instance;
-    [SerializeField] private Collider teleportArea;
+    [SerializeField] public Collider teleportArea;
     [SerializeField] public NavMeshChecker Checker;
     [SerializeField] private NavMeshSurface navMeshSurface;
     private void Awake()

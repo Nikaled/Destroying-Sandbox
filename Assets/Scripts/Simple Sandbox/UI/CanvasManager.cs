@@ -65,6 +65,10 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject CurrentDestroyBarUI;
     [SerializeField] GameObject CurrentDestroyBarFilledImage;
     [SerializeField] GameObject OnWinMapUI;
+    [SerializeField] Image[] PhaseButtonImages;
+    [SerializeField] public Button WeaponSpecialInteracteButton;
+    [SerializeField] public Button ChangePhaseButton;
+    [SerializeField] public GameObject UnlockWeaponUI;
     [Header("Parkour")]
     [SerializeField] GameObject ParkourUI;
     [SerializeField] GameObject OnWinParkourMapUI;
@@ -74,9 +78,27 @@ public class CanvasManager : MonoBehaviour
     [Header("Unlock cursor Windows")]
     [SerializeField] private List<GameObject> UnlockCursorWindows;
 
+    private IEnumerator cursorLocker;
     private readonly string LoadedInGameplay = "LoadedInGameplay";
 
     #region DestroyingSandbox
+    public void ChangePhaseButtonIcon(int index)
+    {
+        for (int i = 0; i < PhaseButtonImages.Length; i++)
+        {
+            PhaseButtonImages[i].gameObject.SetActive(false);
+        }
+        PhaseButtonImages[index].gameObject.SetActive(true);
+    }
+    public void ShowUnlockWeaponSlotUI(bool Is)
+    {
+        UnlockWeaponUI.SetActive(Is);
+        CheckActiveUnlockCursorWindows();
+    }
+    public void SwitchPlayerWeapon()
+    {
+        Player.instance.SwitchWeapon(Player.instance.CurrentWeaponIndex);
+    }
     public void ShowWinParkourUI(bool Is)
     {
         OnWinParkourMapUI.SetActive(Is);
@@ -133,12 +155,16 @@ public class CanvasManager : MonoBehaviour
         {
             return;
         }
+        if (Player.instance.AdWarningActive)
+        {
+            return;
+        }
         if ( Player.instance.currentState == Player.PlayerState.Building)
         {
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                ShowInAppShop(!InAppShopActive);
-            }
+            //if (Input.GetKeyDown(KeyCode.I))
+            //{
+            //    ShowInAppShop(!InAppShopActive);
+            //}
             if (Input.GetKeyDown(KeyCode.K))
             {
                 ShowSaveMapUI(!SaveMapUIActive);
@@ -146,7 +172,7 @@ public class CanvasManager : MonoBehaviour
         }
         if(Player.instance.InterfaceActive == false)
         {
-            if (Input.GetKeyDown(KeyCode.J)&& Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.U))
             {
                 Cursor.lockState = CursorLockMode.None; 
                 SceneManager.LoadScene(0);
@@ -162,7 +188,7 @@ public class CanvasManager : MonoBehaviour
         {
             CanvasMobileInterface.SetActive(true);
             CanvasPCInterface.SetActive(false);
-            InteracteButton.gameObject.SetActive(false);
+            InteracteButton.gameObject.SetActive(true);
             ShowMobileIdleButtons(true);
         }
         else
@@ -305,7 +331,13 @@ public class CanvasManager : MonoBehaviour
     }
     public void CheckActiveUnlockCursorWindows()
     {
-        StartCoroutine(DelayDeactivateInterface(false));
+        if(cursorLocker != null)
+        {
+            StopCoroutine(cursorLocker);
+        }
+        cursorLocker = DelayDeactivateInterface(false);
+        StartCoroutine(cursorLocker);
+
         if (Geekplay.Instance.mobile == true)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -319,7 +351,12 @@ public class CanvasManager : MonoBehaviour
             if (UnlockCursorWindows[i].activeInHierarchy == true)
             {
                 Cursor.lockState = CursorLockMode.None;
-                StartCoroutine(DelayDeactivateInterface(true));
+                if (cursorLocker != null)
+                {
+                    StopCoroutine(cursorLocker);
+                }
+                cursorLocker = DelayDeactivateInterface(true);
+                StartCoroutine(cursorLocker);
             }
         }
     }
@@ -424,53 +461,5 @@ public class CanvasManager : MonoBehaviour
     {
         _idleInstruction.SetActive(Is);
         ShowWeaponSlotsUI(Is);
-    }
-    public void ShowChosenObjectRotatingModeInstruction(bool Is, Vector3 Scale, Vector3 Rotation)
-    {
-        _rotatingChosenObjectModeInstruction.SetActive(Is);
-        if (Is)
-        {
-            ShowTransportEnterInstruction(false);
-            ShowCitizenEnterInstruction(false);
-            ShowObjectInteructInstruction(false);
-        }
-        if (Geekplay.Instance.mobile)
-        {
-            ShowMobileIdleButtons(!Is);
-            UpLeftButtons.SetActive(!Is);
-        }
-
-        if (Is)
-        {
-            float[] ScaleParametres = new float[] { Scale.x, Scale.y, Scale.z };
-            float[] RotationParametres = new float[] { Rotation.x, Rotation.y, Rotation.z };
-            for (int i = 0; i < ScaleParametres.Length; i++)
-            {
-                if (ScaleParametres[i] > RotatingModeSlidersScale[i].maxValue)
-                {
-                    ScaleParametres[i] = RotatingModeSlidersScale[i].maxValue;
-                }
-            }
-            for (int i = 0; i < RotationParametres.Length; i++)
-            {
-                if (RotationParametres[i] < RotatingModeSlidersRotation[i].minValue)
-                {
-                    RotationParametres[i] += 360f;
-                }
-                if (RotationParametres[i] > RotatingModeSlidersRotation[i].maxValue)
-                {
-                    RotationParametres[i] -= 360f;
-                }
-            }
-            for (int i = 0; i < RotatingModeSlidersScale.Length; i++)
-            {
-                RotatingModeSlidersScale[i].value = ScaleParametres[i];
-            }
-            for (int i = 0; i < RotatingModeSlidersRotation.Length; i++)
-            {
-                RotatingModeSlidersRotation[i].value = RotationParametres[i];
-            }
-        }
-
     }
 }

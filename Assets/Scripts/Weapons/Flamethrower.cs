@@ -7,8 +7,15 @@ public class Flamethrower : MonoBehaviour
     [SerializeField] GameObject FireThrowAnimation;
     [SerializeField] BoxCollider HitCollider;
     private IEnumerator WaitForActiveFire;
+    public static Flamethrower instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     public void StartFire()
     {
+        Debug.Log("Fire Flame");
+
         if (WaitForActiveFire != null)
         {
             StopCoroutine(WaitForActiveFire);

@@ -577,7 +577,10 @@ public class VehicleControl : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        if (Player.instance.InterfaceActive)
+        {
+            return;
+        }
 
         // speed of car
         speed = myRigidbody.velocity.magnitude * 2.7f;

@@ -14,10 +14,39 @@ public class BuildCellManager : MonoBehaviour
 
     private Player player;
     public static BuildCellManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         player = Player.instance;
-        instance = this;
+    }
+    public void SetButtonsToBuildMode()
+    {
+        CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
+        CanvasManager.instance.DoButton.onClick.AddListener(delegate { PlaceBlock(); });
+        CanvasManager.instance.InteracteButton.onClick.RemoveAllListeners();
+        CanvasManager.instance.InteracteButton.onClick.AddListener(delegate { DeleteBlock(); });
+    }
+    private void PlaceBlock()
+    {
+        if(currentCell != null)
+        {
+            Vector3 pos = currentCell.GetPositionToPlace();
+            Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
+            newBlock.AddBlockToSaveList();
+        }    
+    }
+    private void DeleteBlock()
+    {
+        if(currentCell != null)
+        {
+            if (currentCell.parentBlock.CompareTag("Undestructable") == false)
+            {
+                currentCell.parentBlock.DeleteBlock();
+            }
+        }
     }
     public void BuildUpdate()
     {
@@ -43,20 +72,23 @@ public class BuildCellManager : MonoBehaviour
             {
                 if (player.CurrentBlock != null)
                 {
-                    if (Input.GetMouseButtonDown(0))
+                    if(Geekplay.Instance.mobile == false)
                     {
-                        Vector3 pos = currentCell.GetPositionToPlace();
-                        Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
-                        newBlock.AddBlockToSaveList();
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            PlaceBlock();
+                        }
                     }
+                 
                 }
-                if (Input.GetMouseButtonDown(1))
+                if (Geekplay.Instance.mobile == false)
                 {
-                    if (currentCell.parentBlock.CompareTag("Undestructable") == false)
+                    if (Input.GetMouseButtonDown(1))
                     {
-                        currentCell.parentBlock.DeleteBlock();
+                        DeleteBlock();
                     }
                 }
+               
 #if UNITY_EDITOR
                 if (Input.GetKeyDown(KeyCode.G))
                 {

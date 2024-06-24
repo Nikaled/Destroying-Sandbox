@@ -38,6 +38,7 @@ public class PlayerData
     public List<ParkourMapPlayerData> parkourMapPlayerDataList;
     public int DestroyCount;
 
+    public bool[] WeaponOpenedArray;
     public List<int> Codes;
     /////InApps//////
     public string lastBuy;

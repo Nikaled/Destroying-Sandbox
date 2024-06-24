@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     [SerializeField] public GameObject CharacterModel;
     [SerializeField] public GameObject CreeperModel;
     [SerializeField] public AudioSource SwapCitizenAudioSource;
-    
+
     public KeyCode DeletingModeButton = KeyCode.N;
     public KeyCode BuildingModeButton = KeyCode.B;
     public KeyCode RotatingModeButton = KeyCode.M;
@@ -64,7 +64,6 @@ public class Player : MonoBehaviour
         InBuildingMenu,
         Parkour
     }
-    float startTime;
     public enum WeaponType
     {
         Pistol,
@@ -85,17 +84,22 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        SwitchPlayerState(PlayerState.Building);
         if (Geekplay.Instance.mobile)
         {
             examplePlayer.Mobile = true;
             examplePlayer.PC = false;
             CanvasManager.instance.DoButton.onClick.AddListener(delegate { MobileFireInput(); });
             examplePlayer.LockCursor(false);
+            if (SerializeBlockManager.instance.OnlyDestroyingMap)
+            {
+                CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
+            }
         }
         else
         {
             examplePlayer.Mobile = false;
-            examplePlayer.PC = true;     
+            examplePlayer.PC = true;
         }
         if (SerializeBlockManager.instance.OnlyParkourMap)
         {
@@ -126,18 +130,29 @@ public class Player : MonoBehaviour
         switch (newPlayerState)
         {
             case PlayerState.Idle:
+                
                 animator.SetBool("PistolAiming", false);
                 break;
             case PlayerState.Building:
                 HideAllWeapons();
+                if (Geekplay.Instance.mobile)
+                {
+                    BuildCellManager.instance.SetButtonsToBuildMode();
+                }
                 break;
             case PlayerState.Parkour:
                 CanvasManager.instance.ShowBlockSlotsAndHideWeapons(false);
                 CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(false);
+                if (Geekplay.Instance.mobile)
+                {
+                    CanvasManager.instance.DoButton.gameObject.SetActive(false);
+                    CanvasManager.instance.InteracteButton.gameObject.SetActive(false);
+                    CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
+                }
                 break;
 
         }
-        if(currentState == PlayerState.Building && newPlayerState == PlayerState.Idle)
+        if (currentState == PlayerState.Building && newPlayerState == PlayerState.Idle)
         {
             CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(true);
         }
@@ -147,7 +162,7 @@ public class Player : MonoBehaviour
         }
         if (Delay > 0)
         {
-        StartCoroutine(DelaySwitchState(newPlayerState, Delay));
+            StartCoroutine(DelaySwitchState(newPlayerState, Delay));
         }
         else
         {
@@ -172,18 +187,24 @@ public class Player : MonoBehaviour
     }
     public void SwitchActiveWeaponSlot(int PressedNumber)
     {
-        CurrentBlockIndex = PressedNumber - 1;
-        CurrentBlock = BlocksInSlots[CurrentBlockIndex];
-        SwitchedBlock?.Invoke(PressedNumber);
+        SwitchedWeapon?.Invoke(PressedNumber);
+        SwitchWeapon(PressedNumber);
     }
     public void OnDestroyingPhaseActivated()
     {
-        SwitchPlayerState(PlayerState.Idle);
+        SwitchPlayerState(PlayerState.Idle, 0);
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
+            CanvasManager.instance.DoButton.onClick.AddListener(delegate { MobileFireInput(); });
+            CanvasManager.instance.InteracteButton.onClick.RemoveAllListeners();
+            CanvasManager.instance.InteracteButton.gameObject.SetActive(false);
+        }
         SwitchWeapon(CurrentWeaponIndex);
     }
     public void OnBuildingPhaseActivated()
     {
-        SwitchPlayerState(PlayerState.Building,0);
+        SwitchPlayerState(PlayerState.Building, 0);
     }
     private void FixedUpdate()
     {
@@ -191,18 +212,18 @@ public class Player : MonoBehaviour
         {
             RotatePlayerOnShoot(playerShooting.AimDirection);
         }
-        if(currentState == PlayerState.AimingGrenade)
+        if (currentState == PlayerState.AimingGrenade)
         {
             RotatePlayerOnShoot(playerShooting.AimDirection);
         }
     }
     private void Update()
     {
-        if ( AdWarningActive)
+        if (AdWarningActive)
         {
             return;
         }
-        if(currentState == PlayerState.Parkour)
+        if (currentState == PlayerState.Parkour)
         {
             return;
         }
@@ -218,35 +239,37 @@ public class Player : MonoBehaviour
             case PlayerState.Building:
                 if (InterfaceActive)
                 {
+                    ChangeActiveBlockInput();
                     return;
                 }
                 BuildCellManager.instance.BuildUpdate();
                 break;
-        }   
+        }
         if (InterfaceActive)
         {
+            ChangeWeaponInput();
             return;
         }
         if (currentState == PlayerState.Idle)
         {
             if (Geekplay.Instance.mobile == false)
             {
-                FireInput();            
+                FireInput();
                 ChangeWeaponInput();
             }
         }
-        if(currentState == PlayerState.Building || currentState == PlayerState.InBuildingMenu)
+        if (currentState == PlayerState.Building || currentState == PlayerState.InBuildingMenu)
         {
             ChangeActiveBlockInput();
         }
-        if(currentState == PlayerState.Building)
+        if (currentState == PlayerState.Building)
         {
             if (Input.GetKeyDown(BuildingModeButton))
             {
                 ActivateBuildingMenu(true);
             }
         }
-      
+
     }
     public void ChangeWeaponInput()
     {
@@ -301,7 +324,24 @@ public class Player : MonoBehaviour
     }
     public void SwitchWeapon(int PressedNumber)
     {
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
+            CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = false;
+        }
+        CanvasManager.instance.ShowUnlockWeaponSlotUI(false);
+
+        if (WeaponSelector.instance.IsWeaponAvailable(PressedNumber) == false)
+        {
+            SwitchedWeapon?.Invoke(PressedNumber);
+            return;
+        }
+        else
+        {
+            examplePlayer.LockCursor(true);
+        }
         HideAllWeapons();
+
         WeaponSelector.instance.HideAllWeapons();
 
         if (CurrentWeapon == WeaponType.Grenade)
@@ -309,7 +349,7 @@ public class Player : MonoBehaviour
             animator.SetBool("AimingGrenade", false);
             grenadeLauncher.ClearTrajectory();
         }
-        if(CurrentWeapon == WeaponType.Plane && InterfaceActive == false)
+        if (CurrentWeapon == WeaponType.Plane)
         {
             examplePlayer.LockCursor(true);
         }
@@ -319,22 +359,31 @@ public class Player : MonoBehaviour
             case 1:
                 CurrentWeapon = WeaponType.Pistol;
                 PistolModel.SetActive(true);
+                if (Geekplay.Instance.mobile)
+                {
+                    CanvasManager.instance.DoButton.onClick.AddListener(delegate { MobileFireInput(); });
+                }
                 break;
             case 2:
                 CurrentWeapon = WeaponType.Grenade;
                 GrenadeModel.SetActive(true);
-                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;             
+                if (Geekplay.Instance.mobile)
+                {
+                    CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+                }
                 break;
             case 3:
                 CurrentWeapon = WeaponType.FlameThrower;
                 FlameThrowerModel.SetActive(true);
-                CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
-                CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+                if (Geekplay.Instance.mobile)
+                {
+                    CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+                }
                 break;
             case 4:
                 CurrentWeapon = WeaponType.Plane;
                 WeaponSelector.instance.SelectWeapon(5);
-                break;   
+                break;
             case 5:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(0);
@@ -366,12 +415,12 @@ public class Player : MonoBehaviour
 
         CurrentWeaponIndex = PressedNumber;
         SwitchedWeapon?.Invoke(PressedNumber);
-        if(currentState != PlayerState.Idle)
+        if (currentState != PlayerState.Idle)
         {
-        SwitchPlayerState(PlayerState.Idle);
+            SwitchPlayerState(PlayerState.Idle);
         }
     }
-        public void ActivateBuildingMenu(bool Is)
+    public void ActivateBuildingMenu(bool Is)
     {
         if (Is)
         {
@@ -461,18 +510,21 @@ public class Player : MonoBehaviour
             motor.SetPosition(transform.position);
             playerShooting.Fire(CurrentWeapon);
         }
-        if (CurrentWeapon == WeaponType.Hand)
-        {
-            animator.SetBool("IsRun", false);
-            animator.SetTrigger("Punch");
-            playerShooting.HandAttack(WeaponType.Hand);
-        }
         if (CurrentWeapon == WeaponType.Gun)
         {
             animator.SetTrigger("GunFire");
             playerShooting.Fire(CurrentWeapon);
             examplePlayer.MyLockOnShoot = true;
             motor.SetPosition(transform.position);
+        }
+        if (CurrentWeapon == WeaponType.FlameThrower)
+        {
+            examplePlayer.MyLockOnShoot = true;
+            animator.SetTrigger("GunFire");
+            if (motor.GroundingStatus.IsStableOnGround)
+            {
+                motor.SetPosition(transform.position);
+            }
         }
         //if (CurrentWeapon == WeaponType.Grenade)
         //{
@@ -482,7 +534,7 @@ public class Player : MonoBehaviour
     #endregion
     private void FireInput()
     {
-        if(CurrentWeapon == WeaponType.FlameThrower)
+        if (CurrentWeapon == WeaponType.FlameThrower)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -527,7 +579,7 @@ public class Player : MonoBehaviour
                 playerShooting.Fire(CurrentWeapon);
                 if (motor.GroundingStatus.IsStableOnGround)
                 {
-                motor.SetPosition(transform.position);
+                    motor.SetPosition(transform.position);
                 }
             }
         }

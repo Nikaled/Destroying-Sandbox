@@ -13,6 +13,7 @@ public class LightningManager : MonoBehaviour
     Vector3 CrosshairWorldPosition;
     public static Action StateSwitched;
     [SerializeField] private LayerMask aimColliderLayerMask;
+   
     public void TryFire()
     {
         CurrentReloadTime = 0; // стереть
@@ -31,6 +32,13 @@ public class LightningManager : MonoBehaviour
             }
         }
     }
+    private void OnEnable()
+    {
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.onClick.AddListener(delegate { TryFire(); });
+        }
+    }
     private void OnDisable()
     {
         StateSwitched?.Invoke();
@@ -47,9 +55,12 @@ public class LightningManager : MonoBehaviour
         {
             return;
         }
-        if (Input.GetMouseButtonDown(0))
+        if(Geekplay.Instance.mobile == false)
         {
-            TryFire();
+            if (Input.GetMouseButtonDown(0))
+            {
+                TryFire();
+            }
         }
     }
 }

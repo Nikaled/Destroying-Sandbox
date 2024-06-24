@@ -19,6 +19,13 @@ public class MeteorManager : MonoBehaviour
     {
         instance = this;
     }
+    private void OnEnable()
+    {
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.onClick.AddListener(delegate { TryFire(); });
+        }
+    }
     private void OnDisable()
     {
         StateSwitched?.Invoke();
@@ -54,9 +61,12 @@ public class MeteorManager : MonoBehaviour
         {
             return;
         }
-        if (Input.GetMouseButtonDown(0))
+        if(Geekplay.Instance.mobile == false)
         {
-            TryFire();
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                TryFire();
+            }
+        }     
     }
 }

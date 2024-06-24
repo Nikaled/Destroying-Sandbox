@@ -16,6 +16,13 @@ public class PressManager : MonoBehaviour
     {
         instance = this;
     }
+    private void OnEnable()
+    {
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.onClick.AddListener(delegate { TryFire(); });
+        }
+    }
     private void OnDisable()
     {
         if(currentPress != null)
@@ -33,7 +40,7 @@ public class PressManager : MonoBehaviour
 
         CrosshairWorldPosition = Vector3.zero;
         Ray ray = Camera.main.ScreenPointToRay(Cross.transform.position);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 5000, aimColliderLayerMask))
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 1000, aimColliderLayerMask))
         {
             CrosshairWorldPosition = raycastHit.point;
             Vector3 PressUpPosition = new Vector3(0, 100, 0);
@@ -46,16 +53,19 @@ public class PressManager : MonoBehaviour
         Cross = CanvasManager.instance.Crosshair;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Player.instance.InterfaceActive)
         {
             return;
         }
-        if (Input.GetMouseButtonDown(0))
+        if(Geekplay.Instance.mobile == false)
         {
-            TryFire();
+            if (Input.GetMouseButtonDown(0))
+            {
+                TryFire();
+            }
         }
+       
     }
 }

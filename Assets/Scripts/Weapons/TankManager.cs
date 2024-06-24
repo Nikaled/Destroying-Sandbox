@@ -19,6 +19,10 @@ public class TankManager : MonoBehaviour
     }
     void Update()
     {
+        if (Player.instance.AdWarningActive)
+        {
+            return;
+        }
         Player.instance.ChangeWeaponInput();
     }
 }

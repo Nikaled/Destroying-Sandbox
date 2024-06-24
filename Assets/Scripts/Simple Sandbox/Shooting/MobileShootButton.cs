@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
 
 public class MobileShootButton : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHandler, IPointerUpHandler
 {
@@ -9,6 +10,7 @@ public class MobileShootButton : MonoBehaviour, IUpdateSelectedHandler, IPointer
     public bool isPressed;
 
     public static MobileShootButton instance;
+    public Action OnHolding;
 
     private void Start()
     {
@@ -18,15 +20,19 @@ public class MobileShootButton : MonoBehaviour, IUpdateSelectedHandler, IPointer
     // Start is called before the first frame update
     public void OnUpdateSelected(BaseEventData data)
     {
-        if (isPressed && Player.instance.CurrentWeapon == Player.WeaponType.Gun)
+        if (isPressed)
         {
-            Player.instance.MobileFireInput();
+            OnHolding?.Invoke();
+            if (Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
+            {
+                Player.instance.MobileFireInput();
+            }
+            if (Player.instance.CurrentWeapon == Player.WeaponType.Grenade)
+            {
+                Player.instance.AimingGrenadeOnMobile();
+            }
         }
-        if (isPressed && Player.instance.CurrentWeapon == Player.WeaponType.Grenade)
-        {
-            //Player.instance.MobileFireInput();
-            Player.instance.AimingGrenadeOnMobile();
-        }
+        
     }
     public void OnPointerDown(PointerEventData data)
     {
@@ -34,6 +40,10 @@ public class MobileShootButton : MonoBehaviour, IUpdateSelectedHandler, IPointer
         if (Player.instance.CurrentWeapon == Player.WeaponType.Grenade)
         {
             Player.instance.AimingGrenadeOnMobile();
+        }
+        if (Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
+        {
+            PlayerShooting.instance.Fire(Player.WeaponType.FlameThrower);
         }
     }
     public void OnPointerUp(PointerEventData data)
@@ -43,6 +53,10 @@ public class MobileShootButton : MonoBehaviour, IUpdateSelectedHandler, IPointer
         {
             Player.instance.LaunchGrenadeOnMobile();
         }
-        
+        if (Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
+        {
+            PlayerShooting.instance.EndFire(Player.WeaponType.FlameThrower);
+        }
+
     }
 }

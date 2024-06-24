@@ -155,6 +155,8 @@ public class DestroySystem : MonoBehaviour
     private void ObjectDies()
     {
         OnDied?.Invoke();
+        Geekplay.Instance.PlayerData.Coins += 1;
+        Geekplay.Instance.Save();
         DestroyCounter.instance.ObjectDestroyed();
         if (MeshObject != null)
         {

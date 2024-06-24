@@ -14,13 +14,27 @@ public class DynamiteManager : MonoBehaviour
     [SerializeField] Dynamite DynamitePrefab;
     public static Action ExplodeDynamite;
     public static Action StateSwitched;
-     KeyCode ExplodeButton = KeyCode.Y;
+    KeyCode ExplodeButton = KeyCode.R;
     private void Start()
     {
         player = Player.instance;
         instance = this;
         Crosshair = CanvasManager.instance.Crosshair;
         DestroyCounter.instance.AllBlockDestroyed += OnWeaponSwitched;
+    }
+    private void OnEnable()
+    {
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.onClick.AddListener(delegate { PlaceDynamite(); });
+            CanvasManager.instance.ChangeDoButtonImageToMode(true);
+            CanvasManager.instance.InteracteButton.onClick.RemoveAllListeners();
+            CanvasManager.instance.InteracteButton.gameObject.SetActive(true);
+            CanvasManager.instance.InteracteButton.onClick.AddListener(delegate { DeleteDynamite(); });
+            CanvasManager.instance.WeaponSpecialInteracteButton.gameObject.SetActive(true);
+            CanvasManager.instance.WeaponSpecialInteracteButton.onClick.RemoveAllListeners();
+            CanvasManager.instance.WeaponSpecialInteracteButton.onClick.AddListener(delegate { DoExplostion(); });
+        }
     }
     private void OnWeaponSwitched()
     {
@@ -29,6 +43,15 @@ public class DynamiteManager : MonoBehaviour
     private void OnDisable()
     {
         OnWeaponSwitched();
+
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.ChangeDoButtonImageToMode(false);
+            CanvasManager.instance.InteracteButton.onClick.RemoveAllListeners();
+            CanvasManager.instance.InteracteButton.gameObject.SetActive(false);
+            CanvasManager.instance.WeaponSpecialInteracteButton.onClick.RemoveAllListeners();
+            CanvasManager.instance.WeaponSpecialInteracteButton.gameObject.SetActive(false);
+        }
     }
     private void Update()
     {
@@ -56,29 +79,45 @@ public class DynamiteManager : MonoBehaviour
         {
             if (currentCell.GetComponent<BuildCellSide>() != null)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Geekplay.Instance.mobile == false)
                 {
-                    Vector3 pos = currentCell.GetPositionToPlace();
-                    Dynamite newDynamite = Instantiate(DynamitePrefab, pos, Quaternion.identity);
-                    newDynamite.SubscribeOnExplosion();
-                    newDynamite.SubscribeOnSwitchState();
-                }
-                if (Input.GetMouseButtonDown(1))
-                {
-                    if (currentCell.parentBlock.CompareTag("Undestructable") == false)
+                    if (Input.GetMouseButtonDown(0))
                     {
-                        if (currentCell.transform.parent.GetComponent<Dynamite>() != null)
+                        PlaceDynamite();
+                    }
+                    if (Input.GetMouseButtonDown(1))
+                    {
+                        if (currentCell.parentBlock.CompareTag("Undestructable") == false)
                         {
-                            Destroy(currentCell.transform.parent.gameObject);
+                            if (currentCell.transform.parent.GetComponent<Dynamite>() != null)
+                            {
+                                DeleteDynamite();
+                            }
                         }
                     }
                 }
             }
+
         }
 
         if (Input.GetKeyDown(ExplodeButton))
         {
-            ExplodeDynamite?.Invoke();
+            DoExplostion();
         }
+    }
+    private void PlaceDynamite()
+    {
+        Vector3 pos = currentCell.GetPositionToPlace();
+        Dynamite newDynamite = Instantiate(DynamitePrefab, pos, Quaternion.identity);
+        newDynamite.SubscribeOnExplosion();
+        newDynamite.SubscribeOnSwitchState();
+    }
+    private void DeleteDynamite()
+    {
+        Destroy(currentCell.transform.parent.gameObject);
+    }
+    private void DoExplostion()
+    {
+        ExplodeDynamite?.Invoke();
     }
 }

@@ -11,6 +11,10 @@ public class CreeperManager : MonoBehaviour
         Player.instance.CharacterModel.SetActive(false);
         Player.instance.CreeperModel.SetActive(true);
         CashedPlayerPos = Player.instance.transform.position;
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.onClick.AddListener(delegate { ExplodeCreeper(); });
+        }
     }
     private void OnDisable()
     {
@@ -28,7 +32,11 @@ public class CreeperManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Creeper.instance.StartExplosion();
+            ExplodeCreeper();
         }
+    }
+    private void ExplodeCreeper()
+    {
+        Creeper.instance.StartExplosion();
     }
 }

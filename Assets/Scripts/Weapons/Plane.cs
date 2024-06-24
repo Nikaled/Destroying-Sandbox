@@ -24,33 +24,68 @@ public class Plane : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] MeshRenderer[] Meshes;
     public PlaneManager planeManager;
+    public Joystick joystick;
     private void OnEnable()
     {
         LockCursor(true);
+        if (Geekplay.Instance.mobile)
+        {
+        joystick = Player.instance.examplePlayer.FixedJoystick;
+            CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+            CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().OnHolding += Fire;
+        }
     }
     private void OnDisable()
     {
         LockCursor(false);
+        if (Geekplay.Instance.mobile)
+        {
+            CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().OnHolding -= Fire;
+        }
     }
     private void FixedUpdate()
     {
+        if (Player.instance.InterfaceActive || Player.instance.AdWarningActive)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
         rb.velocity = transform.forward * Speed;
     }
     private void Update()
     {
+        if(Player.instance.InterfaceActive || Player.instance.AdWarningActive)
+        {
+            return;
+        }
         if (IsExploding)
         {
             return;
         }
+        float YInput = 0;
+        float XInput = 0;
+        if (Geekplay.Instance.mobile == false)
+        {
+             YInput = -Input.GetAxis("Mouse Y");
+             XInput = Input.GetAxis("Mouse X");
+        }
+        else
+        {
+            YInput = -joystick.Vertical;
+            XInput = joystick.Horizontal;
+        }
         //transform.Translate(Vector3.forward*Time.deltaTime* Speed);
-        float YInput = -Input.GetAxis("Mouse Y");
-        float XInput = Input.GetAxis("Mouse X");
+       
         transform.Rotate(new Vector3(YInput, XInput, 0) * Time.deltaTime * RotatingSpeed);
         //rb.rotation = transform.rotation;
-        if (Input.GetMouseButton(0))
+        if(Geekplay.Instance.mobile == false)
         {
-            Fire();
+            if (Input.GetMouseButton(0))
+            {
+                Fire();
+            }
         }
+       
         RotateRotors();
     }
     public void Fire()
