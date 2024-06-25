@@ -14,7 +14,7 @@ public class DynamiteManager : MonoBehaviour
     [SerializeField] Dynamite DynamitePrefab;
     public static Action ExplodeDynamite;
     public static Action StateSwitched;
-    KeyCode ExplodeButton = KeyCode.R;
+    KeyCode ExplodeButton = KeyCode.T;
     private void Start()
     {
         player = Player.instance;
