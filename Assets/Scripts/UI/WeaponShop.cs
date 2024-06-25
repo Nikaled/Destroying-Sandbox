@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class WeaponShop : MonoBehaviour
 {
-    public bool[] OpenedWeapons; // 5-9 is buyable;
+  [HideInInspector]  public bool[] OpenedWeapons; // 5-9 is buyable;
     public static WeaponShop instance;
     public WeaponShopCell[] shopCells;
     public TextMeshProUGUI CoinsText;
@@ -15,7 +15,7 @@ public class WeaponShop : MonoBehaviour
     void Start()
     {
         Geekplay.Instance.PlayerData.CoinsChanged += ChangeCoinsText;
-        Geekplay.Instance.PlayerData.Coins = 500;
+        Geekplay.Instance.PlayerData.Coins = 1000;
         LoadWeaponInfo();
         for (int i = 0; i < shopCells.Length; i++)
         {

@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class LocalizationMenu : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI Button1;
-    [SerializeField] TextMeshProUGUI Button2;
+    [Header("FromSimpleSandbox")]
     [SerializeField] TextMeshProUGUI Button3;
     [SerializeField] TextMeshProUGUI Button4;
     [SerializeField] TextMeshProUGUI Button5;
@@ -18,12 +17,6 @@ public class LocalizationMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI LeadersDesc1;
     [SerializeField] TextMeshProUGUI LeadersDesc2;
     [SerializeField] TextMeshProUGUI LeadersDesc3;
-    [SerializeField] TextMeshProUGUI ChooseMapH;
-    [SerializeField] TextMeshProUGUI ChooseMap1;
-    [SerializeField] TextMeshProUGUI ChooseMap2;
-    [SerializeField] TextMeshProUGUI ChooseMap3;
-    [SerializeField] TextMeshProUGUI ChooseMap4;
-    [SerializeField] TextMeshProUGUI ChooseLoadMapH;
     [SerializeField] TextMeshProUGUI MenuButton1;
     [SerializeField] TextMeshProUGUI MenuButton2;
     [SerializeField] TextMeshProUGUI PromoAsk;
@@ -33,13 +26,26 @@ public class LocalizationMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI PromoMessage2;
     [SerializeField] TextMeshProUGUI PromoMessage3;
     [SerializeField] Text PlaceHolder;
+    [Header("FromDestroyingSandbox")]
+    [SerializeField] TextMeshProUGUI ChooseModeHeader1;
+    [SerializeField] TextMeshProUGUI ChooseModeHeader2;
+    [SerializeField] TextMeshProUGUI ChooseModeHeader3;
+    [SerializeField] TextMeshProUGUI ChooseModeDesc1;
+    [SerializeField] TextMeshProUGUI ChooseModeDesc2;
+    [SerializeField] TextMeshProUGUI ChooseModeDesc3;
+    [SerializeField] TextMeshProUGUI ShopButtonL;
+    [SerializeField] TextMeshProUGUI ShopButtonR;
+    [Header("BuildingMenu")]
+    [SerializeField] TextMeshProUGUI BuildingMenuL;
+    [SerializeField] TextMeshProUGUI BuildingMenuR;
+
     private void Start()
     {
-      if(Geekplay.Instance.language == "ru")
+        if (Geekplay.Instance.language == "ru")
         {
             RuLocalization();
         }
-      else if(Geekplay.Instance.language == "en")
+        else if (Geekplay.Instance.language == "en")
         {
             EnLocalization();
         }
@@ -47,11 +53,19 @@ public class LocalizationMenu : MonoBehaviour
         {
             TrLocalization();
         }
-    } 
+    }
     private void RuLocalization()
     {
-        Button1.text = "СОЗДАТЬ МИР";
-        Button2.text = "ЗАГРУЗИТЬ МИР";
+        ChooseModeHeader1.text = "Строй и разрушай";
+        ChooseModeHeader2.text = "Разрушай чужое";
+        ChooseModeHeader3.text = "Паркур";
+        ChooseModeDesc1.text = "В этом режиме ты можешь построить все, что захочешь, а после этого разрушить свою постройку!";
+        ChooseModeDesc2.text = "В этом режиме ты сможешь разрушить то, что построили другие!";
+        ChooseModeDesc3.text = "В этом режиме ты на скорость должен преодолеть препятствия и достичь финиша!";
+        ShopButtonL.text = "Больше\nОружия!";
+        ShopButtonR.text = "Больше\nЗолота!";
+        BuildingMenuL.text = "Строй Новое";
+        BuildingMenuR.text = "Загрузить сохраненную карту";
         Button3.text = "ЛИДЕРЫ";
         Button4.text = "БОНУСЫ";
         Button5.text = "НАШИ ИГРЫ";
@@ -62,12 +76,6 @@ public class LocalizationMenu : MonoBehaviour
         LeadersDesc1.text = "Стройте как можно больше объектов!";
         LeadersDesc2.text = "Разрушайте все, что можете!";
         LeadersDesc3.text = "Поддержите разработчика донатом!";
-        ChooseMapH.text = "ВЫБЕРИТЕ КАРТУ";
-        ChooseMap1.text = "Поле";
-        ChooseMap2.text = "Военная база";
-        ChooseMap3.text = "Ферма";
-        ChooseMap4.text = "Аэропорт";
-        ChooseLoadMapH.text = "ВЫБЕРИТЕ КАРТУ";
         MenuButton1.text = "Меню";
         MenuButton2.text = "Меню";
         PromoAsk.text = "Подпишись на наш канал и введи промокод который найдешь там";
@@ -80,8 +88,16 @@ public class LocalizationMenu : MonoBehaviour
     }
     private void EnLocalization()
     {
-        Button1.text = "CREATE A WORLD";
-        Button2.text = "LOAD THE WORLD";
+        ChooseModeHeader1.text = "Build and destroy";
+        ChooseModeHeader2.text = "Destroy someone else's";
+        ChooseModeHeader3.text = "Parkour";
+        ChooseModeDesc1.text = "In this mode, you can build anything you want, and then destroy your building!";
+        ChooseModeDesc2.text = "In this mode, you can destroy what others have built!";
+        ChooseModeDesc3.text = "In this mode, you must overcome obstacles at speed and reach the finish line!";
+        ShopButtonL.text = "More\nWeapons!";
+        ShopButtonR.text = "More\ngold!";
+        BuildingMenuL.text = "Build a New One";
+        BuildingMenuR.text = "Load a saved map";
         Button3.text = "LEADERS";
         Button4.text = "BONUSES";
         Button5.text = "OUR GAMES";
@@ -92,12 +108,6 @@ public class LocalizationMenu : MonoBehaviour
         LeadersDesc1.text = "Build as many objects as possible!";
         LeadersDesc2.text = "Destroy everything you can!";
         LeadersDesc3.text = "Support the developer with a donation!";
-        ChooseMapH.text = "SELECT A MAP";
-        ChooseMap1.text = "Field";
-        ChooseMap2.text = "Military base";
-        ChooseMap3.text = "Farm";
-        ChooseMap4.text = "Airport";
-        ChooseLoadMapH.text = "SELECT A MAP";
         MenuButton1.text = "Menu";
         MenuButton2.text = "Menu";
         PromoAsk.text = "Subscribe to our channel and enter the promo code that you will find there";
@@ -110,8 +120,16 @@ public class LocalizationMenu : MonoBehaviour
     }
     private void TrLocalization()
     {
-        Button1.text = "DÜNYAYI YARATMAK";
-        Button2.text = "DÜNYAYI YÜKLE";
+        ChooseModeHeader1.text = "İnşa et ve yok et";
+        ChooseModeHeader2.text = "Başkasını yok et";
+        ChooseModeHeader3.text = "Parkur";
+        ChooseModeDesc1.text = "Bu modda istediğiniz her şeyi inşa edebilir ve bundan sonra yapınızı yok edebilirsiniz!";
+        ChooseModeDesc2.text = "Bu modda başkalarının inşa ettiklerini yok edebilirsiniz!";
+        ChooseModeDesc3.text = "Bu modda engelleri hızla aşmalı ve bitiş çizgisine ulaşmalısınız!";
+        ShopButtonL.text = "Daha fazla\ndaha fazla!";
+        ShopButtonR.text = "Daha fazla\naltın!";
+        BuildingMenuL.text = "Yeni İnşa et";
+        BuildingMenuR.text = "Kayıtlı kartı yükle";
         Button3.text = "LİDERLER";
         Button4.text = "BONUSLAR";
         Button5.text = "OYUNLARIMIZ";
@@ -122,12 +140,6 @@ public class LocalizationMenu : MonoBehaviour
         LeadersDesc1.text = "Mümkün olduğunca çok nesne oluşturun!";
         LeadersDesc2.text = "Yapabileceğiniz her şeyi yok edin!";
         LeadersDesc3.text = "Geliştiriciyi bağışla destekleyin!";
-        ChooseMapH.text = "KARTI SEÇİN";
-        ChooseMap1.text = "Alan";
-        ChooseMap2.text = "Askeri üs";
-        ChooseMap3.text = "Çiftlik";
-        ChooseMap4.text = "Havaalanı";
-        ChooseLoadMapH.text = "KARTI SEÇİN";
         MenuButton1.text = "Menü";
         MenuButton2.text = "Menü";
         PromoAsk.text = "Kanalımıza abone olun ve orada bulduğunuz promosyon kodunu girin";

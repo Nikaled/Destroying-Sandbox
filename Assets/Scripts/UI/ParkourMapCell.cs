@@ -1,30 +1,35 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class ParkourMapCell : MonoBehaviour
+public class ParkourMapCell : DestroyingMapCell
 {
-    public string MapName;
-    [SerializeField] TextMeshProUGUI MapTime;
+    private readonly string StartedParkourMap = "StartedParkourMapAtNumber_";
+    public override void Awake()
+    {
+        base.Awake();
+    }
     public void LoadParkourMap()
     {
         Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
-        Geekplay.Instance.PlayerData.CurrentParkourMapName = MapName;
+        Geekplay.Instance.PlayerData.CurrentParkourMapName = MapNameForScripts;
         Geekplay.Instance.ShowInterstitialAd();
+        string forEvent = StartedParkourMap + IndexOfMap;
+        Geekplay.Instance.PlayerData.CurrentParkourMapIndex = IndexOfMap;
+        Analytics.instance.SendEvent(forEvent);
         SceneManager.LoadScene(1);
     }
     public void SetTimeToSlot(float TimeInSeconds)
     {
-        if(TimeInSeconds == 0)
+        if (TimeInSeconds > 0)
         {
-            MapTime.text = "Нет рекорда";
-            return;
+            int minutes = (int)TimeInSeconds / 60;
+            int seconds = (int)TimeInSeconds - minutes * 60;
+            float milliseconds = (TimeInSeconds - (int)TimeInSeconds) * 1000;
+            MapReward.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
+            CoinsImage.enabled = false;
         }
-        int minutes =(int) TimeInSeconds / 60;
-        int seconds = (int) TimeInSeconds - minutes*60;
-        float milliseconds = (TimeInSeconds - (int)TimeInSeconds) *1000;
-        MapTime.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
     }
 }

@@ -26,6 +26,9 @@ public class PlayerData
     public int _coinsDontUse;
 
     public bool IsFirstPlay;
+    public bool IsFirstGameplay;
+    public bool IsFirstMovement;
+    public bool IsFirstBlockPlaced;
 
     public bool IsLoadingMapFromSlot;
     public int MapSlotToLoad;
@@ -33,9 +36,12 @@ public class PlayerData
     public bool IsLoadingParkourMap;
     public string CurrentDestructionMapName;
     public string CurrentParkourMapName;
+    public int CurrentParkourMapIndex;
+    public int CurrentDestructionMapIndex;
     public List<SaveBlockData> SavedBlocks;
     public MapData[] MapDataArray;
     public List<ParkourMapPlayerData> parkourMapPlayerDataList;
+    public List<DestroyingMapsPlayerData> DestroyingMapPlayerDataList;
     public int DestroyCount;
 
     public bool[] WeaponOpenedArray;

@@ -7,4 +7,5 @@ public class ParkourMapPlayerData
 {
     public string MapName;
     public float timeInSeconds;
+    public bool IsCompleted;
 }

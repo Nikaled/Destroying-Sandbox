@@ -77,10 +77,7 @@ public class CycleManager : MonoBehaviour
     }
     public void ActivateBuildingPhase()
     {
-        if (SerializeBlockManager.instance.OnlyDestroyingMap)
-        {
-            return;
-        }
+       
         SerializeBlockManager.instance.LoadBlocks();
         Player.instance.OnBuildingPhaseActivated();
         CanvasManager.instance.ShowWinMapUI(false);
@@ -92,7 +89,10 @@ public class CycleManager : MonoBehaviour
             CanvasManager.instance.ChangePhaseButtonIcon(1);
             CanvasManager.instance.ChangeDoButtonImageToMode(true);
         }
-
-
+        if (SerializeBlockManager.instance.OnlyDestroyingMap)
+        {
+            ActivateDestroyingPhase();
+            return;
+        }
     }
 }

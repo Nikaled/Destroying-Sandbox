@@ -19,48 +19,25 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public GameObject MultiplatformUI;
     [SerializeField] public GameObject WeaponSlotsUI;
     [Header("PC Interfaces")]
-    [SerializeField] GameObject _helicopterInstruction;
-    [SerializeField] GameObject _planeInstruction;
-    [SerializeField] GameObject _objectInteractionInstruction;
-    [SerializeField] GameObject _ControlCarInstruction;
-
-    [SerializeField] GameObject _EnterTransportInstruction;
-    [SerializeField] GameObject _EnterCitizenInstruction;
-
-    [SerializeField] GameObject _rotatingModeInstruction;
-    [SerializeField] GameObject _idleInstruction;
-    [SerializeField] GameObject _buildingModeInstruction;
-    [SerializeField] GameObject _deletingModeInstruction;
     [SerializeField] GameObject CanvasPCInterface;
-    [SerializeField] GameObject CarShootingText;
     [Header("Mobile Interfaces")]
     [SerializeField] GameObject CanvasMobileInterface;
     [SerializeField] GameObject LeftButtonsZone;
     [SerializeField] GameObject RightButtonsZone;
-    [SerializeField] GameObject HelicopterMobileInstruction;
-    [SerializeField] GameObject PlaneMobileInstruction;
     [SerializeField] GameObject CarMobileInstruction;
     [SerializeField] GameObject AppShopButton;
     [SerializeField] GameObject UpLeftButtons;
     [SerializeField] public Button DoButton;
     [SerializeField] public Button InteracteButton;
-    [SerializeField] Button BuildingButton;
-    [SerializeField] Image BuildingButtonImage;
-    [SerializeField] Button DeletingButton;
-    [SerializeField] Image DeletingButtonImage;
-    [SerializeField] Button RotatingButton;
-    [SerializeField] Image RotatingButtonImage;
     [SerializeField] Image[] InteracteSymbolInButton;
     [SerializeField] Image DoButtonImageInIdle;
     [SerializeField] Image DoButtonImageInMode;
-    [Header("Rotating Mode")]
-    [SerializeField] GameObject _rotatingChosenObjectModeInstruction;
-    [SerializeField] Slider[] RotatingModeSlidersScale;
-    [SerializeField] Slider[] RotatingModeSlidersRotation;
 
 
     [Header("DestroyingSandbox")]
+    [SerializeField] GameObject BuildingInstruction;
     [SerializeField] GameObject BlockSlots;
+    [SerializeField] GameObject BuildingMenuButton;
     [SerializeField] GameObject WeaponSlots;
     [SerializeField] GameObject CurrentDestroyBarUI;
     [SerializeField] GameObject CurrentDestroyBarFilledImage;
@@ -69,19 +46,37 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public Button WeaponSpecialInteracteButton;
     [SerializeField] public Button ChangePhaseButton;
     [SerializeField] public GameObject UnlockWeaponUI;
+    [SerializeField] GameObject[] WeaponInstructions;
     [Header("Parkour")]
     [SerializeField] GameObject ParkourUI;
     [SerializeField] GameObject OnWinParkourMapUI;
     [SerializeField] TextMeshProUGUI CurrentDestroyedText;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
+    private bool BuildingMenuActive;
     [Header("Unlock cursor Windows")]
     [SerializeField] private List<GameObject> UnlockCursorWindows;
 
     private IEnumerator cursorLocker;
-    private readonly string LoadedInGameplay = "LoadedInGameplay";
+    private readonly string FirstLoadedInGameplay = "FirstTimeLoadedInGameplay";
+    private readonly string InventoryOpened = "InventoryOpened";
 
     #region DestroyingSandbox
+    public void ShowBuildingInstruction(bool Is)
+    {
+        BuildingInstruction.SetActive(Is);
+    }
+    public void ShowCurrentWeaponInstruction(int WeaponIndex, bool HideAll = false)
+    {
+        for (int i = 0; i < WeaponInstructions.Length; i++)
+        {
+            WeaponInstructions[i].SetActive(false);
+        }
+        if(HideAll == false)
+        {
+            WeaponInstructions[WeaponIndex].SetActive(true);
+        }
+    }
     public void ChangePhaseButtonIcon(int index)
     {
         for (int i = 0; i < PhaseButtonImages.Length; i++)
@@ -129,6 +124,7 @@ public class CanvasManager : MonoBehaviour
         if (Is)
         {
             WeaponSlots.SetActive(false);
+            BuildingMenuButton.SetActive(true);
             //ShowWeaponSlotsAndHideBlocks(false);
         }
     }
@@ -138,6 +134,7 @@ public class CanvasManager : MonoBehaviour
         if (Is)
         {
             BlockSlots.SetActive(false);
+            BuildingMenuButton.SetActive(false);
         }
     }
     private void OnWinParkourMap()
@@ -181,6 +178,7 @@ public class CanvasManager : MonoBehaviour
     }
     private void Start()
     {
+        Geekplay.Instance.ShowInterstitialAd();
         ChangeCoinsText(Geekplay.Instance.PlayerData.Coins);
         DestroyCounter.instance.DestroyBlockCountChanged += DestroyCountChanged;
         DestroyCounter.instance.AllBlockDestroyed += OnWinMap;
@@ -209,6 +207,12 @@ public class CanvasManager : MonoBehaviour
         {
             ParkourUI.SetActive(false);
         }
+        if (Geekplay.Instance.PlayerData.IsFirstGameplay == false)
+        {
+            Geekplay.Instance.PlayerData.IsFirstGameplay = true;
+            Analytics.instance.SendEvent(FirstLoadedInGameplay);
+            Geekplay.Instance.Save();
+        }
 
     }
     #region Mobile
@@ -223,45 +227,6 @@ public class CanvasManager : MonoBehaviour
         {
             DoButtonImageInIdle.gameObject.SetActive(true);
             DoButtonImageInMode.gameObject.SetActive(false);
-        }
-    }
-    public void TurnYellowBuildingButton(bool Is)
-    {
-        if (Is)
-        {
-            BuildingButton.image.color = Color.yellow;
-            BuildingButtonImage.color = Color.yellow;
-        }
-        else
-        {
-            BuildingButton.image.color = Color.white;
-            BuildingButtonImage.color = Color.white;
-        }
-    }
-    public void TurnYellowDeletingButton(bool Is)
-    {
-        if (Is)
-        {
-            DeletingButton.image.color = Color.yellow;
-            DeletingButtonImage.color = Color.yellow;
-        }
-        else
-        {
-            DeletingButton.image.color = Color.white;
-            DeletingButtonImage.color = Color.white;
-        }
-    }
-    public void TurnYellowRotatingButton(bool Is)
-    {
-        if (Is)
-        {
-            RotatingButton.image.color = Color.yellow;
-            RotatingButtonImage.color = Color.yellow;
-        }
-        else
-        {
-            RotatingButton.image.color = Color.white;
-            RotatingButtonImage.color = Color.white;
         }
     }
     private void ShowMobileIdleButtons(bool Is)
@@ -308,19 +273,9 @@ public class CanvasManager : MonoBehaviour
             CheckActiveUnlockCursorWindows();
         }
     }
-    public void ShowHelicopterMobileInstruction(bool Is)
-    {
-        HelicopterMobileInstruction.SetActive(Is);
-        ShowMobileIdleButtons(!Is);
-    }
     public void ShowCarMobileInstruction(bool Is)
     {
         CarMobileInstruction.SetActive(Is);
-        ShowMobileIdleButtons(!Is);
-    }
-    public void ShowPlaneMobileInstruction(bool Is)
-    {
-        PlaneMobileInstruction.SetActive(Is);
         ShowMobileIdleButtons(!Is);
     }
     #endregion
@@ -374,25 +329,6 @@ public class CanvasManager : MonoBehaviour
     {
         CoinsText.text = NewValue.ToString();
     }
-    public void ShowHelicopterInstruction(bool Is)
-    {
-        _helicopterInstruction.SetActive(Is);
-    }
-    public void ShowTransportEnterInstruction(bool Is)
-    {
-        _EnterTransportInstruction.SetActive(Is);
-        if (Is)
-        {
-            ShowObjectInteructInstruction(false);
-            ShowCitizenEnterInstruction(false);
-        }
-    }
-    public void ShowControlCarInstruction(bool Is, bool IsTank)
-    {
-        _ControlCarInstruction.SetActive(Is);
-        CarShootingText.SetActive(IsTank);
-    }
-
     public void ShowInAppShop(bool Is)
     {
         InAppShopActive = Is;
@@ -406,60 +342,25 @@ public class CanvasManager : MonoBehaviour
             CheckActiveUnlockCursorWindows();
         }
     }
-    public void ShowCitizenEnterInstruction(bool Is)
+    public void BuildingMenuButtonFunc()
     {
-        _EnterCitizenInstruction.SetActive(Is);
-        if (Is)
-        {
-            ShowObjectInteructInstruction(false);
-            ShowTransportEnterInstruction(false);
-        }
-    }
-    public void ShowPlaneInstruction(bool Is)
-    {
-        _planeInstruction.SetActive(Is);
+        BuildingMenuActive = !BuildingMenuActive;
+        ShowBuildingMenu(BuildingMenuActive);
     }
     public void ShowBuildingMenu(bool Is)
     {
         BuildingMenu.SetActive(Is);
+        BuildingMenuActive = Is;
         CheckActiveUnlockCursorWindows();
         if (Is)
         {
             Player.instance.SwitchPlayerState(Player.PlayerState.InBuildingMenu);
+            Analytics.instance.SendEvent(InventoryOpened);
         }
         else
         {
             Player.instance.SwitchPlayerState(Player.PlayerState.Building);
         }
 
-    }
-    public void ShowObjectInteructInstruction(bool Is)
-    {
-        _objectInteractionInstruction.SetActive(Is);
-        if (Is)
-        {
-            ShowTransportEnterInstruction(false);
-            ShowCitizenEnterInstruction(false);
-        }
-
-    }
-    public void ShowRotatingModeInstruction(bool Is)
-    {
-        _rotatingModeInstruction.SetActive(Is);
-    }
-    public void ShowDeletingModeInstruction(bool Is)
-    {
-        _deletingModeInstruction.SetActive(Is);
-        ShowCitizenEnterInstruction(false);
-        ShowTransportEnterInstruction(false);
-    }
-    public void ShowBuildingModeInstruction(bool Is)
-    {
-        _buildingModeInstruction.SetActive(Is);
-    }
-    public void ShowIdleInstruction(bool Is)
-    {
-        _idleInstruction.SetActive(Is);
-        ShowWeaponSlotsUI(Is);
     }
 }

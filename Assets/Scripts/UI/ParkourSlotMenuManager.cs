@@ -6,7 +6,8 @@ public class ParkourSlotMenuManager : MonoBehaviour
 {
     [SerializeField] ParkourMapCell[] parkourCells;
     List<ParkourMapPlayerData> playerMapData;
-
+    private int GridIndex = 0;
+    private int MapsInPage = 15;
     private void Start()
     {
         playerMapData = Geekplay.Instance.PlayerData.parkourMapPlayerDataList;
@@ -17,11 +18,10 @@ public class ParkourSlotMenuManager : MonoBehaviour
                 for (int i = 0; i < parkourCells.Length; i++)
                 {
                     parkourCells[i].SetTimeToSlot(0);
+                    parkourCells[i].IndexOfMap = i+ (MapsInPage* GridIndex) + 1;
                     for (int j = 0; j < playerMapData.Count; j++)
                     {
-                        Debug.Log("parkourCells[i].name:"+ parkourCells[i].MapName);
-                        Debug.Log(" playerMapData[j].MapName:" + playerMapData[j].MapName);
-                        if(parkourCells[i].MapName == playerMapData[j].MapName)
+                        if(parkourCells[i].MapNameForScripts == playerMapData[j].MapName)
                         {
                             parkourCells[i].SetTimeToSlot(playerMapData[j].timeInSeconds);
                         }

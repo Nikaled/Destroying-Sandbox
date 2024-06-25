@@ -8,6 +8,8 @@ public class AnimationPlayer : MonoBehaviour
     [SerializeField] private Player player;
     public bool IsMoving;
     public bool RidingAnimal;
+
+    private readonly string FirstMovement = "FirstMovement";
     private void OnEnable()
     {
         player.PistolFire += DoPistolAnimation;
@@ -43,6 +45,15 @@ public class AnimationPlayer : MonoBehaviour
                 float v = player.examplePlayer.FixedJoystick.Vertical;
                 IsMoving = h != 0 || v != 0;
                 anim.SetBool("isRun", h != 0 || v != 0);
+            }
+            if (IsMoving)
+            {
+                if (Geekplay.Instance.PlayerData.IsFirstMovement == false)
+                {
+                    Geekplay.Instance.PlayerData.IsFirstMovement = true;
+                    Geekplay.Instance.Save();
+                    Analytics.instance.SendEvent(FirstMovement);
+                }
             }
 
         }

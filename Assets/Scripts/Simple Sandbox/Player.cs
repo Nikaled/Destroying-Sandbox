@@ -108,6 +108,10 @@ public class Player : MonoBehaviour
             parkourStartRotation = transform.rotation;
             CycleManager.instance.ParkourPhaseStarted += OnParkourPhaseStarted;
         }
+        if (SerializeBlockManager.instance.OnlyDestroyingMap)
+        {
+            SwitchPlayerState(PlayerState.Idle);
+        }
         SetFlyMode();
     }
     private void OnParkourPhaseStarted()
@@ -132,12 +136,18 @@ public class Player : MonoBehaviour
             case PlayerState.Idle:
                 
                 animator.SetBool("PistolAiming", false);
+                CanvasManager.instance.ShowBuildingInstruction(false);
                 break;
             case PlayerState.Building:
                 HideAllWeapons();
                 if (Geekplay.Instance.mobile)
                 {
                     BuildCellManager.instance.SetButtonsToBuildMode();
+                }
+                else
+                {
+                    CanvasManager.instance.ShowCurrentWeaponInstruction(0, HideAll: true);
+                    CanvasManager.instance.ShowBuildingInstruction(true);
                 }
                 break;
             case PlayerState.Parkour:
@@ -148,6 +158,11 @@ public class Player : MonoBehaviour
                     CanvasManager.instance.DoButton.gameObject.SetActive(false);
                     CanvasManager.instance.InteracteButton.gameObject.SetActive(false);
                     CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    CanvasManager.instance.ShowBuildingInstruction(false);
+                    CanvasManager.instance.ShowCurrentWeaponInstruction(0, HideAll: true);
                 }
                 break;
 
@@ -328,6 +343,10 @@ public class Player : MonoBehaviour
         {
             CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
             CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = false;
+        }
+        else
+        {
+            CanvasManager.instance.ShowCurrentWeaponInstruction(PressedNumber - 1);
         }
         CanvasManager.instance.ShowUnlockWeaponSlotUI(false);
 

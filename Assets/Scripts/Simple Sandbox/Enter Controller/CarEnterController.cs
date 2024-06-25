@@ -24,7 +24,7 @@ public class CarEnterController : EnterController
     }
     protected  void ActivateTransport()
     {
-        CanvasManager.instance.ShowControlCarInstruction(true, IsTank);
+        //CanvasManager.instance.ShowControlCarInstruction(true, IsTank);
         vehicleControl.gameObject.transform.position = new Vector3(vehicleControl.gameObject.transform.position.x, vehicleControl.gameObject.transform.position.y + 1f, vehicleControl.gameObject.transform.position.z);
         vehicleControl.enabled = true;
         vehicleControl.GetComponent<VehicleControl>().activeControl = true;
@@ -48,7 +48,7 @@ public class CarEnterController : EnterController
     }
     private void OnDisable()
     {
-        CanvasManager.instance.ShowControlCarInstruction(false, IsTank);
+        //CanvasManager.instance.ShowControlCarInstruction(false, IsTank);
         if (Geekplay.Instance.mobile)
         {
             vehicleControl.MyClearButtons();
@@ -59,7 +59,7 @@ public class CarEnterController : EnterController
     }
     protected  void DeactivateTransport()
     {
-        CanvasManager.instance.ShowControlCarInstruction(false, IsTank);
+        //CanvasManager.instance.ShowControlCarInstruction(false, IsTank);
         vehicleControl.carSetting.brakePower = float.MaxValue;
         vehicleControl.GetComponent<VehicleControl>().activeControl = false;
         vehicleControl.GetComponent<VehicleControl>().OnCarQuit();

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -15,9 +15,18 @@ public class WeaponShopCell : MonoBehaviour
     private string BoughtText;
     private void Awake()
     {
-            BoughtText = "Êóïëåíî";
+           
         if(Geekplay.Instance.language == "ru")
         {
+            BoughtText = "ÐšÑƒÐ¿Ð»ÐµÐ½Ð¾";
+        }
+        if(Geekplay.Instance.language == "en")
+        {
+            BoughtText = "Bought";
+        }
+        if (Geekplay.Instance.language == "tr")
+        {
+            BoughtText = "SatÄ±n AlÄ±ndÄ±";
         }
     }
     public void LoadBuyStatusPriceAndIndex(int price, bool IsBought, int WeaponIndex)

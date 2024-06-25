@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 5
+  m_CurrentQuality: 1
   m_QualitySettings:
   - serializedVersion: 3
     name: Very Low
@@ -67,8 +67,8 @@ QualitySettings:
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
     shadowmaskMode: 0
-    skinWeights: 2
-    globalTextureMipmapLimit: 0
+    skinWeights: 1
+    globalTextureMipmapLimit: 2
     textureMipmapLimitSettings: []
     anisotropicTextures: 0
     antiAliasing: 0
@@ -312,8 +312,8 @@ QualitySettings:
     PS5: 5
     Server: 0
     Stadia: 5
-    Standalone: 5
-    WebGL: 3
+    Standalone: 1
+    WebGL: 1
     Windows Store Apps: 5
     XboxOne: 5
     iPhone: 2

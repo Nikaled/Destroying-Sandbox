@@ -387,7 +387,7 @@ MonoBehaviour:
   - {fileID: 6792518854583279378}
   bullet: {fileID: 868298531, guid: cfa9b245a40c7d34d88826a3dfa04b93, type: 3}
   Speed: 18
-  RotatingSpeed: 200
+  RotatingSpeed: 300
   rotor: {fileID: 5255901320478170071}
   IsExploding: 0
   ExplosionAnimation: {fileID: 1193787603551711114}

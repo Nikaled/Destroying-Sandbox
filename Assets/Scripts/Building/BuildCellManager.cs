@@ -14,6 +14,9 @@ public class BuildCellManager : MonoBehaviour
 
     private Player player;
     public static BuildCellManager instance;
+
+    private readonly string FirstBlock = "FirstBlockPlaced";
+
     private void Awake()
     {
         instance = this;
@@ -36,6 +39,12 @@ public class BuildCellManager : MonoBehaviour
             Vector3 pos = currentCell.GetPositionToPlace();
             Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
             newBlock.AddBlockToSaveList();
+            if (Geekplay.Instance.PlayerData.IsFirstBlockPlaced == false)
+            {
+                Geekplay.Instance.PlayerData.IsFirstBlockPlaced = true;
+                Geekplay.Instance.Save();
+                Analytics.instance.SendEvent(FirstBlock);
+            }
         }    
     }
     private void DeleteBlock()

@@ -14,6 +14,7 @@ public class ParkourManager : MonoBehaviour
     float milliseconds;
     public static ParkourManager instance;
     private bool WinMap;
+    private readonly string EndedParkourMap = "EndedParkourMapAtNumber_";
     private void Start()
     {
         instance = this;
@@ -30,9 +31,12 @@ public class ParkourManager : MonoBehaviour
     }
     private void TrySerializeTimeValue()
     {
+        string forAnalytics = EndedParkourMap + Geekplay.Instance.PlayerData.CurrentParkourMapIndex;
+        Analytics.instance.SendEvent(forAnalytics);
         bool MapFound = false;
         var parkourPlayerData = new ParkourMapPlayerData();
         parkourPlayerData.MapName = Geekplay.Instance.PlayerData.CurrentParkourMapName;
+        parkourPlayerData.IsCompleted = true;
         parkourPlayerData.timeInSeconds = minutes * 60 + seconds + milliseconds / 1000;
         if (Geekplay.Instance.PlayerData.parkourMapPlayerDataList != null)
         {

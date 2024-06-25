@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -7,19 +7,62 @@ using UnityEngine.SceneManagement;
 public class LoadMapView : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI[] Dates;
+    [SerializeField] TextMeshProUGUI MapName1;
+    [SerializeField] TextMeshProUGUI MapName2;
+    [SerializeField] TextMeshProUGUI MapName3;
+    [SerializeField] TextMeshProUGUI MapName4;
     private List<MapData> mapData;
     string EmptySlotText;
     private void Start()
     {
-        EmptySlotText = "������ ����";
+        LocalizateNames();
+       
         SetDateText();
+    }
+    private void LocalizateNames()
+    {
+        if (Geekplay.Instance.language == "ru")
+        {
+            EmptySlotText = "Пустой слот";
+            MapName1.text = "Карта 1";
+            MapName2.text = "Карта 2";
+            MapName3.text = "Карта 3";
+            MapName4.text = "Карта 4";
+        }
+        if (Geekplay.Instance.language == "en")
+        {
+            EmptySlotText = "Empty slot";
+            MapName1.text = "Map 1";
+            MapName2.text = "Map 2";
+            MapName3.text = "Map 3";
+            MapName4.text = "Map 4";
+        }
+        
+        if (Geekplay.Instance.language == "tr")
+        {
+            EmptySlotText = "boş yuva";
+            MapName1.text = "Harita 1";
+            MapName2.text = "Harita 2";
+            MapName3.text = "Harita 3";
+            MapName4.text = "Harita 4";
+        }
     }
     public void SetDateText()
     {
         mapData = new();
         if (Geekplay.Instance.PlayerData.MapDataArray != null)
         {
+            if(Geekplay.Instance.PlayerData.MapDataArray.Length > 0)
+            {
             mapData.AddRange(Geekplay.Instance.PlayerData.MapDataArray);
+            }
+            else
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    mapData.Add(null);
+                }
+            }
         }
         else
         {
