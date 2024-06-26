@@ -15,6 +15,7 @@ public class ForwardBlockCollider : MonoBehaviour
         if (colDetect != null)
         {
             StopCoroutine(colDetect);
+            upChecker.DeactivateCollider();
         }
         colDetect = waitForDetectCollision();
         StartCoroutine(colDetect);

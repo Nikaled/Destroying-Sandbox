@@ -43,6 +43,5 @@ public class BuildCellGenerator : MonoBehaviour
         bc.center = new Vector3(50, 0, 50);
         bc.isTrigger = true;
         NewGridParent.transform.position = new Vector3(-Widht, 0, -Lenght);
-        CitizenNavMeshManager.instance.teleportArea = bc;
     }
 }

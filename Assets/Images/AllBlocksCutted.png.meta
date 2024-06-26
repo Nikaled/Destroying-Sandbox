@@ -1,0 +1,1174 @@
+fileFormatVersion: 2
+guid: 3abb7be2dcca59346b8c68eeaa071015
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AllBlocksCutted_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1781
+        width: 176
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa1b52fd35e33a4ba9186e6d9b04b4e
+      internalID: -983314780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1805
+        width: 154
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8ffbc34bb95f34ca126587ae3b2da4
+      internalID: 1644536895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_2
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1805
+        width: 154
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f961bfc6bd2474f9a6905cf28fbe8a
+      internalID: 1646246090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_3
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1805
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc39146e6ff5d6b48bc742476f9feaad
+      internalID: 612198873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_4
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1805
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676c810a39671dd46b33d79c6c940d73
+      internalID: -1663639051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_5
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 1805
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0c4d00a9b5eaa4ea468da5c53f41ee
+      internalID: -351030754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_6
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1805
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a05d541e02f61546b73ff4dced32efa
+      internalID: 158816247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_7
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 1805
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce0355a0e82cc2499a7a96c4c68710c
+      internalID: -1755199660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1558
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bbd113db9c1c747a575e4b0a7f353b
+      internalID: -100324356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_9
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1558
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac9aa2316539c24fbb7b1a2345ef8a7
+      internalID: -2087468470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_10
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1558
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afa9a9f6a31f624283d8c83a0f96097
+      internalID: 1705417295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_11
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1558
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8477b4eb32421d64eb9a5b10271ea77a
+      internalID: -2100588913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_12
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1558
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f29650ef7257a4a868aa085876b685
+      internalID: 1757182769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_13
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1558
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4b8969434c8924a8e67314525d0855
+      internalID: -1361361819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_14
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 1558
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b3bbbdb43ed4b4fbd4a1a4f06a3017
+      internalID: -2103787587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1301
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368fd76c23cf0984fbc25eb88baa75b6
+      internalID: -1810992114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_16
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1311
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b124276a6111b914e9a9ddbcd744e5de
+      internalID: -855603758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_17
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1311
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14adf79ec0452a543b17a75ed6a0dc2b
+      internalID: 2007238539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_18
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1308
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0188af13972fc594e8a104b00efb34f1
+      internalID: -254865985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_19
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1311
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6ec966e35cebb47af989adbf1a6aa1
+      internalID: -392348952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_20
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1311
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e91d4ede14e764992959f3c0824d58
+      internalID: 1266749103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_21
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 1308
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15eb1349072eed04d9d925aa04931186
+      internalID: -1067551420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_22
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1058
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6ff2995fb095b4cba6b99034ff20d4
+      internalID: -790676353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_23
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1064
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbf61e5967bdda42b58c88bf633b147
+      internalID: 224023544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_24
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1064
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223b8d32932568c4088d92447eaa3d68
+      internalID: 480804892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_25
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1061
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9611c98ff86af234e80aec30b69e79f9
+      internalID: 1576038919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_26
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1058
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafa0a6fe82229e4caa782038f53f276
+      internalID: 1718167413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_27
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1064
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7b56c1f982f9f488c48179c087122c
+      internalID: 834905072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_28
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1064
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddbc5540d1f9fc4c9c1b1a25c028e06
+      internalID: 1148984789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_29
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 790
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8ce874bce762741ba49feeca633c7e
+      internalID: 1817973490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_30
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 790
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416778f25bc2ab74782cd9ef87ed0fba
+      internalID: -887639350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_31
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 790
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667941468823d8844b5002d954a40679
+      internalID: 1985288535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_32
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 793
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1351d51e9fa231c4989bb589df826b31
+      internalID: -473590044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_33
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 790
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ead1f0523573204398b10dcfec71c10
+      internalID: -1049969689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_34
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 790
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595dc18e15cf4ff47b5311f2b092a9a2
+      internalID: 243093504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_35
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 790
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dabcbf47e30b8a346ba19bf3c11dd1ee
+      internalID: 275228293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_36
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 522
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf0f3f41dfc8d5409f6a5caf8ce4bc7
+      internalID: 881812641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_37
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 516
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e534ea0f082618044ab490bac2d2c76c
+      internalID: 668606222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_38
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 516
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725f51afc04bac643aa0ed309bd04e79
+      internalID: -449231695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_39
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 516
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cc576dd83bd11419a5013a1e89827d
+      internalID: -1519133625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_40
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 522
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e82b928c19a8194687c5dd11355e40f
+      internalID: -1744621913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_41
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 516
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b25879a8214fb49955b812e8548eb2
+      internalID: 1921078556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_42
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 516
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70e5978c2feed1428916f2cad9aeece
+      internalID: -1313852501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_43
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 255
+        width: 155
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d3a2956bce81945841f47514473cf2
+      internalID: -385148694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_44
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 243
+        width: 155
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ff03c88d7f8d64abe10ba4b14f065b
+      internalID: -388520939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_45
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 243
+        width: 155
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7955cbcdc0a35de4085682823ae79671
+      internalID: -237256804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllBlocksCutted_46
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 260
+        width: 143
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984320675b64ee94db68ccb0d913990a
+      internalID: 609699652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c2c0835eba9043548aa157410183834c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AllBlocksCutted_0: -983314780
+      AllBlocksCutted_1: 1644536895
+      AllBlocksCutted_10: 1705417295
+      AllBlocksCutted_11: -2100588913
+      AllBlocksCutted_12: 1757182769
+      AllBlocksCutted_13: -1361361819
+      AllBlocksCutted_14: -2103787587
+      AllBlocksCutted_15: -1810992114
+      AllBlocksCutted_16: -855603758
+      AllBlocksCutted_17: 2007238539
+      AllBlocksCutted_18: -254865985
+      AllBlocksCutted_19: -392348952
+      AllBlocksCutted_2: 1646246090
+      AllBlocksCutted_20: 1266749103
+      AllBlocksCutted_21: -1067551420
+      AllBlocksCutted_22: -790676353
+      AllBlocksCutted_23: 224023544
+      AllBlocksCutted_24: 480804892
+      AllBlocksCutted_25: 1576038919
+      AllBlocksCutted_26: 1718167413
+      AllBlocksCutted_27: 834905072
+      AllBlocksCutted_28: 1148984789
+      AllBlocksCutted_29: 1817973490
+      AllBlocksCutted_3: 612198873
+      AllBlocksCutted_30: -887639350
+      AllBlocksCutted_31: 1985288535
+      AllBlocksCutted_32: -473590044
+      AllBlocksCutted_33: -1049969689
+      AllBlocksCutted_34: 243093504
+      AllBlocksCutted_35: 275228293
+      AllBlocksCutted_36: 881812641
+      AllBlocksCutted_37: 668606222
+      AllBlocksCutted_38: -449231695
+      AllBlocksCutted_39: -1519133625
+      AllBlocksCutted_4: -1663639051
+      AllBlocksCutted_40: -1744621913
+      AllBlocksCutted_41: 1921078556
+      AllBlocksCutted_42: -1313852501
+      AllBlocksCutted_43: -385148694
+      AllBlocksCutted_44: -388520939
+      AllBlocksCutted_45: -237256804
+      AllBlocksCutted_46: 609699652
+      AllBlocksCutted_5: -351030754
+      AllBlocksCutted_6: 158816247
+      AllBlocksCutted_7: -1755199660
+      AllBlocksCutted_8: -100324356
+      AllBlocksCutted_9: -2087468470
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

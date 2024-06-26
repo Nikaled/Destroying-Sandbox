@@ -29,6 +29,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject UpLeftButtons;
     [SerializeField] public Button DoButton;
     [SerializeField] public Button InteracteButton;
+    [SerializeField] public Button SaveButton;
     [SerializeField] Image[] InteracteSymbolInButton;
     [SerializeField] Image DoButtonImageInIdle;
     [SerializeField] Image DoButtonImageInMode;
@@ -125,6 +126,7 @@ public class CanvasManager : MonoBehaviour
         {
             WeaponSlots.SetActive(false);
             BuildingMenuButton.SetActive(true);
+            SaveButton.gameObject.SetActive(true);
             //ShowWeaponSlotsAndHideBlocks(false);
         }
     }
@@ -135,6 +137,7 @@ public class CanvasManager : MonoBehaviour
         {
             BlockSlots.SetActive(false);
             BuildingMenuButton.SetActive(false);
+            SaveButton.gameObject.SetActive(false);
         }
     }
     private void OnWinParkourMap()

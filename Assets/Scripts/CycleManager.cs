@@ -9,6 +9,7 @@ public class CycleManager : MonoBehaviour
     public Action DestroyingPhaseStarted;
     public Action BuildingPhaseStarted;
     public Action ParkourPhaseStarted;
+    private Phase currentPhase;
     public enum Phase
     {
         Building,
@@ -21,6 +22,10 @@ public class CycleManager : MonoBehaviour
     }
     private void Start()
     {
+        //if(currentPhase != Phase.Destroying)
+        //{
+        //    currentPhase = Phase.Building;
+        //}
         ChangePhaseButtonFunc(Phase.Building);
     }
     private void Update()
@@ -31,13 +36,19 @@ public class CycleManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if (Player.instance.currentState == Player.PlayerState.Building)
-                ActivateDestroyingPhase();
+            if (Player.instance.currentState == Player.PlayerState.Idle || Player.instance.currentState == Player.PlayerState.Building)
+                SwitchPhase();
         }
-        if (Input.GetKeyDown(KeyCode.N))
+    }
+    private void SwitchPhase()
+    {
+        if (currentPhase == Phase.Destroying)
         {
-            if (Player.instance.currentState == Player.PlayerState.Idle)
-                ActivateBuildingPhase();
+            ActivateBuildingPhase();
+        }
+        else if (currentPhase == Phase.Building)
+        {
+             ActivateDestroyingPhase();
         }
     }
     private void ChangePhaseButtonFunc(Phase newPhase)
@@ -54,9 +65,9 @@ public class CycleManager : MonoBehaviour
     }
     public void ActivateDestroyingPhase()
     {
+        currentPhase = Phase.Destroying;
         DestroyCounter.instance.DestroyPhaseStarted();
         SerializeBlockManager.instance.SaveBlocks();
-        CitizenNavMeshManager.instance.BuildNavMesh();
         Player.instance.OnDestroyingPhaseActivated();
         CanvasManager.instance.ShowCurrentDestroyInterface(true);
         DestroyingPhaseStarted?.Invoke();
@@ -70,6 +81,7 @@ public class CycleManager : MonoBehaviour
 
     public void ActivateParkourPhase()  // if player taked restart
     {
+        currentPhase = Phase.Parkour;
         CanvasManager.instance.ShowWinParkourUI(false);
         ParkourManager.instance.StartParkour();
         ParkourPhaseStarted?.Invoke();
@@ -77,7 +89,7 @@ public class CycleManager : MonoBehaviour
     }
     public void ActivateBuildingPhase()
     {
-       
+        currentPhase = Phase.Building;
         SerializeBlockManager.instance.LoadBlocks();
         Player.instance.OnBuildingPhaseActivated();
         CanvasManager.instance.ShowWinMapUI(false);

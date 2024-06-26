@@ -13,7 +13,7 @@ public class SerializeBlockManager : MonoBehaviour
    [SerializeField] public List<SaveBlockData> BlocksData;
     //public ChooseBlockCell CellPrefab;
     //public GameObject CellParent;
-    //public ContentGridManager CurrentManagerForSetPrefabs;
+    public ContentGridManager CurrentManagerForSetPrefabs;
     public Block[] BlocksPrefab;
     public bool OnlyDestroyingMap;
     public bool OnlyParkourMap;
@@ -21,6 +21,8 @@ public class SerializeBlockManager : MonoBehaviour
     private MapData currentMapData;
     private readonly string EndedDestroyMap = "EndedDestroyMapAtNumber_";
 
+
+    public Sprite[] SpritesToCells;
     private void Awake()
     {
 
@@ -217,28 +219,22 @@ public class SerializeBlockManager : MonoBehaviour
         Debug.Log("Индекс объекта не найден:" + blockToSave);
         return -1;
     }
-    //[ContextMenu("Set Prefabs to Cells")]
-    //public void SetPrefabsToCells()
-    //{
-    //    CurrentManagerForSetPrefabs.Cells = new ChooseBlockCell[47];
-    //    for (int i = 0; i < CurrentManagerForSetPrefabs.Cells.Length; i++)
-    //    {
-    //        ChooseBlockCell prefab = Instantiate(CellPrefab);
-    //        prefab.transform.parent = CellParent.transform;
-    //        ConvertToPrefabInstanceSettings convertToPrefabInstanceSettings = new ConvertToPrefabInstanceSettings();
-    //        convertToPrefabInstanceSettings.recordPropertyOverridesOfMatches = true;
-    //        CurrentManagerForSetPrefabs.Cells[i] = prefab;
-    //        CurrentManagerForSetPrefabs.Cells[i].blockPrefab = BlocksPrefab[i];
-    //    }
-    //    EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
-    //    //SceneView.RepaintAll();
-    //}
+    [ContextMenu("Set Sprites to Cells")]
+    public void SetPrefabsToCells()
+    {
+        for (int i = 0; i < CurrentManagerForSetPrefabs.Cells.Length; i++)
+        {
+            CurrentManagerForSetPrefabs.Cells[i].blockSprite.sprite = SpritesToCells[i];
+        }
+        //SceneView.RepaintAll();
+    }
     [ContextMenu("Set Names")]
 
     public void SetNames()
     {
         for (int i = 0; i < BlocksPrefab.Length; i++)
         {
+            
             BlocksPrefab[i].NameToSerializing = BlocksPrefab[i].name;
         }
     }
