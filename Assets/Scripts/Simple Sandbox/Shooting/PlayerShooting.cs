@@ -91,6 +91,7 @@ public class PlayerShooting : MonoBehaviour
         if (currentWeapon == Player.WeaponType.FlameThrower)
         {
             flameThrower.EndFire();
+            player.examplePlayer.MyLockOnShoot = false;
         }
     }
     public void LockPlayerMovement(float HoldingTime = 1f)
@@ -103,6 +104,11 @@ public class PlayerShooting : MonoBehaviour
         HoldingCoroutine = null;
         HoldingCoroutine = player.LockPositionOnShoot(HoldingTime);
         StartCoroutine(HoldingCoroutine);
+    }
+    public void RotatePlayerOnShoot()
+    {
+        Vector3 aimDirection = (CrosshairWorldPosition - GunProjectileSpawnPoint.position).normalized;
+        player.RotatePlayerOnShoot(aimDirection);
     }
     public void FireGun()
     {

@@ -18,10 +18,17 @@ public class MainMenu : MonoBehaviour
             Geekplay.Instance.PlayerData.IsFirstPlay = false;
             Geekplay.Instance.Save();
         }
+
+
+        //Geekplay.Instance.PlayerData = new PlayerData();
+        //Geekplay.Instance.Save();
+    }
+    public void ShowAdOnButtonClick()
+    {
+        Geekplay.Instance.ShowInterstitialAd();
     }
     public void A_PressedAnyModeButton()
     {
-        Geekplay.Instance.ShowInterstitialAd();
         Analytics.instance.SendEvent(AnalyticsAnyModePressed);
     }
     public void A_PressedBuildingModeButton()

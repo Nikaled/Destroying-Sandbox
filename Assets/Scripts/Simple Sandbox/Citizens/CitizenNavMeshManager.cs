@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Unity.AI.Navigation;
+using System.Runtime.CompilerServices;
 
 public class CitizenNavMeshManager : MonoBehaviour
 {
@@ -23,7 +24,11 @@ public class CitizenNavMeshManager : MonoBehaviour
     }
     public void BuildNavMesh()
     {
+        buildMesh();
+        async void buildMesh()
+        {
         navMeshSurface.BuildNavMesh();
+        }
     }
     public Vector3? MoveCheckerToNewPoint(GameObject sphere, Transform UnitTransform)
     {

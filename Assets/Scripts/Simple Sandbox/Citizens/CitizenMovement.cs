@@ -58,7 +58,6 @@ public class CitizenMovement : MonoBehaviour
     private void Start()
     {
         CycleManager.instance.DestroyingPhaseStarted += OnActivatedDestroyingPhase;
-        //hpSystem.OnDied += CitizenDie;
     }
     private void OnDestroy()
     {

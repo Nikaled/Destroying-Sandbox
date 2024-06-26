@@ -540,6 +540,10 @@ public class Player : MonoBehaviour
         {
             examplePlayer.MyLockOnShoot = true;
             animator.SetTrigger("GunFire");
+            if (Geekplay.Instance.mobile)
+            {
+                RotatePlayerOnShoot(playerShooting.AimDirection);
+            }
             if (motor.GroundingStatus.IsStableOnGround)
             {
                 motor.SetPosition(transform.position);

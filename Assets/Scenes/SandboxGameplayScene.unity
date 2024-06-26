@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9009,7 +9009,7 @@ MonoBehaviour:
   DoButtonImageInMode: {fileID: 82168025}
   BuildingInstruction: {fileID: 1908294612}
   BlockSlots: {fileID: 644106807}
-  BuildingMenuButton: {fileID: 0}
+  BuildingMenuButton: {fileID: 1561235360}
   WeaponSlots: {fileID: 571140160}
   CurrentDestroyBarUI: {fileID: 1470968307}
   CurrentDestroyBarFilledImage: {fileID: 609607722}
@@ -13957,6 +13957,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5465372661526854238, guid: b2efc0d00382da14680e4a8d5fe88d91, type: 3}
   m_PrefabInstance: {fileID: 878286133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &881720644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881720646}
+  - component: {fileID: 881720645}
+  m_Layer: 0
+  m_Name: An
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &881720645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881720644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03203847cb6d1b4fb988c8c14be7397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &881720646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881720644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1040.1862, y: 584.8957, z: -7.59614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &888587980 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5291694129932373673, guid: b2efc0d00382da14680e4a8d5fe88d91, type: 3}
@@ -13986,7 +14030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &888690877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15395,7 +15439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &979001760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16797,7 +16841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44, y: -305}
+  m_AnchoredPosition: {x: 44, y: -183}
   m_SizeDelta: {x: 160, y: 102.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1044927535
@@ -16844,7 +16888,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 80902196}
         m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
         m_MethodName: LoadSceneBuyIndex
         m_Mode: 3
@@ -20730,7 +20774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44, y: -179}
+  m_AnchoredPosition: {x: 44, y: -57}
   m_SizeDelta: {x: 160, y: 102.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1406988781
@@ -35386,3 +35430,4 @@ SceneRoots:
   - {fileID: 1638095722}
   - {fileID: 549822742}
   - {fileID: 702462334}
+  - {fileID: 881720646}
