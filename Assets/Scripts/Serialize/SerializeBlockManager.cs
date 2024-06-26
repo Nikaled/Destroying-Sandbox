@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class SerializeBlockManager : MonoBehaviour
@@ -13,7 +14,7 @@ public class SerializeBlockManager : MonoBehaviour
    [SerializeField] public List<SaveBlockData> BlocksData;
     //public ChooseBlockCell CellPrefab;
     //public GameObject CellParent;
-    public ContentGridManager CurrentManagerForSetPrefabs;
+    //public ContentGridManager CurrentManagerForSetPrefabs;
     public Block[] BlocksPrefab;
     public bool OnlyDestroyingMap;
     public bool OnlyParkourMap;
@@ -21,8 +22,6 @@ public class SerializeBlockManager : MonoBehaviour
     private MapData currentMapData;
     private readonly string EndedDestroyMap = "EndedDestroyMapAtNumber_";
 
-
-    public Sprite[] SpritesToCells;
     private void Awake()
     {
 
@@ -219,15 +218,17 @@ public class SerializeBlockManager : MonoBehaviour
         Debug.Log("Индекс объекта не найден:" + blockToSave);
         return -1;
     }
-    [ContextMenu("Set Sprites to Cells")]
-    public void SetPrefabsToCells()
-    {
-        for (int i = 0; i < CurrentManagerForSetPrefabs.Cells.Length; i++)
-        {
-            CurrentManagerForSetPrefabs.Cells[i].blockSprite.sprite = SpritesToCells[i];
-        }
-        //SceneView.RepaintAll();
-    }
+    //[ContextMenu("Set Sprites to Cells")]
+    //public void SetPrefabsToCells()
+    //{
+    //    for (int i = 0; i < CurrentManagerForSetPrefabs.Cells.Length; i++)
+    //    {
+    //        CurrentManagerForSetPrefabs.Cells[i].blockSprite.sprite = SpritesToCells[i];
+    //        GameObject c = CurrentManagerForSetPrefabs.Cells[i].gameObject;
+    //        UnityEditor.EditorUtility.SetDirty(CurrentManagerForSetPrefabs.Cells[i].blockSprite.sprite);
+    //    }
+    //    //SceneView.RepaintAll();
+    //}
     [ContextMenu("Set Names")]
 
     public void SetNames()
