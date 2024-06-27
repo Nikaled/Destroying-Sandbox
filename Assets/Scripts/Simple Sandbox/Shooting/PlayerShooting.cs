@@ -105,11 +105,6 @@ public class PlayerShooting : MonoBehaviour
         HoldingCoroutine = player.LockPositionOnShoot(HoldingTime);
         StartCoroutine(HoldingCoroutine);
     }
-    public void RotatePlayerOnShoot()
-    {
-        Vector3 aimDirection = (CrosshairWorldPosition - GunProjectileSpawnPoint.position).normalized;
-        player.RotatePlayerOnShoot(aimDirection);
-    }
     public void FireGun()
     {
         Vector3 aimDirection = (CrosshairWorldPosition - GunProjectileSpawnPoint.position).normalized;

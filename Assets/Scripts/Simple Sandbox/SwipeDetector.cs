@@ -1,60 +1,54 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
+using System.Linq.Expressions;
 
 public class SwipeDetector : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Vector2 startPosition;
+    private Vector2 lastPosition;
     private Vector2 endPosition;
     public Vector2 swipeDelta;
 
-    public Transform PlayerCamera;
+    private Coroutine coroutine;
     public static SwipeDetector instance;
 
-    private void Start()
+    void Awake()
     {
         instance = this;
     }
+
     public void OnBeginDrag(PointerEventData data)
     {
-        startPosition = data.position;
+        lastPosition = data.position;
     }
 
     public void OnDrag(PointerEventData data)
     {
-        swipeDelta = (data.position - startPosition).normalized;
+        swipeDelta = data.position - lastPosition;
+
+        if (swipeDelta.magnitude < 2)
+        {
+            swipeDelta = Vector2.zero;
+        }
+        else
+        {
+            swipeDelta.Normalize();
+        }
+
+        lastPosition = data.position;
+
+        if (coroutine != null) StopCoroutine(coroutine);
+        coroutine = StartCoroutine(Wait());
     }
 
-    public void OnEndDrag(PointerEventData data)
+    public void OnEndDrag(PointerEventData eventData)
     {
-        endPosition = data.position;
+        swipeDelta = Vector2.zero;
+    }
 
-        Vector2 swipe = endPosition - startPosition;
-
-        if (swipe.magnitude > 50)
-        {
-            if (Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y)) 
-            {
-                if (swipe.x < 0) 
-                {
-                    Debug.Log("Swipe Left");
-                }
-                else
-                {
-                    Debug.Log("Swipe Right");
-                }
-            }
-            else 
-            {
-                if (swipe.y < 0) 
-                {
-                    Debug.Log("Swipe Down");
-                }
-                else
-                {
-                    Debug.Log("Swipe Up");
-                }
-            }
-        }
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.01f);
         swipeDelta = Vector2.zero;
     }
 }

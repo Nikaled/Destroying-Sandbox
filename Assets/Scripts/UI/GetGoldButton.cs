@@ -11,12 +11,15 @@ public class GetGoldButton : MonoBehaviour
     public Button BuyGoldButton;
     [SerializeField] GameObject RewardBlocker;
     [SerializeField] TextMeshProUGUI RewardTimerText;
+    [SerializeField] Pulse ObjectPulse;
+    [SerializeField] GameObject HideParent;
     private void Start()
     {
         SubscribeOnReward();
     }
     private void OnEnable()
     {
+      
         if (RewardBlocker != null && RewardTimerText != null)
         {
             Geekplay.Instance.RewardLockTimeUpdate += SetNewTimerTextAndCheckEnd;
@@ -24,14 +27,45 @@ public class GetGoldButton : MonoBehaviour
             {
                 RewardBlocker.SetActive(true);
                 RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
+
+                ShowButton(false);
+                StopPulsing();
+            }
+            else
+            {
+                ShowButton(true);
+                StartPulsing();
             }
         }
+    }
+
+    public void ShowButton(bool Is)
+    {
+        BuyGoldButton.image.enabled = Is;
+        HideParent.SetActive(Is);
+    }
+    private void StartPulsing()
+    {
+        //if (ObjectPulse != null)
+        //{
+        //    ObjectPulse.IsUnlocked = true;
+        //    ObjectPulse.StartPulsingIfUnlocked();
+        //}
+    }
+    private void StopPulsing()
+    {
+        //if (ObjectPulse != null)
+        //{
+        //    ObjectPulse.StopPulsing();
+        //    ObjectPulse.IsUnlocked = false;
+        //}
     }
     private void OnDisable()
     {
         if (RewardBlocker != null && RewardTimerText != null)
         {
             Geekplay.Instance.RewardLockTimeUpdate -= SetNewTimerTextAndCheckEnd;
+            StopPulsing();
         }
     }
     public void SubscribeOnPurchase()
@@ -56,6 +90,7 @@ public class GetGoldButton : MonoBehaviour
         RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
         RewardBlocker.SetActive(true);
         BuyGoldButton.enabled = false;
+        ShowButton(false);
     }
     private void SetNewTimerTextAndCheckEnd(int Timer)
     {
@@ -76,6 +111,8 @@ public class GetGoldButton : MonoBehaviour
         {
             RewardBlocker.SetActive(false);
             BuyGoldButton.enabled = true;
+            ShowButton(true);
+            StartPulsing();
         }
     }
     private void GetGold()

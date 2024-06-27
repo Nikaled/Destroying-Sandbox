@@ -100,8 +100,8 @@ namespace KinematicCharacterController.Examples
             }
             else
             {
-                lookInputVector = SwipeDetector.instance.swipeDelta;
-                SwipeDetector.instance.swipeDelta = Vector2.zero;
+                lookInputVector = new Vector2(SwipeDetector.instance.swipeDelta.x * 2.5f, SwipeDetector.instance.swipeDelta.y * 2.5f);
+                //SwipeDetector.instance.swipeDelta = Vector2.zero;
             }
 
             // Prevent moving the camera while the cursor isn't locked

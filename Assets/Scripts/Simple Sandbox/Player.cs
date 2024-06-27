@@ -231,6 +231,15 @@ public class Player : MonoBehaviour
         {
             RotatePlayerOnShoot(playerShooting.AimDirection);
         }
+        //if(CurrentWeapon == WeaponType.FlameThrower)
+        //{
+        //    MobileFireInput();
+        //    RotatePlayerOnShoot(playerShooting.AimDirection);
+        //    if (Input.GetKeyDown(KeyCode.H))
+        //    {
+
+        //    }
+        //}
     }
     private void Update()
     {
@@ -630,8 +639,10 @@ public class Player : MonoBehaviour
     }
     public void RotatePlayerOnShoot(Vector3 aimDirection)
     {
+        Debug.Log("Aim direction:" + aimDirection);
         Quaternion targetRotation = Quaternion.LookRotation(aimDirection);
         Quaternion OnlyY = new Quaternion(0, targetRotation.y, 0, targetRotation.w);
+        Debug.Log("Rotate char to:" + OnlyY);
         motor.RotateCharacter(OnlyY);
     }
 }
