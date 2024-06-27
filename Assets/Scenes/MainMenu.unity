@@ -12518,6 +12518,7 @@ MonoBehaviour:
   RewardBlocker: {fileID: 17960793}
   RewardTimerText: {fileID: 1114033867}
   ObjectPulse: {fileID: 1325989303}
+  HideParent: {fileID: 487519540}
 --- !u!114 &1325989300
 MonoBehaviour:
   m_ObjectHideFlags: 0
