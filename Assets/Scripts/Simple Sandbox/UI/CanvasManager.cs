@@ -43,7 +43,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject CurrentDestroyBarUI;
     [SerializeField] GameObject CurrentDestroyBarFilledImage;
     [SerializeField] GameObject OnWinMapUI;
-    [SerializeField] Image[] PhaseButtonImages;
+    [SerializeField] GameObject[] PhaseButtonImages;
     [SerializeField] public Button WeaponSpecialInteracteButton;
     [SerializeField] public Button ChangePhaseButton;
     [SerializeField] public GameObject UnlockWeaponUI;
@@ -82,9 +82,9 @@ public class CanvasManager : MonoBehaviour
     {
         for (int i = 0; i < PhaseButtonImages.Length; i++)
         {
-            PhaseButtonImages[i].gameObject.SetActive(false);
+            PhaseButtonImages[i].SetActive(false);
         }
-        PhaseButtonImages[index].gameObject.SetActive(true);
+        PhaseButtonImages[index].SetActive(true);
     }
     public void ShowUnlockWeaponSlotUI(bool Is)
     {
@@ -98,7 +98,10 @@ public class CanvasManager : MonoBehaviour
     public void ShowWinParkourUI(bool Is)
     {
         OnWinParkourMapUI.SetActive(Is);
+        if (Is) // On Restart IsInterface controlled by ParkourManager
+        {
         CheckActiveUnlockCursorWindows();
+        }
     }
     private void DestroyCountChanged(int CurrentDestroyed)
     {

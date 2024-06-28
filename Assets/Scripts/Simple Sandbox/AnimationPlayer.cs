@@ -24,7 +24,7 @@ public class AnimationPlayer : MonoBehaviour
     }
     void Update()
     {
-        if (RidingAnimal)
+        if (player.InterfaceActive)
         {
             anim.SetBool("isRun", false);
             return;

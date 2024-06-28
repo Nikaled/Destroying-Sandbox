@@ -135,12 +135,6 @@ namespace KinematicCharacterController.Examples
         {
             PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
 
-            if (Player.instance.AdWarningActive || Player.instance.InterfaceActive)
-            {
-                characterInputs.MoveAxisForward = 0;
-                characterInputs.MoveAxisRight = 0;
-                return;
-            }
           
             // Build the CharacterInputs struct
             if (Mobile)
@@ -170,6 +164,12 @@ namespace KinematicCharacterController.Examples
                 //characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
             }
             // Apply inputs to character
+
+            if (Player.instance.AdWarningActive || Player.instance.InterfaceActive)
+            {
+                characterInputs.MoveAxisForward = 0;
+                characterInputs.MoveAxisRight = 0;
+            }
             Character.SetInputs(ref characterInputs);
            
         }

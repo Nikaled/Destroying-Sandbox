@@ -107,12 +107,23 @@ public class Player : MonoBehaviour
             parkourStartPosition = transform.position;
             parkourStartRotation = transform.rotation;
             CycleManager.instance.ParkourPhaseStarted += OnParkourPhaseStarted;
+            if (Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward)
+            {
+                Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward = false;
+                SpeedUpPlayer();
+            }
         }
         if (SerializeBlockManager.instance.OnlyDestroyingMap)
         {
             SwitchPlayerState(PlayerState.Idle);
         }
         SetFlyMode();
+    }
+    private void SpeedUpPlayer()
+    {
+        characterController.MaxStableMoveSpeed = 20;
+        characterController.MaxAirMoveSpeed = 30;
+        //characterController.JumpUpSpeed = 20;
     }
     private void OnParkourPhaseStarted()
     {
@@ -381,6 +392,10 @@ public class Player : MonoBehaviour
         {
             examplePlayer.LockCursor(true);
         }
+        if(CurrentWeapon == WeaponType.FlameThrower)
+        {
+            Flamethrower.instance.IsFiring = false;
+        }
         switch (PressedNumber)
         {
 
@@ -547,12 +562,6 @@ public class Player : MonoBehaviour
         }
         if (CurrentWeapon == WeaponType.FlameThrower)
         {
-            examplePlayer.MyLockOnShoot = true;
-            animator.SetTrigger("GunFire");
-            if (Geekplay.Instance.mobile)
-            {
-                RotatePlayerOnShoot(playerShooting.AimDirection);
-            }
             if (motor.GroundingStatus.IsStableOnGround)
             {
                 motor.SetPosition(transform.position);
@@ -563,6 +572,12 @@ public class Player : MonoBehaviour
         //    AimingGrenadeOnMobile();
         //}
     } // Used by Fire Button
+    public void FireFlameThrower()
+    {
+        examplePlayer.MyLockOnShoot = true;
+        animator.SetTrigger("GunFire");
+        RotatePlayerOnShoot(playerShooting.AimDirection);
+    }
     #endregion
     private void FireInput()
     {

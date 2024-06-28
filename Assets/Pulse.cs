@@ -7,13 +7,13 @@ public class Pulse : MonoBehaviour
 {
     private IEnumerator PulsingCor;
     public bool IsUnlocked = true;
-
+    public Transform PulseObj;
     public void StartPulsingIfUnlocked()
     {
         if (PulsingCor != null)
         {
             StopCoroutine(PulsingCor);
-            transform.DOScale(new Vector3(1f, 1f, 1f), 0);
+            PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0);
         }
         PulsingCor = Pulsing();
         StartCoroutine(PulsingCor);
@@ -23,7 +23,7 @@ public class Pulse : MonoBehaviour
         if (PulsingCor != null)
         {
             StopCoroutine(PulsingCor);
-            transform.DOScale(new Vector3(1f, 1f, 1f), 0);
+            PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0);
         }
     }
     private IEnumerator Pulsing()
@@ -33,9 +33,9 @@ public class Pulse : MonoBehaviour
             while (true)
             {
 
-                transform.DOScale(new Vector3(1.15f, 1.15f, 1.15f), 1);
+                PulseObj.DOScale(new Vector3(1.15f, 1.15f, 1.15f), 1);
                 yield return new WaitForSeconds(0.5f);
-                transform.DOScale(new Vector3(1f, 1f, 1f), 1);
+                PulseObj.DOScale(new Vector3(1f, 1f, 1f), 1);
                 yield return new WaitForSeconds(0.5f);
 
             }
@@ -47,6 +47,10 @@ public class Pulse : MonoBehaviour
     }
     void Start()
     {
+        if(PulseObj == null)
+        {
+            PulseObj = gameObject.transform;
+        }
         if (IsUnlocked)
         {
             PulsingCor = Pulsing();

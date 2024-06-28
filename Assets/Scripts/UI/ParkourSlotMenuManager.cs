@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ParkourSlotMenuManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ParkourSlotMenuManager : MonoBehaviour
     private int MapsInPage = 15;
     private void Start()
     {
+
         playerMapData = Geekplay.Instance.PlayerData.parkourMapPlayerDataList;
         if(playerMapData != null)
         {

@@ -152,7 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DelayBeforeExplosion: 2
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
-  GrenadeDamage: 10
   ExplosionScale: 2
   Source: {fileID: 9145188485724541115}
   explosionForceChecker: {fileID: 1721609417389044721}
@@ -268,7 +267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SphereExplosionRange: {fileID: 371946380589212462}
-  VecolityModifier: 400
+  VecolityModifier: 600
+  HasFireEffect: 0
 --- !u!54 &5245777644737588926
 Rigidbody:
   m_ObjectHideFlags: 0

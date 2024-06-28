@@ -136,7 +136,7 @@ public class DestroySystem : MonoBehaviour
             var rb = smallBlock.GetComponent<Rigidbody>();
             rb.isKinematic = false;
             rb.useGravity = true;
-            smallBlock.layer = 2;
+            smallBlock.layer = 12;
             Vector3 PosDifference = (transform.position - ProjectilePosition).normalized;
             smallBlock.GetComponent<Rigidbody>().AddForce((PosDifference + Vector3.down) * 5);
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour
@@ -9,6 +10,10 @@ public class MainMenu : MonoBehaviour
     private readonly string AnalyticsBuildModePressed = "BuildModeMenuButtonPressed";
     private readonly string AnalyticsDestroyingModePressed = "DestroyingModeMenuButtonPressed";
     private readonly string AnalyticsParkourModePressed = "ParkourModeMenuButtonPressed";
+
+    [SerializeField] GameObject[] Windows;
+    [SerializeField] TextMeshProUGUI CoinsTextInPromo;
+    [SerializeField] TextMeshProUGUI CoinsTextInOurGames;
     private void Start()
     {
         Geekplay.Instance.ShowInterstitialAd();
@@ -18,10 +23,39 @@ public class MainMenu : MonoBehaviour
             Geekplay.Instance.PlayerData.IsFirstPlay = false;
             Geekplay.Instance.Save();
         }
+        Geekplay.Instance.PlayerData.CoinsChanged += SetCoinsInPromo;
+        CoinsTextInPromo.text = Geekplay.Instance.PlayerData.Coins.ToString();
+        CoinsTextInOurGames.text = Geekplay.Instance.PlayerData.Coins.ToString();
 
 
         //Geekplay.Instance.PlayerData = new PlayerData();
         //Geekplay.Instance.Save();
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P) && Input.GetKeyDown(KeyCode.D))
+        {
+            Geekplay.Instance.PlayerData = new PlayerData();
+            Geekplay.Instance.Save();
+            Debug.Log("PLAYER DATA CLEARED");
+        }
+    }
+    private void OnDisable()
+    {
+        Geekplay.Instance.PlayerData.CoinsChanged -= SetCoinsInPromo;
+
+    }
+    private void SetCoinsInPromo(int NewCoins)
+    {
+        CoinsTextInPromo.text = NewCoins.ToString();
+        CoinsTextInOurGames.text = Geekplay.Instance.PlayerData.Coins.ToString();
+    }
+    public void HideAllWindows() //On Buttons
+    {
+        for (int i = 0; i < Windows.Length; i++)
+        {
+            Windows[i].SetActive(false);
+        }
     }
     public void ShowAdOnButtonClick()
     {

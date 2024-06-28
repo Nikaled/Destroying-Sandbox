@@ -71,9 +71,15 @@ public class GameplayLocalization : MonoBehaviour
     [SerializeField] TextMeshProUGUI Creeper2;
     [SerializeField] TextMeshProUGUI Creeper3;
 
+    [Header("PhaseButtons")]
+    public TextMeshProUGUI InventoryButton;
+    public TextMeshProUGUI BuildPhaseButton;
+    public TextMeshProUGUI DestroyPhaseButton;
+
     private void Start()
     {
-        if(Geekplay.Instance.language == "ru")
+       
+        if (Geekplay.Instance.language == "ru")
         {
         RuLocalization();
         }
@@ -141,6 +147,9 @@ public class GameplayLocalization : MonoBehaviour
         Creeper1.text = "<color=orange>[T]</color> Explode";
         Creeper2.text = "<color=orange>[M]</color> Building mode";
         Creeper3.text = "<color=orange>[U]</color> To Menu";
+        InventoryButton.text = "INVENTORY";
+        BuildPhaseButton.text = "BUILD";
+        DestroyPhaseButton.text = "DESTROY";
     }
     private void TrLocalization()
     {
@@ -197,6 +206,9 @@ public class GameplayLocalization : MonoBehaviour
         Creeper1.text = "<color=orange>[T]</color> Patlamak için";
         Creeper2.text = "<color=orange>[M]</color> İnşaat modu";
         Creeper3.text = "<color=orange>[U]</color> Menüde";
+        InventoryButton.text = "ENVANTER";
+        BuildPhaseButton.text = "İNŞA ETMEK";
+        DestroyPhaseButton.text = "YOK ET";
     }
     private void RuLocalization()
     {
@@ -253,5 +265,8 @@ public class GameplayLocalization : MonoBehaviour
         Creeper1.text = "<color=orange>[T]</color> Взорваться";
         Creeper2.text = "<color=orange>[М]</color> Режим строительства";
         Creeper3.text = "<color=orange>[U]</color>  В Меню";
+        InventoryButton.text = "ИНВЕНТАРЬ";
+        BuildPhaseButton.text = "СТРОИТЬ";
+        DestroyPhaseButton.text = "РАЗРУШИТЬ";
     }
 }

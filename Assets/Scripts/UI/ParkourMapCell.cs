@@ -11,7 +11,7 @@ public class ParkourMapCell : DestroyingMapCell
     {
         base.Awake();
     }
-    public void LoadParkourMap()
+    public void LoadMapLogic()
     {
         Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
         Geekplay.Instance.PlayerData.CurrentParkourMapName = MapNameForScripts;
@@ -20,6 +20,12 @@ public class ParkourMapCell : DestroyingMapCell
         Geekplay.Instance.PlayerData.CurrentParkourMapIndex = IndexOfMap;
         Analytics.instance.SendEvent(forEvent);
         SceneManager.LoadScene(1);
+    }
+    public void LoadParkourMap()
+    {
+        ParkourRewardManager.instance.currentPressedCell = this;
+        ParkourRewardManager.instance.TryShowRewardWindow();
+
     }
     public void SetTimeToSlot(float TimeInSeconds)
     {

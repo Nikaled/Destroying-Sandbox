@@ -10,6 +10,7 @@ public class WeaponSlot : MonoBehaviour
     [SerializeField] Image ActiveWeaponImage;
     [SerializeField] TextMeshProUGUI NumberOfSlot;
     [SerializeField] Image BlockImage;
+    [SerializeField] GameObject LockedWeaponImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,14 @@ public class WeaponSlot : MonoBehaviour
     {
         Player.instance.SwitchActiveWeaponSlot(WeaponNumber);
     }
-    public void ChangeSpriteInSlot(Sprite blockSprite)
+    //public void ChangeSpriteInSlot(Sprite blockSprite)
+    //{
+    //    BlockImage.sprite = blockSprite;
+    //}
+
+    public void SetLockView(bool IsUnlocked)
     {
-        BlockImage.sprite = blockSprite;
+        LockedWeaponImage.SetActive(!IsUnlocked);
     }
     public void WeaponIsActive()
     {

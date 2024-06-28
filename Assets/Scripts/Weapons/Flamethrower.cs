@@ -7,7 +7,9 @@ public class Flamethrower : MonoBehaviour
     [SerializeField] GameObject FireThrowAnimation;
     [SerializeField] BoxCollider HitCollider;
     private IEnumerator WaitForActiveFire;
+    public bool IsFiring;
     public static Flamethrower instance;
+
     private void Awake()
     {
         instance = this;
@@ -15,7 +17,7 @@ public class Flamethrower : MonoBehaviour
     public void StartFire()
     {
         Debug.Log("Fire Flame");
-
+        IsFiring = true;
         if (WaitForActiveFire != null)
         {
             StopCoroutine(WaitForActiveFire);
@@ -24,6 +26,16 @@ public class Flamethrower : MonoBehaviour
         StartCoroutine(WaitForActiveFire);
 
         FireThrowAnimation.SetActive(true);
+    }
+    private void Update()
+    {
+        if(Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower && Player.instance.currentState == Player.PlayerState.Idle)
+        {
+            if (IsFiring)
+            {
+                Player.instance.FireFlameThrower();
+            }
+        }
     }
     private void ActivateFire()
     {    
@@ -35,6 +47,7 @@ public class Flamethrower : MonoBehaviour
         {
             StopCoroutine(WaitForActiveFire);
         }
+        IsFiring = false;
         FireThrowAnimation.SetActive(false);
         HitCollider.enabled = false;
     }

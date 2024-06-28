@@ -15,11 +15,11 @@ public class WeaponShop : MonoBehaviour
     void Start()
     {
         Geekplay.Instance.PlayerData.CoinsChanged += ChangeCoinsText;
-        Geekplay.Instance.PlayerData.Coins = 1000;
+        CoinsText.text = Geekplay.Instance.PlayerData.Coins.ToString();
         LoadWeaponInfo();
         for (int i = 0; i < shopCells.Length; i++)
         {
-            int WeaponIndexInArray = i + 4;
+            int WeaponIndexInArray = i + 5;
             shopCells[i].LoadBuyStatusPriceAndIndex(550, OpenedWeapons[WeaponIndexInArray], WeaponIndexInArray);
         }
     }

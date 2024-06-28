@@ -6,6 +6,7 @@ public class WeaponSelector : MonoBehaviour
 {
     public static WeaponSelector instance;
     [SerializeField] GameObject[] WeaponsInChild;
+    [SerializeField] WeaponSlotManager WeaponManager;
     private int CurrentIndexToOpen;
     private bool[] UnlockOneTime;
     private void Awake()
@@ -32,7 +33,7 @@ public class WeaponSelector : MonoBehaviour
     }
     private void OnEnable()
     {
-        if (CycleManager.instance !=null)
+        if (CycleManager.instance != null)
         {
             CycleManager.instance.BuildingPhaseStarted += HideAllWeapons;
         }
@@ -44,30 +45,54 @@ public class WeaponSelector : MonoBehaviour
             CycleManager.instance.BuildingPhaseStarted -= HideAllWeapons;
         }
     }
+    private void SetUnlockImages(bool[] OpenedWeapons)
+    {
+        bool[] AllWaysUnlockedWeapons = new bool[OpenedWeapons.Length];
+
+        for (int i = 0; i < AllWaysUnlockedWeapons.Length; i++)
+        {
+            AllWaysUnlockedWeapons[i] = OpenedWeapons[i];
+        }
+        for (int i = 0; i < AllWaysUnlockedWeapons.Length; i++)
+        {
+            if (UnlockOneTime == null)
+            {
+                break;
+            }
+            if (i < UnlockOneTime.Length)
+            {
+                if (UnlockOneTime[i] == true)
+                {
+                    AllWaysUnlockedWeapons[i] = true;
+                }
+            }
+        }
+        WeaponManager.ChangeLockedWeaponImages(AllWaysUnlockedWeapons);
+    }
     public bool IsWeaponAvailable(int WeaponPressedNumber)
     {
         int WeaponIndex = WeaponPressedNumber - 1;
         if (Geekplay.Instance.PlayerData.WeaponOpenedArray == null)
         {
             Geekplay.Instance.PlayerData.WeaponOpenedArray = new bool[10];
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }
-            Geekplay.Instance.PlayerData.WeaponOpenedArray[9] = true;
             Geekplay.Instance.Save();
         }
-        else if(Geekplay.Instance.PlayerData.WeaponOpenedArray.Length < 9)
+        else if (Geekplay.Instance.PlayerData.WeaponOpenedArray.Length < 9)
         {
             Geekplay.Instance.PlayerData.WeaponOpenedArray = new bool[10];
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }
-            Geekplay.Instance.PlayerData.WeaponOpenedArray[9] = true;
             Geekplay.Instance.Save();
         }
         bool[] OpenedWeapon = Geekplay.Instance.PlayerData.WeaponOpenedArray;
+        SetUnlockImages(OpenedWeapon);
+
         if (UnlockOneTime != null)
         {
             if (UnlockOneTime[WeaponIndex])
@@ -94,11 +119,12 @@ public class WeaponSelector : MonoBehaviour
     }
     public void UnlockWeaponOneTime()
     {
-        if(UnlockOneTime == null)
+        if (UnlockOneTime == null)
         {
             UnlockOneTime = new bool[10];
         }
         UnlockOneTime[CurrentIndexToOpen] = true;
+        SetUnlockImages(Geekplay.Instance.PlayerData.WeaponOpenedArray);
         Player.instance.SwitchWeapon(CurrentIndexToOpen + 1);
 
     }

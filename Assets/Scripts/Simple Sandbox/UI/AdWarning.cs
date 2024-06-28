@@ -32,7 +32,7 @@ public class AdWarning : MonoBehaviour
     }
     private void ResumeTime()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
     }
     private IEnumerator StartTimer()
     {
@@ -56,14 +56,17 @@ public class AdWarning : MonoBehaviour
         WarningPanel.SetActive(false);
         AddCoinsConfirmUI.SetActive(true);
         Player.instance.AdWarningActive = false;
-        Player.instance.InterfaceActive = InterfaceState;
+        //Player.instance.InterfaceActive = InterfaceState;
         StartCoroutine(AwaitAndShowWarningPanel());
         Cursor.lockState = CursorLockMode.None;
 //#if UNITY_EDITOR
 //        CanvasManager.instance.CheckActiveUnlockCursorWindows();
 //#endif
     }
-
+    public void ConfirmCoinButton()
+    {
+        Time.timeScale = 1f;
+    }
     private void LocalizateText(int Timer)
     {
         if (Geekplay.Instance.language == "ru")

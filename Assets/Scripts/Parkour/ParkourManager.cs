@@ -14,10 +14,14 @@ public class ParkourManager : MonoBehaviour
     float milliseconds;
     public static ParkourManager instance;
     private bool WinMap;
+    private bool CountDown;
     private readonly string EndedParkourMap = "EndedParkourMapAtNumber_";
+    [SerializeField] GameObject CountDownOnStartPanel;
+    [SerializeField] TextMeshProUGUI CountDownTimer;
     private void Start()
     {
         instance = this;
+        CountDown = true;
         if (SerializeBlockManager.instance.OnlyParkourMap)
         {
             StartParkour();
@@ -26,8 +30,28 @@ public class ParkourManager : MonoBehaviour
     }
     public void StartParkour()
     {
+        CountDown = true;
+        timerText.text = string.Format("{0:00}:{1:00}:{2:00}", 0, 0, 0);
+        StartCoroutine(CountDownOnStart());
+    }
+    private IEnumerator CountDownOnStart()
+    {
+        CountDownOnStartPanel.SetActive(true);
+        Player.instance.examplePlayer.LockCursor(true);
+        Player.instance.InterfaceActive = true;
+        int Timer = 4;
+        while (Timer != 1)
+        {
+            Timer--;
+            CountDownTimer.text = Timer.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+        Geekplay.Instance.Save();
+        CountDownOnStartPanel.SetActive(false);
+        Player.instance.InterfaceActive = false;
         StartTime = Time.time;
         WinMap = false;
+        CountDown = false;
     }
     private void TrySerializeTimeValue()
     {
@@ -73,7 +97,7 @@ public class ParkourManager : MonoBehaviour
     }
     private void Update()
     {
-        if (WinMap)
+        if (WinMap || CountDown)
         {
             return;
         }

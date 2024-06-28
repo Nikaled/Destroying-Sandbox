@@ -118,6 +118,7 @@ public class GetGoldButton : MonoBehaviour
     private void GetGold()
     {
         Geekplay.Instance.PlayerData.Coins += PurGold;
+        Geekplay.Instance.Save();
     }
     private IEnumerator BlockRewardOnTimeByGeekplay()
     {

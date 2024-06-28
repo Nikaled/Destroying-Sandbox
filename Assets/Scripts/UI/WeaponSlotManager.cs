@@ -5,14 +5,17 @@ using UnityEngine;
 public class WeaponSlotManager : MonoBehaviour
 {
     [SerializeField] WeaponSlot[] WeaponSlots;
-    private void Awake()
-    {
-
-    }
     private void Start()
     {
         OnWeaponSwitched(1);
         Player.instance.SwitchedWeapon += OnWeaponSwitched;
+    }
+    public void ChangeLockedWeaponImages(bool[] WeaponUnlockedArray)
+    {
+        for (int i = 0; i < WeaponUnlockedArray.Length; i++)
+        {
+            WeaponSlots[i].SetLockView(WeaponUnlockedArray[i]);
+        }
     }
     //private void OnEnable()
     //{
