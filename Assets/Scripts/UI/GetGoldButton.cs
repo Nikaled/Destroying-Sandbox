@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GetGoldButton : MonoBehaviour
 {
     public string PurName;
-    public int PurGold;
+    //public int PurGold;
     public Button BuyGoldButton;
     [SerializeField] GameObject RewardBlocker;
     [SerializeField] TextMeshProUGUI RewardTimerText;
@@ -115,8 +115,8 @@ public class GetGoldButton : MonoBehaviour
     }
     private void GetGold()
     {
-        Geekplay.Instance.PlayerData.Coins += PurGold;
-        Geekplay.Instance.Save();
+        //Geekplay.Instance.PlayerData.Coins += PurGold;
+        //Geekplay.Instance.Save();
     }
     private IEnumerator BlockRewardOnTimeByGeekplay()
     {

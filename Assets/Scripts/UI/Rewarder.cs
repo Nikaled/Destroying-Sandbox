@@ -14,7 +14,7 @@ public class Rewarder : MonoBehaviour
     public int PurchaseForGoldGold2 = 200;
     public int PurchaseForGoldGold3 = 500;
     public Action RewardShowed;
-    Dictionary<string, int> OperationNameAndReward = new();
+     Dictionary<string, int> OperationNameAndReward = new();
     private void Awake()
     {
         OperationNameAndReward.Add(RewardForGold, RewardForGoldGold);
@@ -34,17 +34,18 @@ public class Rewarder : MonoBehaviour
     private void GetGoldReward()
     {
         Geekplay.Instance.PlayerData.Coins += RewardForGoldGold;
+        RewardShowed?.Invoke();
     }
     private void GetGoldPur1()
     {
-        Geekplay.Instance.PlayerData.Coins += RewardForGoldGold;
+        Geekplay.Instance.PlayerData.Coins += PurchaseForGoldGold1;
     }
     private void GetGoldPur2()
     {
-        Geekplay.Instance.PlayerData.Coins += RewardForGoldGold;
+        Geekplay.Instance.PlayerData.Coins += PurchaseForGoldGold2;
     }
     private void GetGoldPur3()
     {
-        Geekplay.Instance.PlayerData.Coins += RewardForGoldGold;
+        Geekplay.Instance.PlayerData.Coins += PurchaseForGoldGold3;
     }
 }

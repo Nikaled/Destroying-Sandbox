@@ -24,7 +24,6 @@ public class ParkourRewardManager : MonoBehaviour
         RewardWindow.SetActive(true);
         RewardButton.onClick.RemoveAllListeners();
         RewardButton.onClick.AddListener(delegate { RewardOperation(); });
-        //RewardButton.onClick.AddListener(delegate { currentPressedCell.LoadMapLogic(); });
         DeclineButton.onClick.RemoveAllListeners();
         DeclineButton.onClick.AddListener(delegate { currentPressedCell.LoadMapLogic(); });
     }

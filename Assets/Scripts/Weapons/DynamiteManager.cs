@@ -42,6 +42,10 @@ public class DynamiteManager : MonoBehaviour
     }
     private void OnDisable()
     {
+        if(currentCell != null)
+        {
+            currentCell.ShowCellMesh(false);
+        }
         OnWeaponSwitched();
 
         if (Geekplay.Instance.mobile)
@@ -63,7 +67,10 @@ public class DynamiteManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 26, AbleToBuildMask))
         {
-
+            if (currentCell != null)
+            {
+                currentCell.ShowCellMesh(false);
+            }
             CrosshairWorldPosition = raycastHit.point;
             currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
         }
@@ -72,6 +79,7 @@ public class DynamiteManager : MonoBehaviour
             if (currentCell != null)
             {
                 CrosshairWorldPosition = ray.GetPoint(19);
+                currentCell.ShowCellMesh(false);
             }
             currentCell = null;
         }

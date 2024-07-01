@@ -29,18 +29,14 @@ public class WeaponShop : MonoBehaviour
     }
     public void LoadWeaponInfo()
     {
-        Geekplay.Instance.PlayerData.WeaponOpenedArray = null;
-
-
 
         if (Geekplay.Instance.PlayerData.WeaponOpenedArray == null)
         {
             Geekplay.Instance.PlayerData.WeaponOpenedArray = new bool[10];
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }
-            Geekplay.Instance.PlayerData.WeaponOpenedArray[9] = true;
             Geekplay.Instance.Save();
         }
         else if (Geekplay.Instance.PlayerData.WeaponOpenedArray.Length < 9)
@@ -50,7 +46,6 @@ public class WeaponShop : MonoBehaviour
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }
-            Geekplay.Instance.PlayerData.WeaponOpenedArray[9] = true;
             Geekplay.Instance.Save();
         }
         OpenedWeapons = Geekplay.Instance.PlayerData.WeaponOpenedArray;
@@ -62,7 +57,7 @@ public class WeaponShop : MonoBehaviour
             Geekplay.Instance.PlayerData.Coins -= price;
             Geekplay.Instance.PlayerData.WeaponOpenedArray[currentWeaponIndex] = true;
             Geekplay.Instance.Save();
-            int CellIndex = currentWeaponIndex - 4;
+            int CellIndex = currentWeaponIndex - 5;
             shopCells[CellIndex].LoadBuyStatusPriceAndIndex(550, OpenedWeapons[CellIndex], CellIndex);
         }
     }
