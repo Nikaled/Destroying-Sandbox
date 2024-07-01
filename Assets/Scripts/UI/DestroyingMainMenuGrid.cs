@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyingMainMenuGrid : MonoBehaviour
 {
     [SerializeField] DestroyingMapCell[] Cells;
-    private List<DestroyingMapsPlayerData> completedMaps;
+    private List<MapsPlayerData> completedMaps;
     private int GridIndex =0;
     private int MapsInPage = 15;
     private void Start()
@@ -18,7 +18,7 @@ public class DestroyingMainMenuGrid : MonoBehaviour
             {
             if(Cells[i].MapNameForScripts == completedMaps[j].MapName)
                 {
-                    Cells[i].SetMapRewardTextOnCompleted(completedMaps[j].IsRewardTaked);
+                    Cells[i].SetMapRewardTextOnCompleted(completedMaps[j].IsCompleted);
                 }
             }
         }

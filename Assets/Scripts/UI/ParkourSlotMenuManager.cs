@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ParkourSlotMenuManager : MonoBehaviour
 {
     [SerializeField] ParkourMapCell[] parkourCells;
-    List<ParkourMapPlayerData> playerMapData;
+    List<ParkourMapsPlayerData> playerMapData;
     private int GridIndex = 0;
     private int MapsInPage = 15;
     private void Start()

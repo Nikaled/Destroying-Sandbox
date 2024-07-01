@@ -70,12 +70,10 @@ public class GetGoldButton : MonoBehaviour
     }
     public void SubscribeOnPurchase()
     {
-        Geekplay.Instance.SubscribeOnPurchase(PurName, GetGold);
         BuyGoldButton.onClick.AddListener(delegate { InAppOperation(); });
     }
     public void SubscribeOnReward()
     {
-        Geekplay.Instance.SubscribeOnReward(PurName, GetGold);
         BuyGoldButton.onClick.AddListener(delegate { RewardOperation(); });
     }
     private void InAppOperation()
@@ -85,7 +83,7 @@ public class GetGoldButton : MonoBehaviour
     private void RewardOperation()
     {
         Geekplay.Instance.ShowRewardedAd(PurName);
-        Geekplay.Instance.RunCoroutine(BlockRewardOnTimeByGeekplay());
+        Geekplay.Instance.RunBlockRewardCoroutine();
 
         RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
         RewardBlocker.SetActive(true);

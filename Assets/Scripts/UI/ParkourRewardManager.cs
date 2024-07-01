@@ -36,7 +36,7 @@ public class ParkourRewardManager : MonoBehaviour
     private void RewardOperation()
     {
         Geekplay.Instance.ShowRewardedAd(ParkourRewardName);
-        Geekplay.Instance.RunCoroutine(BlockRewardOnTimeByGeekplay());
+        Geekplay.Instance.RunBlockRewardCoroutine();
     }
     private void GetSpeed()
     {

@@ -96,11 +96,11 @@ var plugin = {
           myGameInstance.SendMessage('Init', 'StopMusAndGame');
         },
         onRewarded: () => {
-          //myGameInstance.SendMessage('Init', 'OnRewarded');
+          myGameInstance.SendMessage('Init', 'OnRewarded');
         },
         onClose: () => {
           console.log('Video ad closed.');
-          myGameInstance.SendMessage('Init', 'OnRewarded');
+         // myGameInstance.SendMessage('Init', 'OnRewarded');
           myGameInstance.SendMessage('Init', 'ResumeMusAndGame');
         }, 
         onError: (e) => {

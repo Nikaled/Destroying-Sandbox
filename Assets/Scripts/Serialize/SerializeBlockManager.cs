@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SerializeBlockManager : MonoBehaviour
 {
     public DestructionMapData destructionMapData;
     public ParkourMapsData parkourMapsData;
-    public List<Block> BlocksOnScene = new();
+  [HideInInspector]  public List<Block> BlocksOnScene = new();
     public static SerializeBlockManager instance;
    [SerializeField] public List<SaveBlockData> BlocksData;
     //public ChooseBlockCell CellPrefab;
@@ -17,9 +18,11 @@ public class SerializeBlockManager : MonoBehaviour
     public bool OnlyDestroyingMap;
     public bool OnlyParkourMap;
     public string CurrentParkourMapName;
-    private MapData currentMapData;
+    public MapData currentMapData;
     private readonly string EndedDestroyMap = "EndedDestroyMapAtNumber_";
-
+    private readonly string EndedParkourMap = "EndedParkourMapAtNumber_";
+    private int CurrentMapIndex;
+    public bool IsCurrentMapLast;
     private void Awake()
     {
 
@@ -27,35 +30,70 @@ public class SerializeBlockManager : MonoBehaviour
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
             Geekplay.Instance.PlayerData.IsLoadingDestructionMap = false;
-            for (int i = 0; i < destructionMapData.DestructionMaps.Count; i++)
+            if(Geekplay.Instance.PlayerData.CurrentDestructionMapName == null)
             {
-                if(Geekplay.Instance.PlayerData.CurrentDestructionMapName == destructionMapData.DestructionMaps[i].MapName)
+                for (int i = 0; i < destructionMapData.DestructionMaps.Count; i++)
                 {
-                    currentMapData = destructionMapData.DestructionMaps[i];
-                    Geekplay.Instance.PlayerData.SavedBlocks = destructionMapData.DestructionMaps[i].SavedBlocks;
-                    OnlyDestroyingMap = true;
-                    LoadBlocks();
-                    break;
+                    if (Geekplay.Instance.PlayerData.CurrentDestructionMapIndex == destructionMapData.DestructionMaps[i].MapIndex)
+                    {
+                        currentMapData = destructionMapData.DestructionMaps[i];
+                        Geekplay.Instance.PlayerData.SavedBlocks = destructionMapData.DestructionMaps[i].SavedBlocks;
+                        OnlyDestroyingMap = true;
+                        CheckMapIsLastInLevelList(currentMapData.MapIndex, destructionMapData.DestructionMaps.Count);
+                        LoadBlocks();
+                        break;
+                    }
                 }
             }
-           
+            else
+            {
+                for (int i = 0; i < destructionMapData.DestructionMaps.Count; i++)
+                {
+                    if (Geekplay.Instance.PlayerData.CurrentDestructionMapName == destructionMapData.DestructionMaps[i].MapName)
+                    {
+                        currentMapData = destructionMapData.DestructionMaps[i];
+                        Geekplay.Instance.PlayerData.SavedBlocks = destructionMapData.DestructionMaps[i].SavedBlocks;
+                        OnlyDestroyingMap = true;
+                        CheckMapIsLastInLevelList(currentMapData.MapIndex, destructionMapData.DestructionMaps.Count);
+                        LoadBlocks();
+                        break;
+                    }
+                }
+            }   
         }
         else
         {
             if (Geekplay.Instance.PlayerData.IsLoadingParkourMap)
             {
                 Geekplay.Instance.PlayerData.IsLoadingParkourMap = false;
-                for (int i = 0; i < parkourMapsData.ParkourMaps.Count; i++)
+                if (Geekplay.Instance.PlayerData.CurrentParkourMapName == null)
                 {
-                    if (Geekplay.Instance.PlayerData.CurrentParkourMapName == parkourMapsData.ParkourMaps[i].MapName)
+                    for (int i = 0; i < parkourMapsData.ParkourMaps.Count; i++)
                     {
-                        currentMapData = parkourMapsData.ParkourMaps[i];
-                        Geekplay.Instance.PlayerData.SavedBlocks = parkourMapsData.ParkourMaps[i].SavedBlocks;
-                        OnlyParkourMap = true;
-                        LoadBlocks();
-                        break;
+                        if (Geekplay.Instance.PlayerData.CurrentParkourMapIndex == parkourMapsData.ParkourMaps[i].MapIndex)
+                        {
+                            currentMapData = parkourMapsData.ParkourMaps[i];
+                            Geekplay.Instance.PlayerData.SavedBlocks = parkourMapsData.ParkourMaps[i].SavedBlocks;
+                            OnlyParkourMap = true;
+                            CheckMapIsLastInLevelList(currentMapData.MapIndex, parkourMapsData.ParkourMaps.Count);
+                            LoadBlocks();
+                            break;
+                        }
                     }
                 }
+                else
+                    for (int i = 0; i < parkourMapsData.ParkourMaps.Count; i++)
+                    {
+                        if (Geekplay.Instance.PlayerData.CurrentParkourMapName == parkourMapsData.ParkourMaps[i].MapName)
+                        {
+                            currentMapData = parkourMapsData.ParkourMaps[i];
+                            Geekplay.Instance.PlayerData.SavedBlocks = parkourMapsData.ParkourMaps[i].SavedBlocks;
+                            OnlyParkourMap = true;
+                            CheckMapIsLastInLevelList(currentMapData.MapIndex, parkourMapsData.ParkourMaps.Count);
+                            LoadBlocks();
+                            break;
+                        }
+                    }
             }
         }
        
@@ -67,7 +105,6 @@ public class SerializeBlockManager : MonoBehaviour
             Geekplay.Instance.PlayerData.IsLoadingMapFromSlot = false;
             LoadBlocksFromSlot(Geekplay.Instance.PlayerData.MapSlotToLoad);
             Geekplay.Instance.Save();
-            CycleManager.instance.ActivateDestroyingPhase();
         }
         if (OnlyDestroyingMap)
         {
@@ -75,41 +112,125 @@ public class SerializeBlockManager : MonoBehaviour
             DestroyCounter.instance.AllBlockDestroyed += TryGetRewardForDestroyingMap;
         }
     }
+    private void CheckMapIsLastInLevelList(int CurrentMapIndex, int ListCount)
+    {
+        if(CurrentMapIndex == ListCount - 1)
+        {
+            IsCurrentMapLast = true;
+        }
+        else
+        {
+            IsCurrentMapLast = false;
 
+        }
+    }
+    public void LoadNextLevel()
+    {
+       int NewLevelIndex =  currentMapData.MapIndex + 1; 
+        if (OnlyParkourMap)
+        {
+            Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
+            Geekplay.Instance.PlayerData.CurrentParkourMapIndex = NewLevelIndex;
+            Geekplay.Instance.PlayerData.CurrentParkourMapName = null;
+        }
+        else if (OnlyDestroyingMap)
+        {
+            Geekplay.Instance.PlayerData.IsLoadingDestructionMap = true;
+            Geekplay.Instance.PlayerData.CurrentDestructionMapIndex = NewLevelIndex;
+            Geekplay.Instance.PlayerData.CurrentDestructionMapName = null;
+        }
+        SceneManager.LoadScene(1);
+    }
     private void TryGetRewardForDestroyingMap()
     {
         string forAnalytics = EndedDestroyMap + Geekplay.Instance.PlayerData.CurrentDestructionMapIndex;
         Analytics.instance.SendEvent(forAnalytics);
-        var DList =  Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList;
+        var DList = Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList;
         var DMapName = Geekplay.Instance.PlayerData.CurrentDestructionMapName;
         bool MapFounded = false;
-        for (int i = 0; i < DList.Count; i++)
+        if(DList != null)
         {
-            if(DList[i] != null)
+            for (int i = 0; i < DList.Count; i++)
             {
-                if (DList[i].MapName == DMapName)
+                if (DList[i] != null)
                 {
-                    if (DList[i].IsRewardTaked == false)
+                    if (DList[i].MapName == DMapName)
                     {
-                        MapFounded = true;
-                        DList[i].IsRewardTaked = true;
-                        Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
-                        Geekplay.Instance.Save();
+                        if (DList[i].IsCompleted == false)
+                        {
+                            MapFounded = true;
+                            DList[i].IsCompleted = true;
+                            Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
+                            Geekplay.Instance.Save();
+                        }
                     }
                 }
+
             }
-           
         }
-        if(MapFounded == false)
+        else
         {
-            var dmData = new DestroyingMapsPlayerData();
+            Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList = new();
+        }
+      
+        if (MapFounded == false)
+        {
+            var dmData = new MapsPlayerData();
             dmData.MapName = currentMapData.MapName;
-            dmData.IsRewardTaked = true;
+            dmData.IsCompleted = true;
             Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList.Add(dmData);
             Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
             Geekplay.Instance.Save();
         }
-           
+
+    }
+    public void TryGetRewardForParkourMap()
+    {
+        CanvasManager.instance.ShowRewardAndSetRewardText(false, 0);
+        string forAnalytics = EndedParkourMap + Geekplay.Instance.PlayerData.CurrentParkourMapIndex;
+        Analytics.instance.SendEvent(forAnalytics);
+        var DList = Geekplay.Instance.PlayerData.parkourMapPlayerDataList;
+        var DMapName = Geekplay.Instance.PlayerData.CurrentParkourMapName;
+        bool MapFounded = false;
+        if(DList != null)
+        {
+            for (int i = 0; i < DList.Count; i++)
+            {
+                if (DList[i] != null)
+                {
+                    if (DList[i].MapName == DMapName)
+                    {
+                        MapFounded = true;
+                        ParkourManager.instance.TrySerializeTime(DList[i]);
+                        if (DList[i].IsCompleted == false)
+                        {
+                            DList[i].IsCompleted = true;
+                            Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
+                            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
+                            Geekplay.Instance.Save();
+                        }
+                    }
+                }
+
+            }
+        }
+        else
+        {
+            Geekplay.Instance.PlayerData.parkourMapPlayerDataList = new();
+        }
+        if (MapFounded == false)
+        {
+            var dmData = new ParkourMapsPlayerData();
+            dmData.MapName = currentMapData.MapName;
+            dmData.IsCompleted = true;
+            ParkourManager.instance.TrySerializeTime(dmData);
+            Geekplay.Instance.PlayerData.parkourMapPlayerDataList.Add(dmData);
+            Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
+            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
+            Geekplay.Instance.Save();
+        }
+
+      
     }
     private string WriteDate()
     {

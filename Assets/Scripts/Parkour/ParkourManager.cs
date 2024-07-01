@@ -15,7 +15,6 @@ public class ParkourManager : MonoBehaviour
     public static ParkourManager instance;
     private bool WinMap;
     private bool CountDown;
-    private readonly string EndedParkourMap = "EndedParkourMapAtNumber_";
     [SerializeField] GameObject CountDownOnStartPanel;
     [SerializeField] TextMeshProUGUI CountDownTimer;
     private void Start()
@@ -31,14 +30,15 @@ public class ParkourManager : MonoBehaviour
     public void StartParkour()
     {
         CountDown = true;
+        Player.instance.examplePlayer.LockCursor(true);
+        Player.instance.InterfaceActive = true;
         timerText.text = string.Format("{0:00}:{1:00}:{2:00}", 0, 0, 0);
         StartCoroutine(CountDownOnStart());
     }
     private IEnumerator CountDownOnStart()
     {
         CountDownOnStartPanel.SetActive(true);
-        Player.instance.examplePlayer.LockCursor(true);
-        Player.instance.InterfaceActive = true;
+
         int Timer = 4;
         while (Timer != 1)
         {
@@ -53,46 +53,22 @@ public class ParkourManager : MonoBehaviour
         WinMap = false;
         CountDown = false;
     }
-    private void TrySerializeTimeValue()
+    public float GetTimeInSeconds()
     {
-        string forAnalytics = EndedParkourMap + Geekplay.Instance.PlayerData.CurrentParkourMapIndex;
-        Analytics.instance.SendEvent(forAnalytics);
-        bool MapFound = false;
-        var parkourPlayerData = new ParkourMapPlayerData();
-        parkourPlayerData.MapName = Geekplay.Instance.PlayerData.CurrentParkourMapName;
-        parkourPlayerData.IsCompleted = true;
-        parkourPlayerData.timeInSeconds = minutes * 60 + seconds + milliseconds / 1000;
-        if (Geekplay.Instance.PlayerData.parkourMapPlayerDataList != null)
+        return minutes * 60 + seconds + milliseconds / 1000;
+    }
+    public void TrySerializeTime(ParkourMapsPlayerData currentParkourMapSlot)
+    {
+        float currentRecord = GetTimeInSeconds();
+        if (currentParkourMapSlot.timeInSeconds > currentRecord || currentParkourMapSlot.timeInSeconds == 0)
         {
-            for (int i = 0; i < Geekplay.Instance.PlayerData.parkourMapPlayerDataList.Count; i++)
-            {
-                if (Geekplay.Instance.PlayerData.parkourMapPlayerDataList[i].MapName == parkourPlayerData.MapName)
-                {
-                    MapFound = true;
-                    if (Geekplay.Instance.PlayerData.parkourMapPlayerDataList[i].timeInSeconds > parkourPlayerData.timeInSeconds)
-                    {
-                        Geekplay.Instance.PlayerData.parkourMapPlayerDataList[i] = parkourPlayerData;
-                    }
-                }
-            }
-
+            currentParkourMapSlot.timeInSeconds = currentRecord;
         }
-        else
-        {
-            Geekplay.Instance.PlayerData.parkourMapPlayerDataList = new();
-        }
-        if (MapFound == false)
-        {
-            {
-                Geekplay.Instance.PlayerData.parkourMapPlayerDataList.Add(parkourPlayerData);
-            }
-        }
-        Geekplay.Instance.Save();
     }
     private void OnWinParkour()
     {
         WinMap = true;
-        TrySerializeTimeValue();
+        SerializeBlockManager.instance.TryGetRewardForParkourMap();
         Debug.Log("Win parkour");
     }
     private void Update()

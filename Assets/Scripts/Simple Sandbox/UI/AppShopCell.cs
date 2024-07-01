@@ -23,6 +23,10 @@ public class AppShopCell : MonoBehaviour
                 RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
             }
         }
+        if(Rewarder.instance != null)
+        {
+            Rewarder.instance.RewardShowed += RewardOperation;
+        }
     }
     private void OnDisable()
     {
@@ -33,12 +37,10 @@ public class AppShopCell : MonoBehaviour
     }
     public void SubscribeOnPurchase()
     {
-        Geekplay.Instance.SubscribeOnPurchase(PurName, GetGold);
         BuyGoldButton.onClick.AddListener(delegate { InAppOperation(); });
     }
     public void SubscribeOnReward()
     {
-        Geekplay.Instance.SubscribeOnReward(PurName, GetGold);
         BuyGoldButton.onClick.AddListener(delegate { RewardOperation(); });
     }
     private void InAppOperation()
@@ -47,9 +49,8 @@ public class AppShopCell : MonoBehaviour
     }
     private void RewardOperation()
     {
+        Geekplay.Instance.RunBlockRewardCoroutine();
         Geekplay.Instance.ShowRewardedAd(PurName);
-        Geekplay.Instance.RunCoroutine(BlockRewardOnTimeByGeekplay());
-
         RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
         RewardBlocker.SetActive(true);
         BuyGoldButton.enabled = false;

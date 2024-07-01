@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 
-public class DestroyingMapsPlayerData 
+public class MapsPlayerData 
 {
     public string MapName;
-    public bool IsRewardTaked;
+    public bool IsCompleted;
+
 }

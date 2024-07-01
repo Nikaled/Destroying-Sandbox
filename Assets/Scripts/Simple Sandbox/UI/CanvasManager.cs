@@ -52,6 +52,10 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject ParkourUI;
     [SerializeField] GameObject OnWinParkourMapUI;
     [SerializeField] TextMeshProUGUI CurrentDestroyedText;
+    [SerializeField] GameObject RewardUI;
+    [SerializeField] Button LoadNextLevelButton;
+    [SerializeField] TextMeshProUGUI RewardText;
+    [SerializeField] Button ReloadButtonOnWinPanel;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
     private bool BuildingMenuActive;
@@ -63,6 +67,22 @@ public class CanvasManager : MonoBehaviour
     private readonly string InventoryOpened = "InventoryOpened";
 
     #region DestroyingSandbox
+    public void TryShowNextLevelButton()
+    {
+        if((SerializeBlockManager.instance.OnlyDestroyingMap || SerializeBlockManager.instance.OnlyParkourMap) && SerializeBlockManager.instance.IsCurrentMapLast == false)
+        {
+            LoadNextLevelButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            LoadNextLevelButton.gameObject.SetActive(false);
+        }
+    }
+    public void ShowRewardAndSetRewardText(bool Is, int Reward)
+    {
+        RewardUI.SetActive(Is);
+        RewardText.text = Reward.ToString();
+    }
     public void ShowBuildingInstruction(bool Is)
     {
         BuildingInstruction.SetActive(Is);
@@ -97,7 +117,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void ShowWinParkourUI(bool Is)
     {
-        OnWinParkourMapUI.SetActive(Is);
+        ShowWinMapUI(Is);
         if (Is) // On Restart IsInterface controlled by ParkourManager
         {
         CheckActiveUnlockCursorWindows();
@@ -117,6 +137,10 @@ public class CanvasManager : MonoBehaviour
     {
         OnWinMapUI.SetActive(Is);
         CheckActiveUnlockCursorWindows();
+        if (Is)
+        {
+        TryShowNextLevelButton();
+        }
     }
     public void ShowCurrentDestroyInterface(bool Is)
     {
@@ -184,6 +208,7 @@ public class CanvasManager : MonoBehaviour
     }
     private void Start()
     {
+        Player.instance.examplePlayer.LockCursor(true);
         Geekplay.Instance.ShowInterstitialAd();
         ChangeCoinsText(Geekplay.Instance.PlayerData.Coins);
         DestroyCounter.instance.DestroyBlockCountChanged += DestroyCountChanged;
@@ -208,10 +233,13 @@ public class CanvasManager : MonoBehaviour
         {
             ParkourUI.SetActive(true);
             ParkourWinZone.instance.WinParkour += OnWinParkourMap;
+            ReloadButtonOnWinPanel.onClick.RemoveAllListeners();
+            ReloadButtonOnWinPanel.onClick.AddListener(delegate { CycleManager.instance.ActivateParkourPhase(); });
         }
         else
         {
             ParkourUI.SetActive(false);
+            ReloadButtonOnWinPanel.onClick.AddListener(delegate { CycleManager.instance.ActivateBuildingPhase(); });
         }
         if (Geekplay.Instance.PlayerData.IsFirstGameplay == false)
         {

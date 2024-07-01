@@ -83,12 +83,28 @@ public class Geekplay : MonoBehaviour
     public CursorLockMode? cashedCursorModeSilence = null;
     public int RewardLockTimer;
     public  Action<int> RewardLockTimeUpdate;
+    public IEnumerator BlockRewardCor;
 
     public OurGameWindow OurGame;
 
-    public void RunCoroutine(IEnumerator enumerator)
+    public void RunBlockRewardCoroutine()
     {
-        StartCoroutine(enumerator);
+        if(BlockRewardCor != null)
+        {
+            StopCoroutine(BlockRewardCor);
+        }
+        BlockRewardCor = BlockRewardOnTimeByGeekplay();
+        StartCoroutine(BlockRewardCor);
+    }
+    private IEnumerator BlockRewardOnTimeByGeekplay()
+    {
+        Geekplay.Instance.RewardLockTimer = 90;
+        while (Geekplay.Instance.RewardLockTimer > 0)
+        {
+            yield return new WaitForSeconds(1);
+            Geekplay.Instance.RewardLockTimer--;
+            Geekplay.Instance.RewardLockTimeUpdate?.Invoke(Geekplay.Instance.RewardLockTimer);
+        }
     }
     public void SubscribeOnReward(string idOrTags , UnityAction action)
     {

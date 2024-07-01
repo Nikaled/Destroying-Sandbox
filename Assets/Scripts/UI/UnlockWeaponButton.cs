@@ -72,7 +72,7 @@ public class UnlockWeaponButton : MonoBehaviour
     private void RewardOperation()
     {
         Geekplay.Instance.ShowRewardedAd("UnlockWeapon");
-        Geekplay.Instance.RunCoroutine(BlockRewardOnTimeByGeekplay());
+        Geekplay.Instance.RunBlockRewardCoroutine();
         //WeaponSelector.instance.UnlockWeaponOneTime();
         RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
         RewardBlocker.SetActive(true);

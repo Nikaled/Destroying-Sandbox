@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ParkourMapPlayerData
+public class ParkourMapsPlayerData : MapsPlayerData
 {
-    public string MapName;
     public float timeInSeconds;
-    public bool IsCompleted;
 }

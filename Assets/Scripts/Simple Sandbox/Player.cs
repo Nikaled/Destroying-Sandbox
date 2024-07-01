@@ -74,7 +74,31 @@ public class Player : MonoBehaviour
         FlameThrower,
         None
     }
+    private void SwitchView()
+    {
+        IsFirstView = !IsFirstView;
+        GoToNormalCamera();
+    }
+    public void SwitchCamera()
+    {
+        examplePlayer.SwitchCamera();
+        SwitchView();
+    }
+    private void GoToNormalCamera()
+    {
+        if (IsFirstView == false)
+        {
+            normalCamera.FollowPointFraming = new Vector2(1.8f, 1.8f);
+            normalCamera.Camera.fieldOfView = 55;
+        }
+        else
+        {
+            normalCamera.FollowPointFraming = new Vector2(-0.2f, 0.69f);
+            normalCamera.Camera.fieldOfView = 40;
+        }
+        //playerShooting.lineRenderer.enabled = false;
 
+    }
     private void Awake()
     {
         instance = this;
@@ -197,6 +221,7 @@ public class Player : MonoBehaviour
     }
     private void AfterSwitchState(Player.PlayerState newPlayerState)
     {
+        BuildCellManager.instance.DisableBlockOutline();
         currentState = newPlayerState;
         Debug.Log("Player State:" + currentState);
     }
@@ -234,7 +259,7 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (/*animationPlayer.IsMoving == false &&*/ currentState == PlayerState.Idle && IsFirstView)
+        if (/*animationPlayer.IsMoving == false &&*/  IsFirstView)
         {
             RotatePlayerOnShoot(playerShooting.AimDirection);
         }
@@ -254,6 +279,12 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SwitchView();
+        }
+#endif
         if (AdWarningActive)
         {
             return;
@@ -525,7 +556,7 @@ public class Player : MonoBehaviour
         examplePlayer.MyLockOnShoot = false;
     }
 
-    #region MobileFunctions
+#region MobileFunctions
     public void AimingGrenadeOnMobile()
     {
         animator.SetBool("AimingGrenade", true);
@@ -578,7 +609,7 @@ public class Player : MonoBehaviour
         animator.SetTrigger("GunFire");
         RotatePlayerOnShoot(playerShooting.AimDirection);
     }
-    #endregion
+#endregion
     private void FireInput()
     {
         if (CurrentWeapon == WeaponType.FlameThrower)

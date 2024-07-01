@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 6257860086439443408}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 4708497965962219044}
 --- !u!1 &1213495106045100570
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,6 +243,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 6257860086439443408}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 142517903200559001}
 --- !u!1 &1503168384660771314
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -510,6 +512,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 6257860086439443408}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 2342563628190343964}
 --- !u!1 &3054622769982808550
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -631,6 +634,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 6257860086439443408}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 7039439158685730001}
 --- !u!1 &4705824317556136379
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +698,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -752,6 +756,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 6257860086439443408}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 5859209233841832932}
 --- !u!1 &6665997280996790124
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +820,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -873,6 +878,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 6257860086439443408}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 3052579578056036700}
 --- !u!1 &6952303015656572758
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +892,7 @@ GameObject:
   - component: {fileID: 6257860086439443408}
   - component: {fileID: 1799982331510167379}
   m_Layer: 6
-  m_Name: GridCellCube Default
+  m_Name: BaseBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

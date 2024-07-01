@@ -40,8 +40,8 @@ public class PlayerData
     public int CurrentDestructionMapIndex;
     public List<SaveBlockData> SavedBlocks;
     public MapData[] MapDataArray;
-    public List<ParkourMapPlayerData> parkourMapPlayerDataList;
-    public List<DestroyingMapsPlayerData> DestroyingMapPlayerDataList;
+    public List<ParkourMapsPlayerData> parkourMapPlayerDataList;
+    public List<MapsPlayerData> DestroyingMapPlayerDataList;
     public int DestroyCount;
     public bool IsParkourSpeedUpForReward;
     public bool[] WeaponOpenedArray;

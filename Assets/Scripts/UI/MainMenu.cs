@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class MainMenu : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P) && Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.P) && Input.GetKeyDown(KeyCode.D))
         {
             Geekplay.Instance.PlayerData = new PlayerData();
             Geekplay.Instance.Save();
@@ -76,5 +77,24 @@ public class MainMenu : MonoBehaviour
     public void A_PressedParkourModeButton()
     {
         Analytics.instance.SendEvent(AnalyticsParkourModePressed);
+    }
+
+    public void LoadMapFromSlot(int SlotIndex)
+    {
+        if (Geekplay.Instance.PlayerData.MapDataArray != null)
+        {
+            if (Geekplay.Instance.PlayerData.MapDataArray.Length > SlotIndex)
+            {
+                if (Geekplay.Instance.PlayerData.MapDataArray[SlotIndex] != null)
+                {
+                    if (string.IsNullOrEmpty(Geekplay.Instance.PlayerData.MapDataArray[SlotIndex].SaveDate) == false)
+                    {
+                        Geekplay.Instance.PlayerData.IsLoadingMapFromSlot = true;
+                        Geekplay.Instance.PlayerData.MapSlotToLoad = SlotIndex;
+                        SceneManager.LoadScene(1);
+                    }
+                }
+            }
+        }
     }
 }

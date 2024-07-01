@@ -6,7 +6,8 @@ using UnityEngine;
 public class MapData 
 {
     public string MapName;
-    public string SaveDate;
+    public int MapIndex;
+  [HideInInspector]  public string SaveDate;
     public int RewardForComplete;
     public List<SaveBlockData> SavedBlocks;
 }
