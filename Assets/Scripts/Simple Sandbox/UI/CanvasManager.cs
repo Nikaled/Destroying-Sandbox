@@ -210,6 +210,7 @@ public class CanvasManager : MonoBehaviour
     {
         Player.instance.examplePlayer.LockCursor(true);
         Geekplay.Instance.ShowInterstitialAd();
+        ShowRewardAndSetRewardText(false, 0);
         ChangeCoinsText(Geekplay.Instance.PlayerData.Coins);
         DestroyCounter.instance.DestroyBlockCountChanged += DestroyCountChanged;
         DestroyCounter.instance.AllBlockDestroyed += OnWinMap;

@@ -143,6 +143,7 @@ public class SerializeBlockManager : MonoBehaviour
     }
     private void TryGetRewardForDestroyingMap()
     {
+        CanvasManager.instance.ShowRewardAndSetRewardText(false, 0);
         string forAnalytics = EndedDestroyMap + Geekplay.Instance.PlayerData.CurrentDestructionMapIndex;
         Analytics.instance.SendEvent(forAnalytics);
         var DList = Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList;
@@ -161,6 +162,7 @@ public class SerializeBlockManager : MonoBehaviour
                             MapFounded = true;
                             DList[i].IsCompleted = true;
                             Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
+                            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
                             Geekplay.Instance.Save();
                         }
                     }
@@ -180,6 +182,7 @@ public class SerializeBlockManager : MonoBehaviour
             dmData.IsCompleted = true;
             Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList.Add(dmData);
             Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
+            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
             Geekplay.Instance.Save();
         }
 
