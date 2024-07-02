@@ -21,6 +21,12 @@ public class ParkourRewardManager : MonoBehaviour
     }
     public void TryShowRewardWindow()
     {
+        if(Geekplay.Instance.RewardLockTimer > 0)
+        {
+            currentPressedCell.LoadMapLogic();
+            return;
+        }
+        Cursor.lockState = CursorLockMode.None;
         RewardWindow.SetActive(true);
         RewardButton.onClick.RemoveAllListeners();
         RewardButton.onClick.AddListener(delegate { RewardOperation(); });

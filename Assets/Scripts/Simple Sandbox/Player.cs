@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     [SerializeField] public AudioSource SwapCitizenAudioSource;
 
     public KeyCode DeletingModeButton = KeyCode.N;
-    public KeyCode BuildingModeButton = KeyCode.B;
+    private KeyCode BuildingModeButton = KeyCode.I;
     public KeyCode RotatingModeButton = KeyCode.M;
     public static Player instance;
     public bool IsFirstView;
@@ -426,6 +426,7 @@ public class Player : MonoBehaviour
         if(CurrentWeapon == WeaponType.FlameThrower)
         {
             Flamethrower.instance.IsFiring = false;
+            examplePlayer.MyLockOnShoot = false;
         }
         switch (PressedNumber)
         {

@@ -37,6 +37,10 @@ public class LocalizationMenu : MonoBehaviour
     [Header("BuildingMenu")]
     [SerializeField] TextMeshProUGUI BuildingMenuL;
     [SerializeField] TextMeshProUGUI BuildingMenuR;
+    [Header("ParkourMenu")]
+    [SerializeField] TextMeshProUGUI ParkourRewardH;
+    [SerializeField] TextMeshProUGUI ParkourRewardBNo;
+    [SerializeField] TextMeshProUGUI ParkourRewardBY;
 
     private void Start()
     {
@@ -81,6 +85,9 @@ public class LocalizationMenu : MonoBehaviour
         PromoMessage1.text = "Промокод успешно введен";
         PromoMessage2.text = "Промокод уже использован";
         PromoMessage3.text = "Такого промокода нет";
+        ParkourRewardH.text = "Хотите ускроиться вдвое?";
+        ParkourRewardBNo.text = "НЕТ";
+        ParkourRewardBY.text = "ДА";
     }
     private void EnLocalization()
     {
@@ -112,6 +119,9 @@ public class LocalizationMenu : MonoBehaviour
         PromoMessage1.text = "Promo code successfully entered";
         PromoMessage2.text = "Promo code has already been used";
         PromoMessage3.text = "There is no such promo code";
+        ParkourRewardH.text = "Do you want to double the speed?";
+        ParkourRewardBNo.text = "NO";
+        ParkourRewardBY.text = "YES";
     }
     private void TrLocalization()
     {
@@ -143,5 +153,8 @@ public class LocalizationMenu : MonoBehaviour
         PromoMessage1.text = "Promosyon Kodu başarıyla girildi";
         PromoMessage2.text = "Promosyon Kodu zaten kullanılıyor";
         PromoMessage3.text = "Böyle bir promosyon kodu yok";
+        ParkourRewardH.text = "İkiye katlanmak ister misiniz?";
+        ParkourRewardBNo.text = "HAYIR";
+        ParkourRewardBY.text = "EVET";
     }
 }

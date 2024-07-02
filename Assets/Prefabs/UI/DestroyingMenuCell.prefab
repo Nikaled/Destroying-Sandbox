@@ -354,8 +354,8 @@ GameObject:
   - component: {fileID: 7348876091625584653}
   - component: {fileID: 4376669617264276274}
   - component: {fileID: 733193824694892286}
-  - component: {fileID: 8391768003832307862}
   - component: {fileID: 3591429892972258484}
+  - component: {fileID: 6730185957005812990}
   m_Layer: 5
   m_Name: DestroyingMenuCell
   m_TagString: Untagged
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8391768003832307862
+--- !u!114 &3591429892972258484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,7 +432,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 5633776863091463309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 630cf1aa69c2bd047b4db63763c56674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MapNameForScripts: 
+  RewardForMap: 0
+  MapReward: {fileID: 3483984923945128603}
+  MapNameText: {fileID: 3758138603491922260}
+  MapNameRu: r
+  MapNameEn: e
+  MapNameTr: t
+  CoinsImage: {fileID: 7100997301412023837}
+  IndexOfMap: 0
+--- !u!114 &6730185957005812990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633776863091463309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1891793fb06ca5342a48332f0eda050a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -479,26 +500,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3591429892972258484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5633776863091463309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 630cf1aa69c2bd047b4db63763c56674, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MapNameForScripts: 
-  RewardForMap: 0
-  MapReward: {fileID: 3483984923945128603}
-  MapNameText: {fileID: 3758138603491922260}
-  MapNameRu: r
-  MapNameEn: e
-  MapNameTr: t
-  CoinsImage: {fileID: 7100997301412023837}
 --- !u!1 &5655193394194697480
 GameObject:
   m_ObjectHideFlags: 0

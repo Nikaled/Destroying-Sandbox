@@ -199,7 +199,7 @@ public class CanvasManager : MonoBehaviour
         }
         if(Player.instance.InterfaceActive == false)
         {
-            if (Input.GetKeyDown(KeyCode.U))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 Cursor.lockState = CursorLockMode.None; 
                 SceneManager.LoadScene(0);
@@ -326,38 +326,35 @@ public class CanvasManager : MonoBehaviour
         }
         cursorLocker = DelayDeactivateInterface(false);
         StartCoroutine(cursorLocker);
-
-        if (Geekplay.Instance.mobile == true)
-        {
-            Cursor.lockState = CursorLockMode.None;
-
-            return;
-        }
-        Cursor.lockState = CursorLockMode.Locked;
+        Player.instance.examplePlayer.LockCursor(true);
 
         for (int i = 0; i < UnlockCursorWindows.Count; i++)
         {
             if (UnlockCursorWindows[i].activeInHierarchy == true)
             {
-                Cursor.lockState = CursorLockMode.None;
+                //Cursor.lockState = CursorLockMode.None;
+                Player.instance.examplePlayer.LockCursor(false);
                 if (cursorLocker != null)
                 {
                     StopCoroutine(cursorLocker);
                 }
                 cursorLocker = DelayDeactivateInterface(true);
-                StartCoroutine(cursorLocker);
+                Player.instance.InterfaceActive = true;
+                //StartCoroutine(cursorLocker);
+                break;
             }
         }
     }
     private IEnumerator DelayDeactivateInterface(bool Is)
     {
-        yield return new WaitForSeconds(0.1f);
+        //yield return new WaitForSeconds(0.1f);
+        yield return null;
         Player.instance.InterfaceActive = Is;
-        if (Is)
-        {
-            Player.instance.examplePlayer.LockCursor(false);
-            Debug.Log("Lock cursor false");
-        }
+        //if (Is)
+        //{
+        //    Player.instance.examplePlayer.LockCursor(false);
+        //    Debug.Log("Lock cursor false");
+        //}
     }
     private void ChangeCoinsText(int NewValue)
     {

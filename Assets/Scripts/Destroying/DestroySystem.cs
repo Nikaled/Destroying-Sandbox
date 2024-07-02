@@ -45,6 +45,10 @@ public class DestroySystem : MonoBehaviour
     {
         if (IsFireable == false && IsUnit == false)
         {
+            if(Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
+            {
+            NotFlamingUI.instance.ShowWarning();
+            }
             return;
         }
         if (ObjectIsDestroying)

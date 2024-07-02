@@ -25,6 +25,7 @@ namespace KinematicCharacterController.Examples
         public bool PC = false;
         public bool IsCursorLocked;
         public bool MyLockOnShoot; // my field
+        //[SerializeField] Transform MyFollowTransform;
         private void Start()
         {
             if (IsCursorLocked)
@@ -38,6 +39,7 @@ namespace KinematicCharacterController.Examples
             }
             // Tell camera to follow transform
             CharacterCamera.SetFollowTransform(Character.CameraFollowPoint);
+            //CharacterCamera.SetFollowTransform(MyFollowTransform);
 
             // Ignore the character's collider(s) for camera obstruction checks
             CharacterCamera.IgnoredColliders.Clear();

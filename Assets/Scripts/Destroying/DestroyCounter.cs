@@ -31,6 +31,7 @@ public class DestroyCounter : MonoBehaviour
     private IEnumerator DelayToWin()
     {
         yield return new WaitForSeconds(0.5f);
+        Debug.Log("All blocks destroy Event");
         AllBlockDestroyed?.Invoke();
     }
     public void ObjectDestroyed()

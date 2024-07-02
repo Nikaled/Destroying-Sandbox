@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,14 +6,30 @@ using UnityEngine;
 public class AdWarning : MonoBehaviour
 {
     public int TimeToShowWarning;
+    private int CashedBaseTimeToShowWarning;
     public GameObject WarningPanel;
     public TextMeshProUGUI WarningText;
+    public TextMeshProUGUI YouWillGetRewardText;
     [SerializeField] GameObject AddCoinsConfirmUI;
+    public static AdWarning instance;
+    private int CurrentTimeToShowWarning;
+    private IEnumerator AwaitWarningCor;
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
-        StartCoroutine(AwaitAndShowWarningPanel());
+        CashedBaseTimeToShowWarning = TimeToShowWarning;
+        if(AwaitWarningCor != null)
+        {
+            StopCoroutine(AwaitWarningCor);
+        }
+        AwaitWarningCor = AwaitAndShowWarningPanel();
+        StartCoroutine(AwaitWarningCor);
         LocalizateText(5);
         Geekplay.Instance.ShowedAdInEditor += ResumeTime;
+        LocalizeReward();
     }
     private void OnEnable()
     {
@@ -24,9 +40,26 @@ public class AdWarning : MonoBehaviour
     {
         Geekplay.Instance.ShowedAdInEditor -= ResumeTime;
     }
+    public void AddTimeToShowWarning(int plusTime)
+    {
+        if (AwaitWarningCor != null)
+        {
+            StopCoroutine(AwaitWarningCor);
+        }
+        TimeToShowWarning = CurrentTimeToShowWarning + plusTime;
+        AwaitWarningCor = AwaitAndShowWarningPanel();
+        StartCoroutine(AwaitWarningCor);
+    }
     private IEnumerator AwaitAndShowWarningPanel()
     {
-        yield return new WaitForSeconds(TimeToShowWarning);
+        CurrentTimeToShowWarning = TimeToShowWarning;
+        Debug.Log("Current TimeToShowWarning:" + TimeToShowWarning);
+        for (int i = 1; i <= TimeToShowWarning; i++)
+        {
+            yield return new WaitForSeconds(1);
+            CurrentTimeToShowWarning = TimeToShowWarning - i;
+        }
+        TimeToShowWarning = CashedBaseTimeToShowWarning;
         WarningPanel.SetActive(true);
         StartCoroutine(StartTimer());
     }
@@ -57,20 +90,34 @@ public class AdWarning : MonoBehaviour
         AddCoinsConfirmUI.SetActive(true);
         Player.instance.AdWarningActive = false;
         //Player.instance.InterfaceActive = InterfaceState;
-        StartCoroutine(AwaitAndShowWarningPanel());
         Cursor.lockState = CursorLockMode.None;
-//#if UNITY_EDITOR
-//        CanvasManager.instance.CheckActiveUnlockCursorWindows();
-//#endif
+        if (AwaitWarningCor != null)
+        {
+            StopCoroutine(AwaitWarningCor);
+        }
+        AwaitWarningCor = AwaitAndShowWarningPanel();
+        StartCoroutine(AwaitWarningCor);
+        //#if UNITY_EDITOR
+        //        CanvasManager.instance.CheckActiveUnlockCursorWindows();
+        //#endif
     }
     public void ConfirmCoinButton()
     {
         Time.timeScale = 1f;
     }
+    private void LocalizeReward()
+    {
+        if (Geekplay.Instance.language == "ru")
+            YouWillGetRewardText.text = "Вы получите:";
+        if (Geekplay.Instance.language == "en")
+            YouWillGetRewardText.text = "You will get:";
+        if (Geekplay.Instance.language == "tr")
+            YouWillGetRewardText.text = "Alacaksınız:";
+    }
     private void LocalizateText(int Timer)
     {
         if (Geekplay.Instance.language == "ru")
-            WarningText.text = $"������� �����: {Timer}";
+            WarningText.text = $"реклама через: {Timer}";
         if (Geekplay.Instance.language == "en")
             WarningText.text = $"Advertisement in: {Timer}";
         if (Geekplay.Instance.language == "tr")

@@ -20,7 +20,6 @@ public class ParkourManager : MonoBehaviour
     private void Start()
     {
         instance = this;
-        CountDown = true;
         if (SerializeBlockManager.instance.OnlyParkourMap)
         {
             StartParkour();
@@ -73,6 +72,10 @@ public class ParkourManager : MonoBehaviour
     }
     private void Update()
     {
+        if (CountDown)
+        {
+            Player.instance.InterfaceActive = true;
+        }
         if (WinMap || CountDown)
         {
             return;

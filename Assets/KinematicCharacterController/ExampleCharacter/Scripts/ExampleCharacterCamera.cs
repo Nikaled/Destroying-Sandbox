@@ -25,9 +25,9 @@ namespace KinematicCharacterController.Examples
         [Range(-90f, 90f)]
         public float DefaultVerticalAngle = 20f;
         [Range(-90f, 90f)]
-        public float MinVerticalAngle = -90f;
-        [Range(-90f, 90f)]
-        public float MaxVerticalAngle = 90f;
+        public float MinVerticalAngle = -90;
+        [Range(-90f, 180)]
+        public float MaxVerticalAngle = 120f;
         public float RotationSpeed = 1f;
         public float RotationSharpness = 10000f;
         public bool RotateWithPhysicsMover = false;
@@ -54,7 +54,9 @@ namespace KinematicCharacterController.Examples
         private Vector3 _currentFollowPosition;
 
         private const int MaxObstructions = 32;
-
+        ////////
+        public float MyFraming = -1;
+        public Vector3 MyFramingVector;
         void OnValidate()
         {
             DefaultDistance = Mathf.Clamp(DefaultDistance, MinDistance, MaxDistance);
@@ -101,6 +103,7 @@ namespace KinematicCharacterController.Examples
                 Quaternion planarRot = Quaternion.LookRotation(PlanarDirection, FollowTransform.up);
 
                 _targetVerticalAngle -= (rotationInput.y * RotationSpeed);
+                //_targetVerticalAngle = Mathf.Clamp(_targetVerticalAngle, MinVerticalAngle, MaxVerticalAngle);
                 _targetVerticalAngle = Mathf.Clamp(_targetVerticalAngle, MinVerticalAngle, MaxVerticalAngle);
                 Quaternion verticalRot = Quaternion.Euler(_targetVerticalAngle, 0, 0);
                 Quaternion targetRotation = Quaternion.Slerp(Transform.rotation, planarRot * verticalRot, 1f - Mathf.Exp(-RotationSharpness * deltaTime));
@@ -117,6 +120,7 @@ namespace KinematicCharacterController.Examples
                 TargetDistance = Mathf.Clamp(TargetDistance, MinDistance, MaxDistance);
 
                 // Find the smoothed follow position
+                //_currentFollowPosition = Vector3.Lerp(_currentFollowPosition, FollowTransform.position, 1f - Mathf.Exp(-FollowingSharpness * deltaTime));
                 _currentFollowPosition = Vector3.Lerp(_currentFollowPosition, FollowTransform.position, 1f - Mathf.Exp(-FollowingSharpness * deltaTime));
 
                 // Handle obstructions
@@ -165,14 +169,15 @@ namespace KinematicCharacterController.Examples
                 }
 
                 // Find the smoothed camera orbit position
-                Vector3 targetPosition = _currentFollowPosition - ((targetRotation * Vector3.forward) * _currentDistance);
+                //Vector3 targetPosition = _currentFollowPosition - ((targetRotation * Vector3.forward) * _currentDistance);
+                Vector3 targetPosition = _currentFollowPosition - ((targetRotation * Vector3.forward) * _currentDistance) /*+ MyFramingVector*/;
 
                 // Handle framing
                 targetPosition += Transform.right * FollowPointFraming.x;
                 targetPosition += Transform.up * FollowPointFraming.y;
 
                 // Apply position
-                Transform.position = targetPosition;
+                Transform.position = targetPosition; /*+Vector3.forward*MyFraming*//*+ new Vector3(0,0, MyFraming)*/;
             }
         }
     }

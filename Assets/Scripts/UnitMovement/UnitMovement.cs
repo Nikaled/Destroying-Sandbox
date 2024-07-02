@@ -16,6 +16,8 @@ public class UnitMovement : MonoBehaviour
     Vector3 ChildrenStartLocalPosition;
     private bool DestroyPhaseStarted;
     private IEnumerator rotatingCor;
+    [SerializeField] bool IsZombie;
+    [SerializeField] Animator ZombieAnimator;
     private void Start()
     {
         CycleManager.instance.DestroyingPhaseStarted += OnActivatedDestroyingPhase;
@@ -29,9 +31,16 @@ public class UnitMovement : MonoBehaviour
         }
         ChildrenStartLocalPosition = ChildrenUnit.transform.localPosition;
         Sequence WalkSequence = DOTween.Sequence();
-        WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f)).SetEase(Ease.InExpo);
-        WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenStartLocalPosition, 1f).SetEase(Ease.InOutExpo));
-        WalkSequence.SetLoops(10000);
+        if (IsZombie == false)
+        {
+            WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f)).SetEase(Ease.InExpo);
+            WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenStartLocalPosition, 1f).SetEase(Ease.InOutExpo));
+            WalkSequence.SetLoops(10000);
+        }
+        else
+        {
+            ZombieAnimator.SetBool("Walking", true);
+        }
         StartCoroutine(RandomRotatingCycle());
         ForwardCollider.enabled = true;
         DestroyPhaseStarted = true;

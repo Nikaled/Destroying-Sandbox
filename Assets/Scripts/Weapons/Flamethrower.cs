@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Flamethrower : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Flamethrower : MonoBehaviour
     private IEnumerator WaitForActiveFire;
     public bool IsFiring;
     public static Flamethrower instance;
+    [SerializeField] Transform FlameRotator;
 
     private void Awake()
     {
@@ -34,6 +36,8 @@ public class Flamethrower : MonoBehaviour
             if (IsFiring)
             {
                 Player.instance.FireFlameThrower();
+                Vector3 dir = PlayerShooting.instance.CrosshairWorldPosition;
+                FlameRotator.LookAt(dir);
             }
         }
     }

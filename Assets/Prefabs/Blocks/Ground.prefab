@@ -131,7 +131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -189,3 +189,4 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 4432993666258668773}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 787098907317826532}
