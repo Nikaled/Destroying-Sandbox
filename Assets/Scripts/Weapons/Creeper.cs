@@ -19,12 +19,12 @@ public class Creeper : MonoBehaviour
     private Vector3 DefaultScale;
     [SerializeField] Material CreeperWhiteMaterial;
     [SerializeField] GameObject creeperModel;
-    private void Awake()
+    protected virtual void Awake()
     {
         instance = this;
         DefaultScale = transform.localScale;
     }
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         ChangeAlphaOnMaterial(CreeperWhiteMaterial, 0);
         transform.localScale = DefaultScale;
@@ -53,7 +53,7 @@ public class Creeper : MonoBehaviour
             StartCoroutine(ExplosionCor);
         }
     }
-    private void ExplosionCreeperAnimation()
+    protected virtual void ExplosionCreeperAnimation()
     {
         transform.DOScale(transform.localScale * 1.3f, DelayBeforeExplosion);
         StartCoroutine(TurnWhiteCor());
@@ -72,14 +72,14 @@ public class Creeper : MonoBehaviour
             }     
         }
     }
-    private void ChangeAlphaOnMaterial(Material mat, float alphaVal)
+    protected virtual void ChangeAlphaOnMaterial(Material mat, float alphaVal)
     {
         Color oldColor = mat.color;
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
         mat.SetColor("_Color", newColor);
 
     }
-    private IEnumerator Explosion()
+    protected virtual IEnumerator Explosion()
     {
         targetsInExplosion = new();
         DestroyArea.GetComponent<SphereCollider>().enabled = true;
@@ -106,7 +106,7 @@ public class Creeper : MonoBehaviour
         IsExploding = false;
         CreeperManager.OnCreeperExploded();
     }
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         var DestrCol = other.GetComponent<DestroyCollision>();
         if (DestrCol != null)

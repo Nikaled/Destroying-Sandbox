@@ -46,11 +46,4 @@ public class NotFlamingUI : MonoBehaviour
         ShowSeq.Append(t4);
         ShowSeq.Play();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ShowWarning();
-        }
-    }
 }

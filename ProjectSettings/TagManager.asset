@@ -12,6 +12,7 @@ TagManager:
   - Stone
   - Grass
   - Street
+  - Unit
   layers:
   - Default
   - TransparentFX
