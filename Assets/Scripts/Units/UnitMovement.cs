@@ -20,16 +20,30 @@ public class UnitMovement : MonoBehaviour
     private float EnemyFoundTime;
     private float TimeToKillEnemy = 6;
     [HideInInspector] public bool AwaitForGroundAfterPunch;
-    [HideInInspector]  public float PunchInterval =0;
+    [HideInInspector] private float PunchInterval = 1;
     private float timeFromPunching;
     public UnitType Type;
     private bool BattleUnit;
     private bool IsUpstairNow;
+    private bool EnemyNear;
     [SerializeField] LayerMask OnPunchedRayCollider;
+    [SerializeField] Material HittedMatPrefab;
+    [SerializeField] MeshRenderer[] UnitMesh;
+    [SerializeField] BoxCollider Vision;
+
+
+    Material HittedMatInstance;
+    List<Material> HittedMatInstanceList;
+    Sequence WalkSequence;
     [Header("OnlyCreeper")]
     public DestroySystem destroySystem;
     public CreeperNPC creeperNPC;
-    Sequence WalkSequence;
+
+
+
+
+    private Vector3 GizPos;
+    private Vector3 GizDir;
     public enum UnitType
     {
         Zombie,
@@ -44,12 +58,19 @@ public class UnitMovement : MonoBehaviour
     }
     private void SetBattleUnitBool()
     {
-        if(Type != UnitType.Animal) { BattleUnit = true; }
+        if (Type != UnitType.Animal) { BattleUnit = true; }
     }
-    public void ResetTimeToFoundEnemy   () // by Vision Collider
+    public void ResetTimeToFoundEnemy() // by Vision Collider
     {
         EnemyFoundTime = Time.time;
         RotateToEnemy();
+    }
+    public void OnUnitDie()
+    {
+        for (int i = 0; i < HittedMatInstanceList.Count; i++)
+        {
+            ChangeAlphaOnMaterial(HittedMatInstanceList[i], 0);
+        }
     }
     public void GetPunch(GameObject Puncher)
     {
@@ -57,14 +78,31 @@ public class UnitMovement : MonoBehaviour
         {
             CurrentEnemy = Puncher;
             ResetTimeToFoundEnemy();
-        } 
+        }
         if (AwaitForGroundAfterPunch == true)
         {
             return;
         }
+        if (HittedMatInstance == null)
+        {
+            HittedMatInstanceList = new();
+            for (int i = 0; i < UnitMesh.Length; i++)
+            {
+                HittedMatInstance = Instantiate(HittedMatPrefab);
+                UnitMesh[i].materials = new Material[2] { UnitMesh[i].materials[0], HittedMatInstance };
+                HittedMatInstanceList.Add(UnitMesh[i].materials[1]);
+            }
+        }
+        for (int i = 0; i < HittedMatInstanceList.Count; i++)
+        {
+            ChangeAlphaOnMaterial(HittedMatInstanceList[i], 1);
+        }
         AwaitForGroundAfterPunch = true;
         charController.enabled = false;
-        Vector3 PunchDirection = (gameObject.transform.position - Puncher.transform.position).normalized*3 + Vector3.up * 0.9f;
+        Vector3 PosWithoutHight = new Vector3(transform.position.x, 0, transform.position.z);
+        Vector3 PosPuncherWithoutHight = new Vector3(Puncher.transform.position.x, 0, Puncher.transform.position.z);
+
+        Vector3 PunchDirection = (transform.position - Puncher.transform.position).normalized * 3 + Vector3.up * 0.9f;
         Vector3 EndPosition = transform.position + PunchDirection;
         CalculateEndPoint();
         transform.DOMove(EndPosition, 0.3f).OnComplete(EnCharC);
@@ -73,18 +111,40 @@ public class UnitMovement : MonoBehaviour
 
             charController.enabled = true;
             AwaitForGroundAfterPunch = false;
+            for (int i = 0; i < HittedMatInstanceList.Count; i++)
+            {
+                ChangeAlphaOnMaterial(HittedMatInstanceList[i], 0);
+            }
         }
         void CalculateEndPoint()
         {
-            Ray ray = new Ray(gameObject.transform.position, transform.position + PunchDirection);
+            //Ray ray = new Ray(gameObject.transform.position, transform.position + PunchDirection);
+            Ray ray = new Ray(transform.position, transform.position + PunchDirection);
             float Distance = Vector3.Distance(transform.position, PunchDirection);
             if (Physics.Raycast(ray, out RaycastHit HittedBlock, Distance, OnPunchedRayCollider))
             {
-                
+
                 Debug.Log("Punch Raycast hitted:" + HittedBlock.collider.name);
-                EndPosition = HittedBlock.point;
+                Vector3 GoodPoint = Vector3.Lerp(transform.position, HittedBlock.point, 0.8f);
+                EndPosition = GoodPoint;
+                GizPos = transform.position;
+                GizDir = EndPosition;
             }
         }
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(GizPos, GizDir);
+    }
+    private void ChangeAlphaOnMaterial(Material mat, float alphaVal)
+    {
+        Color oldColor = mat.color;
+        Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
+        //mat.SetColor("_Color", newColor);
+        mat.color = newColor;
+        Debug.Log("Alpha changed to " + alphaVal);
+
     }
     private void OnActivatedDestroyingPhase()
     {
@@ -94,7 +154,7 @@ public class UnitMovement : MonoBehaviour
                 BlockCollidersParentAndSides[i].enabled = false;
         }
         ChildrenStartLocalPosition = ChildrenUnit.transform.localPosition;
-         WalkSequence = DOTween.Sequence();
+        WalkSequence = DOTween.Sequence();
         if (IsZombie == false)
         {
             WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f)).SetEase(Ease.InExpo);
@@ -108,6 +168,11 @@ public class UnitMovement : MonoBehaviour
         StartCoroutine(RandomRotatingCycle());
         ForwardCollider.enabled = true;
         DestroyPhaseStarted = true;
+
+        if (BattleUnit)
+        {
+            Vision.enabled = true;
+        }
     }
     private void OnDestroy()
     {
@@ -121,31 +186,41 @@ public class UnitMovement : MonoBehaviour
             return;
         }
         CurrentVectorMove = (MoveToObj.position - transform.position).normalized;
-        Debug.Log("CurrentVectorMove:" + CurrentVectorMove);
         if (charController.enabled == true)
         {
             charController.Move((CurrentVectorMove - Vector3.up * 10) * Time.deltaTime * Speed);
         }
         if (BattleUnit)
         {
-            if(Time.time - EnemyFoundTime > TimeToKillEnemy)
+            if (Time.time - EnemyFoundTime > TimeToKillEnemy)
             {
                 EnemyFoundTime = Time.time;
                 CurrentEnemy = null;
             }
             if (CurrentEnemy != null)
             {
-                RotateToEnemy();
+
+                if (EnemyNear == false)
+                {
+                    RotateToEnemy();
+                }
                 if (Vector3.Distance(gameObject.transform.position, CurrentEnemy.transform.position) < 2.65f)
                 {
+                    if (Vector3.Distance(gameObject.transform.position, CurrentEnemy.transform.position) < 0.5f)
+                    { EnemyNear = true; }
+                    else
+                    {
+                        EnemyNear = false;
+                    }
                     var EnemyHP = CurrentEnemy.GetComponent<UnitHpSystem>();
                     if (EnemyHP != null)
                     {
 
                         if (Time.time - timeFromPunching > PunchInterval)
                         {
-                            //timeFromPunching = Time.time;
-                            if(Type != UnitType.Creeper)
+                            timeFromPunching = Time.time;
+                            Debug.Log("timeFromPunching:" + timeFromPunching);
+                            if (Type != UnitType.Creeper)
                             {
                                 bool IsEnemyPunched = EnemyHP.TryGetPunch(gameObject);
                                 if (IsEnemyPunched)
@@ -160,8 +235,12 @@ public class UnitMovement : MonoBehaviour
                         }
                     }
                 }
+                else
+                {
+                    EnemyNear = false;
+                }
             }
-        }    
+        }
     }
     private void CreeperExplosion()
     {
@@ -189,6 +268,10 @@ public class UnitMovement : MonoBehaviour
     }
     public void RotateUnit()
     {
+        if(CurrentEnemy != null)
+        {
+            return;
+        }
         charController.enabled = false;
         int RandomDegree = Random.Range(20, 91);
         transform.DOLocalRotate(transform.rotation.eulerAngles + new Vector3(0, RandomDegree, 0), 1).OnComplete(EnCharC);
@@ -201,11 +284,10 @@ public class UnitMovement : MonoBehaviour
     {
         Vector3 targetPostition = new Vector3(CurrentEnemy.transform.position.x, this.transform.position.y, CurrentEnemy.transform.position.z);
         transform.LookAt(targetPostition);
-        Debug.Log("Rotate to Enemy");
     }
     public void UpOnBlock()
     {
-        if(IsUpstairNow)
+        if (IsUpstairNow)
         {
             return;
         }

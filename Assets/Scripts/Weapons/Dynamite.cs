@@ -10,7 +10,7 @@ public class Dynamite : MonoBehaviour
     [SerializeField] int ExplosionScale = 3;
     [SerializeField] AudioExplosion Source;
     [SerializeField] ExplosionForceChecker explosionForceChecker;
-
+    [SerializeField] DamageArea DamageSphere;
     public void SubscribeOnExplosion()
     {
         DynamiteManager.ExplodeDynamite += OnLaunch;
@@ -39,18 +39,20 @@ public class Dynamite : MonoBehaviour
     {
         yield return new WaitForSeconds(DelayBeforeExplosion);
         //Source.PlayExplosionSound();
-        GetComponent<SphereCollider>().enabled = true;
-        explosionForceChecker.transform.parent = null;
-        explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
+        DamageSphere.GetComponent<SphereCollider>().enabled = true;
+    
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         DestroyAnimation.transform.parent = null;
         DestroyAnimation.ShowEffectAndDestroyAfterDelay();
-        for (int i = 0; i < targetsInExplosion.Count; i++)
+        for (int i = 0; i < DamageSphere.targetsInExplosion.Count; i++)
         {
-            if (targetsInExplosion[i] != null)
-                targetsInExplosion[i].TakeDamage(transform.position);
+            if (DamageSphere.targetsInExplosion[i] != null)
+                DamageSphere.targetsInExplosion[i].TakeDamage(transform.position);
         }
+        explosionForceChecker.transform.parent = null;
+        explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
+        yield return new WaitForSeconds(0.05f);
         Destroy(explosionForceChecker.gameObject);
         Destroy(gameObject);
     }

@@ -150,7 +150,6 @@ public class Plane : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
         Destroy(explosionForceChecker.gameObject);
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
         for (int i = 0; i < Meshes.Length; i++)
         {
             Meshes[i].enabled = false;

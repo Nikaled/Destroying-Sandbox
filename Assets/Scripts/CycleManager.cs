@@ -9,7 +9,7 @@ public class CycleManager : MonoBehaviour
     public Action DestroyingPhaseStarted;
     public Action BuildingPhaseStarted;
     public Action ParkourPhaseStarted;
-    private Phase currentPhase;
+    public Phase currentPhase;
     public enum Phase
     {
         Building,

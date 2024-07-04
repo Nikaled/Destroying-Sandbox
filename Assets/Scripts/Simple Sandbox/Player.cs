@@ -421,7 +421,10 @@ public class Player : MonoBehaviour
         }
         if (CurrentWeapon == WeaponType.Plane)
         {
+            if(InterfaceActive == false)
+            {
             examplePlayer.LockCursor(true);
+            }
         }
         if(CurrentWeapon == WeaponType.FlameThrower)
         {

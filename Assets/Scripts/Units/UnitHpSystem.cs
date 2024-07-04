@@ -22,6 +22,7 @@ public class UnitHpSystem : MonoBehaviour
         HitPoints--;
         if(HitPoints <=0 )
         {
+            unitMovement.OnUnitDie();
             destroySystem.DamageTaked(Vector3.zero);
         }
     }

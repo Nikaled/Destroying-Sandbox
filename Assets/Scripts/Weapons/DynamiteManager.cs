@@ -12,6 +12,7 @@ public class DynamiteManager : MonoBehaviour
     private Player player;
     public static DynamiteManager instance;
     [SerializeField] Dynamite DynamitePrefab;
+    [SerializeField] AvailablePlaceBlockChecker placeChecker;
     public static Action ExplodeDynamite;
     public static Action StateSwitched;
     KeyCode ExplodeButton = KeyCode.T;
@@ -115,10 +116,34 @@ public class DynamiteManager : MonoBehaviour
     }
     private void PlaceDynamite()
     {
-        Vector3 pos = currentCell.GetPositionToPlace();
-        Dynamite newDynamite = Instantiate(DynamitePrefab, pos, Quaternion.identity);
-        newDynamite.SubscribeOnExplosion();
-        newDynamite.SubscribeOnSwitchState();
+        if (currentCell != null)
+        {
+            StartCoroutine(waitPlaceCheckerCallback());
+
+        }
+        IEnumerator waitPlaceCheckerCallback()
+        {
+            Vector3 pos = currentCell.GetPositionToPlace();
+            var Checker = Instantiate(placeChecker, pos, Quaternion.identity);
+            yield return new WaitForSeconds(0.05f);
+            if (Checker.PlayerInCell == false && Checker.BlockInCell == false)
+            {
+                PlaceLogic();
+            }
+            else
+            {
+                Debug.Log("Игрок или другой блок в клетке для установки!");
+            }
+            Destroy(Checker.gameObject);
+
+
+            void PlaceLogic()
+            {
+                Dynamite newDynamite = Instantiate(DynamitePrefab, pos, Quaternion.identity);
+                newDynamite.SubscribeOnExplosion();
+                newDynamite.SubscribeOnSwitchState();
+            }
+        }
     }
     private void DeleteDynamite()
     {

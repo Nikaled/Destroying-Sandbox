@@ -8,15 +8,31 @@ public class ForwardBlockCollider : MonoBehaviour
     [SerializeField] UnitMovement movement;
     [SerializeField] UperBlockChecker upChecker;
     private IEnumerator colDetect;
+    List<GameObject> collidersWithTagUnit = new();
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Впереди блок");
+        if (movement.AwaitForGroundAfterPunch)
+        {
+            return;
+        }
         //movement.RotateUnit();
         if (other.CompareTag("Unit"))
         {
+            collidersWithTagUnit.Add(other.gameObject);
+            if (movement.CurrentEnemy == null)
+            {
             movement.RotateUnit();
+            }
             return;
         }
+        for (int i = 0; i < collidersWithTagUnit.Count; i++)
+        {
+            if(collidersWithTagUnit[i] != null)
+            {
+                return;
+            }
+        }
+        collidersWithTagUnit.Clear();
         if (colDetect != null)
         {
             StopCoroutine(colDetect);
@@ -30,6 +46,10 @@ public class ForwardBlockCollider : MonoBehaviour
     //    Debug.Log("Впереди блок");
     //    //movement.RotateUnit();
     //}
+    private void OnTriggerExit(Collider other)
+    {
+        collidersWithTagUnit.Remove(other.gameObject);
+    }
     private IEnumerator waitForDetectCollision()
     {
         upChecker.ActivateCollider();

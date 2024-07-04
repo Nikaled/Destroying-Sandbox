@@ -414,6 +414,9 @@ MonoBehaviour:
   OnPunchedRayCollider:
     serializedVersion: 2
     m_Bits: 576
+  HittedMatPrefab: {fileID: 2100000, guid: a95d87ad302808e4d81240daf70d1a1d, type: 2}
+  UnitMesh:
+  - {fileID: 2545535796242390260}
   destroySystem: {fileID: 0}
   creeperNPC: {fileID: 0}
 --- !u!143 &8136031982956858414

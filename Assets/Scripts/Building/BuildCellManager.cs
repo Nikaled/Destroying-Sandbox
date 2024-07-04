@@ -11,6 +11,7 @@ public class BuildCellManager : MonoBehaviour
     private BuildCellSide currentCell;
     [SerializeField] private GameObject BlockPrefab;
     [SerializeField] GameObject ParkourWinBlock;
+    [SerializeField] AvailablePlaceBlockChecker placeChecker;
 
     private Player player;
     public static BuildCellManager instance;
@@ -37,15 +38,35 @@ public class BuildCellManager : MonoBehaviour
         if(currentCell != null)
         {
             Vector3 pos = currentCell.GetPositionToPlace();
-            Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
-            newBlock.AddBlockToSaveList();
-            if (Geekplay.Instance.PlayerData.IsFirstBlockPlaced == false)
+            StartCoroutine(waitPlaceCheckerCallback());
+          
+        }
+        IEnumerator waitPlaceCheckerCallback()
+        {
+            Vector3 pos = currentCell.GetPositionToPlace();
+            var Checker =  Instantiate(placeChecker, pos, Quaternion.identity);
+            yield return new WaitForSeconds(0.05f);
+            if (Checker.PlayerInCell == false && Checker.BlockInCell == false)
             {
-                Geekplay.Instance.PlayerData.IsFirstBlockPlaced = true;
-                Geekplay.Instance.Save();
-                Analytics.instance.SendEvent(FirstBlock);
+                PlaceLogic();
             }
-        }    
+            else
+            {
+                Debug.Log("Игрок или другой блок в клетке для установки!");
+            }
+            Destroy(Checker.gameObject);
+            void PlaceLogic()
+            {
+                Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
+                newBlock.AddBlockToSaveList();
+                if (Geekplay.Instance.PlayerData.IsFirstBlockPlaced == false)
+                {
+                    Geekplay.Instance.PlayerData.IsFirstBlockPlaced = true;
+                    Geekplay.Instance.Save();
+                    Analytics.instance.SendEvent(FirstBlock);
+                }
+            }
+        }
     }
     private void DeleteBlock()
     {

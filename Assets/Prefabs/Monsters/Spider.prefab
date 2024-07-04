@@ -85,6 +85,11 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 9177783332877465574, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
   m_PrefabInstance: {fileID: 4072446277356401130}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &8103523013261139899 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
+  m_PrefabInstance: {fileID: 4072446277356401130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6578786019466386991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,6 +178,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8125865767506949431, guid: 29a02369a00aa954eab82eebbcc285da, type: 3}
   m_PrefabInstance: {fileID: 6578786019466386991}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &3221272182779264780 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8644882672394314019, guid: 29a02369a00aa954eab82eebbcc285da, type: 3}
+  m_PrefabInstance: {fileID: 6578786019466386991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7736422024095397685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,6 +206,10 @@ PrefabInstance:
     - target: {fileID: 1960265210550887327, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Center.y
       value: -0.30128008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960265210550887327, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Name
@@ -323,6 +337,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4381427993546508331}
+    - targetCorrespondingSourceObject: {fileID: 5903215971430906012, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6858310140430784059}
   m_SourcePrefab: {fileID: 100100000, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
 --- !u!65 &946190242005181308 stripped
 BoxCollider:
@@ -355,6 +372,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4229202693198696361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5903215971430906012, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+  m_PrefabInstance: {fileID: 7736422024095397685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &6858310140430784059
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4229202693198696361}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!65 &4891988827139076112 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 2935959087885256485, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
@@ -428,11 +473,14 @@ MonoBehaviour:
   ZombieAnimator: {fileID: 0}
   CurrentEnemy: {fileID: 0}
   AwaitForGroundAfterPunch: 0
-  PunchInterval: 0
-  Type: 2
+  Type: 1
   OnPunchedRayCollider:
     serializedVersion: 2
     m_Bits: 576
+  HittedMatPrefab: {fileID: 2100000, guid: a95d87ad302808e4d81240daf70d1a1d, type: 2}
+  UnitMesh:
+  - {fileID: 3221272182779264780}
+  Vision: {fileID: 8103523013261139899}
   destroySystem: {fileID: 0}
   creeperNPC: {fileID: 0}
 --- !u!143 &6196525007161834551

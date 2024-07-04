@@ -28,7 +28,7 @@ TagManager:
   - UnitMoveCollider
   - BlockFragment
   - PostyProcessing
-  - 
+  - MapBorder
   - 
   - 
   - 

@@ -93,6 +93,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6077213682008947439}
     m_Modifications:
+    - target: {fileID: 2022479127552796651, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022479127552796651, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a95d87ad302808e4d81240daf70d1a1d, type: 2}
     - target: {fileID: 2407649435380820151, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3
@@ -161,6 +169,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4970204471841894786, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970204471841894786, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a95d87ad302808e4d81240daf70d1a1d, type: 2}
     - target: {fileID: 9205460241278680758, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -171,6 +187,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
+--- !u!23 &1888404253186313168 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4970204471841894786, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
+  m_PrefabInstance: {fileID: 6831189928520481362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4817735626811858361 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2022479127552796651, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
+  m_PrefabInstance: {fileID: 6831189928520481362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8425992739057502303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3036095524353307149, guid: 5b0a210271bb61f45b5d6972c457ee1f, type: 3}
@@ -395,6 +421,10 @@ MonoBehaviour:
   OnPunchedRayCollider:
     serializedVersion: 2
     m_Bits: 576
+  HittedMatPrefab: {fileID: 2100000, guid: a95d87ad302808e4d81240daf70d1a1d, type: 2}
+  UnitMesh:
+  - {fileID: 4817735626811858361}
+  - {fileID: 1888404253186313168}
   destroySystem: {fileID: 0}
   creeperNPC: {fileID: 0}
 --- !u!143 &6099699169956825040

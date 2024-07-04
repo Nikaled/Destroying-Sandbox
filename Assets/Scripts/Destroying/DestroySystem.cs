@@ -111,7 +111,7 @@ public class DestroySystem : MonoBehaviour
     }
     public void ExplosionForce(Vector3 force)
     {
-        if (IsUnit)
+        if (IsUnit || CycleManager.instance.currentPhase != CycleManager.Phase.Destroying)
         {
             return;
         }

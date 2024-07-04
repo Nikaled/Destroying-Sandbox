@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnitMovementObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7231162912612220180, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
       propertyPath: movement
       value: 
@@ -396,6 +400,11 @@ Transform:
 --- !u!4 &4578892414985714020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3908570344583435379, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
+  m_PrefabInstance: {fileID: 699595476838755607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4702942245687591750 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
   m_PrefabInstance: {fileID: 699595476838755607}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &8569082567097637617 stripped
@@ -787,11 +796,14 @@ MonoBehaviour:
   ZombieAnimator: {fileID: 0}
   CurrentEnemy: {fileID: 0}
   AwaitForGroundAfterPunch: 0
-  PunchInterval: 0
   Type: 2
   OnPunchedRayCollider:
     serializedVersion: 2
     m_Bits: 576
+  HittedMatPrefab: {fileID: 2100000, guid: a95d87ad302808e4d81240daf70d1a1d, type: 2}
+  UnitMesh:
+  - {fileID: 8426428733149873281}
+  Vision: {fileID: 4702942245687591750}
   destroySystem: {fileID: 3933793924641114376}
   creeperNPC: {fileID: 928850596680944149}
 --- !u!143 &-1408521081430490287

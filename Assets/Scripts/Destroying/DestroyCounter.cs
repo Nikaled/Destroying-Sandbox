@@ -33,6 +33,7 @@ public class DestroyCounter : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Debug.Log("All blocks destroy Event");
         AllBlockDestroyed?.Invoke();
+        Player.instance.examplePlayer.LockCursor(false);
     }
     public void ObjectDestroyed()
     {
