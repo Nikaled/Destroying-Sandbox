@@ -55,6 +55,7 @@ public class DestroySystem : MonoBehaviour
         {
             return;
         }
+        SoundManager.instance.PlayBlockBurningSound();
         ObjectIsDestroying = true;
         var Fire = Instantiate(FireAnimation, transform.position, transform.rotation);
         Fire.transform.parent = MeshObject.transform;
@@ -127,6 +128,7 @@ public class DestroySystem : MonoBehaviour
     }
     private void BlocksAnimation()
     {
+        SoundManager.instance.PlayBlockCrushedSound();
         GameObject[] smallBlocks = new GameObject[15];
         for (int i = 0; i < 15; i++)
         {

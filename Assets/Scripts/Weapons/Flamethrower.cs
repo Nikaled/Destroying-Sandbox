@@ -38,6 +38,8 @@ public class Flamethrower : MonoBehaviour
                 Player.instance.FireFlameThrower();
                 Vector3 dir = PlayerShooting.instance.CrosshairWorldPosition;
                 FlameRotator.LookAt(dir);
+                FireThrowAnimation.gameObject.transform.LookAt(dir);
+                //PlayerShooting.instance.FireFlameThrower();
             }
         }
     }

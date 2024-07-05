@@ -83,6 +83,7 @@ public class UnitMovement : MonoBehaviour
         {
             return;
         }
+        SoundManager.instance.PlayUnitedHittedSound();
         if (HittedMatInstance == null)
         {
             HittedMatInstanceList = new();
@@ -99,8 +100,6 @@ public class UnitMovement : MonoBehaviour
         }
         AwaitForGroundAfterPunch = true;
         charController.enabled = false;
-        Vector3 PosWithoutHight = new Vector3(transform.position.x, 0, transform.position.z);
-        Vector3 PosPuncherWithoutHight = new Vector3(Puncher.transform.position.x, 0, Puncher.transform.position.z);
 
         Vector3 PunchDirection = (transform.position - Puncher.transform.position).normalized * 3 + Vector3.up * 0.9f;
         Vector3 EndPosition = transform.position + PunchDirection;

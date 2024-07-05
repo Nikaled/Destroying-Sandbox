@@ -13,7 +13,6 @@ public class LightningManager : MonoBehaviour
     Vector3 CrosshairWorldPosition;
     public static Action StateSwitched;
     [SerializeField] private LayerMask aimColliderLayerMask;
-   
     public void TryFire()
     {
         CurrentReloadTime = 0; // стереть
@@ -29,6 +28,7 @@ public class LightningManager : MonoBehaviour
                 var lightning = Instantiate(LightningPrefab, CrosshairWorldPosition, Quaternion.identity);
                 lightning.Fire();
                 lightning.SubscribeOnSwitchState();
+                SoundManager.instance.PlayLightningSound();
             }
         }
     }

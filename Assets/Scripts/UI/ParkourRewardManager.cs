@@ -19,8 +19,12 @@ public class ParkourRewardManager : MonoBehaviour
     {
         SubscribeOnReward();
     }
-    public void TryShowRewardWindow()
+    public void TryShowRewardWindow(ParkourMapCell pressedCell)
     {
+        if (currentPressedCell == null)
+        {
+            currentPressedCell = pressedCell;
+        }
         if(Geekplay.Instance.RewardLockTimer > 0)
         {
             currentPressedCell.LoadMapLogic();

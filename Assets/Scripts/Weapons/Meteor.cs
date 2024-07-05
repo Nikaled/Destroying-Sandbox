@@ -11,9 +11,9 @@ public class Meteor : MonoBehaviour
     List<DestroyCollision> targetsInExplosion = new();
     [SerializeField] float DelayBeforeExplosion = 0.6f;
     [SerializeField] float ExplosionScale = 3;
-    [SerializeField] AudioExplosion Source;
     [SerializeField] ExplosionForceChecker explosionForceChecker;
     [SerializeField] Rigidbody MeteorRb;
+    [SerializeField] AudioSource FlyingSoundSource;
     Vector3 CurrentDestination;
 
 
@@ -63,8 +63,9 @@ public class Meteor : MonoBehaviour
                 targetsInExplosion[i].TakeDamage(targetsInExplosion[i].transform.position + new Vector3(0, 2, 0));
             }
         }
-
+        SoundManager.instance.PlayMeteorCrushedSound();
         yield return new WaitForSeconds(0.1f);
+        FlyingSoundSource.Pause();
         Destroy(explosionForceChecker.gameObject);
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         yield return new WaitForSeconds(1);

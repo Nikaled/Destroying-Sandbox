@@ -214,13 +214,16 @@ MonoBehaviour:
   ExplosionAnimation: {fileID: 1018226324770885812}
   DestroyArea: {fileID: 2490973840392078812}
   CreeperMesh: {fileID: 8426428733149873281}
-  DelayBeforeExplosion: 0.6
+  DelayBeforeExplosion: 2
   ExplosionScale: 3
-  Source: {fileID: 0}
   explosionForceChecker: {fileID: 4342174644390720474}
   IsExploding: 0
   CreeperWhiteMaterial: {fileID: 2100000, guid: 3e6b0ea9005ce23479a3bd79a004575d, type: 2}
   creeperModel: {fileID: 8066030742769280340}
+  Source: {fileID: 0}
+  SoundSource: {fileID: 4269694427779045365}
+  fuse: {fileID: 8300000, guid: eb8e40b350339f541a1281149fa53d9a, type: 3}
+  explosion: {fileID: 8300000, guid: b01d906a7a22e3e4a8f2a558d492d547, type: 3}
 --- !u!1001 &666899184741179082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,11 +234,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 531488755263295102, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: EffectScale
-      value: 20
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 531488755263295102, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: DelayBeforeDeleting
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2349537945447355841, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_Name
       value: DestroyEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349537945447355841, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602964586493561151, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: Priority
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602964586493561151, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b01d906a7a22e3e4a8f2a558d492d547, type: 3}
+    - target: {fileID: 3602964586493561151, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_LocalScale.x
@@ -305,6 +328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930cc50aa825ffa47a53a50086ef5d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &4269694427779045365 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3602964586493561151, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+  m_PrefabInstance: {fileID: 666899184741179082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7725864138790472667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
@@ -375,8 +403,24 @@ PrefabInstance:
       value: UnitMovementObjects
       objectReference: {fileID: 0}
     - target: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
+      propertyPath: m_Size.z
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256056384307506769, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
+      propertyPath: m_Center.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7231162912612220180, guid: 272234367b2abd64a8dc784ed6b64441, type: 3}
       propertyPath: movement

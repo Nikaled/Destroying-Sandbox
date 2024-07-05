@@ -12,7 +12,6 @@ public class CreeperNPC : MonoBehaviour
     List<DestroyCollision> targetsInExplosion = new();
     [SerializeField] float DelayBeforeExplosion = 0.6f;
     [SerializeField] float ExplosionScale = 3;
-    [SerializeField] AudioExplosion Source;
     [SerializeField] ExplosionForceChecker explosionForceChecker;
     public bool IsExploding;
     private IEnumerator ExplosionCor;
@@ -20,6 +19,10 @@ public class CreeperNPC : MonoBehaviour
     [SerializeField] GameObject creeperModel;
     public Action OnCreeperEndsExplosion;
     private Material expMatInstance;
+    [SerializeField] AudioExplosion Source;
+    [SerializeField] AudioSource SoundSource;
+    [SerializeField] AudioClip fuse;
+    [SerializeField] AudioClip explosion;
     public void StartExplosion()
     {
         if (IsExploding == false)
@@ -60,15 +63,19 @@ public class CreeperNPC : MonoBehaviour
     }
     protected virtual IEnumerator Explosion()
     {
+        SoundSource.clip = fuse;
+        SoundSource.Play();
         targetsInExplosion = new();
         DestroyArea.GetComponent<SphereCollider>().enabled = true;
         ExplosionCreeperAnimation();
         yield return new WaitForSeconds(DelayBeforeExplosion);
         creeperModel.SetActive(false);
-        //Source.PlayExplosionSound();
         DestroyEffect explosionAnim = Instantiate(ExplosionAnimation, ExplosionAnimation.transform.position, ExplosionAnimation.transform.rotation);
         explosionAnim.enabled = true;
         explosionAnim.ShowEffectAndDestroyAfterDelay();
+        explosionAnim.transform.parent = null;
+        explosionAnim.GetComponent<AudioSource>().clip = explosion;
+        explosionAnim.GetComponent<AudioSource>().Play();
 
         explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
         targetsInExplosion = DestroyArea.targetsInExplosion;
@@ -79,6 +86,7 @@ public class CreeperNPC : MonoBehaviour
                 targetsInExplosion[i].TakeDamage(targetsInExplosion[i].transform.position + new Vector3(0, 2, 0));
             }
         }
+        yield return new WaitForSeconds(0.05f);
         Destroy(DestroyArea.gameObject);
         Destroy(explosionForceChecker.gameObject);
         //DestroyArea.GetComponent<SphereCollider>().enabled = false;
@@ -86,6 +94,5 @@ public class CreeperNPC : MonoBehaviour
         ChangeAlphaOnMaterial(expMatInstance, 0);
         //yield return new WaitForSeconds(1f);
         IsExploding = false;
-        OnCreeperEndsExplosion?.Invoke();
     }
 }

@@ -139,6 +139,7 @@ public class DynamiteManager : MonoBehaviour
 
             void PlaceLogic()
             {
+                BuildCellManager.instance.PlayPlaceBlockSound();
                 Dynamite newDynamite = Instantiate(DynamitePrefab, pos, Quaternion.identity);
                 newDynamite.SubscribeOnExplosion();
                 newDynamite.SubscribeOnSwitchState();
@@ -147,10 +148,12 @@ public class DynamiteManager : MonoBehaviour
     }
     private void DeleteDynamite()
     {
+        BuildCellManager.instance.PlayDeleteBlockSound();
         Destroy(currentCell.transform.parent.gameObject);
     }
     private void DoExplostion()
     {
         ExplodeDynamite?.Invoke();
+        SoundManager.instance.PlayDynamiteSound();
     }
 }

@@ -6,8 +6,12 @@ public class Plane : MonoBehaviour
 {
     [SerializeField] Transform[] BulletSpawnPoints;
     [SerializeField] ShootingProjectile bullet;
+    [SerializeField] AudioSource FireAndExplodeSoundSource;
+    [SerializeField] AudioSource FlySoundSource;
+    [SerializeField] AudioClip ShootingClip;
+    [SerializeField] AudioClip ExplosionClip;
     float GunTimer;
-    float GunShootInterval = 0.05f;
+    float GunShootInterval = 0.1f;
     private bool Reloading;
     public float Speed = 10;
     public float RotatingSpeed;
@@ -98,6 +102,8 @@ public class Plane : MonoBehaviour
         if (Reloading == false)
         {
             Reloading = true;
+            FireAndExplodeSoundSource.clip = ShootingClip;
+            FireAndExplodeSoundSource.Play();
 
             for (int i = 0; i < BulletSpawnPoints.Length; i++)
             {
@@ -137,7 +143,7 @@ public class Plane : MonoBehaviour
         //Source.PlayExplosionSound();
         ExplosionAnimation.enabled = true;
         ExplosionAnimation.ShowEffectAndDestroyAfterDelay();
-
+        
         explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
         targetsInExplosion = DestroyArea.targetsInExplosion;
         for (int i = 0; i < targetsInExplosion.Count; i++)
@@ -149,6 +155,9 @@ public class Plane : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.1f);
+        FlySoundSource.Pause();
+        FireAndExplodeSoundSource.clip = ExplosionClip;
+        FireAndExplodeSoundSource.Play();
         Destroy(explosionForceChecker.gameObject);
         for (int i = 0; i < Meshes.Length; i++)
         {

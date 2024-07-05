@@ -37,6 +37,7 @@ public class SerializeBlockManager : MonoBehaviour
                     if (Geekplay.Instance.PlayerData.CurrentDestructionMapIndex == destructionMapData.DestructionMaps[i].MapIndex)
                     {
                         currentMapData = destructionMapData.DestructionMaps[i];
+                        Geekplay.Instance.PlayerData.CurrentDestructionMapName = currentMapData.MapName;
                         Geekplay.Instance.PlayerData.SavedBlocks = destructionMapData.DestructionMaps[i].SavedBlocks;
                         OnlyDestroyingMap = true;
                         CheckMapIsLastInLevelList(currentMapData.MapIndex, destructionMapData.DestructionMaps.Count);
@@ -73,6 +74,7 @@ public class SerializeBlockManager : MonoBehaviour
                         if (Geekplay.Instance.PlayerData.CurrentParkourMapIndex == parkourMapsData.ParkourMaps[i].MapIndex)
                         {
                             currentMapData = parkourMapsData.ParkourMaps[i];
+                            Geekplay.Instance.PlayerData.CurrentParkourMapName = currentMapData.MapName;
                             Geekplay.Instance.PlayerData.SavedBlocks = parkourMapsData.ParkourMaps[i].SavedBlocks;
                             OnlyParkourMap = true;
                             CheckMapIsLastInLevelList(currentMapData.MapIndex, parkourMapsData.ParkourMaps.Count);

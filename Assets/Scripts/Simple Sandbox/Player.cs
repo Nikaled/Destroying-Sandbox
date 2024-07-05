@@ -33,7 +33,6 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject GrenadeModel;
     [SerializeField] public GameObject CharacterModel;
     [SerializeField] public GameObject CreeperModel;
-    [SerializeField] public AudioSource SwapCitizenAudioSource;
 
     public KeyCode DeletingModeButton = KeyCode.N;
     private KeyCode BuildingModeButton = KeyCode.I;
@@ -42,8 +41,8 @@ public class Player : MonoBehaviour
     public bool IsFirstView;
     public bool AdWarningActive;
 
-    public SkinnedMeshRenderer CurrentCitizenMesh;
-    public SkinnedMeshRenderer[] PlayerMeshes;
+    //public SkinnedMeshRenderer CurrentCitizenMesh;
+    //public SkinnedMeshRenderer[] PlayerMeshes;
     private IEnumerator lockOnShoot;
     public Block[] BlocksInSlots;
     public Block CurrentBlock;
@@ -238,6 +237,10 @@ public class Player : MonoBehaviour
     }
     public void SwitchActiveWeaponSlot(int PressedNumber)
     {
+        if (InterfaceActive)
+        {
+            return;
+        }
         SwitchedWeapon?.Invoke(PressedNumber);
         SwitchWeapon(PressedNumber);
     }
@@ -339,6 +342,10 @@ public class Player : MonoBehaviour
     }
     public void ChangeWeaponInput()
     {
+        if(currentState != PlayerState.Idle)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SwitchWeapon(1);
@@ -408,7 +415,10 @@ public class Player : MonoBehaviour
         }
         else
         {
-            examplePlayer.LockCursor(true);
+            if (InterfaceActive == false)
+            {
+                examplePlayer.LockCursor(true);
+            }
         }
         HideAllWeapons();
 
@@ -430,6 +440,7 @@ public class Player : MonoBehaviour
         {
             Flamethrower.instance.IsFiring = false;
             examplePlayer.MyLockOnShoot = false;
+            playerShooting.EndFire(WeaponType.FlameThrower);
         }
         switch (PressedNumber)
         {

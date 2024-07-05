@@ -12,6 +12,9 @@ public class BuildCellManager : MonoBehaviour
     [SerializeField] private GameObject BlockPrefab;
     [SerializeField] GameObject ParkourWinBlock;
     [SerializeField] AvailablePlaceBlockChecker placeChecker;
+    [SerializeField] AudioSource SoundSource;
+    [SerializeField] AudioClip PlaceBlockSound;
+    [SerializeField] AudioClip DeleteBlockSound;
 
     private Player player;
     public static BuildCellManager instance;
@@ -57,8 +60,10 @@ public class BuildCellManager : MonoBehaviour
             Destroy(Checker.gameObject);
             void PlaceLogic()
             {
+                PlayPlaceBlockSound();
                 Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
                 newBlock.AddBlockToSaveList();
+                
                 if (Geekplay.Instance.PlayerData.IsFirstBlockPlaced == false)
                 {
                     Geekplay.Instance.PlayerData.IsFirstBlockPlaced = true;
@@ -68,12 +73,23 @@ public class BuildCellManager : MonoBehaviour
             }
         }
     }
+    public void PlayDeleteBlockSound()
+    {
+        SoundSource.clip = DeleteBlockSound;
+        SoundSource.Play();
+    }
+    public void PlayPlaceBlockSound()
+    {
+        SoundSource.clip = PlaceBlockSound;
+        SoundSource.Play();
+    }
     private void DeleteBlock()
     {
         if(currentCell != null)
         {
             if (currentCell.parentBlock.CompareTag("Undestructable") == false)
             {
+                PlayDeleteBlockSound();
                 currentCell.parentBlock.DeleteBlock();
             }
         }

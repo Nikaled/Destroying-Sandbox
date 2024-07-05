@@ -17,6 +17,9 @@ public class ParkourManager : MonoBehaviour
     private bool CountDown;
     [SerializeField] GameObject CountDownOnStartPanel;
     [SerializeField] TextMeshProUGUI CountDownTimer;
+    [SerializeField] AudioSource SoundSoure;
+    [SerializeField] AudioClip ParkourCountdown;
+
     private void Start()
     {
         instance = this;
@@ -37,6 +40,8 @@ public class ParkourManager : MonoBehaviour
     private IEnumerator CountDownOnStart()
     {
         CountDownOnStartPanel.SetActive(true);
+        SoundSoure.clip = ParkourCountdown;
+        SoundSoure.Play();
 
         int Timer = 4;
         while (Timer != 1)

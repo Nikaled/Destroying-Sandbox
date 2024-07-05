@@ -69,7 +69,7 @@ public class CanvasManager : MonoBehaviour
     #region DestroyingSandbox
     public void TryShowNextLevelButton()
     {
-        if((SerializeBlockManager.instance.OnlyDestroyingMap || SerializeBlockManager.instance.OnlyParkourMap) && SerializeBlockManager.instance.IsCurrentMapLast == false)
+        if ((SerializeBlockManager.instance.OnlyDestroyingMap || SerializeBlockManager.instance.OnlyParkourMap) && SerializeBlockManager.instance.IsCurrentMapLast == false)
         {
             LoadNextLevelButton.gameObject.SetActive(true);
         }
@@ -93,7 +93,7 @@ public class CanvasManager : MonoBehaviour
         {
             WeaponInstructions[i].SetActive(false);
         }
-        if(HideAll == false)
+        if (HideAll == false)
         {
             WeaponInstructions[WeaponIndex].SetActive(true);
         }
@@ -120,7 +120,7 @@ public class CanvasManager : MonoBehaviour
         ShowWinMapUI(Is);
         if (Is) // On Restart IsInterface controlled by ParkourManager
         {
-        CheckActiveUnlockCursorWindows();
+            CheckActiveUnlockCursorWindows();
         }
     }
     private void DestroyCountChanged(int CurrentDestroyed)
@@ -139,7 +139,12 @@ public class CanvasManager : MonoBehaviour
         CheckActiveUnlockCursorWindows();
         if (Is)
         {
-        TryShowNextLevelButton();
+            if (SerializeBlockManager.instance.OnlyParkourMap == false)
+            {
+                SwitchPlayerWeapon();
+            }
+            SoundManager.instance.OnWinMapSound();
+            TryShowNextLevelButton();
         }
     }
     public void ShowCurrentDestroyInterface(bool Is)
@@ -186,7 +191,7 @@ public class CanvasManager : MonoBehaviour
         {
             return;
         }
-        if ( Player.instance.currentState == Player.PlayerState.Building)
+        if (Player.instance.currentState == Player.PlayerState.Building)
         {
             //if (Input.GetKeyDown(KeyCode.I))
             //{
@@ -197,11 +202,11 @@ public class CanvasManager : MonoBehaviour
                 ShowSaveMapUI(!SaveMapUIActive);
             }
         }
-        if(Player.instance.InterfaceActive == false)
+        if (Player.instance.InterfaceActive == false)
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                Cursor.lockState = CursorLockMode.None; 
+                Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(0);
             }
         }
@@ -321,7 +326,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void CheckActiveUnlockCursorWindows()
     {
-        if(cursorLocker != null)
+        if (cursorLocker != null)
         {
             StopCoroutine(cursorLocker);
         }

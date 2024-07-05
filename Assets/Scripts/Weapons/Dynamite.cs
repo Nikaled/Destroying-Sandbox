@@ -8,7 +8,6 @@ public class Dynamite : MonoBehaviour
     [SerializeField] float DelayBeforeExplosion;
     [SerializeField] DestroyEffect DestroyAnimation;
     [SerializeField] int ExplosionScale = 3;
-    [SerializeField] AudioExplosion Source;
     [SerializeField] ExplosionForceChecker explosionForceChecker;
     [SerializeField] DamageArea DamageSphere;
     public void SubscribeOnExplosion()

@@ -12,6 +12,9 @@ public class Creeper : MonoBehaviour
     [SerializeField] float DelayBeforeExplosion = 0.6f;
     [SerializeField] float ExplosionScale = 3;
     [SerializeField] AudioExplosion Source;
+    [SerializeField] AudioSource SoundSource;
+    [SerializeField] AudioClip fuse;
+    [SerializeField] AudioClip explosion;
     [SerializeField] ExplosionForceChecker explosionForceChecker;
     public static Creeper instance;
     public bool IsExploding;
@@ -76,11 +79,13 @@ public class Creeper : MonoBehaviour
     {
         Color oldColor = mat.color;
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
-        mat.SetColor("_Color", newColor);
-
+        //mat.SetColor("_Color", newColor);
+        mat.color = newColor;
     }
     protected virtual IEnumerator Explosion()
     {
+        SoundSource.clip = fuse;
+        SoundSource.Play();
         targetsInExplosion = new();
         DestroyArea.GetComponent<SphereCollider>().enabled = true;
         ExplosionCreeperAnimation();
@@ -88,6 +93,8 @@ public class Creeper : MonoBehaviour
         //Source.PlayExplosionSound();
         DestroyEffect explosionAnim = Instantiate(ExplosionAnimation, ExplosionAnimation.transform.position, ExplosionAnimation.transform.rotation);
         explosionAnim.enabled = true;
+        //SoundSource.clip = explosion;
+        //SoundSource.Play();
         explosionAnim.ShowEffectAndDestroyAfterDelay();
 
         explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
@@ -100,6 +107,7 @@ public class Creeper : MonoBehaviour
             }
         }
         DestroyArea.GetComponent<SphereCollider>().enabled = false;
+        yield return new WaitForSeconds(0.03f);
         explosionForceChecker.GetComponent<SphereCollider>().enabled = false;
         creeperModel.SetActive(false);
         yield return new WaitForSeconds(1f);
@@ -108,6 +116,7 @@ public class Creeper : MonoBehaviour
     }
     protected virtual void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Force collision with:"+other.name);
         var DestrCol = other.GetComponent<DestroyCollision>();
         if (DestrCol != null)
         {

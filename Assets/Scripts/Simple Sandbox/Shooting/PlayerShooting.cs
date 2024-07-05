@@ -26,11 +26,7 @@ public class PlayerShooting : MonoBehaviour
     //[SerializeField] public LineRenderer lineRenderer;
     public AudioSource FireAudioSource;
     [SerializeField] AudioClip PistolSound;
-    [SerializeField] AudioClip GunSound;
-    [SerializeField] AudioClip HandAttackSound;
-    [SerializeField] AudioClip HandAttackHitObjectSound;
-    [SerializeField] AudioClip KnifeAttackSound;
-    [SerializeField] AudioClip KnifeAttackHitObjectSound;
+    [SerializeField] AudioClip FlamethrowSound;
     [SerializeField] public AudioClip GrenadeThrowSound;
     private void Start()
     {
@@ -84,7 +80,15 @@ public class PlayerShooting : MonoBehaviour
         if (currentWeapon == Player.WeaponType.FlameThrower)
         {
             flameThrower.StartFire();
+            FireFlameThrowerSound();
         }
+    }
+    public void FireFlameThrowerSound()
+    {
+        FireAudioSource.clip = FlamethrowSound;
+        FireAudioSource.timeSamples = 100;
+        FireAudioSource.Play();
+        FireAudioSource.loop = true;
     }
     public void EndFire(Player.WeaponType currentWeapon)
     {
@@ -92,6 +96,9 @@ public class PlayerShooting : MonoBehaviour
         {
             flameThrower.EndFire();
             player.examplePlayer.MyLockOnShoot = false;
+            FireAudioSource.Pause();
+            FireAudioSource.clip = null;
+            FireAudioSource.loop = false;
         }
     }
     public void LockPlayerMovement(float HoldingTime = 1f)
@@ -119,7 +126,6 @@ public class PlayerShooting : MonoBehaviour
 
             ShootingProjectile proj = Instantiate(projectile, GunProjectileSpawnPoint.position, Quaternion.LookRotation(aimDirection, Vector3.up));
             GunTimer = Time.time;
-            FireAudioSource.clip = GunSound;
             FireAudioSource.Play();
         }
 
@@ -141,13 +147,11 @@ public class PlayerShooting : MonoBehaviour
             {
                 targets[i].TakeDamage(meleeDamage);
             }
-            FireAudioSource.clip = HandAttackHitObjectSound;
             FireAudioSource.Play();
         }
         else
         {
 
-            FireAudioSource.clip = HandAttackSound;
             FireAudioSource.Play();
 
         }

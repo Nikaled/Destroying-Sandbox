@@ -137,6 +137,9 @@ MonoBehaviour:
   DelayBeforeExplosion: 0.6
   ExplosionScale: 3
   Source: {fileID: 0}
+  SoundSource: {fileID: 8690988197641343638}
+  fuse: {fileID: 8300000, guid: eb8e40b350339f541a1281149fa53d9a, type: 3}
+  explosion: {fileID: 8300000, guid: b01d906a7a22e3e4a8f2a558d492d547, type: 3}
   explosionForceChecker: {fileID: 9196094358496458425}
   IsExploding: 0
   CreeperWhiteMaterial: {fileID: 0}
@@ -152,7 +155,7 @@ GameObject:
   - component: {fileID: 3875260378195959279}
   - component: {fileID: 1861107463347551830}
   - component: {fileID: 9196094358496458425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ForceArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +196,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 0.18
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9196094358496458425
 MonoBehaviour:
@@ -208,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SphereExplosionRange: {fileID: 1861107463347551830}
-  VecolityModifier: 400
+  VecolityModifier: 800
   HasFireEffect: 1
 --- !u!1 &6519677431167255383
 GameObject:
@@ -222,7 +225,7 @@ GameObject:
   - component: {fileID: 5337105638010332862}
   - component: {fileID: 3370581709633865081}
   - component: {fileID: 7011014244890443967}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DestroyingArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,12 +318,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 531488755263295102, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: EffectScale
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2349537945447355841, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_Name
       value: DestroyEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 3602964586493561151, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e4d62df31c67ad340a0179c2136db2da, type: 3}
     - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -394,3 +401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930cc50aa825ffa47a53a50086ef5d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &8690988197641343638 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3602964586493561151, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+  m_PrefabInstance: {fileID: 5376412348791954345}
+  m_PrefabAsset: {fileID: 0}
