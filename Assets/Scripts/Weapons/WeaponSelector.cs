@@ -7,11 +7,23 @@ public class WeaponSelector : MonoBehaviour
     public static WeaponSelector instance;
     [SerializeField] GameObject[] WeaponsInChild;
     [SerializeField] WeaponSlotManager WeaponManager;
-    private int CurrentIndexToOpen;
+    public int CurrentIndexToOpen;
     private bool[] UnlockOneTime;
     private void Awake()
     {
         instance = this;
+    }
+    public void UnlockAllWeaponForTutorial()
+    {
+        if (UnlockOneTime == null)
+        {
+            UnlockOneTime = new bool[10];
+        }
+        for (int i = 0; i < UnlockOneTime.Length; i++)
+        {
+        UnlockOneTime[i] = true;
+        }
+        SetUnlockImages(Geekplay.Instance.PlayerData.WeaponOpenedArray);
     }
     public void SelectWeapon(int WeaponsInChildIndex)
     {

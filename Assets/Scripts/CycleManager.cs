@@ -28,7 +28,7 @@ public class CycleManager : MonoBehaviour
         //}
         ChangePhaseButtonFunc(Phase.Building);
     }
-    private void Update()
+    protected virtual void Update()
     {
         if (Player.instance.InterfaceActive || Player.instance.AdWarningActive)
         {
@@ -40,7 +40,7 @@ public class CycleManager : MonoBehaviour
                 SwitchPhase();
         }
     }
-    private void SwitchPhase()
+    public virtual void SwitchPhase()
     {
         if (currentPhase == Phase.Destroying)
         {
@@ -51,7 +51,7 @@ public class CycleManager : MonoBehaviour
              ActivateDestroyingPhase();
         }
     }
-    private void ChangePhaseButtonFunc(Phase newPhase)
+    protected void ChangePhaseButtonFunc(Phase newPhase)
     {
         CanvasManager.instance.ChangePhaseButton.onClick.RemoveAllListeners();
         if (newPhase == Phase.Destroying)
@@ -63,7 +63,7 @@ public class CycleManager : MonoBehaviour
             CanvasManager.instance.ChangePhaseButton.onClick.AddListener(delegate { ActivateDestroyingPhase(); });
         }
     }
-    public void ActivateDestroyingPhase()
+    public virtual void ActivateDestroyingPhase()
     {
         currentPhase = Phase.Destroying;
         DestroyCounter.instance.DestroyPhaseStarted();
@@ -87,7 +87,7 @@ public class CycleManager : MonoBehaviour
         ParkourPhaseStarted?.Invoke();
 
     }
-    public void ActivateBuildingPhase()
+    public virtual void ActivateBuildingPhase()
     {
         currentPhase = Phase.Building;
         SerializeBlockManager.instance.LoadBlocks();

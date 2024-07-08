@@ -35,7 +35,7 @@ public class DestroyCounter : MonoBehaviour
         AllBlockDestroyed?.Invoke();
         Player.instance.examplePlayer.LockCursor(false);
     }
-    public void ObjectDestroyed()
+    public virtual void ObjectDestroyed()
     {
         DestroyedCurrent++;
         if(DestroyedCurrent == DestroyedMax)

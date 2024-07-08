@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public PlayerState currentState = PlayerState.Idle;
     public WeaponType CurrentWeapon;
     public event Action PistolFire;
-    public event Action<int> SwitchedBlock;
+    public  Action<int> SwitchedBlock;
     public event Action<int> SwitchedWeapon;
     public event Action<int, Sprite> SwitchedBlockFromShop;
     [SerializeField] public Animator animator;
@@ -41,8 +41,6 @@ public class Player : MonoBehaviour
     public bool IsFirstView;
     public bool AdWarningActive;
 
-    //public SkinnedMeshRenderer CurrentCitizenMesh;
-    //public SkinnedMeshRenderer[] PlayerMeshes;
     private IEnumerator lockOnShoot;
     public Block[] BlocksInSlots;
     public Block CurrentBlock;
@@ -105,7 +103,7 @@ public class Player : MonoBehaviour
         CurrentBlockIndex = 0;
         CurrentWeaponIndex = 1;
     }
-    private void Start()
+    protected virtual void Start()
     {
         SwitchPlayerState(PlayerState.Building);
         if (Geekplay.Instance.mobile)
@@ -126,21 +124,30 @@ public class Player : MonoBehaviour
         }
         if (SerializeBlockManager.instance.OnlyParkourMap)
         {
-            SwitchPlayerState(PlayerState.Parkour);
-            parkourStartPosition = transform.position;
-            parkourStartRotation = transform.rotation;
-            CycleManager.instance.ParkourPhaseStarted += OnParkourPhaseStarted;
-            if (Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward)
-            {
-                Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward = false;
-                SpeedUpPlayer();
-            }
+          
         }
         if (SerializeBlockManager.instance.OnlyDestroyingMap)
         {
-            SwitchPlayerState(PlayerState.Idle);
+            //SwitchPlayerState(PlayerState.Idle);
         }
         SetFlyMode();
+    }
+    public void ParkourMapSetup()
+    {
+        ParkourManager.instance.StartParkourOnLoad();
+        SwitchPlayerState(PlayerState.Parkour);
+        parkourStartPosition = transform.position;
+        parkourStartRotation = transform.rotation;
+        CycleManager.instance.ParkourPhaseStarted += OnParkourPhaseStarted;
+        if (Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward)
+        {
+            Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward = false;
+            SpeedUpPlayer();
+        }
+    }
+    public void DestroyMapSetup()
+    {
+        SwitchPlayerState(PlayerState.Idle);
     }
     private void SpeedUpPlayer()
     {
@@ -208,6 +215,7 @@ public class Player : MonoBehaviour
         if (currentState == PlayerState.Idle && newPlayerState == PlayerState.Building)
         {
             CanvasManager.instance.ShowBlockSlotsAndHideWeapons(true);
+            WeaponSelector.instance.HideAllWeapons();
         }
         if (Delay > 0)
         {
@@ -229,7 +237,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(Delay);
         AfterSwitchState(newPlayerState);
     }
-    public void SwitchActiveBlockSlot(int PressedNumber)
+    public  virtual void SwitchActiveBlockSlot(int PressedNumber)
     {
         CurrentBlockIndex = PressedNumber - 1;
         CurrentBlock = BlocksInSlots[CurrentBlockIndex];
@@ -270,17 +278,8 @@ public class Player : MonoBehaviour
         {
             RotatePlayerOnShoot(playerShooting.AimDirection);
         }
-        //if(CurrentWeapon == WeaponType.FlameThrower)
-        //{
-        //    MobileFireInput();
-        //    RotatePlayerOnShoot(playerShooting.AimDirection);
-        //    if (Input.GetKeyDown(KeyCode.H))
-        //    {
-
-        //    }
-        //}
     }
-    private void Update()
+    protected virtual void Update()
     {
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Q))
@@ -340,7 +339,7 @@ public class Player : MonoBehaviour
         }
 
     }
-    public void ChangeWeaponInput()
+    public virtual void ChangeWeaponInput()
     {
         if(currentState != PlayerState.Idle)
         {
@@ -509,7 +508,7 @@ public class Player : MonoBehaviour
             SwitchPlayerState(PlayerState.Idle);
         }
     }
-    public void ActivateBuildingMenu(bool Is)
+    public  virtual void ActivateBuildingMenu(bool Is)
     {
         if (Is)
         {

@@ -54,7 +54,10 @@ public class Plane : MonoBehaviour
             rb.velocity = Vector3.zero;
             return;
         }
-        rb.velocity = transform.forward * Speed;
+        if (IsExploding == false)
+        {
+            rb.velocity = transform.forward * Speed;
+        }
     }
     private void Update()
     {
@@ -64,6 +67,7 @@ public class Plane : MonoBehaviour
         }
         if (IsExploding)
         {
+            rb.velocity = Vector3.zero;
             return;
         }
         float YInput = 0;
@@ -139,10 +143,16 @@ public class Plane : MonoBehaviour
         IsExploding = true;
         DestroyArea.GetComponent<SphereCollider>().enabled = true;
         explosionForceChecker.transform.parent = null;
+        ExplosionAnimation.ShowEffectAndDestroyAfterDelay();
+        for (int i = 0; i < Meshes.Length; i++)
+        {
+            Meshes[i].enabled = false;
+        }
+        rb.isKinematic = true;
         yield return new WaitForSeconds(DelayBeforeExplosion);
+      
         //Source.PlayExplosionSound();
         ExplosionAnimation.enabled = true;
-        ExplosionAnimation.ShowEffectAndDestroyAfterDelay();
         
         explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
         targetsInExplosion = DestroyArea.targetsInExplosion;
@@ -153,16 +163,13 @@ public class Plane : MonoBehaviour
                 targetsInExplosion[i].TakeDamage(targetsInExplosion[i].transform.position + new Vector3(0, 2, 0));
             }
         }
-
+       
         yield return new WaitForSeconds(0.1f);
         FlySoundSource.Pause();
         FireAndExplodeSoundSource.clip = ExplosionClip;
         FireAndExplodeSoundSource.Play();
         Destroy(explosionForceChecker.gameObject);
-        for (int i = 0; i < Meshes.Length; i++)
-        {
-            Meshes[i].enabled = false;
-        }
+       
         yield return new WaitForSeconds(1);
         planeManager.OnPlaneDestroyed();
         Destroy(gameObject);

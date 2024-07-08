@@ -405,6 +405,7 @@ MonoBehaviour:
   explosionForceChecker: {fileID: 437236948576368589}
   rb: {fileID: 4175618190581035671}
   Meshes:
+  - {fileID: 6072665104622622335}
   - {fileID: 7376363644945979988}
   - {fileID: 8359328292141409470}
   - {fileID: 5983768880530017064}
@@ -424,7 +425,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -451,7 +452,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -18,11 +18,12 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         Geekplay.Instance.ShowInterstitialAd();
-        if (Geekplay.Instance.PlayerData.IsFirstPlay)
+        if (Geekplay.Instance.PlayerData.IsNotFirstPlay == false)
         {
             Analytics.instance.SendEvent(AnalyticsFirstPlay);
-            Geekplay.Instance.PlayerData.IsFirstPlay = false;
+            Geekplay.Instance.PlayerData.IsNotFirstPlay = true;
             Geekplay.Instance.Save();
+            SceneManager.LoadScene(2);
         }
         Geekplay.Instance.PlayerData.CoinsChanged += SetCoinsInPromo;
         CoinsTextInPromo.text = Geekplay.Instance.PlayerData.Coins.ToString();

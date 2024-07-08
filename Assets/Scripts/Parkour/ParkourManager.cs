@@ -20,9 +20,12 @@ public class ParkourManager : MonoBehaviour
     [SerializeField] AudioSource SoundSoure;
     [SerializeField] AudioClip ParkourCountdown;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
+    }
+    public void StartParkourOnLoad()
+    {
         if (SerializeBlockManager.instance.OnlyParkourMap)
         {
             StartParkour();

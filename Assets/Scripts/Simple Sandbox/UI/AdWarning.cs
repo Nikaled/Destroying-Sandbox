@@ -53,7 +53,6 @@ public class AdWarning : MonoBehaviour
     private IEnumerator AwaitAndShowWarningPanel()
     {
         CurrentTimeToShowWarning = TimeToShowWarning;
-        Debug.Log("Current TimeToShowWarning:" + TimeToShowWarning);
         for (int i = 1; i <= TimeToShowWarning; i++)
         {
             yield return new WaitForSeconds(1);

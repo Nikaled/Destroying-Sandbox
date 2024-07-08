@@ -33,7 +33,7 @@ public class ExplosionForceChecker : MonoBehaviour
         //ForceModifier /= 1.2f;
         Vector3 Direction = (target.transform.position - transform.position).normalized;
         Vector3 ForceVelocity = Direction * ForceModifier;
-        Debug.Log("ForceVelocity:" + ForceVelocity.sqrMagnitude);
+        //Debug.Log("ForceVelocity:" + ForceVelocity.sqrMagnitude);
         return ForceVelocity* VecolityModifier;
 
     }

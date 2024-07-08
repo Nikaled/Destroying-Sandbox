@@ -158,12 +158,16 @@ public class DestroySystem : MonoBehaviour
         rb.angularDrag = 0.3f;
         rb.drag = 0.3f;
     }
-    private void ObjectDies()
+    protected virtual void PlusCountOnObjectDestroyed()
     {
-        OnDied?.Invoke();
         Geekplay.Instance.PlayerData.Coins += 1;
         Geekplay.Instance.Save();
         DestroyCounter.instance.ObjectDestroyed();
+    }
+    private void ObjectDies()
+    {
+        OnDied?.Invoke();   
+        PlusCountOnObjectDestroyed();
         if (MeshObject != null)
         {
             Destroy(RootObject);
@@ -181,14 +185,5 @@ public class DestroySystem : MonoBehaviour
 
         //Analytics.instance.SendEvent(AnalyticsDestroyObject);
         Geekplay.Instance.Save();
-    }
-    private void DestroyObjectAnimation(GameObject rootObject)
-    {
-
-        //AudioExplosion audioExplosion = Instantiate(AudioExplosionPrefab, transform.position, Quaternion.identity);
-        //audioExplosion.PlayExplosionSound();
-        //var fx = Instantiate(DestroyAnimation, transform.position, Quaternion.identity);
-        ////fx.transform.parent = null;
-        ////fx.transform.DOScale(DestroyAnimation.transform.localScale * SumOfSides, 0);
     }
 }

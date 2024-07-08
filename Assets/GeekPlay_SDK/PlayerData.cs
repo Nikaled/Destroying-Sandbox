@@ -25,7 +25,7 @@ public class PlayerData
     public event Action<int> CoinsChanged;
     public int _coinsDontUse;
 
-    public bool IsFirstPlay;
+    public bool IsNotFirstPlay;
     public bool IsFirstGameplay;
     public bool IsFirstMovement;
     public bool IsFirstBlockPlaced;

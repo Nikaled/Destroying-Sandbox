@@ -21,16 +21,18 @@ public class SerializeBlockManager : MonoBehaviour
     public MapData currentMapData;
     private readonly string EndedDestroyMap = "EndedDestroyMapAtNumber_";
     private readonly string EndedParkourMap = "EndedParkourMapAtNumber_";
-    private int CurrentMapIndex;
     public bool IsCurrentMapLast;
     private void Awake()
     {
 
         instance = this;
+    }
+    private void TryLoadMap()
+    {
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
             Geekplay.Instance.PlayerData.IsLoadingDestructionMap = false;
-            if(Geekplay.Instance.PlayerData.CurrentDestructionMapName == null)
+            if (Geekplay.Instance.PlayerData.CurrentDestructionMapName == null)
             {
                 for (int i = 0; i < destructionMapData.DestructionMaps.Count; i++)
                 {
@@ -42,6 +44,7 @@ public class SerializeBlockManager : MonoBehaviour
                         OnlyDestroyingMap = true;
                         CheckMapIsLastInLevelList(currentMapData.MapIndex, destructionMapData.DestructionMaps.Count);
                         LoadBlocks();
+                        Player.instance.DestroyMapSetup();
                         break;
                     }
                 }
@@ -57,10 +60,11 @@ public class SerializeBlockManager : MonoBehaviour
                         OnlyDestroyingMap = true;
                         CheckMapIsLastInLevelList(currentMapData.MapIndex, destructionMapData.DestructionMaps.Count);
                         LoadBlocks();
+                        Player.instance.DestroyMapSetup();
                         break;
                     }
                 }
-            }   
+            }
         }
         else
         {
@@ -79,6 +83,7 @@ public class SerializeBlockManager : MonoBehaviour
                             OnlyParkourMap = true;
                             CheckMapIsLastInLevelList(currentMapData.MapIndex, parkourMapsData.ParkourMaps.Count);
                             LoadBlocks();
+                            Player.instance.ParkourMapSetup();
                             break;
                         }
                     }
@@ -93,12 +98,12 @@ public class SerializeBlockManager : MonoBehaviour
                             OnlyParkourMap = true;
                             CheckMapIsLastInLevelList(currentMapData.MapIndex, parkourMapsData.ParkourMaps.Count);
                             LoadBlocks();
+                            Player.instance.ParkourMapSetup();
                             break;
                         }
                     }
             }
         }
-       
     }
     private void Start()
     {
@@ -107,6 +112,10 @@ public class SerializeBlockManager : MonoBehaviour
             Geekplay.Instance.PlayerData.IsLoadingMapFromSlot = false;
             LoadBlocksFromSlot(Geekplay.Instance.PlayerData.MapSlotToLoad);
             Geekplay.Instance.Save();
+        }
+        else
+        {
+            TryLoadMap();
         }
         if (OnlyDestroyingMap)
         {
@@ -291,6 +300,7 @@ public class SerializeBlockManager : MonoBehaviour
        Debug.Log($"Geekplay.Instance.PlayerData.MapaDataList[{MapDataSlotIndex}].SavedBlocks:" + Geekplay.Instance.PlayerData.MapDataArray[MapDataSlotIndex].SavedBlocks.Count);
         Geekplay.Instance.Save();
     }
+    
     public void LoadBlocks()
     {
         if (BlocksOnScene.Count > 0)
@@ -315,6 +325,15 @@ public class SerializeBlockManager : MonoBehaviour
             BlocksOnScene.Add(LoadedBlock);
         }
     }
+    [ContextMenu("LoadBlocksFromBlocksData")]
+    private void LoadBlockdFromBlocksData() 
+    {
+        for (int i = 0; i < BlocksData.Count; i++)
+        {
+            Block LoadedBlock = Instantiate(BlocksPrefab[BlocksData[i].PrefabIndex]);
+            LoadedBlock.transform.position = BlocksData[i].Position;
+        }
+    } // to Dev only
     public void LoadBlocksFromSlot(int index)
     {
         BlocksData = new();

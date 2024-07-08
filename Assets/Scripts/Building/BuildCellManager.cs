@@ -9,7 +9,6 @@ public class BuildCellManager : MonoBehaviour
     public Image Crosshair;
     public LayerMask AbleToBuildMask;
     private BuildCellSide currentCell;
-    [SerializeField] private GameObject BlockPrefab;
     [SerializeField] GameObject ParkourWinBlock;
     [SerializeField] AvailablePlaceBlockChecker placeChecker;
     [SerializeField] AudioSource SoundSource;
@@ -70,10 +69,16 @@ public class BuildCellManager : MonoBehaviour
                     Geekplay.Instance.Save();
                     Analytics.instance.SendEvent(FirstBlock);
                 }
+                    OnBlockPlaced();
             }
         }
     }
-    public void PlayDeleteBlockSound()
+
+    protected virtual  void OnBlockPlaced()
+    {
+
+    }
+public void PlayDeleteBlockSound()
     {
         SoundSource.clip = DeleteBlockSound;
         SoundSource.Play();
@@ -106,7 +111,10 @@ public class BuildCellManager : MonoBehaviour
             }
             CrosshairWorldPosition = raycastHit.point;
             currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
+            if(currentCell != null)
+            {
             currentCell.ShowCellMesh(true);
+            }
         }
         else
         {
