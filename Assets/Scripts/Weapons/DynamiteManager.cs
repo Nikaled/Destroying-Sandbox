@@ -74,6 +74,10 @@ public class DynamiteManager : MonoBehaviour
             }
             CrosshairWorldPosition = raycastHit.point;
             currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
+            if (currentCell != null)
+            {
+                currentCell.ShowCellMesh(true);
+            }
         }
         else
         {

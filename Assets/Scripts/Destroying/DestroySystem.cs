@@ -144,9 +144,14 @@ public class DestroySystem : MonoBehaviour
             rb.useGravity = true;
             smallBlock.layer = 12;
             Vector3 PosDifference = (transform.position - ProjectilePosition).normalized;
-            smallBlock.GetComponent<Rigidbody>().AddForce((PosDifference + Vector3.down) * 5);
+            float RandomModifierX = UnityEngine.Random.Range(-1, 1);
+            float RandomModifierY = UnityEngine.Random.Range(-1, 1);
+            float RandomModifierZ = UnityEngine.Random.Range(-1, 1);
+            float RandomModifierPower = UnityEngine.Random.Range(0, 4);
+            Vector3 RandomVector = new Vector3(RandomModifierX, RandomModifierY, RandomModifierZ)* RandomModifierPower;
+            smallBlock.GetComponent<Rigidbody>().AddForce((/*PosDifference+ */RandomVector/*+ Vector3.down*/ +Vector3.up* RandomModifierPower) *100);
         }
-        GameObject objToSpawn = new GameObject("Cool GameObject made from Code");
+        GameObject objToSpawn = new GameObject("BlockFragmentDestroyer");
         BlockDestroyingAnimation smallBlockParent = objToSpawn.AddComponent<BlockDestroyingAnimation>();
 
         smallBlockParent.smallBlocks = smallBlocks;

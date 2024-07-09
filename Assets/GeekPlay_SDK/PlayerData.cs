@@ -47,7 +47,9 @@ public class PlayerData
     public bool[] WeaponOpenedArray;
 
 
-
+    /////Tutorial////
+    public bool[] TutorialPhasesCompleted;
+    public bool[] TutorialBordersCompleted;
 
     public List<int> Codes;
     /////InApps//////

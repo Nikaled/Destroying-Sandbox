@@ -10,14 +10,13 @@ public class TutorialCycleManager : CycleManager
         {
             return;
         }
-        if (TutorialManager.instance.AnimalPlaced)
+        if (TutorialManager.instance.AbleToChangeMode)
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
                 if (Player.instance.currentState == Player.PlayerState.Idle || Player.instance.currentState == Player.PlayerState.Building)
                 {
-                    SwitchPhase();
-                    TutorialManager.instance.OpenPhase(TutorialManager.instance.PhaseName7);
+                    SwitchPhase();                   
                 }
             }
         }
@@ -32,6 +31,7 @@ public class TutorialCycleManager : CycleManager
         {
             ActivateDestroyingPhase();
         }
+        TutorialManager.instance.OpenPhase(TutorialManager.instance.PhaseName6);
     }
     public override void ActivateDestroyingPhase()
     {
@@ -42,6 +42,7 @@ public class TutorialCycleManager : CycleManager
         DestroyingPhaseStarted?.Invoke();
         if (Geekplay.Instance.mobile)
         {
+            ChangePhaseButtonFunc(Phase.Destroying);
             CanvasManager.instance.ChangePhaseButtonIcon(0);
             CanvasManager.instance.ChangeDoButtonImageToMode(false);
         }

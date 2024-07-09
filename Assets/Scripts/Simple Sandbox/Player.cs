@@ -105,17 +105,13 @@ public class Player : MonoBehaviour
     }
     protected virtual void Start()
     {
-        SwitchPlayerState(PlayerState.Building);
         if (Geekplay.Instance.mobile)
         {
             examplePlayer.Mobile = true;
             examplePlayer.PC = false;
             CanvasManager.instance.DoButton.onClick.AddListener(delegate { MobileFireInput(); });
             examplePlayer.LockCursor(false);
-            if (SerializeBlockManager.instance.OnlyDestroyingMap)
-            {
-                CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
-            }
+         
         }
         else
         {
@@ -132,22 +128,31 @@ public class Player : MonoBehaviour
         }
         SetFlyMode();
     }
-    public void ParkourMapSetup()
+    public void MapSetup()
     {
-        ParkourManager.instance.StartParkourOnLoad();
-        SwitchPlayerState(PlayerState.Parkour);
-        parkourStartPosition = transform.position;
-        parkourStartRotation = transform.rotation;
-        CycleManager.instance.ParkourPhaseStarted += OnParkourPhaseStarted;
-        if (Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward)
+        SwitchPlayerState(PlayerState.Building);
+        if (SerializeBlockManager.instance.OnlyDestroyingMap)
         {
-            Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward = false;
-            SpeedUpPlayer();
+            SwitchPlayerState(PlayerState.Idle);
+            if (SerializeBlockManager.instance.OnlyDestroyingMap)
+            {
+                CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
+            }
         }
-    }
-    public void DestroyMapSetup()
-    {
-        SwitchPlayerState(PlayerState.Idle);
+        else if (SerializeBlockManager.instance.OnlyParkourMap)
+        {
+
+            ParkourManager.instance.StartParkourOnLoad();
+            SwitchPlayerState(PlayerState.Parkour);
+            parkourStartPosition = transform.position;
+            parkourStartRotation = transform.rotation;
+            CycleManager.instance.ParkourPhaseStarted += OnParkourPhaseStarted;
+            if (Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward)
+            {
+                Geekplay.Instance.PlayerData.IsParkourSpeedUpForReward = false;
+                SpeedUpPlayer();
+            }
+        }
     }
     private void SpeedUpPlayer()
     {
@@ -170,7 +175,7 @@ public class Player : MonoBehaviour
         BlocksInSlots[CurrentBlockIndex] = CurrentBlock;
         SwitchedBlockFromShop?.Invoke(CurrentBlockIndex, BlockSprite);
     }
-    public void SwitchPlayerState(PlayerState newPlayerState, float Delay = 0.1f)
+    public virtual void SwitchPlayerState(PlayerState newPlayerState, float Delay = 0.1f)
     {
         switch (newPlayerState)
         {

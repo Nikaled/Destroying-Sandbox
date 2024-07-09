@@ -36,13 +36,13 @@ public class CanvasManager : MonoBehaviour
 
 
     [Header("DestroyingSandbox")]
-    [SerializeField] GameObject BuildingInstruction;
+    [SerializeField]  GameObject BuildingInstruction;
     [SerializeField] GameObject BlockSlots;
-    [SerializeField] GameObject BuildingMenuButton;
+    [SerializeField] public GameObject BuildingMenuButton;
     [SerializeField] GameObject WeaponSlots;
     [SerializeField] GameObject CurrentDestroyBarUI;
     [SerializeField] GameObject CurrentDestroyBarFilledImage;
-    [SerializeField] GameObject OnWinMapUI;
+    [SerializeField] public GameObject OnWinMapUI;
     [SerializeField] GameObject[] PhaseButtonImages;
     [SerializeField] public Button WeaponSpecialInteracteButton;
     [SerializeField] public Button ChangePhaseButton;
@@ -123,7 +123,7 @@ public class CanvasManager : MonoBehaviour
             CheckActiveUnlockCursorWindows();
         }
     }
-    private void DestroyCountChanged(int CurrentDestroyed)
+    public void DestroyCountChanged(int CurrentDestroyed)
     {
         CurrentDestroyedText.text = $"{CurrentDestroyed} / {DestroyCounter.instance.DestroyedMax}";
         if (DestroyCounter.instance.DestroyedMax > 0)
@@ -199,7 +199,10 @@ public class CanvasManager : MonoBehaviour
             //}
             if (Input.GetKeyDown(KeyCode.K))
             {
+                if(TutorialManager.instance == null)
+                {
                 ShowSaveMapUI(!SaveMapUIActive);
+                }
             }
         }
         if (Player.instance.InterfaceActive == false)
@@ -233,8 +236,17 @@ public class CanvasManager : MonoBehaviour
             AppShopButton.SetActive(false);
         }
         Geekplay.Instance.PlayerData.CoinsChanged += ChangeCoinsText;
-        Geekplay.Instance.LockCursorAfterAd += CheckActiveUnlockCursorWindows;
+        Geekplay.Instance.LockCursorAfterAd += CheckActiveUnlockCursorWindows; 
+        if (Geekplay.Instance.PlayerData.IsFirstGameplay == false)
+        {
+            Geekplay.Instance.PlayerData.IsFirstGameplay = true;
+            Analytics.instance.SendEvent(FirstLoadedInGameplay);
+            Geekplay.Instance.Save();
+        }
 
+    }
+    public void MapModeUISetup()
+    {
         if (SerializeBlockManager.instance.OnlyParkourMap)
         {
             ParkourUI.SetActive(true);
@@ -247,13 +259,6 @@ public class CanvasManager : MonoBehaviour
             ParkourUI.SetActive(false);
             ReloadButtonOnWinPanel.onClick.AddListener(delegate { CycleManager.instance.ActivateBuildingPhase(); });
         }
-        if (Geekplay.Instance.PlayerData.IsFirstGameplay == false)
-        {
-            Geekplay.Instance.PlayerData.IsFirstGameplay = true;
-            Analytics.instance.SendEvent(FirstLoadedInGameplay);
-            Geekplay.Instance.Save();
-        }
-
     }
     #region Mobile
     public void ChangeDoButtonImageToMode(bool Mode)

@@ -44,7 +44,6 @@ public class SerializeBlockManager : MonoBehaviour
                         OnlyDestroyingMap = true;
                         CheckMapIsLastInLevelList(currentMapData.MapIndex, destructionMapData.DestructionMaps.Count);
                         LoadBlocks();
-                        Player.instance.DestroyMapSetup();
                         break;
                     }
                 }
@@ -60,7 +59,6 @@ public class SerializeBlockManager : MonoBehaviour
                         OnlyDestroyingMap = true;
                         CheckMapIsLastInLevelList(currentMapData.MapIndex, destructionMapData.DestructionMaps.Count);
                         LoadBlocks();
-                        Player.instance.DestroyMapSetup();
                         break;
                     }
                 }
@@ -83,7 +81,7 @@ public class SerializeBlockManager : MonoBehaviour
                             OnlyParkourMap = true;
                             CheckMapIsLastInLevelList(currentMapData.MapIndex, parkourMapsData.ParkourMaps.Count);
                             LoadBlocks();
-                            Player.instance.ParkourMapSetup();
+
                             break;
                         }
                     }
@@ -98,12 +96,11 @@ public class SerializeBlockManager : MonoBehaviour
                             OnlyParkourMap = true;
                             CheckMapIsLastInLevelList(currentMapData.MapIndex, parkourMapsData.ParkourMaps.Count);
                             LoadBlocks();
-                            Player.instance.ParkourMapSetup();
                             break;
                         }
                     }
             }
-        }
+        }       
     }
     private void Start()
     {
@@ -117,6 +114,8 @@ public class SerializeBlockManager : MonoBehaviour
         {
             TryLoadMap();
         }
+        CanvasManager.instance.MapModeUISetup();
+        Player.instance.MapSetup();
         if (OnlyDestroyingMap)
         {
             CycleManager.instance.ActivateDestroyingPhase();

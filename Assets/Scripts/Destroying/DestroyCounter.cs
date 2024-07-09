@@ -26,6 +26,7 @@ public class DestroyCounter : MonoBehaviour
     public void DestroyPhaseStarted()
     {
         DestroyedMax = SerializeBlockManager.instance.BlocksOnScene.Count;
+        CanvasManager.instance.DestroyCountChanged(0);
         DestroyedCurrent = 0;
     }
     private IEnumerator DelayToWin()

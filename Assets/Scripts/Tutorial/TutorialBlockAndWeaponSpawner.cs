@@ -10,6 +10,16 @@ public class TutorialBlockAndWeaponSpawner : MonoBehaviour
     [SerializeField] Transform ProjectileSpawnTransform;
     [SerializeField] Lightning LightningPrefab;
     [SerializeField] ShootingProjectile Bullet;
+    private bool PlayerSee;
+
+    void OnBecameVisible()
+    {
+        PlayerSee = true;
+    }
+    private void OnBecameInvisible()
+    {
+        PlayerSee = false;
+    }
 
     void Start()
     {
@@ -20,11 +30,21 @@ public class TutorialBlockAndWeaponSpawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(TutorialBlockPrefab, TutorialBlockSpawnTransform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1.5f);
-            var lightning = Instantiate(LightningPrefab, TutorialBlockSpawnTransform.position, Quaternion.identity);
-            lightning.Fire();
-            yield return new WaitForSeconds(2f);
+            if (PlayerSee)
+            {
+                Instantiate(TutorialBlockPrefab, TutorialBlockSpawnTransform.position, Quaternion.identity);
+                Instantiate(TutorialBlockPrefab, TutorialBlockSpawnTransform.position+new Vector3(0,0,2), Quaternion.identity);
+                Instantiate(TutorialBlockPrefab, TutorialBlockSpawnTransform.position+new Vector3(2,0,2), Quaternion.identity);
+                Instantiate(TutorialBlockPrefab, TutorialBlockSpawnTransform.position+new Vector3(2,0,0), Quaternion.identity);
+                yield return new WaitForSeconds(1.5f);
+                var lightning = Instantiate(LightningPrefab, TutorialBlockSpawnTransform.position, Quaternion.identity);
+                lightning.Fire();
+                yield return new WaitForSeconds(2f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(1);
+            }
         }
        
     }
@@ -32,10 +52,17 @@ public class TutorialBlockAndWeaponSpawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(TutorialBlockPrefab, PistolTutorialBlockSpawnTransform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1.5f);
-            Instantiate(Bullet, ProjectileSpawnTransform.position, ProjectileSpawnTransform.rotation);
-            yield return new WaitForSeconds(2f);
+            if (PlayerSee)
+            {
+                Instantiate(TutorialBlockPrefab, PistolTutorialBlockSpawnTransform.position, Quaternion.identity);
+                yield return new WaitForSeconds(1.5f);
+                Instantiate(Bullet, ProjectileSpawnTransform.position, ProjectileSpawnTransform.rotation);
+                yield return new WaitForSeconds(2f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(1);
+            }
         }
 
     }

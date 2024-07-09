@@ -10,6 +10,7 @@ public class TutorialPlayer : Player
     }
     protected override void Start()
     {
+        base.Start();
         WeaponSelector.instance.UnlockAllWeaponForTutorial();
     }
     public override void ChangeWeaponInput()
@@ -29,4 +30,22 @@ public class TutorialPlayer : Player
         }
         base.ActivateBuildingMenu(Is);
     }
+    public override void SwitchPlayerState(PlayerState newPlayerState, float Delay = 0.1f)
+    {
+        base.SwitchPlayerState(newPlayerState, Delay);
+        if (Geekplay.Instance.mobile)
+        {
+            if(TutorialManager.instance.AbleToChangeMode == false)
+            {
+                CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(true);
+            }
+            CanvasManager.instance.BuildingMenuButton.SetActive(false);
+            CanvasManager.instance.SaveButton.gameObject.SetActive(false);
+        }
+    }
+
 }

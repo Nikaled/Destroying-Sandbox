@@ -56,11 +56,13 @@ public class CycleManager : MonoBehaviour
         CanvasManager.instance.ChangePhaseButton.onClick.RemoveAllListeners();
         if (newPhase == Phase.Destroying)
         {
-            CanvasManager.instance.ChangePhaseButton.onClick.AddListener(delegate { ActivateBuildingPhase(); });
+            //CanvasManager.instance.ChangePhaseButton.onClick.AddListener(delegate { ActivateBuildingPhase(); });
+            CanvasManager.instance.ChangePhaseButton.onClick.AddListener(delegate { SwitchPhase(); });
         }
         else if (newPhase == Phase.Building)
         {
-            CanvasManager.instance.ChangePhaseButton.onClick.AddListener(delegate { ActivateDestroyingPhase(); });
+            //CanvasManager.instance.ChangePhaseButton.onClick.AddListener(delegate { ActivateDestroyingPhase(); });
+            CanvasManager.instance.ChangePhaseButton.onClick.AddListener(delegate { SwitchPhase(); });
         }
     }
     public virtual void ActivateDestroyingPhase()
