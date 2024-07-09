@@ -41,6 +41,11 @@ public class LocalizationMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI ParkourRewardH;
     [SerializeField] TextMeshProUGUI ParkourRewardBNo;
     [SerializeField] TextMeshProUGUI ParkourRewardBY;
+    [Header("Tutorial")]
+    [SerializeField] TextMeshProUGUI TutorialButton;
+    [SerializeField] TextMeshProUGUI TutorialAsk;
+    [SerializeField] TextMeshProUGUI TutorialYes;
+    [SerializeField] TextMeshProUGUI TutorialNo;
 
     private void Start()
     {
@@ -88,6 +93,11 @@ public class LocalizationMenu : MonoBehaviour
         ParkourRewardH.text = "Хотите ускроиться вдвое?";
         ParkourRewardBNo.text = "НЕТ";
         ParkourRewardBY.text = "ДА";
+        TutorialAsk.text = "Хотите пройти обучение?";
+        TutorialYes.text = "НЕТ";
+        TutorialNo.text = "ДА";
+        TutorialButton.text = "ОБУЧЕНИЕ";
+
     }
     private void EnLocalization()
     {
@@ -122,6 +132,10 @@ public class LocalizationMenu : MonoBehaviour
         ParkourRewardH.text = "Do you want to double the speed?";
         ParkourRewardBNo.text = "NO";
         ParkourRewardBY.text = "YES";
+        TutorialAsk.text = "Do you want to start tutorial?";
+        TutorialYes.text = "NO";
+        TutorialNo.text = "YES";
+        TutorialButton.text = "TUTORIAL";
     }
     private void TrLocalization()
     {
@@ -156,5 +170,9 @@ public class LocalizationMenu : MonoBehaviour
         ParkourRewardH.text = "İkiye katlanmak ister misiniz?";
         ParkourRewardBNo.text = "HAYIR";
         ParkourRewardBY.text = "EVET";
+        TutorialAsk.text = "Eğitim almak ister misiniz?";
+        TutorialYes.text = "HAYIR";
+        TutorialNo.text = "EVET";
+        TutorialButton.text = "EĞİTİM";
     }
 }

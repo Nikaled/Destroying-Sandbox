@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject[] Windows;
     [SerializeField] TextMeshProUGUI CoinsTextInPromo;
     [SerializeField] TextMeshProUGUI CoinsTextInOurGames;
+    [SerializeField] GameObject TutorialWindow;
     private void Start()
     {
         Geekplay.Instance.ShowInterstitialAd();
@@ -23,7 +24,7 @@ public class MainMenu : MonoBehaviour
             Analytics.instance.SendEvent(AnalyticsFirstPlay);
             Geekplay.Instance.PlayerData.IsNotFirstPlay = true;
             Geekplay.Instance.Save();
-            SceneManager.LoadScene(2);
+            TutorialWindow.SetActive(true);
         }
         Geekplay.Instance.PlayerData.CoinsChanged += SetCoinsInPromo;
         CoinsTextInPromo.text = Geekplay.Instance.PlayerData.Coins.ToString();
@@ -32,15 +33,6 @@ public class MainMenu : MonoBehaviour
 
         //Geekplay.Instance.PlayerData = new PlayerData();
         //Geekplay.Instance.Save();
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P) && Input.GetKeyDown(KeyCode.D))
-        {
-            Geekplay.Instance.PlayerData = new PlayerData();
-            Geekplay.Instance.Save();
-            Debug.Log("PLAYER DATA CLEARED");
-        }
     }
     private void OnDisable()
     {
