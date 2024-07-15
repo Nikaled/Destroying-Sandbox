@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class RoamingBlock : MonoBehaviour
+public class RoamingBlock : MonoBehaviour, IMoveableParkour
 {
     [SerializeField] Rigidbody rb;
     public float TimeToGoOneSide;
@@ -13,6 +13,7 @@ public class RoamingBlock : MonoBehaviour
     Vector3 RightPosition;
     Vector3 LeftPosition;
     Vector3 CurrentDestination;
+    public bool IsFrozen { get; set; }
     private void Start()
     {
         RightPosition = transform.position + SideToRoam*MovesFromMiddlePosition;
@@ -21,6 +22,7 @@ public class RoamingBlock : MonoBehaviour
     }
     private void SwitchVector(bool IsRight)
     {
+        rb.velocity = Vector3.zero;
         GoRight = IsRight;
         if (GoRight)
         {
@@ -33,6 +35,11 @@ public class RoamingBlock : MonoBehaviour
     }
     private void Update()
     {
+        if (IsFrozen)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        }
         rb.DOMove(CurrentDestination, TimeToGoOneSide);
         rb.MovePosition(CurrentDestination);
         if(Vector3.Distance(transform.position, CurrentDestination) < 2)

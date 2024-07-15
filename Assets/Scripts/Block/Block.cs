@@ -5,17 +5,19 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     public string NameToSerializing;
-    public SaveBlockData SaveBlock()
+   [HideInInspector] public SaveBlockData saveBlockData;
+    public  virtual SaveBlockData SaveBlock()
     {
         int blockPrefabIndex = FindIndexInPrefabList();
         Vector3Int pos = Vector3Int.CeilToInt(transform.position);
-       return  new SaveBlockData(blockPrefabIndex, pos);
+        saveBlockData = new SaveBlockData(blockPrefabIndex, pos);
+        return new SaveBlockData(blockPrefabIndex, pos);
     }
-    public void AddBlockToSaveList()
+    public virtual void AddBlockToSaveList()
     {
         SerializeBlockManager.instance.AddBlockToSaveList(this);
     }
-    private int FindIndexInPrefabList()
+    protected int FindIndexInPrefabList()
     {
         return SerializeBlockManager.instance.FindIndex(this);
     }

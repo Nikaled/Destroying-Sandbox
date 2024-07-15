@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6594990303151140768}
   - component: {fileID: 2333917006439132863}
-  - component: {fileID: 3676242379174354456}
   - component: {fileID: 7159477037447197036}
+  - component: {fileID: 5712253763839592838}
   - component: {fileID: 5484860783017355287}
   m_Layer: 6
   m_Name: Z_RoamingBlock
@@ -63,19 +63,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3676242379174354456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320619608194132117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2871373f0699c84f903b8724b12c71f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NameToSerializing: RoamingBlock
 --- !u!114 &7159477037447197036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +79,26 @@ MonoBehaviour:
   TimeToGoOneSide: 5
   MovesFromMiddlePosition: 6
   SideToRoam: {x: 0, y: 0, z: 1}
+--- !u!114 &5712253763839592838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320619608194132117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a742847b0bac1489985b22de0c8cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameToSerializing: Z_RoamingBlock
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
+  saveParkourBlockData:
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    BlockOnSceneIndex: 0
 --- !u!54 &5484860783017355287
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,7 +137,7 @@ GameObject:
   - component: {fileID: 5372892679285509673}
   - component: {fileID: 7381951320281207084}
   - component: {fileID: 1910996474670682388}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,8 +328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3676242379174354456}
+  parentBlock: {fileID: 5712253763839592838}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &4219532075877255805
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,8 +450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3676242379174354456}
+  parentBlock: {fileID: 5712253763839592838}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &5282524849344615496
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,8 +572,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3676242379174354456}
+  parentBlock: {fileID: 5712253763839592838}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &6052159069257975186
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,8 +694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3676242379174354456}
+  parentBlock: {fileID: 5712253763839592838}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &9145902834350305568
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,8 +816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3676242379174354456}
+  parentBlock: {fileID: 5712253763839592838}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &9189561840096075558
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,5 +938,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3676242379174354456}
+  parentBlock: {fileID: 5712253763839592838}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}

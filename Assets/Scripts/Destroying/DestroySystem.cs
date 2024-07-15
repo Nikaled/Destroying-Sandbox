@@ -24,6 +24,10 @@ public class DestroySystem : MonoBehaviour
     }
     public void DamageTaked(Vector3 position)
     {
+        if(CycleManager.instance.currentPhase != CycleManager.Phase.Destroying)
+        {
+            return;
+        }
         ProjectilePosition = position;
         Debug.Log("Damage Taked");
         if (ObjectIsDestroying)
@@ -43,6 +47,10 @@ public class DestroySystem : MonoBehaviour
     }
     public void FireObject()
     {
+        if (CycleManager.instance.currentPhase != CycleManager.Phase.Destroying)
+        {
+            return;
+        }
         if (IsFireable == false && IsUnit == false)
         {
             if(Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
@@ -166,8 +174,10 @@ public class DestroySystem : MonoBehaviour
     protected virtual void PlusCountOnObjectDestroyed()
     {
         Geekplay.Instance.PlayerData.Coins += 1;
+        Geekplay.Instance.PlayerData.DestroyCount += 1;
         Geekplay.Instance.Save();
         DestroyCounter.instance.ObjectDestroyed();
+        Geekplay.Instance.Leaderboard("Destroy", Geekplay.Instance.PlayerData.DestroyCount);
     }
     private void ObjectDies()
     {

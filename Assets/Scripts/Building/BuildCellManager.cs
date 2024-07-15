@@ -62,12 +62,18 @@ public class BuildCellManager : MonoBehaviour
                 PlayPlaceBlockSound();
                 Block newBlock = Instantiate(player.CurrentBlock, pos, Quaternion.identity);
                 newBlock.AddBlockToSaveList();
-                
+                Geekplay.Instance.PlayerData.BuildCount++;
+                Geekplay.Instance.Leaderboard("Build", Geekplay.Instance.PlayerData.BuildCount);
+
                 if (Geekplay.Instance.PlayerData.IsFirstBlockPlaced == false)
                 {
                     Geekplay.Instance.PlayerData.IsFirstBlockPlaced = true;
                     Geekplay.Instance.Save();
                     Analytics.instance.SendEvent(FirstBlock);
+                }
+                else
+                {
+                    Geekplay.Instance.Save();
                 }
                     OnBlockPlaced();
             }

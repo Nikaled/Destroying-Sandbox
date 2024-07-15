@@ -9,13 +9,14 @@ public class AppShopCell : MonoBehaviour
     public string PurName;
     //public int PurGold;
     public Button BuyGoldButton;
-   [Header("Only Reward")]
+    [SerializeField] TextMeshProUGUI GoldCount;
+    [Header("Only Reward")]
     [SerializeField] GameObject RewardBlocker;
     [SerializeField] TextMeshProUGUI RewardTimerText;
     private void OnEnable()
     {
         SubscribeOnPurchase();
-
+        GoldCount.text = Rewarder.instance.GetGoldCountByName(PurName).ToString();
         if (RewardBlocker != null && RewardTimerText !=null)
         {
             Geekplay.Instance.RewardLockTimeUpdate += SetNewTimerTextAndCheckEnd;

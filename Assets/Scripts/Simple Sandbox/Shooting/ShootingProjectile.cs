@@ -11,7 +11,6 @@ public class ShootingProjectile : MonoBehaviour
    public bool TankProjectile;
     [SerializeField] GameObject DestroyAnimation;
 
-    // Start is called before the first frame update
     void Start()
     {
         bulletRigidbody.velocity = transform.forward * speed;

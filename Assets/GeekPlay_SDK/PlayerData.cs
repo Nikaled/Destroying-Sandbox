@@ -43,6 +43,8 @@ public class PlayerData
     public List<ParkourMapsPlayerData> parkourMapPlayerDataList;
     public List<MapsPlayerData> DestroyingMapPlayerDataList;
     public int DestroyCount;
+    public int BuildCount;
+    public int DonatCount;
     public bool IsParkourSpeedUpForReward;
     public bool[] WeaponOpenedArray;
 

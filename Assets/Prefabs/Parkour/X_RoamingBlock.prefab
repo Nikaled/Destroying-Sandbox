@@ -119,8 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3270487781531583535}
+  parentBlock: {fileID: -8072570313448380328}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &1208113031766583185
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,8 +241,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3270487781531583535}
+  parentBlock: {fileID: -8072570313448380328}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &1950625672039269957
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,8 +363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3270487781531583535}
+  parentBlock: {fileID: -8072570313448380328}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &3772571656206277159
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,9 +376,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1670942276053281494}
   - component: {fileID: 5044495712823180314}
-  - component: {fileID: 3270487781531583535}
   - component: {fileID: 8577225202842001591}
   - component: {fileID: 603531991914058617}
+  - component: {fileID: -8072570313448380328}
   m_Layer: 6
   m_Name: X_RoamingBlock
   m_TagString: Untagged
@@ -426,19 +429,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3270487781531583535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3772571656206277159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2871373f0699c84f903b8724b12c71f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NameToSerializing: RoamingBlock
 --- !u!114 &8577225202842001591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +472,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!114 &-8072570313448380328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3772571656206277159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a742847b0bac1489985b22de0c8cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameToSerializing: X_RoamingBlock
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
+  saveParkourBlockData:
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    BlockOnSceneIndex: 0
 --- !u!1 &4496227793110239497
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,8 +611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3270487781531583535}
+  parentBlock: {fileID: -8072570313448380328}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &4909103289666751686
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,8 +733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3270487781531583535}
+  parentBlock: {fileID: -8072570313448380328}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &5822674873442014699
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +747,7 @@ GameObject:
   - component: {fileID: 1356874925108563205}
   - component: {fileID: 686871905264413516}
   - component: {fileID: 8731834036681268686}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,5 +938,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsOccupied: 0
-  parentBlock: {fileID: 3270487781531583535}
+  parentBlock: {fileID: -8072570313448380328}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}

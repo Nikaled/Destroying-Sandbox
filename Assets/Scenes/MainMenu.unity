@@ -4997,6 +4997,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5193742389231066938, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c78ad13e576db4472a83ae1dba215554, type: 3}
     - target: {fileID: 6333192077129588625, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: PurName
       value: AppForGold3
@@ -5536,6 +5540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630cf1aa69c2bd047b4db63763c56674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &405864021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5023734575896185640, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
+  m_PrefabInstance: {fileID: 2112836514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &406625979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5137824321156890345, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
@@ -7183,7 +7192,6 @@ GameObject:
   - component: {fileID: 573506500}
   - component: {fileID: 573506499}
   - component: {fileID: 573506498}
-  - component: {fileID: 573506497}
   - component: {fileID: 573506501}
   m_Layer: 5
   m_Name: Close Button
@@ -7212,18 +7220,6 @@ RectTransform:
   m_AnchoredPosition: {x: 70.00708, y: 495.00006}
   m_SizeDelta: {x: 140, y: 140}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &573506497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573506495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c5774f900feb77408a7793eea3074ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &573506498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8615,8 +8611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 128.73772, y: 0}
-  m_SizeDelta: {x: 223.677, y: 100}
+  m_AnchoredPosition: {x: 128.73772, y: -0.5376015}
+  m_SizeDelta: {x: 223.677, y: 86.9577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779267460
 MonoBehaviour:
@@ -8665,10 +8661,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 37.25
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -9477,58 +9473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c5774f900feb77408a7793eea3074ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &863129867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 863129868}
-  - component: {fileID: 863129869}
-  m_Layer: 0
-  m_Name: Rewarder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &863129868
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863129867}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2112836515}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863129869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863129867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7af1803225eff45998489dfb123a95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RewardForGold: GetGold
-  AppForGold1: AppForGold1
-  AppForGold2: AppForGold2
-  AppForGold3: AppForGold3
-  RewardForGoldGold: 50
-  PurchaseForGoldGold1: 100
-  PurchaseForGoldGold2: 200
-  PurchaseForGoldGold3: 500
 --- !u!1 &872090382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1761911115088569296, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
@@ -11216,6 +11160,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193742389231066938, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44927745c5c88418fb5c605670c86d95, type: 3}
     - target: {fileID: 6333192077129588625, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: PurName
       value: AppForGold4
@@ -11834,6 +11790,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193742389231066938, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1cb612701e37b4b5cbcfc5f73460aca9, type: 3}
     - target: {fileID: 6333192077129588625, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: PurName
       value: AppForGold5
@@ -12875,6 +12843,14 @@ PrefabInstance:
     - target: {fileID: 2301969389616757157, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 217
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 6333192077129588625, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: PurName
@@ -17014,8 +16990,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 128.73772, y: 0}
-  m_SizeDelta: {x: 223.677, y: 100}
+  m_AnchoredPosition: {x: 128.73772, y: -1.3448982}
+  m_SizeDelta: {x: 223.677, y: 83.1482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385964973
 MonoBehaviour:
@@ -17064,10 +17040,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 37.25
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -20504,11 +20480,14 @@ MonoBehaviour:
   ChooseModeDesc3: {fileID: 1313596152}
   ShopButtonL: {fileID: 1639018065}
   ShopButtonR: {fileID: 967093308}
+  TutorialButton: {fileID: 1173014303}
   BuildingMenuL: {fileID: 2061153670}
   BuildingMenuR: {fileID: 1168608295}
   ParkourRewardH: {fileID: 1550214475}
   ParkourRewardBNo: {fileID: 1019314003}
   ParkourRewardBY: {fileID: 1253612375}
+  YourBalanceWeapon: {fileID: 1385964973}
+  YourBalanceApp: {fileID: 779267460}
 --- !u!4 &1699446020
 Transform:
   m_ObjectHideFlags: 0
@@ -23718,7 +23697,6 @@ GameObject:
   - component: {fileID: 1978007129}
   - component: {fileID: 1978007128}
   - component: {fileID: 1978007127}
-  - component: {fileID: 1978007126}
   - component: {fileID: 1978007130}
   m_Layer: 5
   m_Name: Close Button
@@ -23747,18 +23725,6 @@ RectTransform:
   m_AnchoredPosition: {x: 70.00708, y: 495.00006}
   m_SizeDelta: {x: 140, y: 140}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &1978007126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978007124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c5774f900feb77408a7793eea3074ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1978007127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24865,7 +24831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: Platform
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: language
@@ -24877,7 +24843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: purchasesList.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: PlayerData.MapaDataList.Array.size
@@ -24898,6 +24864,14 @@ PrefabInstance:
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: purchasesList.Array.data[3].itemName
       value: AppForGold3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
+      propertyPath: purchasesList.Array.data[4].itemName
+      value: AppForGold4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
+      propertyPath: purchasesList.Array.data[5].itemName
+      value: AppForGold5
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: rewardsList.Array.data[0].rewardName
@@ -25009,17 +24983,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5023734575896185686, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5023734575896185640, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 863129868}
-    m_AddedComponents: []
+      addedObject: {fileID: 2112836517}
   m_SourcePrefab: {fileID: 100100000, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
---- !u!4 &2112836515 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5023734575896185686, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
-  m_PrefabInstance: {fileID: 2112836514}
+--- !u!114 &2112836517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405864021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7af1803225eff45998489dfb123a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RewardForGold: GetGold
+  AppForGold1: AppForGold1
+  AppForGold2: AppForGold2
+  AppForGold3: AppForGold3
+  AppForGold4: AppForGold4
+  AppForGold5: AppForGold5
+  RewardForGoldGold: 50
+  PurchaseForGoldGold1: 100
+  PurchaseForGoldGold2: 200
+  PurchaseForGoldGold3: 500
+  PurchaseForGoldGold4: 1000
+  PurchaseForGoldGold5: 2000
 --- !u!114 &2118888677 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8960458203641171693, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
@@ -28609,6 +28602,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 118.0411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 125.2681
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584932732977356879, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193742389231066938, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b0f1d39a7147e4e838466f1da9737f92, type: 3}
     - target: {fileID: 9172904420688659302, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: m_Name
       value: AppShopSlot

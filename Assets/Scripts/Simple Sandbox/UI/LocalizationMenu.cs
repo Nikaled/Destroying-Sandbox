@@ -34,6 +34,7 @@ public class LocalizationMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI ChooseModeDesc3;
     [SerializeField] TextMeshProUGUI ShopButtonL;
     [SerializeField] TextMeshProUGUI ShopButtonR;
+    [SerializeField] TextMeshProUGUI TutorialButton;
     [Header("BuildingMenu")]
     [SerializeField] TextMeshProUGUI BuildingMenuL;
     [SerializeField] TextMeshProUGUI BuildingMenuR;
@@ -41,6 +42,9 @@ public class LocalizationMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI ParkourRewardH;
     [SerializeField] TextMeshProUGUI ParkourRewardBNo;
     [SerializeField] TextMeshProUGUI ParkourRewardBY;
+    [Header("WeaponAndAppShop")]
+    [SerializeField] TextMeshProUGUI YourBalanceWeapon;
+    [SerializeField] TextMeshProUGUI YourBalanceApp;
 
     private void Start()
     {
@@ -66,7 +70,7 @@ public class LocalizationMenu : MonoBehaviour
         ChooseModeDesc2.text = "В этом режиме ты сможешь разрушить то, что построили другие!";
         ChooseModeDesc3.text = "В этом режиме ты на скорость должен преодолеть препятствия и достичь финиша!";
         ShopButtonL.text = "Больше\nОружия!";
-        ShopButtonR.text = "Больше\nЗолота!";
+        ShopButtonR.text = "Больше\n<color=orange>Золота!</color>";
         BuildingMenuL.text = "Строй Новое";
         BuildingMenuR.text = "Загрузить сохраненную карту";
         Button3.text = "ЛИДЕРЫ";
@@ -88,6 +92,9 @@ public class LocalizationMenu : MonoBehaviour
         ParkourRewardH.text = "Хотите ускроиться вдвое?";
         ParkourRewardBNo.text = "НЕТ";
         ParkourRewardBY.text = "ДА";
+        YourBalanceWeapon.text = "Ваш баланс:";
+        YourBalanceApp.text = "Ваш баланс:";
+        TutorialButton.text = "ОБУЧЕНИЕ";
     }
     private void EnLocalization()
     {
@@ -98,7 +105,7 @@ public class LocalizationMenu : MonoBehaviour
         ChooseModeDesc2.text = "In this mode, you can destroy what others have built!";
         ChooseModeDesc3.text = "In this mode, you must overcome obstacles at speed and reach the finish line!";
         ShopButtonL.text = "More\nWeapons!";
-        ShopButtonR.text = "More\ngold!";
+        ShopButtonR.text = "More\n<color=orange>gold!</color>";
         BuildingMenuL.text = "Build a New One";
         BuildingMenuR.text = "Load a saved map";
         Button3.text = "LEADERS";
@@ -122,6 +129,9 @@ public class LocalizationMenu : MonoBehaviour
         ParkourRewardH.text = "Do you want to double the speed?";
         ParkourRewardBNo.text = "NO";
         ParkourRewardBY.text = "YES";
+        YourBalanceWeapon.text = "Your balance:";
+        YourBalanceApp.text = "Your balance:";
+        TutorialButton.text = "TUTORIAL";
     }
     private void TrLocalization()
     {
@@ -131,8 +141,8 @@ public class LocalizationMenu : MonoBehaviour
         ChooseModeDesc1.text = "Bu modda istediğiniz her şeyi inşa edebilir ve bundan sonra yapınızı yok edebilirsiniz!";
         ChooseModeDesc2.text = "Bu modda başkalarının inşa ettiklerini yok edebilirsiniz!";
         ChooseModeDesc3.text = "Bu modda engelleri hızla aşmalı ve bitiş çizgisine ulaşmalısınız!";
-        ShopButtonL.text = "Daha fazla\ndaha fazla!";
-        ShopButtonR.text = "Daha fazla\naltın!";
+        ShopButtonL.text = "Daha fazla \nsilah!";
+        ShopButtonR.text = "Daha fazla\n<color=orange>altın!</color>";
         BuildingMenuL.text = "Yeni İnşa et";
         BuildingMenuR.text = "Kayıtlı kartı yükle";
         Button3.text = "LİDERLER";
@@ -156,5 +166,8 @@ public class LocalizationMenu : MonoBehaviour
         ParkourRewardH.text = "İkiye katlanmak ister misiniz?";
         ParkourRewardBNo.text = "HAYIR";
         ParkourRewardBY.text = "EVET";
+        YourBalanceWeapon.text = "Bakiyeniz:";
+        YourBalanceApp.text = "Bakiyeniz:";
+        TutorialButton.text = "EĞİTİM";
     }
 }

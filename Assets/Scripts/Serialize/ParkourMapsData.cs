@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class ParkourMapsData : MonoBehaviour
 {
-    public List<MapData> ParkourMaps;
+    public List<ParkourMapData> ParkourMaps;
 }
