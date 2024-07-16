@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1122304313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.41636
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 43.40603
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485852646160592029, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626961988973238541, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
+      propertyPath: m_Name
+      value: ParkourWinZone
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b4d3d3fcefc9cc42b68f913184b408c, type: 3}
 --- !u!1 &1734169079
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.size
-      value: 23
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].ParkourBlocksSaveData.Array.size
@@ -503,11 +560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[0].Position.z
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[1].Position.x
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[1].Position.y
@@ -515,11 +572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[1].Position.z
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[2].Position.x
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[2].Position.y
@@ -527,11 +584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[2].Position.z
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[3].Position.x
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[3].Position.y
@@ -539,11 +596,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[3].Position.z
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[4].Position.x
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[4].Position.y
@@ -551,11 +608,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[4].Position.z
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[5].Position.x
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[5].Position.y
@@ -563,11 +620,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[5].Position.z
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[6].Position.x
-      value: -2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[6].Position.y
@@ -575,11 +632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[6].Position.z
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[7].Position.x
-      value: -4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[7].Position.y
@@ -587,7 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[7].Position.z
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[8].Position.x
@@ -615,7 +672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[0].PrefabIndex
-      value: 0
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[10].Position.x
@@ -739,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[1].PrefabIndex
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[20].Position.x
@@ -859,7 +916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[2].PrefabIndex
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[30].Position.y
@@ -979,7 +1036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[3].PrefabIndex
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[40].Position.x
@@ -1067,19 +1124,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[4].PrefabIndex
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[5].PrefabIndex
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[6].PrefabIndex
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[7].PrefabIndex
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].SavedBlocks.Array.data[8].PrefabIndex
@@ -1239,27 +1296,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].ParkourBlocksSaveData.Array.data[0].Scale.x
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].ParkourBlocksSaveData.Array.data[0].Scale.y
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].ParkourBlocksSaveData.Array.data[0].Scale.z
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].ParkourBlocksSaveData.Array.data[0].rotation.w
-      value: -0.18223569
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].ParkourBlocksSaveData.Array.data[0].rotation.y
-      value: -0.9832549
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6072142722338364997, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: ParkourMaps.Array.data[2].ParkourBlocksSaveData.Array.data[0].BlockOnSceneIndex
-      value: 22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6403066464923825653, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1456,3 +1513,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 4423000595828574834}
   - {fileID: 1734169081}
+  - {fileID: 1122304313}

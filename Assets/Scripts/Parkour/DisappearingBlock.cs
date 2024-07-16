@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisappearingBlock : MonoBehaviour
+public class DisappearingBlock : MonoBehaviour, IMoveableParkour
 {
     [SerializeField] MeshRenderer BlockMesh;
     [SerializeField] Material DisappearingMaterial;
@@ -10,8 +10,14 @@ public class DisappearingBlock : MonoBehaviour
     public float TimeToDisappear=10;
     private bool IsDisappearing;
     public float TimeToAppearAgain;
+    private IEnumerator DisCor;
+    public bool IsFrozen { get; set; }
     private void OnCollisionEnter(Collision collision)
     {
+        if (IsFrozen)
+        {
+            return;
+        }
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -19,7 +25,12 @@ public class DisappearingBlock : MonoBehaviour
             if(IsDisappearing == false)
             {
                 IsDisappearing = true;
-                StartCoroutine(Disappearing());
+                if(DisCor != null)
+                {
+                    StopCoroutine(DisCor);
+                }
+                DisCor = Disappearing();
+                StartCoroutine(DisCor);
             }
         }
     }
@@ -61,5 +72,16 @@ public class DisappearingBlock : MonoBehaviour
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
         mat.SetColor("_Color", newColor);
 
+    }
+
+    public void Freeze(bool Is)
+    {
+        if (Is)
+        {
+            if (DisCor != null)
+            {
+                StopCoroutine(DisCor);
+            }
+        }
     }
 }

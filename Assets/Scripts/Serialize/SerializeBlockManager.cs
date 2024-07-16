@@ -52,15 +52,22 @@ public class SerializeBlockManager : MonoBehaviour
         ParkourMapData parMapData = new();
         parMapData.SavedBlocks = new();
         parMapData.SavedBlocks = BlocksData;
-        parMapData.MapName = "P_Map_" + MapDataSaver.DestructionMaps.Count + 1;
+        parMapData.MapName = "P_Map_" + MapDataSaver.ParkourMaps.Count + 1;
         parMapData.ParkourBlocksSaveData = ParkourBlocksData;
         MapDataSaver.ParkourMaps.Add(parMapData);
     }
+    [ContextMenu("LoadLastParkourMapForBuilding")]
+    private void LoadLastParkourMapForBuilding()
+    {
+        Geekplay.Instance.PlayerData.CurrentParkourMapName = MapDataSaver.ParkourMaps[^1].MapName;
+        parkourMapsData.ParkourMaps = MapDataSaver.ParkourMaps;
+        //Geekplay.Instance.PlayerData.CurrentParkourMapIndex = 2;
+        Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
+        TryLoadMap();
+        OnlyParkourMap = false;
+    }
     private void TryLoadMap()
     {
-        Geekplay.Instance.PlayerData.CurrentParkourMapName = "P";
-        Geekplay.Instance.PlayerData.CurrentParkourMapIndex = 2;
-        Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
 
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
@@ -432,14 +439,14 @@ public class SerializeBlockManager : MonoBehaviour
     //    }
     //    //SceneView.RepaintAll();
     //}
-    [ContextMenu("Set Names")]
+    //[ContextMenu("Set Names")]
 
-    public void SetNames()
-    {
-        for (int i = 0; i < BlocksPrefab.Length; i++)
-        {
+    //public void SetNames()
+    //{
+    //    for (int i = 0; i < BlocksPrefab.Length; i++)
+    //    {
 
-            BlocksPrefab[i].NameToSerializing = BlocksPrefab[i].name;
-        }
-    }
+    //        BlocksPrefab[i].NameToSerializing = BlocksPrefab[i].name;
+    //    }
+    //}
 }
