@@ -241,7 +241,7 @@ public class UnitMovement : MonoBehaviour
             }
         }
     }
-    private void CreeperExplosion()
+    public void CreeperExplosion()
     {
         WalkSequence.Kill();
         charController.enabled = false;

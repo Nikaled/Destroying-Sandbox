@@ -45,6 +45,10 @@ public class LocalizationMenu : MonoBehaviour
     [Header("WeaponAndAppShop")]
     [SerializeField] TextMeshProUGUI YourBalanceWeapon;
     [SerializeField] TextMeshProUGUI YourBalanceApp;
+    [Header("TutorialUI")]
+    [SerializeField] TextMeshProUGUI TutorialAsk;
+    [SerializeField] TextMeshProUGUI TutorialDecline;
+    [SerializeField] TextMeshProUGUI TutorialConfirm;
 
     private void Start()
     {
@@ -95,6 +99,9 @@ public class LocalizationMenu : MonoBehaviour
         YourBalanceWeapon.text = "Ваш баланс:";
         YourBalanceApp.text = "Ваш баланс:";
         TutorialButton.text = "ОБУЧЕНИЕ";
+        TutorialAsk.text = "Хотите пройти обучение?";
+        TutorialDecline.text = "НЕТ";
+        TutorialConfirm.text = "ДА";
     }
     private void EnLocalization()
     {
@@ -132,6 +139,9 @@ public class LocalizationMenu : MonoBehaviour
         YourBalanceWeapon.text = "Your balance:";
         YourBalanceApp.text = "Your balance:";
         TutorialButton.text = "TUTORIAL";
+        TutorialAsk.text = "Do you want to complete tutorial?";
+        TutorialDecline.text = "NO";
+        TutorialConfirm.text = "YES";
     }
     private void TrLocalization()
     {
@@ -169,5 +179,8 @@ public class LocalizationMenu : MonoBehaviour
         YourBalanceWeapon.text = "Bakiyeniz:";
         YourBalanceApp.text = "Bakiyeniz:";
         TutorialButton.text = "EĞİTİM";
+        TutorialAsk.text = "Eğitim almak ister misiniz?";
+        TutorialDecline.text = "HAYIR";
+        TutorialConfirm.text = "EVET";
     }
 }

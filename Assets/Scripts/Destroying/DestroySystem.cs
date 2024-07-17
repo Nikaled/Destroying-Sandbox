@@ -22,9 +22,18 @@ public class DestroySystem : MonoBehaviour
     {
 
     }
+    protected virtual bool CheckPhaseNotDestroying()
+    {
+
+        if (CycleManager.instance.currentPhase != CycleManager.Phase.Destroying)
+        {
+            return true;
+        }
+        return false;
+    }
     public void DamageTaked(Vector3 position)
     {
-        if(CycleManager.instance.currentPhase != CycleManager.Phase.Destroying)
+        if(CheckPhaseNotDestroying())
         {
             return;
         }
@@ -47,7 +56,7 @@ public class DestroySystem : MonoBehaviour
     }
     public void FireObject()
     {
-        if (CycleManager.instance.currentPhase != CycleManager.Phase.Destroying)
+        if (CheckPhaseNotDestroying())
         {
             return;
         }
@@ -120,7 +129,7 @@ public class DestroySystem : MonoBehaviour
     }
     public void ExplosionForce(Vector3 force)
     {
-        if (IsUnit || CycleManager.instance.currentPhase != CycleManager.Phase.Destroying)
+        if (IsUnit || CheckPhaseNotDestroying())
         {
             return;
         }

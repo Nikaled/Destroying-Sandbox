@@ -8,4 +8,8 @@ public class TutorialBlockDestroySystem : DestroySystem
     {
         return;
     }
+    protected override bool CheckPhaseNotDestroying()
+    {
+        return false;
+    }
 }

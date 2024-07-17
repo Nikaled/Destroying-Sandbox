@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6649f5f1efb310d40b284deebc00e153, type: 2}
     - target: {fileID: 5344201089602751471, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: BlocksPrefab.Array.size
-      value: 62
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 5344201089602751471, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: BlocksPrefab.Array.data[54]
@@ -502,6 +502,10 @@ PrefabInstance:
       propertyPath: BlocksPrefab.Array.data[61]
       value: 
       objectReference: {fileID: 5712253763839592838, guid: 121ca3e7c8079404d889f33fbda00b83, type: 3}
+    - target: {fileID: 5344201089602751471, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: BlocksPrefab.Array.data[62]
+      value: 
+      objectReference: {fileID: 686361192941542582, guid: 1f574c1fae5cfdd42b4a1f9c00ff7f2a, type: 3}
     - target: {fileID: 5692382847778577920, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
