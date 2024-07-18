@@ -11,7 +11,6 @@ public class DestroyCollision : MonoBehaviour
         if (destroySystem != null)
         {
             destroySystem.DamageTaked(projectilePosition);
-            Debug.Log("DamageTaked");
         }
     }
     public void TakeExplosion(Vector3 Force)
@@ -21,7 +20,6 @@ public class DestroyCollision : MonoBehaviour
     }
     public void TakeFire()
     {
-        Debug.Log("TakedFire");
         if (destroySystem != null)
             destroySystem.FireObject();
     }

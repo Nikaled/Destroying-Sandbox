@@ -168,6 +168,7 @@ public class UnitMovement : MonoBehaviour
         ForwardCollider.enabled = true;
         DestroyPhaseStarted = true;
 
+        RotateUnit();
         if (BattleUnit)
         {
             Vision.enabled = true;
@@ -272,7 +273,7 @@ public class UnitMovement : MonoBehaviour
             return;
         }
         charController.enabled = false;
-        int RandomDegree = Random.Range(20, 91);
+        int RandomDegree = Random.Range(-90, 91);
         transform.DOLocalRotate(transform.rotation.eulerAngles + new Vector3(0, RandomDegree, 0), 1).OnComplete(EnCharC);
         void EnCharC()
         {

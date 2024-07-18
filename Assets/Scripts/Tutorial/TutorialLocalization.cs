@@ -11,6 +11,9 @@ public class TutorialLocalization : MonoBehaviour
     [SerializeField] TextMeshProUGUI TutorialTextPhase5;
     [SerializeField] TextMeshProUGUI TutorialTextPhase6;
     [SerializeField] TextMeshProUGUI TutorialTextPhase7;
+    [SerializeField] TextMeshProUGUI WinUIAsk;
+    [SerializeField] TextMeshProUGUI WinUINo;
+    [SerializeField] TextMeshProUGUI WinUIYes;
     private void Start()
     {
         if (Geekplay.Instance.language == "ru")
@@ -55,7 +58,7 @@ public class TutorialLocalization : MonoBehaviour
         TutorialTextPhase4.text = "В этой игре можно не только строить, но и разрушать! Иди вперед и попробуй сам!";
         TutorialTextPhase5.text = "Переключайся между оружиями с помощью панели и уничтожай блоки!";
         TutorialTextPhase6.text = "Нажми кнопку над панелью блоков для перехода в режим разрушения и животные начнут ходить!";
-        TutorialTextPhase7.text = "Иди далее по дороге чтобы закончить обучение. Приятной игры!";
+        TutorialTextPhase7.text = "Зайди в арку, чтобы закончить обучение. Приятной игры!";
     }
     private void RuPCLocalization()
     {
@@ -65,7 +68,7 @@ public class TutorialLocalization : MonoBehaviour
         TutorialTextPhase4.text = "В этой игре можно не только строить, но и разрушать! Иди вперед и попробуй сам!";
         TutorialTextPhase5.text = "Выбирай оружие на цифры и уничтожай блоки! (Инструкции над панелью оружия)";
         TutorialTextPhase6.text = "Нажми <color=orange>[M]</color> для перехода в режим разрушения и животные начнут ходить!";
-        TutorialTextPhase7.text = "Иди далее по дороге чтобы закончить обучение. Приятной игры!";
+        TutorialTextPhase7.text = "Зайди в арку, чтобы закончить обучение. Приятной игры!";
     }
     private void EnMobileLocalization()
     {

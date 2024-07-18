@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5558738566538319647}
   - component: {fileID: 7003327145190323366}
   - component: {fileID: 539372674085059657}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ForceArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 2.6
+  m_Radius: 1.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &539372674085059657
 MonoBehaviour:
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 3671030467065605198}
   - component: {fileID: 6207541085844279177}
   - component: {fileID: 6938386714462827288}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DestroyingArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 1.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6207541085844279177
 Rigidbody:

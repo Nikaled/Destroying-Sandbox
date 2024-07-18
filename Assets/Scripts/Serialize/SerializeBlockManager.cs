@@ -8,7 +8,8 @@ public class SerializeBlockManager : MonoBehaviour
 {
     public DestructionMapData destructionMapData;
     public ParkourMapsData parkourMapsData;
-   /* [HideInInspector]*/ public List<Block> BlocksOnScene = new();
+    /* [HideInInspector]*/
+    public List<Block> BlocksOnScene = new();
     public static SerializeBlockManager instance;
     [SerializeField] public List<SaveBlockData> BlocksData;
     [SerializeField] public List<SaveParkourBlockData> ParkourBlocksData;
@@ -26,13 +27,39 @@ public class SerializeBlockManager : MonoBehaviour
     public MapDataSO MapDataSaver;
     private void Awake()
     {
-
+        destructionMapData.DestructionMaps = MapDataSaver.DestructionMaps;
+        parkourMapsData.ParkourMaps = MapDataSaver.ParkourMaps;
         instance = this;
+    }
+    [ContextMenu("GenerateBlocks")]
+    private void Generate()
+    {
+        BlocksOnScene = new();
+        Vector3 StartPoint = new Vector3(50, 2, 2);
+        int width = 13;
+        int lenght = 13;
+        int height = 13;
+        int Sdvig = 2;
+        for (int i = 0; i < lenght; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    if ((i > 0 && i < lenght - 1) && (j > 0 && j < width - 1) && (y != 0 && y != height - 1))
+                    {
+                        continue;
+                    }
+                    var newBlock = Instantiate(BlocksPrefab[7], StartPoint + new Vector3(Sdvig * j, Sdvig * y, Sdvig * i), Quaternion.identity);
+                    BlocksOnScene.Add(newBlock);
+                }
+            }
+        }
     }
     [ContextMenu("SaveDestructionMap")]
     private void SaveDestrMap()
     {
-        if(MapDataSaver.DestructionMaps == null)
+        if (MapDataSaver.DestructionMaps == null)
         {
             MapDataSaver.DestructionMaps = new();
         }
@@ -68,7 +95,6 @@ public class SerializeBlockManager : MonoBehaviour
     }
     private void TryLoadMap()
     {
-
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
             Geekplay.Instance.PlayerData.IsLoadingDestructionMap = false;
@@ -324,7 +350,7 @@ public class SerializeBlockManager : MonoBehaviour
                 ParkourBlocksData.Add(ParkData);
                 Debug.Log("Added Parkour Data");
             }
-           
+
             BlocksData.Add(BlocksOnScene[i].saveBlockData);
         }
         Geekplay.Instance.PlayerData.SavedBlocks = new();
@@ -369,7 +395,7 @@ public class SerializeBlockManager : MonoBehaviour
             }
             BlocksOnScene = new();
         }
-      
+
         BlocksData = new();
         BlocksData = Geekplay.Instance.PlayerData.SavedBlocks;
         Debug.Log("Geekplay.Instance.PlayerData.SavedBlocks:" + Geekplay.Instance.PlayerData.SavedBlocks.Count);

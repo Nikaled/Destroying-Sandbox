@@ -186,6 +186,8 @@ public class TutorialBlockAndWeaponSpawner : MonoBehaviour
 
                 yield return new WaitForSeconds(1.5f);
                 var expCreeper = Instantiate(creeper, TutorialCreeperSpawnTransform.position, Quaternion.identity);
+                expCreeper.transform.DOMove(TutorialSpawnTransforms[2].position+ new Vector3(0, 0.3f, 0), 2f);
+                yield return new WaitForSeconds(2f);
                 expCreeper.CreeperExplosion();
                 yield return new WaitForSeconds(5f);
             }

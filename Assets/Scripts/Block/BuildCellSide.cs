@@ -10,7 +10,8 @@ public class BuildCellSide : MonoBehaviour
     [SerializeField] MeshRenderer CellSideMesh;
     public Vector3 GetPositionToPlace(float BuildingSize = 2)
     {
-        //GameObject NewCube = Instantiate(prefab, parentGrid.transform.position + offsetForNewBlock*BuildingSize, Quaternion.identity);
+        offsetForNewBlock = (this.transform.position-parentBlock.transform.position).normalized;
+        Debug.Log("OffsetIs:"+offsetForNewBlock);
         return parentBlock.transform.position + offsetForNewBlock * BuildingSize;
     }
     public void ShowCellMesh(bool Is)

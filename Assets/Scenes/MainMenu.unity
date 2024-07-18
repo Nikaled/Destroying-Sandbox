@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9534,7 +9534,6 @@ GameObject:
   - component: {fileID: 847459458}
   - component: {fileID: 847459457}
   - component: {fileID: 847459456}
-  - component: {fileID: 847459460}
   m_Layer: 5
   m_Name: Close Button (1)
   m_TagString: Untagged
@@ -9680,18 +9679,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847459454}
   m_CullTransparentMesh: 1
---- !u!114 &847459460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847459454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c5774f900feb77408a7793eea3074ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &850803461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24753,7 +24740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: Platform
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: language
@@ -25870,7 +25857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9000892599051834937, guid: 10e28c5b15c8ea94a8d0644c1c3a996d, type: 3}
       propertyPath: LeaderboardName
-      value: Buildings
+      value: Build
       objectReference: {fileID: 0}
     - target: {fileID: 9000892599051834937, guid: 10e28c5b15c8ea94a8d0644c1c3a996d, type: 3}
       propertyPath: LeaderboardNameString

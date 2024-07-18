@@ -56,7 +56,20 @@ public class ParkourBlock : Block
             var IParkour = GetComponent<IMoveableParkour>();
             if (IParkour != null)
             {
-                bool Is = IParkour.IsFrozen;
+                //bool Is = IParkour.IsFrozen;
+                bool Is = true;
+                IParkour.IsFrozen = !Is;
+                IParkour.Freeze(Is);
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            var IParkour = GetComponent<IMoveableParkour>();
+            if (IParkour != null)
+            {
+                //bool Is = IParkour.IsFrozen;
+                bool Is = false;
                 IParkour.IsFrozen = !Is;
                 IParkour.Freeze(Is);
             }

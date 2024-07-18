@@ -128,19 +128,19 @@ public class DynamiteManager : MonoBehaviour
         IEnumerator waitPlaceCheckerCallback()
         {
             Vector3 pos = currentCell.GetPositionToPlace();
-            var Checker = Instantiate(placeChecker, pos, Quaternion.identity);
+            //var Checker = Instantiate(placeChecker, pos, Quaternion.identity);
             yield return new WaitForSeconds(0.05f);
-            if (Checker.PlayerInCell == false && Checker.BlockInCell == false)
-            {
-                PlaceLogic();
-            }
-            else
-            {
-                Debug.Log("Игрок или другой блок в клетке для установки!");
-            }
-            Destroy(Checker.gameObject);
+            //if (Checker.PlayerInCell == false && Checker.BlockInCell == false)
+            //{
+            //    PlaceLogic();
+            //}
+            //else
+            //{
+            //    Debug.Log("Игрок или другой блок в клетке для установки!");
+            //}
+            //Destroy(Checker.gameObject);
 
-
+            PlaceLogic();
             void PlaceLogic()
             {
                 BuildCellManager.instance.PlayPlaceBlockSound();

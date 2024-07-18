@@ -91,7 +91,7 @@ public class HpSystem : MonoBehaviour
         }
 
         Geekplay.Instance.PlayerData.DestroyCount++;
-        Geekplay.Instance.Leaderboard("Destroy", Geekplay.Instance.PlayerData.DestroyCount);
+        //Geekplay.Instance.Leaderboard("Destroy", Geekplay.Instance.PlayerData.DestroyCount);
 
         Analytics.instance.SendEvent(AnalyticsDestroyObject);
         Geekplay.Instance.Save();

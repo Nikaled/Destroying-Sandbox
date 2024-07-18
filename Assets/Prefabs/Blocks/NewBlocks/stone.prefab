@@ -24,10 +24,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2630419488187657663, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3e9fe2251eba16b49957c87c24290f1f, type: 2}
     - target: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Name
       value: stone
@@ -88,10 +84,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8029017614949087282, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3e9fe2251eba16b49957c87c24290f1f, type: 2}
     - target: {fileID: 8402763102718128752, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: outlineWidth
       value: 4.95

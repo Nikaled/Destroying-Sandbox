@@ -49,7 +49,6 @@ public class CreeperNPC : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
                 CreepersAlpha += step;
                 step += 0.01f;
-                Debug.Log("CreepersAlpha:" + CreepersAlpha);
                 ChangeAlphaOnMaterial(matInstance, CreepersAlpha);
             }
         }

@@ -38,6 +38,7 @@ public class TutorialCycleManager : CycleManager
         Debug.Log("Destroy Phase Activated");
 
         currentPhase = Phase.Destroying;
+        SerializeBlockManager.instance.SaveBlocks();
         Player.instance.OnDestroyingPhaseActivated();
         DestroyingPhaseStarted?.Invoke();
         if (Geekplay.Instance.mobile)
@@ -51,8 +52,9 @@ public class TutorialCycleManager : CycleManager
     {
         Debug.Log("Building Phase Activated");
         currentPhase = Phase.Building;
-        Player.instance.OnBuildingPhaseActivated();
+        SerializeBlockManager.instance.LoadBlocks();
         BuildingPhaseStarted?.Invoke();
+        Player.instance.OnBuildingPhaseActivated();
         if (Geekplay.Instance.mobile)
         {
             ChangePhaseButtonFunc(Phase.Building);

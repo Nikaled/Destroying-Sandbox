@@ -133,8 +133,8 @@ public class LeaderboardInGame : MonoBehaviour
 
         Geekplay.Instance.leaderNumber = 0;
         Geekplay.Instance.leaderNumberN = 0;
-        //Utils.GetLeaderboard("score", 0, LeaderboardName);
-        //Utils.GetLeaderboard("name", 0, LeaderboardName);
+        Utils.GetLeaderboard("score", 0, LeaderboardName);
+        Utils.GetLeaderboard("name", 0, LeaderboardName);
     }
 
     public void SetLeadersView(string[] name, string[] value, int count)
