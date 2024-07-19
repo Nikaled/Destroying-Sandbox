@@ -36,25 +36,35 @@ public class SerializeBlockManager : MonoBehaviour
     {
         BlocksOnScene = new();
         Vector3 StartPoint = new Vector3(50, 2, 2);
-        int width = 13;
-        int lenght = 13;
-        int height = 13;
+        int width = 1;
+        int lenght = 15;
+        int height = 20;
         int Sdvig = 2;
+        //for (int i = 0; i < lenght; i++)
+        //{
+        //    for (int j = 0; j < width; j++)
+        //    {
+        //        for (int y = 0; y < height; y++)
+        //        {
+        //            if ((i > 0 && i < lenght - 1) && (j > 0 && j < width - 1) && (y != 0 && y != height - 1))
+        //            {
+        //                continue;
+        //            }
+        //            var newBlock = Instantiate(BlocksPrefab[10], StartPoint + new Vector3(Sdvig * j, Sdvig * y, Sdvig * i), Quaternion.identity);
+        //            BlocksOnScene.Add(newBlock);
+        //        }
+        //    }
+        //}
         for (int i = 0; i < lenght; i++)
         {
-            for (int j = 0; j < width; j++)
+            for (int y = 0; y < height; y++)
             {
-                for (int y = 0; y < height; y++)
-                {
-                    if ((i > 0 && i < lenght - 1) && (j > 0 && j < width - 1) && (y != 0 && y != height - 1))
-                    {
-                        continue;
-                    }
-                    var newBlock = Instantiate(BlocksPrefab[7], StartPoint + new Vector3(Sdvig * j, Sdvig * y, Sdvig * i), Quaternion.identity);
-                    BlocksOnScene.Add(newBlock);
-                }
+                var newBlock = Instantiate(BlocksPrefab[39], StartPoint + new Vector3(0, Sdvig * y, Sdvig * i), Quaternion.identity);
+                BlocksOnScene.Add(newBlock);
             }
         }
+
+
     }
     [ContextMenu("SaveDestructionMap")]
     private void SaveDestrMap()
@@ -95,6 +105,9 @@ public class SerializeBlockManager : MonoBehaviour
     }
     private void TryLoadMap()
     {
+        Geekplay.Instance.PlayerData.IsLoadingDestructionMap = true;
+        Geekplay.Instance.PlayerData.CurrentDestructionMapIndex = MapDataSaver.DestructionMaps[^1].MapIndex;
+        Geekplay.Instance.PlayerData.CurrentDestructionMapName = null;
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
             Geekplay.Instance.PlayerData.IsLoadingDestructionMap = false;
@@ -425,6 +438,7 @@ public class SerializeBlockManager : MonoBehaviour
         {
             Block LoadedBlock = Instantiate(BlocksPrefab[BlocksData[i].PrefabIndex]);
             LoadedBlock.transform.position = BlocksData[i].Position;
+            BlocksOnScene.Add(LoadedBlock);
         }
     } // to Dev only
     public void LoadBlocksFromSlot(int index)

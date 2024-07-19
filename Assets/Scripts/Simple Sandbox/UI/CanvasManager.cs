@@ -209,6 +209,12 @@ public class CanvasManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
+#if UNITY_EDITOR
+                if (!Input.GetKey(KeyCode.LeftShift))
+                {
+                    return;
+                }
+#endif
                 Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(0);
             }

@@ -28,6 +28,19 @@ public class BuildCellManager : MonoBehaviour
     {
         player = Player.instance;
     }
+    private void DevPort()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if(currentCell != null)
+            {
+                //PlaceBlock();
+            Player.instance.motor.SetPosition(currentCell.parentBlock.transform.position + new Vector3(0,2,0));
+            }
+
+
+        }
+    }
     public void SetButtonsToBuildMode()
     {
         CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
@@ -84,7 +97,13 @@ public class BuildCellManager : MonoBehaviour
     {
 
     }
-public void PlayDeleteBlockSound()
+#if UNITY_EDITOR
+    private void Update()
+    {
+        DevPort();
+    }
+#endif
+    public void PlayDeleteBlockSound()
     {
         SoundSource.clip = DeleteBlockSound;
         SoundSource.Play();
