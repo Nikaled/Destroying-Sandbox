@@ -37,9 +37,7 @@ public class DestroyingMapCell : MonoBehaviour
             RewardIsText = "Ödül:";
             IsCompletedText = "Geçti";
             MapNameText.text = MapNameTr;
-
         }
-        MapReward.text = RewardIsText + RewardForMap.ToString();
     }
     public virtual void LoadDestroyingMap()
     {
@@ -50,6 +48,13 @@ public class DestroyingMapCell : MonoBehaviour
         Geekplay.Instance.PlayerData.CurrentDestructionMapIndex = IndexOfMap;
         Analytics.instance.SendEvent(forEvent);
         SceneManager.LoadScene(1);
+    }
+    public void LoadDataFromSO(MapData mapData)
+    {
+        RewardForMap = mapData.RewardForComplete;
+        MapNameForScripts = mapData.MapName;
+        IndexOfMap = mapData.MapIndex;
+        MapReward.text = RewardIsText + RewardForMap.ToString();
     }
     public void SetMapRewardTextOnCompleted(bool IsCompleted)
     {

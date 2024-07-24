@@ -36,33 +36,33 @@ public class SerializeBlockManager : MonoBehaviour
     {
         BlocksOnScene = new();
         Vector3 StartPoint = new Vector3(50, 2, 2);
-        int width = 1;
-        int lenght = 15;
-        int height = 20;
+        int width = 6;
+        int lenght = 5;
+        int height = 26;
         int Sdvig = 2;
-        //for (int i = 0; i < lenght; i++)
-        //{
-        //    for (int j = 0; j < width; j++)
-        //    {
-        //        for (int y = 0; y < height; y++)
-        //        {
-        //            if ((i > 0 && i < lenght - 1) && (j > 0 && j < width - 1) && (y != 0 && y != height - 1))
-        //            {
-        //                continue;
-        //            }
-        //            var newBlock = Instantiate(BlocksPrefab[10], StartPoint + new Vector3(Sdvig * j, Sdvig * y, Sdvig * i), Quaternion.identity);
-        //            BlocksOnScene.Add(newBlock);
-        //        }
-        //    }
-        //}
-        for (int i = 0; i < lenght; i++)
+        for (int i = 0; i < width; i++)
         {
-            for (int y = 0; y < height; y++)
+            for (int j = 0; j < lenght; j++)
             {
-                var newBlock = Instantiate(BlocksPrefab[39], StartPoint + new Vector3(0, Sdvig * y, Sdvig * i), Quaternion.identity);
-                BlocksOnScene.Add(newBlock);
+                for (int y = 0; y < height; y++)
+                {
+                    if ((i > 0 && i < lenght - 1) && (j > 0 && j < width - 2) && (y != 0 && y%4 !=0)/*y != height - 1)*/)
+                    {
+                        continue;
+                    }
+                    var newBlock = Instantiate(BlocksPrefab[43], StartPoint + new Vector3(Sdvig * j, Sdvig * y, Sdvig * i), Quaternion.identity);
+                    BlocksOnScene.Add(newBlock);
+                }
             }
         }
+        //for (int i = 0; i < lenght; i++)
+        //{
+        //    for (int y = 0; y < height; y++)
+        //    {
+        //        var newBlock = Instantiate(BlocksPrefab[39], StartPoint + new Vector3(0, Sdvig * y, Sdvig * i), Quaternion.identity);
+        //        BlocksOnScene.Add(newBlock);
+        //    }
+        //}
 
 
     }
@@ -345,6 +345,20 @@ public class SerializeBlockManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             LoadBlocks();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            for (int i = 0; i < BlocksOnScene.Count; i++)
+            {
+                BlocksOnScene[i].transform.position += new Vector3(0, 0, -2);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            for (int i = 0; i < BlocksOnScene.Count; i++)
+            {
+                BlocksOnScene[i].transform.position += new Vector3(0, 0, -2);
+            }
         }
     }
 #endif
