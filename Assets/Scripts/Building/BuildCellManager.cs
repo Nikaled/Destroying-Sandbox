@@ -100,6 +100,30 @@ public class BuildCellManager : MonoBehaviour
 #if UNITY_EDITOR
     private void Update()
     {
+        CrosshairWorldPosition = Vector3.zero;
+        Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 26, AbleToBuildMask))
+        {
+            if (currentCell != null)
+            {
+                currentCell.ShowCellMesh(false);
+            }
+            CrosshairWorldPosition = raycastHit.point;
+            currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
+            if (currentCell != null)
+            {
+                currentCell.ShowCellMesh(true);
+            }
+        }
+        else
+        {
+            if (currentCell != null)
+            {
+                CrosshairWorldPosition = ray.GetPoint(19);
+                currentCell.ShowCellMesh(false);
+            }
+            currentCell = null;
+        }
         DevPort();
     }
 #endif

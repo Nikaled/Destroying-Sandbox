@@ -89,7 +89,7 @@ public class SerializeBlockManager : MonoBehaviour
         ParkourMapData parMapData = new();
         parMapData.SavedBlocks = new();
         parMapData.SavedBlocks = BlocksData;
-        parMapData.MapName = "P_Map_" + MapDataSaver.ParkourMaps.Count + 1;
+        parMapData.MapName = $"P_Map_{MapDataSaver.ParkourMaps.Count + 1}";
         parMapData.ParkourBlocksSaveData = ParkourBlocksData;
         MapDataSaver.ParkourMaps.Add(parMapData);
     }
@@ -105,9 +105,14 @@ public class SerializeBlockManager : MonoBehaviour
     }
     private void TryLoadMap()
     {
-        Geekplay.Instance.PlayerData.IsLoadingDestructionMap = true;
-        Geekplay.Instance.PlayerData.CurrentDestructionMapIndex = MapDataSaver.DestructionMaps[^1].MapIndex;
-        Geekplay.Instance.PlayerData.CurrentDestructionMapName = null;
+        //Geekplay.Instance.PlayerData.IsLoadingDestructionMap = true;
+        //Geekplay.Instance.PlayerData.CurrentDestructionMapIndex = MapDataSaver.DestructionMaps[^1].MapIndex;
+        //Geekplay.Instance.PlayerData.CurrentDestructionMapName = null;
+
+        Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
+        Geekplay.Instance.PlayerData.CurrentParkourMapIndex = MapDataSaver.ParkourMaps[^1].MapIndex;
+        Geekplay.Instance.PlayerData.CurrentParkourMapName = null;
+
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {
             Geekplay.Instance.PlayerData.IsLoadingDestructionMap = false;
@@ -443,6 +448,7 @@ public class SerializeBlockManager : MonoBehaviour
             BlocksOnScene[BlockIndex].transform.rotation = ParkourBlocksData[i].rotation;
             BlocksOnScene[BlockIndex].transform.localScale = ParkourBlocksData[i].Scale;
             BlocksOnScene[BlockIndex].GetComponent<ParkourBlock>().SetBlockPos();
+            BlocksOnScene[BlockIndex].GetComponent<ParkourBlock>().saveParkourBlockData = ParkourBlocksData[i];
         }
     }
     [ContextMenu("LoadBlocksFromBlocksData")]

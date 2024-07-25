@@ -7,7 +7,7 @@ public class DisappearingBlock : MonoBehaviour, IMoveableParkour
     [SerializeField] MeshRenderer BlockMesh;
     [SerializeField] Material DisappearingMaterial;
     [SerializeField] BoxCollider BlockCollider;
-    public float TimeToDisappear=10;
+    public float TimeToDisappear=2;
     private bool IsDisappearing;
     public float TimeToAppearAgain;
     private IEnumerator DisCor;
@@ -45,7 +45,7 @@ public class DisappearingBlock : MonoBehaviour, IMoveableParkour
             float step = 0.05f;
             float stepCount = 1 / step;
             float stepTime = TimeToDisappear / stepCount; 
-            while (CurrentAlpha < 1)
+            while (CurrentAlpha < 0.5f)
             {
                 yield return new WaitForSeconds(stepTime);
                 CurrentAlpha += step;
@@ -70,7 +70,9 @@ public class DisappearingBlock : MonoBehaviour, IMoveableParkour
     {
         Color oldColor = mat.color;
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
-        mat.SetColor("_Color", newColor);
+        //mat.SetColor("_Color", newColor);
+        mat.color = newColor;
+
 
     }
 
@@ -83,5 +85,14 @@ public class DisappearingBlock : MonoBehaviour, IMoveableParkour
                 StopCoroutine(DisCor);
             }
         }
+    }
+
+    public void SetData(float Speed, bool InvertMoveCycle = false)
+    {
+    }
+
+    public SaveParkourBlockData GetData()
+    {
+        return new SaveParkourBlockData();
     }
 }

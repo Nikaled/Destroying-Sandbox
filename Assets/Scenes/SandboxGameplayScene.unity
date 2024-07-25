@@ -309,6 +309,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneCore
       objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: JumpUpSpeed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: BonusOrientationMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: JumpScalableForwardSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4495551017892865747, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

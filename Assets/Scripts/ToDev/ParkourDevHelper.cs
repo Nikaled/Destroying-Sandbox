@@ -9,11 +9,12 @@ public class ParkourDevHelper : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            for (int i = 0; i < Player.instance.BlocksInSlots.Length; i++)
+            for (int i = 0; i < ParkourBlockPrefabs.Length; i++)
             {
+                Player.instance.SwitchActiveBlockSlot(i+1);
                 Player.instance.ChooseNewCurrentBlockFromShop(ParkourBlockPrefabs[i], null);
-                Player.instance.SwitchActiveBlockSlot(i + 1);
             }
         }
+
     }
 }

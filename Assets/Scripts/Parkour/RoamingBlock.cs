@@ -16,12 +16,31 @@ public class RoamingBlock : MonoBehaviour, IMoveableParkour
     Sequence RoamSeq;
     Vector3 BasePosition;
     public bool IsFrozen { get; set; }
+    public bool InvertMoveCycle;
+    public float Speed = 1;
     private void Start()
     {
+       
+    }
+
+    private void ActivateObject()
+    {
+        if (Speed == 0)
+        {
+            Speed = 1;
+        }
+        TimeToGoOneSide /= Speed;
         BasePosition = transform.position;
-        RightPosition = transform.position + SideToRoam*MovesFromMiddlePosition;
+        RightPosition = transform.position + SideToRoam * MovesFromMiddlePosition;
         LeftPosition = transform.position - SideToRoam * MovesFromMiddlePosition;
-        SwitchVector(GoRight);
+        if (!InvertMoveCycle)
+        {
+            SwitchVector(GoRight);
+        }
+        else
+        {
+            SwitchVector(!GoRight);
+        }
     }
     public void Freeze(bool Is)
     {
@@ -30,10 +49,12 @@ public class RoamingBlock : MonoBehaviour, IMoveableParkour
         {
             DOTween.Kill(RoamSeq);
         }
+        DOTween.Kill(rb);
+
         if (Is)
         {
             transform.position = BasePosition;
-            transform.DOMove(BasePosition, 0);
+            rb.DOMove(BasePosition, 0);
         }
         else
         {
@@ -61,23 +82,41 @@ public class RoamingBlock : MonoBehaviour, IMoveableParkour
     private void StartMove()
     {
         RoamSeq = DOTween.Sequence();
-        RoamSeq.Append(transform.DOMove(CurrentDestination, TimeToGoOneSide));
+        //RoamSeq.Append();
+        rb.DOMove(CurrentDestination, TimeToGoOneSide).OnComplete( ()=>SwitchVector(!GoRight));
     }
     private void Update()
     {
         if (IsFrozen)
         {
-            if (RoamSeq != null)
-            {
-                DOTween.Kill(RoamSeq);
-            }
+            //if (RoamSeq != null)
+            //{
+            //    DOTween.Kill(RoamSeq);
+            //}
+            //    DOTween.Kill(gameObject.transform);
             //transform.DOMove(BasePosition, 0);
             return;
         }
-        StartMove();
-        if (Vector3.Distance(transform.position, CurrentDestination) < 1)
-        {
-            SwitchVector(!GoRight);
-        }
+        //StartMove();
+        //if (Vector3.Distance(transform.position, CurrentDestination) < 1)
+        //{
+        //    SwitchVector(!GoRight);
+        //}
+    }
+
+    public void SetData(float Speed, bool InvertMoveCycle = false)
+    {
+        this.Speed = Speed;
+        this.InvertMoveCycle = InvertMoveCycle;
+        ActivateObject();
+    }
+
+    public SaveParkourBlockData GetData()
+    {
+        SaveParkourBlockData newData = new SaveParkourBlockData();
+        newData.Speed = Speed;
+        Debug.Log("Speed is" + newData.Speed);
+        newData.InvertMoveCycle = InvertMoveCycle;
+        return newData;
     }
 }
