@@ -42,6 +42,7 @@ public class PressManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Cross.transform.position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 1000, aimColliderLayerMask))
         {
+            DestroyLimiter.ResetCurrentDestroyed();
             CrosshairWorldPosition = raycastHit.point;
             Vector3 PressUpPosition = new Vector3(0, 100, 0);
             currentPress = Instantiate(PressPrefab, CrosshairWorldPosition + PressUpPosition, Quaternion.identity);

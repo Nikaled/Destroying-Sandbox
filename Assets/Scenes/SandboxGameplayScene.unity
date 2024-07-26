@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1544873518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544873520}
+  - component: {fileID: 1544873519}
+  - component: {fileID: 1544873521}
+  m_Layer: 0
+  m_Name: DestroyCountWriter_And_Limiter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1544873519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544873518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0737e54ba582874b9affadec1945349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1544873520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544873518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3072596, y: 9.859257, z: -1.4988663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1544873521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544873518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044fd6d3378645a43813007e85444012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1734169079
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,8 +375,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: AllowJumpingWhenSliding
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: JumpScalableForwardSpeed
-      value: 8
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: JumpPostGroundingGraceTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4495551017892865747, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -425,10 +490,6 @@ PrefabInstance:
       propertyPath: MapDataSaver
       value: 
       objectReference: {fileID: 11400000, guid: 6649f5f1efb310d40b284deebc00e153, type: 2}
-    - target: {fileID: 5344201089602751471, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
-      propertyPath: IsCurrentMapLast
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5344201089602751471, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: BlocksPrefab.Array.size
       value: 63
@@ -1480,3 +1541,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 4423000595828574834}
   - {fileID: 1734169081}
+  - {fileID: 1544873520}

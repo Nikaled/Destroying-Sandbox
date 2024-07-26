@@ -40,6 +40,7 @@ public class MeteorManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Cross.transform.position);
             if (Physics.Raycast(ray, out RaycastHit raycastHit, 5000, aimColliderLayerMask))
             {
+                DestroyLimiter.ResetCurrentDestroyed();
                 CurrentReloadTime = Time.time;
                 CrosshairWorldPosition = raycastHit.point;
                 Vector3 MeteorUpPosition = new Vector3(20, 50, 20);

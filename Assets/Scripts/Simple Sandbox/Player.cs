@@ -401,6 +401,8 @@ public class Player : MonoBehaviour
     }
     public void SwitchWeapon(int PressedNumber)
     {
+        DestroyLimiter.ResetCurrentDestroyed();
+        DestroyLimiter.IsWeaponWithLimit = false;
         if (Geekplay.Instance.mobile)
         {
             CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
@@ -480,22 +482,27 @@ public class Player : MonoBehaviour
             case 5:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(0);
+                DestroyLimiter.IsWeaponWithLimit = true;
                 break;
             case 6:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(1);
+                DestroyLimiter.IsWeaponWithLimit = true;
                 break;
             case 7:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(4);
+
                 break;
             case 8:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(2);
+                DestroyLimiter.IsWeaponWithLimit = true;
                 break;
             case 9:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(6);
+                DestroyLimiter.IsWeaponWithLimit = true;
                 break;
             case 10:
                 CurrentWeapon = WeaponType.None;

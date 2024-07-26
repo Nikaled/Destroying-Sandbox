@@ -49,12 +49,16 @@ public class DestroyingMapCell : MonoBehaviour
         Analytics.instance.SendEvent(forEvent);
         SceneManager.LoadScene(1);
     }
-    public void LoadDataFromSO(MapData mapData)
+    public  void LoadDataFromSO(MapData mapData)
     {
         RewardForMap = mapData.RewardForComplete;
         MapNameForScripts = mapData.MapName;
         IndexOfMap = mapData.MapIndex;
         MapReward.text = RewardIsText + RewardForMap.ToString();
+
+
+
+        MapNameText.text = MapNameForScripts;
     }
     public void SetMapRewardTextOnCompleted(bool IsCompleted)
     {

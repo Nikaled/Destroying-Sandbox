@@ -9,6 +9,7 @@ public class ParkourSlotMenuManager : MonoBehaviour
     List<ParkourMapsPlayerData> playerMapData;
     private int GridIndex = 0;
     private int MapsInPage = 15;
+    [SerializeField] MapDataSO Data;
     private void Start()
     {
 
@@ -19,6 +20,8 @@ public class ParkourSlotMenuManager : MonoBehaviour
             {
                 for (int i = 0; i < parkourCells.Length; i++)
                 {
+
+                    parkourCells[i].LoadDataFromSO(Data.ParkourMaps[i]);
                     parkourCells[i].SetTimeToSlot(0);
                     parkourCells[i].IndexOfMap = i+ (MapsInPage* GridIndex) + 1;
                     for (int j = 0; j < playerMapData.Count; j++)

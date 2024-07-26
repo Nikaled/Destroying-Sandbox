@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Plane : MonoBehaviour
 {
-    [SerializeField] Transform[] BulletSpawnPoints;
-    [SerializeField] ShootingProjectile bullet;
+    //[SerializeField] Transform[] BulletSpawnPoints;
+    //[SerializeField] ShootingProjectile bullet;
     [SerializeField] AudioSource FireAndExplodeSoundSource;
     [SerializeField] AudioSource FlySoundSource;
     [SerializeField] AudioClip ShootingClip;
@@ -29,42 +29,42 @@ public class Plane : MonoBehaviour
     [SerializeField] MeshRenderer[] Meshes;
     public PlaneManager planeManager;
     public Joystick joystick;
-    private Queue<ShootingProjectile> bulletPool;
-    private int bulletCountInPool = 50;
+    //private Queue<ShootingProjectile> bulletPool;
+    //private int bulletCountInPool = 50;
     private void OnEnable()
     {
-        bulletPool = new();
-        SpawnPool();
+        //bulletPool = new();
+        //SpawnPool();
         LockCursor(true);
         if (Geekplay.Instance.mobile)
         {
         joystick = Player.instance.examplePlayer.FixedJoystick;
-            CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
-            CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().OnHolding += Fire;
+            //CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
+            //CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().OnHolding += Fire;
         }
     }
     private void OnDisable()
     {
         LockCursor(false);
-        for (int i = 0; i < bulletPool.Count; i++)
-        {
-           var bulletInPool = bulletPool.Dequeue();
-            Destroy(bulletInPool);
-        }
+        //for (int i = 0; i < bulletPool.Count; i++)
+        //{
+        //   var bulletInPool = bulletPool.Dequeue();
+        //    Destroy(bulletInPool);
+        //}
         if (Geekplay.Instance.mobile)
         {
             CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().OnHolding -= Fire;
         }
     }
-    private void SpawnPool()
-    {
-        for (int i = 0; i < bulletCountInPool; i++)
-        {
-            var NewBullet = Instantiate(bullet);
-            NewBullet.gameObject.SetActive(false);
-            bulletPool.Enqueue(NewBullet);
-        }
-    }
+    //private void SpawnPool()
+    //{
+    //    for (int i = 0; i < bulletCountInPool; i++)
+    //    {
+    //        var NewBullet = Instantiate(bullet);
+    //        NewBullet.gameObject.SetActive(false);
+    //        bulletPool.Enqueue(NewBullet);
+    //    }
+    //}
     private void FixedUpdate()
     {
         if (Player.instance.InterfaceActive || Player.instance.AdWarningActive)
@@ -116,32 +116,32 @@ public class Plane : MonoBehaviour
     }
     public void Fire()
     {
-        if (bulletPool.Count == 0)
-        {
-            SpawnPool();
-        }
-        if (Time.time - GunTimer > GunShootInterval)
-        {
-            Reloading = false;
-        }
-        if (Reloading == false)
-        {
-            Reloading = true;
-            FireAndExplodeSoundSource.clip = ShootingClip;
-            FireAndExplodeSoundSource.Play();
+        //if (bulletPool.Count == 0)
+        //{
+        //    SpawnPool();
+        //}
+        //if (Time.time - GunTimer > GunShootInterval)
+        //{
+        //    Reloading = false;
+        //}
+        //if (Reloading == false)
+        //{
+        //    Reloading = true;
+        //    FireAndExplodeSoundSource.clip = ShootingClip;
+        //    FireAndExplodeSoundSource.Play();
 
-            for (int i = 0; i < BulletSpawnPoints.Length; i++)
-            {
-                Instantiate(bullet, BulletSpawnPoints[i].transform.position, BulletSpawnPoints[i].transform.rotation);
+        //    for (int i = 0; i < BulletSpawnPoints.Length; i++)
+        //    {
+        //        Instantiate(bullet, BulletSpawnPoints[i].transform.position, BulletSpawnPoints[i].transform.rotation);
                 
-                var CurrentBullet = bulletPool.Dequeue();
-                CurrentBullet.gameObject.SetActive(true);
-                CurrentBullet.gameObject.transform.SetPositionAndRotation(BulletSpawnPoints[i].transform.position, BulletSpawnPoints[i].transform.rotation);
-            }
-            GunTimer = Time.time;
-            //FireAudioSource.clip = GunSound;
-            //FireAudioSource.Play();
-        }
+        //        var CurrentBullet = bulletPool.Dequeue();
+        //        CurrentBullet.gameObject.SetActive(true);
+        //        CurrentBullet.gameObject.transform.SetPositionAndRotation(BulletSpawnPoints[i].transform.position, BulletSpawnPoints[i].transform.rotation);
+        //    }
+        //    GunTimer = Time.time;
+        //    //FireAudioSource.clip = GunSound;
+        //    //FireAudioSource.Play();
+        //}
     }
     private void LockCursor(bool Is)
     {

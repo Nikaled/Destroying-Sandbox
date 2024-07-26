@@ -14,10 +14,10 @@ public class DisappearingBlock : MonoBehaviour, IMoveableParkour
     public bool IsFrozen { get; set; }
     private void OnCollisionEnter(Collision collision)
     {
-        if (IsFrozen)
-        {
-            return;
-        }
+        //if (IsFrozen)
+        //{
+        //    return;
+        //}
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {

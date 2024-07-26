@@ -30,9 +30,18 @@ public class MainMenu : MonoBehaviour
         CoinsTextInPromo.text = Geekplay.Instance.PlayerData.Coins.ToString();
         CoinsTextInOurGames.text = Geekplay.Instance.PlayerData.Coins.ToString();
 
+        
+    }
+    private void Update()
+    {
 
-        //Geekplay.Instance.PlayerData = new PlayerData();
-        //Geekplay.Instance.Save();
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightShift))
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                Geekplay.Instance.PlayerData.Coins += 500;
+            }
+        }
     }
     private void OnDisable()
     {

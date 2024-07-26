@@ -10,15 +10,16 @@ public class ExplosionForceChecker : MonoBehaviour
     private float partOfSphereRange;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<DestroyCollision>() != null)
+        var DestroyCol = other.GetComponent<DestroyCollision>();
+        if (DestroyCol != null)
         {
-            Debug.Log("ExplosionForced:" + other.gameObject);
-            other.GetComponent<DestroyCollision>().TakeExplosion(CalculateForce(other.gameObject));
+            //  Debug.Log("ExplosionForced:" + other.gameObject);
+            DestroyCol.TakeExplosion(CalculateForce(other.gameObject));
             if (HasFireEffect)
             {
                 if (partOfSphereRange < 0.8f)
                 {
-                    other.GetComponent<DestroyCollision>().TakeFire();
+                    DestroyCol.TakeFire();
                 }
             }
 

@@ -28,6 +28,10 @@ public class Press : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (DestroyLimiter.IsDestroyedMaximum())
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

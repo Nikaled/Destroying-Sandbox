@@ -97,7 +97,7 @@ public class BuildCellManager : MonoBehaviour
     {
 
     }
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
     private void Update()
     {
         CrosshairWorldPosition = Vector3.zero;
@@ -126,7 +126,7 @@ public class BuildCellManager : MonoBehaviour
         }
         DevPort();
     }
-#endif
+//#endif
     public void PlayDeleteBlockSound()
     {
         SoundSource.clip = DeleteBlockSound;

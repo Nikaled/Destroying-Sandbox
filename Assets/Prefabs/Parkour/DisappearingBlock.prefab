@@ -94,8 +94,8 @@ GameObject:
   - component: {fileID: 8731880485989862434}
   - component: {fileID: 4917878223459873657}
   - component: {fileID: 7395610519237014659}
-  - component: {fileID: 7159827505448825269}
   - component: {fileID: -5596601268586252611}
+  - component: {fileID: -5515451134545081846}
   m_Layer: 6
   m_Name: DisappearingBlock
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -163,7 +163,30 @@ MonoBehaviour:
   BlockCollider: {fileID: 4917878223459873657}
   TimeToDisappear: 2
   TimeToAppearAgain: 2
---- !u!54 &7159827505448825269
+--- !u!114 &-5596601268586252611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785171925368844743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a742847b0bac1489985b22de0c8cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameToSerializing: DisappearingBlock
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
+  saveParkourBlockData:
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    Scale: {x: 0, y: 0, z: 0}
+    BlockOnSceneIndex: 0
+    Speed: 0
+    InvertMoveCycle: 0
+  InvertMoveCycle: 0
+--- !u!54 &-5515451134545081846
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,31 +208,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &-5596601268586252611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5785171925368844743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a742847b0bac1489985b22de0c8cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NameToSerializing: DisappearingBlock
-  saveBlockData:
-    PrefabIndex: 0
-    Position: {x: 0, y: 0, z: 0}
-  saveParkourBlockData:
-    rotation: {x: 0, y: 0, z: 0, w: 0}
-    Scale: {x: 0, y: 0, z: 0}
-    BlockOnSceneIndex: 0
 --- !u!1 &5850126947687280899
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e9fe2251eba16b49957c87c24290f1f, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -395,7 +398,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -517,7 +520,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -639,7 +642,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e9fe2251eba16b49957c87c24290f1f, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -761,7 +764,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -883,7 +886,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2814f67971de434eb0fe86c6b942d93, type: 2}
+  - {fileID: 2100000, guid: c0163e59cba76c84082ed0813f05693d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
