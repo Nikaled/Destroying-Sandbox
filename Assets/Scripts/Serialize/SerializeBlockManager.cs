@@ -110,8 +110,7 @@ public class SerializeBlockManager : MonoBehaviour
         //Geekplay.Instance.PlayerData.CurrentDestructionMapName = null;
 
         //Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
-        //Geekplay.Instance.PlayerData.CurrentParkourMapIndex = 2;
-        //Geekplay.Instance.PlayerData.CurrentParkourMapName = null;
+        //Geekplay.Instance.PlayerData.CurrentParkourMapName = MapDataSaver.ParkourMaps[^1].MapName;
 
         if (Geekplay.Instance.PlayerData.IsLoadingDestructionMap)
         {

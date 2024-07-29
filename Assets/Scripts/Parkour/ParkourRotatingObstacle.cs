@@ -27,6 +27,10 @@ public class ParkourRotatingObstacle : MonoBehaviour, IMoveableParkour
         {
             this.Speed = 1;
         }
+        if (InvertMoveCycle) 
+        {
+            rotatingOrientationAndSpeed = -rotatingOrientationAndSpeed;
+        }
     }
 
     private void FixedUpdate()

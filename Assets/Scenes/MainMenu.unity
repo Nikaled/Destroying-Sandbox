@@ -28577,6 +28577,15 @@ MonoBehaviour:
   - {fileID: 61862587}
   - {fileID: 1065438051}
   - {fileID: 484882014}
+  - {fileID: 1552827860}
+  - {fileID: 141986950}
+  - {fileID: 5530141}
+  - {fileID: 896444625}
+  - {fileID: 411669678}
+  - {fileID: 1321786435}
+  - {fileID: 18256700}
+  - {fileID: 1000529177}
+  - {fileID: 1352713956}
   Data: {fileID: 11400000, guid: 6649f5f1efb310d40b284deebc00e153, type: 2}
 --- !u!224 &8528755573097372657 stripped
 RectTransform:
