@@ -27,9 +27,10 @@ public class TutorialPhaseBorders : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            TutorialManager.instance.TutorialPhaseText.SetActive(true);
             if (ThisBorderPhase == PhaseBorders.PhaseBorderWeaponDemonstrated)
             {
-                TutorialManager.instance.OpenPhase(TutorialManager.instance.PhaseName4);               
+                TutorialManager.instance.OpenPhase(TutorialManager.instance.PhaseName4);
             }
             if (ThisBorderPhase == PhaseBorders.PhaseBorderWeaponUsed)
             {
@@ -38,7 +39,11 @@ public class TutorialPhaseBorders : MonoBehaviour
                 if (Geekplay.Instance.mobile)
                 {
                     CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(true);
-                }              
+                }
+            }
+            if (ThisBorderPhase != PhaseBorders.PhaseBorderBlockPlaced)
+            {
+                TutorialManager.instance.GoForwardText.SetActive(false);
             }
             SendAnalyticsPlayerGoThrough();
             gameObject.SetActive(false);
@@ -51,40 +56,41 @@ public class TutorialPhaseBorders : MonoBehaviour
         {
             Geekplay.Instance.PlayerData.TutorialBordersCompleted = new bool[5];
         }
-        if(Geekplay.Instance.PlayerData.TutorialBordersCompleted.Length == 0)
+        if (Geekplay.Instance.PlayerData.TutorialBordersCompleted.Length == 0)
         {
             Geekplay.Instance.PlayerData.TutorialBordersCompleted = new bool[5];
         }
         switch (ThisBorderPhase)
         {
             case PhaseBorders.PhaseBorderBlockOnPanelSelected:
-                if(Geekplay.Instance.PlayerData.TutorialBordersCompleted[0] == false)
+                if (Geekplay.Instance.PlayerData.TutorialBordersCompleted[0] == false)
                 {
                     Geekplay.Instance.PlayerData.TutorialBordersCompleted[0] = true;
-                Analytics.instance.SendEvent("Tutorial_2_PhaseCompleted_BlockSelected_Border");
+                    Analytics.instance.SendEvent("Tutorial_2_PhaseCompleted_BlockSelected_Border");
                 }
-            break;                        
+                break;
             case PhaseBorders.PhaseBorderBlockPlaced:
+
                 if (Geekplay.Instance.PlayerData.TutorialBordersCompleted[1] == false)
                 {
                     Geekplay.Instance.PlayerData.TutorialBordersCompleted[1] = true;
-                Analytics.instance.SendEvent("Tutorial_3_PhaseCompleted_BlockPlaced_Border");
+                    Analytics.instance.SendEvent("Tutorial_3_PhaseCompleted_BlockPlaced_Border");
                 }
-            break;                        
+                break;
             case PhaseBorders.PhaseBorderWeaponDemonstrated:
                 if (Geekplay.Instance.PlayerData.TutorialBordersCompleted[2] == false)
                 {
-                Analytics.instance.SendEvent("Tutorial_4_PhaseCompleted_WeaponDemonstrated_Border");
+                    Analytics.instance.SendEvent("Tutorial_4_PhaseCompleted_WeaponDemonstrated_Border");
                     Geekplay.Instance.PlayerData.TutorialBordersCompleted[2] = true;
                 }
-            break;                        
+                break;
             case PhaseBorders.PhaseBorderWeaponUsed:
                 if (Geekplay.Instance.PlayerData.TutorialBordersCompleted[3] == false)
                 {
                     Geekplay.Instance.PlayerData.TutorialBordersCompleted[3] = true;
-                Analytics.instance.SendEvent("Tutorial_5_PhaseCompleted_BlockDestroyed_Border");
+                    Analytics.instance.SendEvent("Tutorial_5_PhaseCompleted_BlockDestroyed_Border");
                 }
-            break;
+                break;
         }
 
         Geekplay.Instance.Save();

@@ -118,14 +118,6 @@ public class Player : MonoBehaviour
             examplePlayer.Mobile = false;
             examplePlayer.PC = true;
         }
-        if (SerializeBlockManager.instance.OnlyParkourMap)
-        {
-          
-        }
-        if (SerializeBlockManager.instance.OnlyDestroyingMap)
-        {
-            //SwitchPlayerState(PlayerState.Idle);
-        }
         SetFlyMode();
     }
     public void MapSetup()

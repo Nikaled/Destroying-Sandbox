@@ -283,6 +283,70 @@ PrefabInstance:
       propertyPath: IsUnit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: parentSUKA
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocks.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocks.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocks.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocks.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksRb.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksRb.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksRb.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksRb.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksRb.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksColliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksColliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: smallBlocksColliders.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7020539944299386795, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -316,7 +380,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4676284850594543709, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2845398919653825448, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       insertIndex: -1

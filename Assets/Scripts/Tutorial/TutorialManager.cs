@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager instance;
@@ -14,13 +14,13 @@ public class TutorialManager : MonoBehaviour
     private bool Phase5; // Player Destoryed block
     private bool Phase6; // Player Switched State
     private bool Phase7; // Player Finished Tutorial
-    public string PhaseName1 /*= "PhaseName1"*/;
-    public string PhaseName2 /*= "PhaseName2"*/;
-    public string PhaseName3 /*= "PhaseName3"*/;
-    public string PhaseName4 /*= "PhaseName4"*/;
-    public string PhaseName5 /*= "PhaseName5"*/;
-    public string PhaseName6 /*= "PhaseName6"*/;
-    public string PhaseName7 /*= "PhaseName7"*/;
+    public string PhaseName1;
+    public string PhaseName2;
+    public string PhaseName3;
+    public string PhaseName4;
+    public string PhaseName5;
+    public string PhaseName6;
+    public string PhaseName7;
     [SerializeField] TutorialPhaseBorders[] PhaseBorders;
     public bool AnimalZoneReached;
     public bool AbleToChangeMode;
@@ -30,6 +30,9 @@ public class TutorialManager : MonoBehaviour
     public GameObject Phase6Objects;
     public GameObject Phase7Objects;
     public GameObject[] PhasesCanvases;
+    [SerializeField] TutorialLocalization TutorLoc;
+    public GameObject GoForwardText;
+    public GameObject TutorialPhaseText;
     private void Awake()
     {
         instance = this;
@@ -42,6 +45,7 @@ public class TutorialManager : MonoBehaviour
         {
             CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
         }
+        GoForwardText.SetActive(false);
     }
 
     public void OpenPhase(string PhaseName)
@@ -69,16 +73,12 @@ public class TutorialManager : MonoBehaviour
                     OnPhaseCompleted(i);
                     Debug.Log("ActivatedPhase:" + PhasesNames[i].ToString());
                 }
-                PhasesCanvases[i].SetActive(false);
-                if (i + 1 < PhasesCanvases.Length)
-                {
-                    PhasesCanvases[i + 1].SetActive(true);
-                }
             }
         }
     }
     private void OnPhaseCompleted(int PhaseIndex)
     {
+        TutorialPhaseText.SetActive(false);
         if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted == null)
         {
             Geekplay.Instance.PlayerData.TutorialPhasesCompleted = new bool[6];
@@ -96,6 +96,7 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[0] = true;
                     Analytics.instance.SendEvent("Tutorial_1_PhaseCompleted_Movement");
                 }
+                    TutorialPhaseText.SetActive(true);
                 break;
             case 1:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[1] == false)
@@ -104,6 +105,7 @@ public class TutorialManager : MonoBehaviour
                     Analytics.instance.SendEvent("Tutorial_2_PhaseCompleted_BlockSelected");
                 }
                 PhaseBorders[0].UnlockNewPhasePath();
+                GoForwardText.SetActive(true);
                 break;
             case 2:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[2] == false)
@@ -113,9 +115,12 @@ public class TutorialManager : MonoBehaviour
                 }
                 PhaseBorders[1].UnlockNewPhasePath();
                 Phase4Objects.SetActive(true);
+                TutorialPhaseText.SetActive(true);
+                GoForwardText.SetActive(true);
                 break;
             case 3:
                 CycleManager.instance.ActivateDestroyingPhase();
+                TutorialPhaseText.SetActive(true);
                 break;
             case 4:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[4] == false)
@@ -123,6 +128,7 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[4] = true;
                     Analytics.instance.SendEvent("Tutorial_5_PhaseCompleted_BlockDestroyed");
                 }
+                GoForwardText.SetActive(true);
                 PhaseBorders[3].UnlockNewPhasePath();
                 Phase6Objects.SetActive(true);
                 AbleToChangeMode = true;
@@ -133,11 +139,14 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[5] = true;
                     Analytics.instance.SendEvent("Tutorial_6_PhaseCompleted_StateSwitched");
                 }
+                GoForwardText.SetActive(true);
                 Phase7Objects.SetActive(true);
                 AbleToEndTutorial = true;
+                TutorialPhaseText.SetActive(true);
                 break;
         }
         Geekplay.Instance.Save();
+        TutorLoc.SetNewText(PhaseIndex+1);
     }
 
     private void Update()

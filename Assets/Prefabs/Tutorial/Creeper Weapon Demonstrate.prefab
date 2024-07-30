@@ -735,6 +735,7 @@ PrefabInstance:
     - {fileID: 323782260062204117, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
     - {fileID: 6189933076374547316, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
     - {fileID: 4978285835707688788, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+    - {fileID: 4676284850594543709, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2845398919653825448, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       insertIndex: -1
@@ -794,6 +795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5813d8a3d3b4b835520068c52645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 5626961988973238541}
   MeshObject: {fileID: 4229202693198696361}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -803,6 +806,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 1
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!54 &3731965456071205504
 Rigidbody:
   m_ObjectHideFlags: 0
