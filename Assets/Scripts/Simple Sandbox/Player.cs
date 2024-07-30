@@ -158,6 +158,7 @@ public class Player : MonoBehaviour
     {
         characterController.MaxStableMoveSpeed = 20;
         characterController.MaxAirMoveSpeed = 30;
+        characterController.AirAccelerationSpeed = 36;
         //characterController.JumpUpSpeed = 20;
     }
     private void OnParkourPhaseStarted()
