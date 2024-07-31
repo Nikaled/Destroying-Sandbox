@@ -28,10 +28,16 @@ public class DestroySystem : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < smallBlocks.Length; i++)
+        if (smallBlocks != null && IsUnit ==false)
         {
-            smallBlocks[i].GetComponent<MeshRenderer>().material = MeshObject.GetComponent<MeshRenderer>().material;
-        }
+            if(smallBlocks.Length > 0)
+            {
+                for (int i = 0; i < smallBlocks.Length; i++)
+                {
+                    smallBlocks[i].GetComponent<MeshRenderer>().material = MeshObject.GetComponent<MeshRenderer>().material;
+                }
+            }         
+        } 
     }
     protected virtual bool CheckPhaseNotDestroying()
     {

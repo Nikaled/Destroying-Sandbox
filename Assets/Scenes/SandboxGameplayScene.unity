@@ -372,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: BonusOrientationMethod
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: AllowJumpingWhenSliding
@@ -380,12 +380,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: JumpScalableForwardSpeed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: JumpPostGroundingGraceTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3893508868742059909, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: CapsulePhysicsMaterial
+      value: 
+      objectReference: {fileID: 13400000, guid: b60d80f8b7cc73040ab2c43f90b44c9e, type: 2}
+    - target: {fileID: 3893508868742059909, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: AllowSteppingWithoutStableGrounding
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923827815742105937, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: b60d80f8b7cc73040ab2c43f90b44c9e, type: 2}
     - target: {fileID: 4495551017892865747, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -411,7 +411,40 @@ public class SerializeBlockManager : MonoBehaviour
         Debug.Log($"Geekplay.Instance.PlayerData.MapaDataList[{MapDataSlotIndex}].SavedBlocks:" + Geekplay.Instance.PlayerData.MapDataArray[MapDataSlotIndex].SavedBlocks.Count);
         Geekplay.Instance.Save();
     }
+    [ContextMenu("LoadBlocksAndChangeBlocks")]
+    public void LoadBlocksAndChangeBlocks()
+    {
+        int blockToChangeIndex = 44;
+        int blockWantChangeIndex = 7;
+        if (BlocksOnScene.Count > 0)
+        {
+            for (int i = 0; i < BlocksOnScene.Count; i++)
+            {
+                if (BlocksOnScene[i] != null)
+                {
+                    Destroy(BlocksOnScene[i].gameObject);
+                    Debug.Log("Удален объект:" + BlocksOnScene[i].name);
+                }
+            }
+            BlocksOnScene = new();
+        }
 
+        BlocksData = new();
+        BlocksData = Geekplay.Instance.PlayerData.SavedBlocks;
+        Debug.Log("Geekplay.Instance.PlayerData.SavedBlocks:" + Geekplay.Instance.PlayerData.SavedBlocks.Count);
+        for (int i = 0; i < BlocksData.Count; i++)
+        {
+            if (BlocksData[i].PrefabIndex == blockToChangeIndex)
+            {
+                BlocksData[i].PrefabIndex = blockWantChangeIndex;
+            }
+            Block LoadedBlock = Instantiate(BlocksPrefab[BlocksData[i].PrefabIndex]);
+            LoadedBlock.transform.position = BlocksData[i].Position;
+            BlocksOnScene.Add(LoadedBlock);
+        }
+        LoadParkourBlocksSettings();
+
+    }
     public void LoadBlocks()
     {
         if (BlocksOnScene.Count > 0)

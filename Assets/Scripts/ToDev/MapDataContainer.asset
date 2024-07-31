@@ -19905,18 +19905,6 @@ MonoBehaviour:
       Position: {x: 26, y: 40, z: -34}
     - PrefabIndex: 54
       Position: {x: 24, y: 40, z: -34}
-    - PrefabIndex: 25
-      Position: {x: 42, y: 18, z: -18}
-    - PrefabIndex: 25
-      Position: {x: 42, y: 18, z: -16}
-    - PrefabIndex: 25
-      Position: {x: 42, y: 20, z: -16}
-    - PrefabIndex: 25
-      Position: {x: 40, y: 20, z: -14}
-    - PrefabIndex: 25
-      Position: {x: 42, y: 20, z: -14}
-    - PrefabIndex: 25
-      Position: {x: 42, y: 22, z: -14}
     - PrefabIndex: 54
       Position: {x: 20, y: 40, z: -32}
     - PrefabIndex: 54
@@ -20073,6 +20061,158 @@ MonoBehaviour:
       Position: {x: 22, y: 40, z: -12}
     - PrefabIndex: 53
       Position: {x: 20, y: 42, z: -14}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -22}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -24}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -26}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -36}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -30}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -28}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -32}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 20, z: -34}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -22}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -24}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -26}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -28}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -30}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -32}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -34}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 22, z: -36}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 24, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 24, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 20, z: -22}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 20, z: -24}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 28, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 30, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 32, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 34, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 36, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 38, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 28, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 30, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 32, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 34, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 36, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 38, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 20, z: -24}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 20, z: -22}
+    - PrefabIndex: 25
+      Position: {x: 28, y: 20, z: -24}
+    - PrefabIndex: 25
+      Position: {x: 28, y: 20, z: -22}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 20, z: -26}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 20, z: -26}
+    - PrefabIndex: 25
+      Position: {x: 28, y: 20, z: -26}
+    - PrefabIndex: 25
+      Position: {x: 40, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 42, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 44, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 46, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 48, y: 20, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 40, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 42, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 44, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 46, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 48, y: 22, z: -20}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 14, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 14, z: 0}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 14, z: -2}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 14, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 14, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 16, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 16, z: 0}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 16, z: -2}
+    - PrefabIndex: 25
+      Position: {x: 24, y: 16, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 16, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 14, z: -4}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 14, z: -6}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 16, z: -4}
+    - PrefabIndex: 25
+      Position: {x: 26, y: 16, z: -6}
+    - PrefabIndex: 25
+      Position: {x: 20, y: 14, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 20, y: 16, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 18, y: 14, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 18, y: 16, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 16, y: 14, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 16, y: 16, z: 2}
+    - PrefabIndex: 25
+      Position: {x: 22, y: 24, z: -22}
     ParkourBlocksSaveData:
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
@@ -20096,47 +20236,47 @@ MonoBehaviour:
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 197
+      BlockOnSceneIndex: 191
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 198
+      BlockOnSceneIndex: 192
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 199
+      BlockOnSceneIndex: 193
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 200
+      BlockOnSceneIndex: 194
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 210
+      BlockOnSceneIndex: 204
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 226
+      BlockOnSceneIndex: 220
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 227
+      BlockOnSceneIndex: 221
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 228
+      BlockOnSceneIndex: 222
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 229
+      BlockOnSceneIndex: 223
       Speed: 0
       InvertMoveCycle: 0
   - MapName: P_Map_7_Ore_Pillars
@@ -20312,159 +20452,159 @@ MonoBehaviour:
     SaveDate: 
     RewardForComplete: 0
     SavedBlocks:
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 2, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 4, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 6, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 8, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 0}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 8, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 6, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 4, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 2, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 2, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 8, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 4, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 6, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 2, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 8, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 6, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 4, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -18}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -20}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -22}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 10, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 8, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 2, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 6, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 4, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 0}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 2, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 6, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 4, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 2, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 6, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 4, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 2, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 4, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 6, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -18}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -20}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -22}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 6, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 2, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 4, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 2, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 6, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 4, z: -6}
     - PrefabIndex: 39
       Position: {x: 36, y: 2, z: 0}
@@ -20502,45 +20642,45 @@ MonoBehaviour:
       Position: {x: 8, y: 4, z: -24}
     - PrefabIndex: 39
       Position: {x: 8, y: 6, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -28}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -30}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -32}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -34}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 2, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 8, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 6, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 4, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 10, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 12, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 10, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 12, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 14, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 14, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -22}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -20}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -18}
     - PrefabIndex: 39
       Position: {x: 8, y: 8, z: -24}
@@ -20554,45 +20694,45 @@ MonoBehaviour:
       Position: {x: 8, y: 16, z: -24}
     - PrefabIndex: 39
       Position: {x: 8, y: 18, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 18, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 10, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 12, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 14, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -28}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -30}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -32}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -34}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 20, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 22, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 18, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 20, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 22, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -36}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -34}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -32}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -30}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -28}
     - PrefabIndex: 39
       Position: {x: 22, y: 2, z: -36}
@@ -20678,171 +20818,171 @@ MonoBehaviour:
       Position: {x: 36, y: 8, z: -20}
     - PrefabIndex: 39
       Position: {x: 36, y: 10, z: -20}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 12, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 14, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 12, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 14, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 16, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 18, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 16, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 18, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -22}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -20}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -18}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 12, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 14, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 16, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 18, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: -2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 8, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 0}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 20, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 18, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 16, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 14, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 12, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 18, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 16, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 14, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 12, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 22, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 24, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 26, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 28, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -26}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 22, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 24, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 26, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 28, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -22}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -20}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -18}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 22, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 22, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 22, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 24, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 28, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 26, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: -2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 0}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 24, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 28, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 26, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 24, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 26, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 28, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 44, y: 30, z: 14}
     - PrefabIndex: 39
       Position: {x: 48, y: 20, z: -16}
@@ -20854,117 +20994,117 @@ MonoBehaviour:
       Position: {x: 38, y: 20, z: 10}
     - PrefabIndex: 39
       Position: {x: 30, y: 20, z: 10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 10, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 12, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 14, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 18, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 20, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 22, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -24}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -22}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -20}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -18}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: -2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 0}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 24, z: 14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -14}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: -2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 0}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 2}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 8}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 10}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 16, z: 12}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 18, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 20, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 22, z: -16}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 10, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 12, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 14, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 18, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 20, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 22, z: -6}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 10, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 12, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 14, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 18, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 20, z: 4}
-    - PrefabIndex: 44
+    - PrefabIndex: 7
       Position: {x: 14, y: 22, z: 4}
     - PrefabIndex: 39
       Position: {x: 20, y: 24, z: 10}
@@ -21095,7 +21235,7 @@ MonoBehaviour:
     - PrefabIndex: 39
       Position: {x: 50, y: 2, z: 2}
     - PrefabIndex: 39
-      Position: {x: 18, y: 2, z: 0}
+      Position: {x: 20, y: 2, z: 0}
     ParkourBlocksSaveData: []
   - MapName: P_Map_9_Forest
     MapIndex: 8
@@ -21103,103 +21243,105 @@ MonoBehaviour:
     RewardForComplete: 0
     SavedBlocks:
     - PrefabIndex: 35
-      Position: {x: 24, y: 2, z: -4}
+      Position: {x: 24, y: 2, z: -6}
     - PrefabIndex: 35
-      Position: {x: 24, y: 4, z: -4}
+      Position: {x: 24, y: 4, z: -6}
     - PrefabIndex: 35
-      Position: {x: 24, y: 6, z: -4}
+      Position: {x: 24, y: 6, z: -6}
     - PrefabIndex: 1
-      Position: {x: 22, y: 6, z: -4}
+      Position: {x: 22, y: 6, z: -6}
     - PrefabIndex: 35
-      Position: {x: 24, y: 8, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 22, y: 8, z: -4}
+      Position: {x: 24, y: 8, z: -6}
     - PrefabIndex: 1
       Position: {x: 22, y: 8, z: -6}
     - PrefabIndex: 1
-      Position: {x: 26, y: 8, z: -4}
+      Position: {x: 22, y: 8, z: -8}
     - PrefabIndex: 1
       Position: {x: 26, y: 8, z: -6}
     - PrefabIndex: 1
-      Position: {x: 24, y: 8, z: -6}
+      Position: {x: 26, y: 8, z: -8}
     - PrefabIndex: 1
-      Position: {x: 24, y: 10, z: -6}
+      Position: {x: 24, y: 8, z: -8}
     - PrefabIndex: 1
-      Position: {x: 22, y: 10, z: -4}
+      Position: {x: 24, y: 10, z: -8}
     - PrefabIndex: 1
       Position: {x: 22, y: 10, z: -6}
-    - PrefabIndex: 35
-      Position: {x: 24, y: 10, z: -4}
     - PrefabIndex: 1
-      Position: {x: 22, y: 12, z: -4}
+      Position: {x: 22, y: 10, z: -8}
+    - PrefabIndex: 35
+      Position: {x: 24, y: 10, z: -6}
     - PrefabIndex: 1
       Position: {x: 22, y: 12, z: -6}
     - PrefabIndex: 1
+      Position: {x: 22, y: 12, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 24, y: 12, z: -8}
+    - PrefabIndex: 1
       Position: {x: 24, y: 12, z: -6}
     - PrefabIndex: 1
-      Position: {x: 24, y: 12, z: -4}
+      Position: {x: 26, y: 10, z: -8}
     - PrefabIndex: 1
-      Position: {x: 26, y: 10, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 26, y: 12, z: -6}
+      Position: {x: 26, y: 12, z: -8}
     - PrefabIndex: 35
-      Position: {x: 36, y: 2, z: -4}
+      Position: {x: 36, y: 2, z: -6}
     - PrefabIndex: 35
-      Position: {x: 36, y: 4, z: -4}
+      Position: {x: 36, y: 4, z: -6}
     - PrefabIndex: 35
-      Position: {x: 36, y: 6, z: -4}
+      Position: {x: 36, y: 6, z: -6}
     - PrefabIndex: 35
-      Position: {x: 36, y: 8, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 34, y: 8, z: -4}
+      Position: {x: 36, y: 8, z: -6}
     - PrefabIndex: 1
       Position: {x: 34, y: 8, z: -6}
     - PrefabIndex: 1
-      Position: {x: 34, y: 12, z: -4}
+      Position: {x: 34, y: 8, z: -8}
     - PrefabIndex: 1
-      Position: {x: 34, y: 10, z: -4}
+      Position: {x: 34, y: 12, z: -6}
     - PrefabIndex: 1
       Position: {x: 34, y: 10, z: -6}
     - PrefabIndex: 1
-      Position: {x: 24, y: 14, z: -4}
+      Position: {x: 34, y: 10, z: -8}
     - PrefabIndex: 1
       Position: {x: 24, y: 14, z: -6}
     - PrefabIndex: 1
-      Position: {x: 26, y: 14, z: -6}
+      Position: {x: 24, y: 14, z: -8}
     - PrefabIndex: 1
-      Position: {x: 22, y: 12, z: -2}
+      Position: {x: 26, y: 14, z: -8}
     - PrefabIndex: 1
-      Position: {x: 20, y: 10, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 20, y: 8, z: -4}
+      Position: {x: 22, y: 12, z: -4}
     - PrefabIndex: 1
       Position: {x: 20, y: 10, z: -6}
     - PrefabIndex: 1
       Position: {x: 20, y: 8, z: -6}
     - PrefabIndex: 1
-      Position: {x: 36, y: 12, z: -4}
+      Position: {x: 20, y: 10, z: -8}
     - PrefabIndex: 1
-      Position: {x: 36, y: 14, z: -4}
+      Position: {x: 20, y: 8, z: -8}
     - PrefabIndex: 1
-      Position: {x: 36, y: 10, z: -6}
+      Position: {x: 36, y: 12, z: -6}
     - PrefabIndex: 1
-      Position: {x: 38, y: 10, z: -6}
+      Position: {x: 36, y: 14, z: -6}
+    - PrefabIndex: 1
+      Position: {x: 36, y: 10, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 38, y: 10, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 2, z: -6}
+      Position: {x: 46, y: 2, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 4, z: -6}
+      Position: {x: 46, y: 4, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 6, z: -6}
+      Position: {x: 46, y: 6, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 8, z: -6}
+      Position: {x: 46, y: 8, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 10, z: -6}
+      Position: {x: 46, y: 10, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 12, z: -6}
+      Position: {x: 46, y: 12, z: -8}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 14, z: -8}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 16, z: -8}
     - PrefabIndex: 35
       Position: {x: 46, y: 14, z: -6}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 16, z: -6}
     - PrefabIndex: 35
       Position: {x: 46, y: 14, z: -4}
     - PrefabIndex: 35
@@ -21207,1133 +21349,997 @@ MonoBehaviour:
     - PrefabIndex: 35
       Position: {x: 46, y: 14, z: 0}
     - PrefabIndex: 35
-      Position: {x: 46, y: 14, z: 2}
+      Position: {x: 46, y: 16, z: 0}
     - PrefabIndex: 35
-      Position: {x: 46, y: 16, z: 2}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 18, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 20, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 20, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 18, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 20, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 18, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 20, z: 6}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 18, z: 6}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 16, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 16, z: 6}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 16, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 14, z: 4}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 14, z: 2}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 16, z: 2}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 18, z: 2}
-    - PrefabIndex: 1
       Position: {x: 46, y: 18, z: 2}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 20, z: 2}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 20, z: 2}
     - PrefabIndex: 1
       Position: {x: 48, y: 18, z: 2}
     - PrefabIndex: 1
-      Position: {x: 48, y: 16, z: 0}
+      Position: {x: 44, y: 20, z: 2}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 18, z: 2}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 20, z: 4}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 18, z: 4}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 16, z: 2}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 16, z: 4}
     - PrefabIndex: 1
       Position: {x: 44, y: 16, z: 2}
     - PrefabIndex: 1
-      Position: {x: 50, y: 16, z: 2}
+      Position: {x: 46, y: 14, z: 2}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 14, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 16, z: 0}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 18, z: 0}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 18, z: 0}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 18, z: 0}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 16, z: -2}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 16, z: 0}
     - PrefabIndex: 1
       Position: {x: 50, y: 16, z: 0}
     - PrefabIndex: 1
-      Position: {x: 50, y: 18, z: 2}
+      Position: {x: 50, y: 16, z: -2}
     - PrefabIndex: 1
-      Position: {x: 50, y: 18, z: 4}
+      Position: {x: 50, y: 18, z: 0}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 18, z: 2}
     - PrefabIndex: 35
-      Position: {x: 46, y: 18, z: -6}
+      Position: {x: 46, y: 18, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 20, z: -6}
+      Position: {x: 46, y: 20, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 22, z: -6}
+      Position: {x: 46, y: 22, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 24, z: -6}
+      Position: {x: 46, y: 24, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 26, z: -6}
+      Position: {x: 46, y: 26, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 28, z: -6}
+      Position: {x: 46, y: 28, z: -8}
     - PrefabIndex: 35
-      Position: {x: 46, y: 30, z: -6}
+      Position: {x: 46, y: 30, z: -8}
     - PrefabIndex: 35
-      Position: {x: 48, y: 18, z: -6}
+      Position: {x: 48, y: 18, z: -8}
     - PrefabIndex: 35
-      Position: {x: 50, y: 18, z: -6}
+      Position: {x: 50, y: 18, z: -8}
     - PrefabIndex: 35
-      Position: {x: 52, y: 18, z: -6}
+      Position: {x: 52, y: 18, z: -8}
     - PrefabIndex: 35
-      Position: {x: 54, y: 18, z: -6}
+      Position: {x: 54, y: 18, z: -8}
     - PrefabIndex: 35
+      Position: {x: 54, y: 20, z: -8}
+    - PrefabIndex: 35
+      Position: {x: 56, y: 20, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 20, z: -10}
+    - PrefabIndex: 1
       Position: {x: 54, y: 20, z: -6}
-    - PrefabIndex: 35
+    - PrefabIndex: 1
       Position: {x: 56, y: 20, z: -6}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 18, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 18, z: -6}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 22, z: -10}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 22, z: -6}
     - PrefabIndex: 1
       Position: {x: 56, y: 22, z: -6}
     - PrefabIndex: 1
-      Position: {x: 56, y: 20, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 20, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 20, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 20, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 18, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 18, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 22, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 22, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 22, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 22, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 24, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 24, z: -4}
+      Position: {x: 54, y: 24, z: -6}
     - PrefabIndex: 1
       Position: {x: 56, y: 24, z: -6}
     - PrefabIndex: 1
-      Position: {x: 56, y: 24, z: -8}
+      Position: {x: 56, y: 24, z: -10}
     - PrefabIndex: 1
-      Position: {x: 52, y: 20, z: -8}
+      Position: {x: 52, y: 20, z: -10}
     - PrefabIndex: 1
-      Position: {x: 52, y: 20, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 26, z: -4}
+      Position: {x: 52, y: 20, z: -6}
     - PrefabIndex: 35
-      Position: {x: 54, y: 22, z: -6}
+      Position: {x: 54, y: 22, z: -8}
     - PrefabIndex: 35
-      Position: {x: 54, y: 24, z: -6}
+      Position: {x: 54, y: 24, z: -8}
     - PrefabIndex: 1
-      Position: {x: 54, y: 26, z: -6}
+      Position: {x: 56, y: 18, z: -6}
     - PrefabIndex: 1
-      Position: {x: 56, y: 26, z: -6}
+      Position: {x: 64, y: 18, z: 8}
     - PrefabIndex: 1
-      Position: {x: 56, y: 26, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 18, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 18, z: 10}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 18, z: 10}
+      Position: {x: 66, y: 18, z: 8}
     - PrefabIndex: 1
       Position: {x: 66, y: 18, z: 10}
     - PrefabIndex: 1
       Position: {x: 66, y: 18, z: 12}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 18, z: 14}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 18, z: 14}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 18, z: 12}
     - PrefabIndex: 35
       Position: {x: 64, y: 18, z: 14}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 18, z: 14}
     - PrefabIndex: 35
-      Position: {x: 64, y: 18, z: 16}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 18, z: 16}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 18, z: 16}
+      Position: {x: 64, y: 16, z: 16}
     - PrefabIndex: 35
       Position: {x: 64, y: 16, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 16, z: 20}
+      Position: {x: 64, y: 14, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 14, z: 20}
+      Position: {x: 64, y: 12, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 12, z: 20}
+      Position: {x: 64, y: 10, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 10, z: 20}
+      Position: {x: 64, y: 8, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 8, z: 20}
+      Position: {x: 64, y: 6, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 6, z: 20}
+      Position: {x: 64, y: 2, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 2, z: 20}
+      Position: {x: 64, y: 4, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 4, z: 20}
+      Position: {x: 64, y: 18, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 18, z: 20}
+      Position: {x: 64, y: 20, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 20, z: 20}
+      Position: {x: 64, y: 22, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 22, z: 20}
+      Position: {x: 64, y: 24, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 24, z: 20}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 16, z: 28}
+      Position: {x: 64, y: 16, z: 26}
     - PrefabIndex: 1
-      Position: {x: 62, y: 16, z: 28}
+      Position: {x: 62, y: 16, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 14, z: 24}
     - PrefabIndex: 1
       Position: {x: 64, y: 14, z: 26}
     - PrefabIndex: 1
-      Position: {x: 64, y: 14, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 16, z: 30}
+      Position: {x: 64, y: 16, z: 28}
     - PrefabIndex: 35
-      Position: {x: 64, y: 16, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 20, z: 14}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 22, z: 12}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 22, z: 14}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 18, z: 12}
+      Position: {x: 64, y: 16, z: 24}
     - PrefabIndex: 35
       Position: {x: 64, y: 20, z: 12}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 22, z: 10}
     - PrefabIndex: 1
-      Position: {x: 64, y: 24, z: 14}
+      Position: {x: 64, y: 18, z: 10}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 20, z: 10}
     - PrefabIndex: 1
-      Position: {x: 66, y: 20, z: 14}
+      Position: {x: 64, y: 24, z: 12}
     - PrefabIndex: 1
       Position: {x: 66, y: 20, z: 12}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 22, z: 12}
     - PrefabIndex: 1
       Position: {x: 66, y: 20, z: 10}
     - PrefabIndex: 1
       Position: {x: 66, y: 22, z: 10}
     - PrefabIndex: 1
-      Position: {x: 66, y: 22, z: 14}
+      Position: {x: 66, y: 20, z: 8}
     - PrefabIndex: 1
-      Position: {x: 66, y: 24, z: 12}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 24, z: 14}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 24, z: 12}
+      Position: {x: 66, y: 22, z: 8}
     - PrefabIndex: 1
       Position: {x: 66, y: 24, z: 10}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 24, z: 10}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 24, z: 8}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 26, z: 8}
     - PrefabIndex: 1
       Position: {x: 66, y: 26, z: 10}
     - PrefabIndex: 1
-      Position: {x: 66, y: 26, z: 12}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 26, z: 12}
+      Position: {x: 64, y: 26, z: 10}
     - PrefabIndex: 35
-      Position: {x: 48, y: 4, z: 28}
+      Position: {x: 48, y: 4, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 6, z: 28}
+      Position: {x: 48, y: 6, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 8, z: 28}
+      Position: {x: 48, y: 8, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 10, z: 28}
+      Position: {x: 48, y: 10, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 12, z: 28}
+      Position: {x: 48, y: 12, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 14, z: 28}
+      Position: {x: 48, y: 14, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 16, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 18, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 18, z: 28}
     - PrefabIndex: 35
       Position: {x: 48, y: 16, z: 28}
     - PrefabIndex: 35
-      Position: {x: 48, y: 18, z: 28}
+      Position: {x: 48, y: 14, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 12, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 10, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 8, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 6, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 4, z: 28}
     - PrefabIndex: 35
       Position: {x: 48, y: 18, z: 30}
     - PrefabIndex: 35
       Position: {x: 48, y: 16, z: 30}
     - PrefabIndex: 35
-      Position: {x: 48, y: 14, z: 30}
-    - PrefabIndex: 35
       Position: {x: 48, y: 12, z: 30}
     - PrefabIndex: 35
-      Position: {x: 48, y: 10, z: 30}
+      Position: {x: 48, y: 14, z: 30}
     - PrefabIndex: 35
       Position: {x: 48, y: 8, z: 30}
     - PrefabIndex: 35
-      Position: {x: 48, y: 6, z: 30}
+      Position: {x: 48, y: 10, z: 30}
     - PrefabIndex: 35
       Position: {x: 48, y: 4, z: 30}
     - PrefabIndex: 35
-      Position: {x: 48, y: 18, z: 32}
+      Position: {x: 46, y: 18, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 16, z: 32}
+      Position: {x: 46, y: 16, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 12, z: 32}
+      Position: {x: 46, y: 12, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 14, z: 32}
+      Position: {x: 46, y: 14, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 8, z: 32}
+      Position: {x: 46, y: 10, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 10, z: 32}
+      Position: {x: 46, y: 8, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 4, z: 32}
+      Position: {x: 46, y: 6, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 18, z: 28}
+      Position: {x: 46, y: 4, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 16, z: 28}
+      Position: {x: 44, y: 18, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 12, z: 28}
+      Position: {x: 44, y: 16, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 14, z: 28}
+      Position: {x: 44, y: 12, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 10, z: 28}
+      Position: {x: 44, y: 10, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 8, z: 28}
+      Position: {x: 44, y: 6, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 6, z: 28}
+      Position: {x: 44, y: 8, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 4, z: 28}
+      Position: {x: 48, y: 22, z: 26}
     - PrefabIndex: 35
-      Position: {x: 44, y: 18, z: 28}
+      Position: {x: 48, y: 20, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 16, z: 28}
+      Position: {x: 48, y: 22, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 12, z: 28}
+      Position: {x: 48, y: 24, z: 26}
     - PrefabIndex: 35
-      Position: {x: 44, y: 10, z: 28}
+      Position: {x: 48, y: 26, z: 26}
     - PrefabIndex: 35
-      Position: {x: 44, y: 6, z: 28}
+      Position: {x: 48, y: 24, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 8, z: 28}
+      Position: {x: 48, y: 26, z: 30}
     - PrefabIndex: 35
-      Position: {x: 48, y: 22, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 20, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 22, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 24, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 26, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 24, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 26, z: 32}
+      Position: {x: 48, y: 28, z: 26}
     - PrefabIndex: 35
       Position: {x: 48, y: 28, z: 28}
     - PrefabIndex: 35
       Position: {x: 48, y: 28, z: 30}
     - PrefabIndex: 35
-      Position: {x: 48, y: 28, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 14, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 18, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 52, y: 18, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 54, y: 18, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 20, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 54, y: 20, z: 30}
+      Position: {x: 44, y: 14, z: 26}
     - PrefabIndex: 35
       Position: {x: 52, y: 18, z: 28}
     - PrefabIndex: 35
-      Position: {x: 48, y: 20, z: 28}
+      Position: {x: 54, y: 18, z: 28}
     - PrefabIndex: 35
-      Position: {x: 50, y: 18, z: 32}
+      Position: {x: 54, y: 20, z: 28}
     - PrefabIndex: 35
-      Position: {x: 50, y: 20, z: 32}
+      Position: {x: 52, y: 18, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 20, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 18, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 20, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 20, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 22, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 24, z: 32}
     - PrefabIndex: 35
       Position: {x: 48, y: 20, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 22, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 24, z: 34}
     - PrefabIndex: 35
       Position: {x: 48, y: 20, z: 36}
     - PrefabIndex: 35
       Position: {x: 48, y: 20, z: 38}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 20, z: 40}
     - PrefabIndex: 1
-      Position: {x: 54, y: 20, z: 32}
+      Position: {x: 54, y: 20, z: 30}
     - PrefabIndex: 1
-      Position: {x: 56, y: 20, z: 30}
+      Position: {x: 56, y: 20, z: 28}
     - PrefabIndex: 1
-      Position: {x: 56, y: 18, z: 30}
+      Position: {x: 56, y: 18, z: 28}
     - PrefabIndex: 1
       Position: {x: 46, y: 20, z: 38}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 20, z: 40}
     - PrefabIndex: 35
-      Position: {x: 42, y: 6, z: 28}
+      Position: {x: 42, y: 6, z: 26}
     - PrefabIndex: 35
-      Position: {x: 42, y: 4, z: 26}
+      Position: {x: 42, y: 4, z: 24}
     - PrefabIndex: 35
-      Position: {x: 40, y: 4, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 40, y: 2, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 38, y: 2, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 4, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 4, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 2, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 2, z: 26}
+      Position: {x: 40, y: 4, z: 24}
     - PrefabIndex: 35
       Position: {x: 40, y: 2, z: 24}
     - PrefabIndex: 35
+      Position: {x: 38, y: 2, z: 24}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 4, z: 24}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 4, z: 24}
+    - PrefabIndex: 35
       Position: {x: 48, y: 2, z: 24}
     - PrefabIndex: 35
-      Position: {x: 40, y: 2, z: 32}
+      Position: {x: 50, y: 2, z: 24}
     - PrefabIndex: 35
-      Position: {x: 48, y: 6, z: 32}
+      Position: {x: 40, y: 2, z: 22}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 2, z: 22}
+    - PrefabIndex: 35
+      Position: {x: 40, y: 2, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 6, z: 30}
     - PrefabIndex: 35
       Position: {x: 42, y: 6, z: 30}
     - PrefabIndex: 35
-      Position: {x: 42, y: 6, z: 32}
+      Position: {x: 42, y: 4, z: 30}
     - PrefabIndex: 35
-      Position: {x: 42, y: 4, z: 32}
+      Position: {x: 40, y: 4, z: 30}
     - PrefabIndex: 35
-      Position: {x: 40, y: 4, z: 32}
+      Position: {x: 38, y: 2, z: 30}
     - PrefabIndex: 35
-      Position: {x: 38, y: 2, z: 32}
+      Position: {x: 40, y: 2, z: 32}
     - PrefabIndex: 35
-      Position: {x: 40, y: 2, z: 34}
+      Position: {x: 46, y: 16, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 16, z: 32}
+      Position: {x: 46, y: 14, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 14, z: 32}
+      Position: {x: 46, y: 12, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 12, z: 32}
+      Position: {x: 44, y: 16, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 16, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 16, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 14, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 12, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 10, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 8, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 14, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 12, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 10, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 8, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 10, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 8, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 6, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 4, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 4, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 6, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 4, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 2, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 2, z: 36}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 4, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 4, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 4, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 4, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 2, z: 36}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 2, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 52, y: 2, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 2, z: 36}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 2, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 18, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 8, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 10, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 12, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 14, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 16, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 8, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 10, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 12, z: 30}
+      Position: {x: 42, y: 16, z: 30}
     - PrefabIndex: 35
       Position: {x: 42, y: 14, z: 30}
     - PrefabIndex: 35
+      Position: {x: 42, y: 12, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 10, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 8, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 14, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 12, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 10, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 8, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 10, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 8, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 6, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 4, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 4, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 6, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 4, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 2, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 2, z: 34}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 4, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 4, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 4, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 4, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 2, z: 34}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 2, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 52, y: 2, z: 32}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 2, z: 34}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 2, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 18, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 8, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 10, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 12, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 14, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 16, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 18, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 18, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 18, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 20, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 20, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 20, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 22, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 22, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 22, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 28, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 28, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 26, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 26, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 26, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 24, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 24, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 24, z: 26}
+    - PrefabIndex: 35
       Position: {x: 42, y: 18, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 18, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 18, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 20, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 24, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 26, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 22, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 20, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 20, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 20, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 22, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 22, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 22, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 28, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 28, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 26, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 26, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 26, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 24, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 24, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 24, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 18, z: 34}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 18, z: 36}
-    - PrefabIndex: 35
-      Position: {x: 40, y: 16, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 38, y: 16, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 36, y: 16, z: 30}
     - PrefabIndex: 35
       Position: {x: 40, y: 16, z: 28}
     - PrefabIndex: 35
       Position: {x: 38, y: 16, z: 28}
     - PrefabIndex: 35
       Position: {x: 36, y: 16, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 40, y: 16, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 38, y: 16, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 36, y: 16, z: 26}
     - PrefabIndex: 1
-      Position: {x: 40, y: 18, z: 28}
+      Position: {x: 40, y: 18, z: 26}
     - PrefabIndex: 1
-      Position: {x: 38, y: 18, z: 28}
+      Position: {x: 38, y: 18, z: 26}
     - PrefabIndex: 1
-      Position: {x: 36, y: 18, z: 28}
+      Position: {x: 36, y: 18, z: 26}
     - PrefabIndex: 1
-      Position: {x: 40, y: 22, z: 28}
+      Position: {x: 40, y: 22, z: 26}
     - PrefabIndex: 1
-      Position: {x: 38, y: 22, z: 28}
+      Position: {x: 38, y: 22, z: 26}
     - PrefabIndex: 1
-      Position: {x: 36, y: 22, z: 28}
+      Position: {x: 36, y: 22, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 20, z: 32}
+      Position: {x: 46, y: 20, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 20, z: 32}
+      Position: {x: 44, y: 20, z: 30}
     - PrefabIndex: 35
-      Position: {x: 42, y: 20, z: 32}
+      Position: {x: 42, y: 20, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 22, z: 32}
+      Position: {x: 46, y: 22, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 22, z: 32}
+      Position: {x: 44, y: 22, z: 30}
     - PrefabIndex: 35
-      Position: {x: 42, y: 22, z: 32}
+      Position: {x: 42, y: 22, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 24, z: 32}
+      Position: {x: 46, y: 24, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 24, z: 32}
+      Position: {x: 44, y: 24, z: 30}
     - PrefabIndex: 35
-      Position: {x: 42, y: 24, z: 32}
+      Position: {x: 42, y: 24, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 26, z: 32}
+      Position: {x: 46, y: 26, z: 30}
     - PrefabIndex: 35
-      Position: {x: 44, y: 26, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 26, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 46, y: 28, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 28, z: 32}
+      Position: {x: 44, y: 26, z: 30}
     - PrefabIndex: 35
       Position: {x: 42, y: 26, z: 30}
     - PrefabIndex: 35
-      Position: {x: 42, y: 24, z: 30}
-    - PrefabIndex: 53
-      Position: {x: 46, y: 16, z: 30}
+      Position: {x: 46, y: 28, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 28, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 26, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 40, y: 4, z: 26}
     - PrefabIndex: 35
       Position: {x: 40, y: 4, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 40, y: 4, z: 30}
     - PrefabIndex: 1
-      Position: {x: 42, y: 2, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 4, z: 30}
+      Position: {x: 42, y: 2, z: 24}
     - PrefabIndex: 1
       Position: {x: 44, y: 4, z: 28}
     - PrefabIndex: 1
-      Position: {x: 46, y: 2, z: 26}
+      Position: {x: 44, y: 4, z: 26}
     - PrefabIndex: 1
       Position: {x: 46, y: 2, z: 24}
     - PrefabIndex: 1
+      Position: {x: 46, y: 2, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 2, z: 28}
+    - PrefabIndex: 1
       Position: {x: 48, y: 2, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 2, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 2, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 52, y: 2, z: 32}
     - PrefabIndex: 1
       Position: {x: 50, y: 2, z: 30}
     - PrefabIndex: 1
-      Position: {x: 42, y: 2, z: 28}
+      Position: {x: 52, y: 2, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 2, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 2, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 2, z: 24}
     - PrefabIndex: 35
       Position: {x: 44, y: 2, z: 26}
     - PrefabIndex: 35
-      Position: {x: 44, y: 2, z: 28}
+      Position: {x: 46, y: 2, z: 26}
     - PrefabIndex: 35
       Position: {x: 46, y: 2, z: 28}
     - PrefabIndex: 35
+      Position: {x: 44, y: 2, z: 28}
+    - PrefabIndex: 1
       Position: {x: 46, y: 2, z: 30}
     - PrefabIndex: 35
       Position: {x: 44, y: 2, z: 30}
     - PrefabIndex: 1
-      Position: {x: 46, y: 2, z: 32}
-    - PrefabIndex: 35
       Position: {x: 44, y: 2, z: 32}
     - PrefabIndex: 1
-      Position: {x: 44, y: 2, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 2, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 42, y: 2, z: 32}
+      Position: {x: 46, y: 2, z: 32}
     - PrefabIndex: 1
       Position: {x: 42, y: 2, z: 30}
     - PrefabIndex: 1
-      Position: {x: 40, y: 2, z: 30}
+      Position: {x: 42, y: 2, z: 28}
     - PrefabIndex: 1
-      Position: {x: 66, y: 28, z: 10}
+      Position: {x: 40, y: 2, z: 28}
     - PrefabIndex: 1
-      Position: {x: 66, y: 28, z: 12}
+      Position: {x: 66, y: 28, z: 8}
     - PrefabIndex: 1
-      Position: {x: 64, y: 28, z: 12}
+      Position: {x: 64, y: 28, z: 10}
     - PrefabIndex: 1
-      Position: {x: 64, y: 30, z: 10}
+      Position: {x: 64, y: 30, z: 8}
     - PrefabIndex: 1
-      Position: {x: 64, y: 24, z: 8}
+      Position: {x: 64, y: 22, z: 6}
     - PrefabIndex: 1
-      Position: {x: 64, y: 22, z: 8}
+      Position: {x: 66, y: 20, z: 6}
     - PrefabIndex: 1
-      Position: {x: 66, y: 22, z: 8}
+      Position: {x: 64, y: 24, z: 14}
     - PrefabIndex: 1
-      Position: {x: 66, y: 20, z: 8}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 24, z: 16}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 22, z: 16}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 20, z: 16}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 16, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 18, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 20, z: 22}
+      Position: {x: 62, y: 16, z: 28}
     - PrefabIndex: 35
       Position: {x: 64, y: 18, z: 24}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 16, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 20, z: 20}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 18, z: 22}
     - PrefabIndex: 1
       Position: {x: 66, y: 16, z: 26}
     - PrefabIndex: 1
-      Position: {x: 66, y: 16, z: 30}
+      Position: {x: 66, y: 16, z: 24}
     - PrefabIndex: 1
-      Position: {x: 66, y: 18, z: 30}
+      Position: {x: 66, y: 16, z: 28}
     - PrefabIndex: 1
       Position: {x: 66, y: 18, z: 28}
     - PrefabIndex: 1
       Position: {x: 66, y: 18, z: 26}
     - PrefabIndex: 1
-      Position: {x: 64, y: 18, z: 30}
+      Position: {x: 66, y: 18, z: 24}
     - PrefabIndex: 1
       Position: {x: 64, y: 18, z: 28}
     - PrefabIndex: 1
-      Position: {x: 64, y: 20, z: 30}
+      Position: {x: 64, y: 18, z: 26}
     - PrefabIndex: 1
-      Position: {x: 66, y: 20, z: 26}
+      Position: {x: 64, y: 20, z: 28}
     - PrefabIndex: 1
-      Position: {x: 66, y: 20, z: 30}
+      Position: {x: 66, y: 20, z: 24}
     - PrefabIndex: 1
       Position: {x: 66, y: 20, z: 28}
     - PrefabIndex: 1
-      Position: {x: 64, y: 22, z: 30}
+      Position: {x: 66, y: 20, z: 26}
     - PrefabIndex: 1
-      Position: {x: 66, y: 22, z: 30}
+      Position: {x: 64, y: 22, z: 28}
     - PrefabIndex: 1
       Position: {x: 66, y: 22, z: 28}
     - PrefabIndex: 1
       Position: {x: 66, y: 22, z: 26}
     - PrefabIndex: 1
-      Position: {x: 64, y: 18, z: 18}
+      Position: {x: 66, y: 22, z: 24}
     - PrefabIndex: 1
-      Position: {x: 64, y: 20, z: 18}
+      Position: {x: 64, y: 18, z: 16}
     - PrefabIndex: 1
       Position: {x: 64, y: 20, z: 16}
     - PrefabIndex: 1
-      Position: {x: 64, y: 22, z: 18}
+      Position: {x: 64, y: 20, z: 14}
     - PrefabIndex: 1
       Position: {x: 64, y: 22, z: 16}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 22, z: 14}
     - PrefabIndex: 35
-      Position: {x: 52, y: 18, z: 32}
+      Position: {x: 52, y: 18, z: 30}
     - PrefabIndex: 35
-      Position: {x: 52, y: 20, z: 32}
+      Position: {x: 52, y: 20, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 28, z: 32}
     - PrefabIndex: 35
       Position: {x: 48, y: 28, z: 34}
     - PrefabIndex: 35
-      Position: {x: 48, y: 28, z: 36}
+      Position: {x: 46, y: 28, z: 32}
     - PrefabIndex: 35
       Position: {x: 46, y: 28, z: 34}
     - PrefabIndex: 35
-      Position: {x: 46, y: 28, z: 36}
+      Position: {x: 46, y: 30, z: 36}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 30, z: 36}
     - PrefabIndex: 35
       Position: {x: 46, y: 30, z: 38}
     - PrefabIndex: 35
       Position: {x: 48, y: 30, z: 38}
     - PrefabIndex: 35
-      Position: {x: 46, y: 30, z: 40}
+      Position: {x: 46, y: 32, z: 40}
     - PrefabIndex: 35
-      Position: {x: 48, y: 30, z: 40}
+      Position: {x: 48, y: 32, z: 40}
     - PrefabIndex: 35
-      Position: {x: 46, y: 32, z: 42}
+      Position: {x: 54, y: 22, z: 28}
     - PrefabIndex: 35
-      Position: {x: 48, y: 32, z: 42}
-    - PrefabIndex: 35
+      Position: {x: 54, y: 24, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 22, z: 28}
+    - PrefabIndex: 1
       Position: {x: 54, y: 22, z: 30}
-    - PrefabIndex: 35
+    - PrefabIndex: 1
       Position: {x: 54, y: 24, z: 30}
-    - PrefabIndex: 35
+    - PrefabIndex: 1
       Position: {x: 54, y: 26, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 26, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 24, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 22, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 22, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 24, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 26, z: 32}
     - PrefabIndex: 35
+      Position: {x: 54, y: 28, z: 28}
+    - PrefabIndex: 1
       Position: {x: 54, y: 28, z: 30}
     - PrefabIndex: 1
-      Position: {x: 54, y: 28, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 28, z: 30}
+      Position: {x: 56, y: 28, z: 28}
     - PrefabIndex: 35
-      Position: {x: 48, y: 26, z: 34}
+      Position: {x: 48, y: 26, z: 32}
     - PrefabIndex: 35
-      Position: {x: 48, y: 20, z: 42}
+      Position: {x: 48, y: 20, z: 40}
     - PrefabIndex: 1
-      Position: {x: 46, y: 20, z: 42}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 22, z: 42}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 22, z: 42}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 24, z: 42}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 24, z: 42}
+      Position: {x: 46, y: 20, z: 40}
     - PrefabIndex: 35
-      Position: {x: 48, y: 22, z: 40}
+      Position: {x: 48, y: 22, z: 38}
     - PrefabIndex: 35
-      Position: {x: 48, y: 24, z: 40}
+      Position: {x: 48, y: 24, z: 38}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 26, z: 38}
     - PrefabIndex: 35
       Position: {x: 48, y: 26, z: 40}
-    - PrefabIndex: 35
+    - PrefabIndex: 1
       Position: {x: 48, y: 26, z: 42}
     - PrefabIndex: 1
-      Position: {x: 48, y: 26, z: 44}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 26, z: 44}
-    - PrefabIndex: 1
       Position: {x: 50, y: 26, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 26, z: 40}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 28, z: 38}
     - PrefabIndex: 1
       Position: {x: 48, y: 28, z: 40}
     - PrefabIndex: 1
       Position: {x: 48, y: 28, z: 42}
     - PrefabIndex: 1
-      Position: {x: 48, y: 28, z: 44}
+      Position: {x: 50, y: 28, z: 40}
     - PrefabIndex: 1
-      Position: {x: 50, y: 28, z: 42}
+      Position: {x: 24, y: 6, z: -4}
     - PrefabIndex: 1
-      Position: {x: 24, y: 6, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 22, y: 6, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 24, z: 8}
+      Position: {x: 22, y: 6, z: -4}
     - PrefabIndex: 35
-      Position: {x: 62, y: 18, z: 12}
-    - PrefabIndex: 1
+      Position: {x: 64, y: 20, z: 8}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 22, z: 8}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 24, z: 8}
+    - PrefabIndex: 35
       Position: {x: 64, y: 26, z: 8}
-    - PrefabIndex: 1
+    - PrefabIndex: 35
       Position: {x: 64, y: 28, z: 8}
     - PrefabIndex: 1
-      Position: {x: 66, y: 26, z: 8}
+      Position: {x: 64, y: 20, z: 6}
     - PrefabIndex: 1
-      Position: {x: 66, y: 28, z: 8}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 30, z: 8}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 30, z: 8}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 20, z: 10}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 22, z: 10}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 24, z: 10}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 26, z: 10}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 28, z: 10}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 20, z: 8}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 24, z: 18}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 26, z: 16}
+      Position: {x: 64, y: 24, z: 16}
     - PrefabIndex: 1
       Position: {x: 64, y: 26, z: 14}
     - PrefabIndex: 1
-      Position: {x: 64, y: 28, z: 14}
+      Position: {x: 64, y: 26, z: 12}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 28, z: 12}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 26, z: 12}
     - PrefabIndex: 1
       Position: {x: 62, y: 26, z: 14}
     - PrefabIndex: 1
-      Position: {x: 62, y: 26, z: 16}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 26, z: 12}
+      Position: {x: 62, y: 26, z: 10}
     - PrefabIndex: 35
-      Position: {x: 64, y: 26, z: 20}
+      Position: {x: 64, y: 26, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 28, z: 20}
+      Position: {x: 64, y: 28, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 30, z: 20}
+      Position: {x: 64, y: 30, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 32, z: 20}
+      Position: {x: 64, y: 32, z: 18}
     - PrefabIndex: 35
-      Position: {x: 64, y: 34, z: 20}
-    - PrefabIndex: 1
       Position: {x: 64, y: 34, z: 18}
     - PrefabIndex: 1
-      Position: {x: 66, y: 34, z: 20}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 32, z: 20}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 32, z: 18}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 34, z: 18}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 32, z: 18}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 34, z: 18}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 34, z: 20}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 34, z: 22}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 34, z: 22}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 34, z: 22}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 36, z: 18}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 36, z: 20}
+      Position: {x: 62, y: 36, z: 18}
     - PrefabIndex: 1
       Position: {x: 64, y: 36, z: 20}
     - PrefabIndex: 1
-      Position: {x: 64, y: 36, z: 22}
+      Position: {x: 66, y: 36, z: 18}
     - PrefabIndex: 1
-      Position: {x: 66, y: 36, z: 20}
+      Position: {x: 56, y: 28, z: 30}
     - PrefabIndex: 1
-      Position: {x: 62, y: 32, z: 20}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 32, z: 18}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 32, z: 22}
-    - PrefabIndex: 1
-      Position: {x: 62, y: 32, z: 22}
-    - PrefabIndex: 1
-      Position: {x: 66, y: 32, z: 22}
+      Position: {x: 56, y: 30, z: 28}
     - PrefabIndex: 1
       Position: {x: 54, y: 30, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 28, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 56, y: 30, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 54, y: 30, z: 32}
     - PrefabIndex: 35
-      Position: {x: 44, y: 30, z: 28}
+      Position: {x: 44, y: 30, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 30, z: 28}
+      Position: {x: 46, y: 30, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 30, z: 28}
+      Position: {x: 48, y: 30, z: 26}
     - PrefabIndex: 35
-      Position: {x: 44, y: 30, z: 32}
+      Position: {x: 44, y: 30, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 30, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 30, z: 32}
+      Position: {x: 46, y: 30, z: 30}
     - PrefabIndex: 35
       Position: {x: 48, y: 30, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 32, z: 32}
+      Position: {x: 48, y: 30, z: 28}
     - PrefabIndex: 35
-      Position: {x: 48, y: 32, z: 32}
+      Position: {x: 46, y: 32, z: 30}
     - PrefabIndex: 35
       Position: {x: 48, y: 32, z: 30}
     - PrefabIndex: 35
       Position: {x: 48, y: 32, z: 28}
     - PrefabIndex: 35
-      Position: {x: 46, y: 32, z: 28}
+      Position: {x: 48, y: 32, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 34, z: 32}
+      Position: {x: 46, y: 32, z: 26}
     - PrefabIndex: 35
       Position: {x: 48, y: 34, z: 30}
     - PrefabIndex: 35
       Position: {x: 48, y: 34, z: 28}
     - PrefabIndex: 35
-      Position: {x: 46, y: 34, z: 28}
+      Position: {x: 48, y: 34, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 34, z: 32}
+      Position: {x: 46, y: 34, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 36, z: 28}
+      Position: {x: 46, y: 34, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 36, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 36, z: 26}
     - PrefabIndex: 35
       Position: {x: 48, y: 36, z: 28}
     - PrefabIndex: 35
       Position: {x: 48, y: 36, z: 30}
     - PrefabIndex: 35
-      Position: {x: 48, y: 36, z: 32}
+      Position: {x: 46, y: 36, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 36, z: 32}
+      Position: {x: 46, y: 38, z: 28}
     - PrefabIndex: 35
-      Position: {x: 46, y: 38, z: 30}
+      Position: {x: 48, y: 38, z: 26}
     - PrefabIndex: 35
-      Position: {x: 48, y: 38, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 38, z: 32}
-    - PrefabIndex: 1
       Position: {x: 48, y: 38, z: 30}
     - PrefabIndex: 1
-      Position: {x: 48, y: 40, z: 28}
+      Position: {x: 48, y: 38, z: 28}
     - PrefabIndex: 1
-      Position: {x: 48, y: 40, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 38, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 38, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 34, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 36, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 38, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 38, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 44, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 42, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 40, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 38, z: 32}
+      Position: {x: 48, y: 40, z: 26}
     - PrefabIndex: 1
       Position: {x: 48, y: 40, z: 30}
     - PrefabIndex: 1
-      Position: {x: 48, y: 42, z: 30}
+      Position: {x: 50, y: 38, z: 30}
     - PrefabIndex: 1
-      Position: {x: 48, y: 44, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 46, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 46, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 40, z: 32}
-    - PrefabIndex: 1
+      Position: {x: 50, y: 38, z: 26}
+    - PrefabIndex: 35
       Position: {x: 44, y: 34, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 42, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 40, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 40, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 38, z: 28}
-    - PrefabIndex: 1
+    - PrefabIndex: 35
       Position: {x: 44, y: 36, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 42, y: 36, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 38, z: 26}
     - PrefabIndex: 1
       Position: {x: 46, y: 38, z: 26}
     - PrefabIndex: 1
+      Position: {x: 46, y: 38, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 44, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 42, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 40, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 38, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 40, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 42, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 44, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 46, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 46, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 40, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 34, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 42, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 40, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 40, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 38, z: 26}
+    - PrefabIndex: 1
       Position: {x: 44, y: 36, z: 26}
     - PrefabIndex: 1
-      Position: {x: 48, y: 38, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 38, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 38, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 36, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 42, y: 36, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 38, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 40, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 40, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 40, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 42, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 42, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 42, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 44, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 44, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 38, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 38, z: 24}
+      Position: {x: 42, y: 36, z: 26}
     - PrefabIndex: 1
       Position: {x: 48, y: 38, z: 24}
     - PrefabIndex: 1
       Position: {x: 46, y: 38, z: 24}
     - PrefabIndex: 1
-      Position: {x: 44, y: 38, z: 24}
+      Position: {x: 44, y: 36, z: 24}
     - PrefabIndex: 1
-      Position: {x: 42, y: 38, z: 28}
+      Position: {x: 48, y: 38, z: 32}
     - PrefabIndex: 1
-      Position: {x: 42, y: 36, z: 26}
+      Position: {x: 46, y: 38, z: 32}
     - PrefabIndex: 1
-      Position: {x: 42, y: 38, z: 26}
+      Position: {x: 44, y: 38, z: 32}
     - PrefabIndex: 1
-      Position: {x: 44, y: 38, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 40, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 42, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 40, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 42, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 40, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 42, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 44, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 44, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 44, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 36, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 36, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 36, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 52, y: 38, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 38, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 52, y: 38, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 52, y: 38, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 52, y: 38, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 36, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 36, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 34, z: 34}
-    - PrefabIndex: 1
-      Position: {x: 42, y: 34, z: 34}
+      Position: {x: 44, y: 36, z: 30}
     - PrefabIndex: 1
       Position: {x: 42, y: 36, z: 30}
     - PrefabIndex: 1
-      Position: {x: 42, y: 34, z: 28}
+      Position: {x: 50, y: 38, z: 32}
     - PrefabIndex: 1
-      Position: {x: 42, y: 34, z: 30}
+      Position: {x: 50, y: 40, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 40, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 40, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 42, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 42, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 42, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 44, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 44, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 38, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 38, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 38, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 38, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 38, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 38, z: 26}
     - PrefabIndex: 1
       Position: {x: 42, y: 36, z: 24}
     - PrefabIndex: 1
+      Position: {x: 42, y: 38, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 38, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 40, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 42, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 40, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 42, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 40, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 42, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 44, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 44, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 44, z: 26}
+    - PrefabIndex: 1
       Position: {x: 50, y: 36, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 28, z: 26}
-    - PrefabIndex: 35
-      Position: {x: 44, y: 26, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 36, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 36, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 38, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 38, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 38, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 38, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 38, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 36, z: 32}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 36, z: 32}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 34, z: 32}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 34, z: 32}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 36, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 34, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 34, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 36, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 36, z: 24}
     - PrefabIndex: 35
       Position: {x: 44, y: 28, z: 24}
-    - PrefabIndex: 1
-      Position: {x: 42, y: 28, z: 24}
-    - PrefabIndex: 1
+    - PrefabIndex: 35
       Position: {x: 44, y: 26, z: 24}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 28, z: 22}
     - PrefabIndex: 1
-      Position: {x: 44, y: 30, z: 24}
+      Position: {x: 42, y: 28, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 26, z: 22}
     - PrefabIndex: 1
       Position: {x: 44, y: 30, z: 22}
     - PrefabIndex: 1
-      Position: {x: 46, y: 28, z: 24}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 30, z: 24}
+      Position: {x: 44, y: 30, z: 20}
     - PrefabIndex: 1
       Position: {x: 46, y: 28, z: 22}
     - PrefabIndex: 1
-      Position: {x: 48, y: 36, z: 26}
+      Position: {x: 46, y: 30, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 28, z: 20}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 36, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 36, z: 20}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 36, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 36, z: 22}
     - PrefabIndex: 1
       Position: {x: 50, y: 36, z: 22}
     - PrefabIndex: 1
-      Position: {x: 44, y: 36, z: 24}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 36, z: 24}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 36, z: 24}
+      Position: {x: 52, y: 36, z: 22}
     - PrefabIndex: 1
       Position: {x: 52, y: 36, z: 24}
     - PrefabIndex: 1
@@ -22343,57 +22349,49 @@ MonoBehaviour:
     - PrefabIndex: 1
       Position: {x: 52, y: 36, z: 30}
     - PrefabIndex: 1
-      Position: {x: 52, y: 36, z: 32}
+      Position: {x: 50, y: 36, z: 32}
     - PrefabIndex: 1
-      Position: {x: 50, y: 36, z: 34}
+      Position: {x: 44, y: 36, z: 32}
     - PrefabIndex: 1
-      Position: {x: 44, y: 36, z: 34}
+      Position: {x: 42, y: 36, z: 32}
     - PrefabIndex: 1
-      Position: {x: 42, y: 36, z: 34}
+      Position: {x: 36, y: 8, z: -4}
     - PrefabIndex: 1
-      Position: {x: 36, y: 8, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 36, y: 10, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 38, y: 8, z: -4}
-    - PrefabIndex: 35
       Position: {x: 36, y: 10, z: -4}
     - PrefabIndex: 1
-      Position: {x: 38, y: 10, z: -4}
+      Position: {x: 38, y: 8, z: -6}
+    - PrefabIndex: 35
+      Position: {x: 36, y: 10, z: -6}
     - PrefabIndex: 1
-      Position: {x: 38, y: 8, z: -2}
+      Position: {x: 38, y: 10, z: -6}
     - PrefabIndex: 1
-      Position: {x: 34, y: 8, z: -2}
+      Position: {x: 38, y: 8, z: -4}
     - PrefabIndex: 1
-      Position: {x: 34, y: 12, z: -2}
+      Position: {x: 34, y: 8, z: -4}
     - PrefabIndex: 1
-      Position: {x: 34, y: 10, z: -2}
+      Position: {x: 34, y: 12, z: -4}
     - PrefabIndex: 1
-      Position: {x: 36, y: 14, z: -2}
+      Position: {x: 34, y: 10, z: -4}
     - PrefabIndex: 1
-      Position: {x: 36, y: 12, z: -2}
+      Position: {x: 36, y: 14, z: -4}
     - PrefabIndex: 1
-      Position: {x: 48, y: 30, z: -6}
+      Position: {x: 36, y: 12, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 30, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 28, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 28, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 28, z: -6}
     - PrefabIndex: 1
       Position: {x: 48, y: 28, z: -6}
     - PrefabIndex: 1
       Position: {x: 50, y: 28, z: -6}
     - PrefabIndex: 1
-      Position: {x: 46, y: 28, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 28, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 28, z: -4}
+      Position: {x: 44, y: 28, z: -8}
     - PrefabIndex: 1
       Position: {x: 44, y: 28, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 28, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 28, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 28, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 28, z: -8}
     - PrefabIndex: 1
       Position: {x: 48, y: 28, z: -10}
     - PrefabIndex: 1
@@ -22401,175 +22399,371 @@ MonoBehaviour:
     - PrefabIndex: 1
       Position: {x: 44, y: 28, z: -10}
     - PrefabIndex: 1
+      Position: {x: 48, y: 28, z: -12}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 28, z: -12}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 28, z: -12}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 28, z: -10}
+    - PrefabIndex: 1
       Position: {x: 42, y: 28, z: -8}
     - PrefabIndex: 1
       Position: {x: 42, y: 28, z: -6}
     - PrefabIndex: 1
-      Position: {x: 42, y: 28, z: -4}
+      Position: {x: 44, y: 30, z: -10}
     - PrefabIndex: 1
       Position: {x: 44, y: 30, z: -8}
     - PrefabIndex: 1
       Position: {x: 44, y: 30, z: -6}
     - PrefabIndex: 1
-      Position: {x: 44, y: 30, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 30, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 30, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 30, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 30, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 28, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 28, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 28, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 28, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 34, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 30, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 30, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 30, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 32, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 32, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 32, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 32, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 32, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 34, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 34, z: -4}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 34, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 50, y: 34, z: -6}
-    - PrefabIndex: 35
-      Position: {x: 48, y: 32, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 32, z: -6}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 32, z: -8}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 30, z: -2}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 30, z: -2}
+      Position: {x: 46, y: 30, z: -10}
     - PrefabIndex: 1
       Position: {x: 48, y: 30, z: -10}
     - PrefabIndex: 1
-      Position: {x: 46, y: 30, z: -10}
+      Position: {x: 48, y: 30, z: -6}
     - PrefabIndex: 1
-      Position: {x: 64, y: 24, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 20, z: 28}
-    - PrefabIndex: 35
-      Position: {x: 64, y: 20, z: 26}
+      Position: {x: 46, y: 30, z: -6}
     - PrefabIndex: 1
-      Position: {x: 64, y: 22, z: 28}
+      Position: {x: 48, y: 28, z: -4}
     - PrefabIndex: 1
-      Position: {x: 64, y: 22, z: 26}
+      Position: {x: 46, y: 28, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 28, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 28, z: -10}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 30, z: -6}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 30, z: -10}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 30, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 30, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 30, z: -12}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 30, z: -12}
     - PrefabIndex: 1
       Position: {x: 64, y: 24, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 64, y: 24, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 40, y: 24, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 38, y: 24, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 36, y: 24, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 40, y: 20, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 38, y: 20, z: 28}
-    - PrefabIndex: 1
-      Position: {x: 36, y: 20, z: 28}
     - PrefabIndex: 35
-      Position: {x: 46, y: 12, z: 30}
+      Position: {x: 64, y: 20, z: 26}
     - PrefabIndex: 35
-      Position: {x: 46, y: 14, z: 30}
+      Position: {x: 64, y: 20, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 22, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 24, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 40, y: 24, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 38, y: 24, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 36, y: 24, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 40, y: 20, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 38, y: 20, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 36, y: 20, z: 26}
     - PrefabIndex: 35
-      Position: {x: 44, y: 14, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 22, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 14, y: 2, z: 0}
-    - PrefabIndex: 1
-      Position: {x: 14, y: 4, z: 0}
-    - PrefabIndex: 1
-      Position: {x: 12, y: 2, z: 0}
-    - PrefabIndex: 1
-      Position: {x: 14, y: 2, z: 2}
-    - PrefabIndex: 1
       Position: {x: 14, y: 2, z: -2}
+    - PrefabIndex: 1
+      Position: {x: 14, y: 4, z: -2}
     - PrefabIndex: 1
       Position: {x: 12, y: 2, z: -2}
     - PrefabIndex: 1
-      Position: {x: 12, y: 2, z: 2}
+      Position: {x: 14, y: 2, z: 0}
     - PrefabIndex: 1
-      Position: {x: 48, y: 30, z: 44}
+      Position: {x: 14, y: 2, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 12, y: 2, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 12, y: 2, z: 0}
     - PrefabIndex: 1
       Position: {x: 48, y: 30, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 30, z: 40}
     - PrefabIndex: 35
-      Position: {x: 44, y: 30, z: 30}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 28, z: 32}
-    - PrefabIndex: 35
-      Position: {x: 42, y: 28, z: 28}
+      Position: {x: 44, y: 30, z: 28}
     - PrefabIndex: 35
       Position: {x: 42, y: 28, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 42, y: 34, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 42, y: 38, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 32, z: 32}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 34, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 38, z: 30}
     - PrefabIndex: 35
-      Position: {x: 46, y: 40, z: 30}
+      Position: {x: 42, y: 28, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 28, z: 28}
     - PrefabIndex: 1
-      Position: {x: 46, y: 42, z: 30}
-    - PrefabIndex: 1
-      Position: {x: 44, y: 40, z: 30}
+      Position: {x: 42, y: 34, z: 30}
     - PrefabIndex: 1
       Position: {x: 42, y: 38, z: 30}
-    - PrefabIndex: 35
+    - PrefabIndex: 1
       Position: {x: 44, y: 32, z: 30}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 34, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 38, z: 28}
     - PrefabIndex: 35
-      Position: {x: 42, y: 30, z: 30}
+      Position: {x: 46, y: 40, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 42, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 40, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 42, y: 38, z: 28}
     - PrefabIndex: 35
-      Position: {x: 46, y: 36, z: 26}
-    - PrefabIndex: 1
-      Position: {x: 48, y: 36, z: 22}
-    - PrefabIndex: 1
-      Position: {x: 46, y: 36, z: 22}
+      Position: {x: 44, y: 32, z: 28}
     - PrefabIndex: 35
-      Position: {x: 46, y: 34, z: 26}
+      Position: {x: 42, y: 30, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 36, z: 24}
     - PrefabIndex: 1
-      Position: {x: 44, y: 34, z: 26}
+      Position: {x: 48, y: 36, z: 20}
     - PrefabIndex: 1
-      Position: {x: 48, y: 34, z: 26}
-    - PrefabIndex: 1
+      Position: {x: 46, y: 36, z: 20}
+    - PrefabIndex: 35
       Position: {x: 46, y: 34, z: 24}
     - PrefabIndex: 1
-      Position: {x: 40, y: 2, z: 28}
+      Position: {x: 44, y: 34, z: 24}
     - PrefabIndex: 1
-      Position: {x: 38, y: 2, z: 30}
+      Position: {x: 48, y: 34, z: 24}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 34, z: 22}
+    - PrefabIndex: 1
+      Position: {x: 40, y: 2, z: 26}
     - PrefabIndex: 1
       Position: {x: 38, y: 2, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 38, y: 2, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 24, z: 10}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 22, z: 10}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 20, z: 8}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 22, z: 8}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 24, z: 8}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 26, z: 8}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 24, z: 6}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 22, z: 6}
+    - PrefabIndex: 35
+      Position: {x: 62, y: 26, z: 6}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 28, z: 6}
+    - PrefabIndex: 35
+      Position: {x: 68, y: 22, z: 6}
+    - PrefabIndex: 35
+      Position: {x: 68, y: 22, z: 8}
+    - PrefabIndex: 35
+      Position: {x: 68, y: 22, z: 10}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 28, z: 8}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 22, z: 12}
+    - PrefabIndex: 35
+      Position: {x: 66, y: 22, z: 12}
+    - PrefabIndex: 35
+      Position: {x: 68, y: 22, z: 12}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 32, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 30, z: 30}
+    - PrefabIndex: 35
+      Position: {x: 52, y: 18, z: 24}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 20, z: 40}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 20, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 26, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 28, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 22, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 22, z: 42}
+    - PrefabIndex: 53
+      Position: {x: 46, y: 22, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 26, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 24, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 22, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 50, y: 28, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 52, y: 28, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 30, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 56, y: 24, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 56, y: 26, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 20, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 18, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 18, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 44, y: 20, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 16, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 14, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 12, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 10, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 8, z: 28}
+    - PrefabIndex: 35
+      Position: {x: 42, y: 6, z: 28}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 30, z: -8}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 20, z: -10}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 22, z: -10}
+    - PrefabIndex: 35
+      Position: {x: 56, y: 22, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 24, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 68, y: 22, z: 4}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 22, z: 4}
+    - PrefabIndex: 35
+      Position: {x: 66, y: 22, z: 6}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 36, z: 18}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 36, z: 16}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 36, z: 16}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 38, z: 18}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 40, z: 18}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 42, z: 18}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 36, z: 16}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 36, z: 20}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 36, z: 20}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 38, z: 20}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 38, z: 20}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 38, z: 18}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 38, z: 18}
+    - PrefabIndex: 35
+      Position: {x: 66, y: 28, z: 18}
+    - PrefabIndex: 35
+      Position: {x: 68, y: 28, z: 18}
+    - PrefabIndex: 35
+      Position: {x: 66, y: 24, z: 12}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 22, z: 26}
+    - PrefabIndex: 35
+      Position: {x: 64, y: 24, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 24, z: 26}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 24, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 50, y: 24, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 30, z: 40}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 28, z: 40}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 32, z: -10}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 32, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 46, y: 32, z: -6}
+    - PrefabIndex: 1
+      Position: {x: 48, y: 32, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 44, y: 32, z: -8}
+    - PrefabIndex: 1
+      Position: {x: 58, y: 24, z: -6}
+    - PrefabIndex: 1
+      Position: {x: 56, y: 24, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 58, y: 24, z: -4}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 38, z: 16}
+    - PrefabIndex: 1
+      Position: {x: 64, y: 40, z: 18}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 38, z: 16}
+    - PrefabIndex: 1
+      Position: {x: 62, y: 38, z: 16}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 40, z: 18}
+    - PrefabIndex: 1
+      Position: {x: 66, y: 38, z: 20}
+    - PrefabIndex: 35
+      Position: {x: 52, y: 20, z: 40}
+    - PrefabIndex: 35
+      Position: {x: 52, y: 20, z: 38}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 20, z: 40}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 20, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 22, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 24, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 26, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 28, z: 38}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 22, z: 40}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 24, z: 40}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 26, z: 40}
+    - PrefabIndex: 35
+      Position: {x: 54, y: 28, z: 40}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 20, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 22, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 24, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 26, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 54, y: 28, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 22, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 24, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 28, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 26, z: 38}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 26, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 28, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 24, z: 42}
+    - PrefabIndex: 1
+      Position: {x: 52, y: 22, z: 42}
     ParkourBlocksSaveData: []
   - MapName: "P_Map_10_\u0421hess"
     MapIndex: 9
@@ -23165,41 +23359,7 @@ MonoBehaviour:
     - PrefabIndex: 7
       Position: {x: 32, y: 8, z: -26}
     - PrefabIndex: 2
-      Position: {x: 32, y: 16, z: -24}
-    - PrefabIndex: 2
       Position: {x: 32, y: 16, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 18, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 16, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 18, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 18, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 20, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 18, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 16, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 18, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 16, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 18, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 16, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 18, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 16, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 18, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 16, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 16, z: -24}
     - PrefabIndex: 7
       Position: {x: 32, y: 12, z: -26}
     - PrefabIndex: 7
@@ -23207,175 +23367,11 @@ MonoBehaviour:
     - PrefabIndex: 44
       Position: {x: 34, y: 6, z: -16}
     - PrefabIndex: 44
-      Position: {x: 40, y: 4, z: -26}
-    - PrefabIndex: 44
       Position: {x: 42, y: 4, z: -26}
     - PrefabIndex: 44
-      Position: {x: 40, y: 4, z: -28}
-    - PrefabIndex: 44
       Position: {x: 42, y: 4, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 38, y: 4, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 4, z: -30}
-    - PrefabIndex: 44
-      Position: {x: 38, y: 4, z: -26}
-    - PrefabIndex: 44
-      Position: {x: 38, y: 4, z: -30}
-    - PrefabIndex: 44
-      Position: {x: 42, y: 4, z: -30}
-    - PrefabIndex: 44
-      Position: {x: 38, y: 6, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 38, y: 8, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 6, z: -26}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 8, z: -26}
-    - PrefabIndex: 44
-      Position: {x: 42, y: 6, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 42, y: 8, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 6, z: -30}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 8, z: -30}
-    - PrefabIndex: 44
-      Position: {x: 42, y: 10, z: -28}
-    - PrefabIndex: 8
-      Position: {x: 40, y: 8, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 10, z: -26}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 10, z: -30}
-    - PrefabIndex: 44
-      Position: {x: 38, y: 10, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 40, y: 10, z: -28}
-    - PrefabIndex: 8
-      Position: {x: 40, y: 12, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 40, y: 12, z: -28}
-    - PrefabIndex: 8
-      Position: {x: 40, y: 12, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 12, z: -28}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 12, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 12, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 12, z: -28}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 12, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 12, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 12, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 12, z: -26}
     - PrefabIndex: 2
       Position: {x: 24, y: 14, z: -20}
-    - PrefabIndex: 8
-      Position: {x: 36, y: 12, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 36, y: 12, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 36, y: 14, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 36, y: 14, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 12, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 12, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 12, z: -32}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 12, z: -32}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 14, z: -32}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 14, z: -32}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 14, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 14, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 14, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 14, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 16, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 36, y: 16, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 16, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 16, z: -26}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 16, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 16, z: -32}
-    - PrefabIndex: 8
-      Position: {x: 38, y: 16, z: -32}
-    - PrefabIndex: 8
-      Position: {x: 36, y: 16, z: -30}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 20, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 20, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 20, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 20, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 20, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 20, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 20, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 20, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 22, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 22, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 22, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 22, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 24, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 20, z: -22}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 18, z: -22}
-    - PrefabIndex: 2
-      Position: {x: 28, y: 20, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 28, y: 18, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 20, z: -30}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 18, z: -30}
-    - PrefabIndex: 2
-      Position: {x: 36, y: 18, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 22, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 22, z: -22}
-    - PrefabIndex: 2
-      Position: {x: 28, y: 22, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 32, y: 22, z: -30}
-    - PrefabIndex: 8
-      Position: {x: 40, y: 16, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 40, y: 14, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 40, y: 12, z: -24}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 14, z: -26}
     - PrefabIndex: 44
       Position: {x: 40, y: 4, z: -8}
     - PrefabIndex: 44
@@ -23406,32 +23402,8 @@ MonoBehaviour:
       Position: {x: 42, y: 8, z: -6}
     - PrefabIndex: 44
       Position: {x: 42, y: 10, z: -6}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 14, z: -6}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 16, z: -6}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 12, z: -6}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 16, z: -8}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 16, z: -4}
-    - PrefabIndex: 8
-      Position: {x: 42, y: 18, z: -6}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 14, z: -28}
-    - PrefabIndex: 8
-      Position: {x: 44, y: 12, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 18, z: -24}
     - PrefabIndex: 7
       Position: {x: 32, y: 14, z: -26}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 22, z: -24}
-    - PrefabIndex: 2
-      Position: {x: 30, y: 22, z: -28}
-    - PrefabIndex: 2
-      Position: {x: 34, y: 22, z: -24}
     - PrefabIndex: 44
       Position: {x: 48, y: 2, z: -10}
     - PrefabIndex: 44
@@ -23507,17 +23479,9 @@ MonoBehaviour:
     - PrefabIndex: 7
       Position: {x: 56, y: 2, z: -16}
     - PrefabIndex: 7
-      Position: {x: 52, y: 4, z: -8}
-    - PrefabIndex: 7
-      Position: {x: 54, y: 4, z: -8}
-    - PrefabIndex: 7
-      Position: {x: 56, y: 4, z: -8}
-    - PrefabIndex: 7
       Position: {x: 50, y: 4, z: -4}
     - PrefabIndex: 7
       Position: {x: 50, y: 4, z: -6}
-    - PrefabIndex: 7
-      Position: {x: 50, y: 4, z: -8}
     - PrefabIndex: 7
       Position: {x: 50, y: 4, z: -2}
     - PrefabIndex: 7
@@ -23527,25 +23491,11 @@ MonoBehaviour:
     - PrefabIndex: 7
       Position: {x: 54, y: 4, z: -2}
     - PrefabIndex: 7
-      Position: {x: 56, y: 4, z: -2}
-    - PrefabIndex: 7
-      Position: {x: 56, y: 4, z: -4}
-    - PrefabIndex: 7
-      Position: {x: 56, y: 4, z: -6}
-    - PrefabIndex: 7
       Position: {x: 54, y: 4, z: -4}
     - PrefabIndex: 7
       Position: {x: 52, y: 4, z: -6}
     - PrefabIndex: 7
       Position: {x: 54, y: 4, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 20, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 20, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 20, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 20, z: -4}
     - PrefabIndex: 7
       Position: {x: 52, y: 6, z: -6}
     - PrefabIndex: 7
@@ -23553,21 +23503,9 @@ MonoBehaviour:
     - PrefabIndex: 7
       Position: {x: 54, y: 6, z: -4}
     - PrefabIndex: 7
-      Position: {x: 52, y: 8, z: -4}
-    - PrefabIndex: 7
       Position: {x: 52, y: 8, z: -6}
     - PrefabIndex: 7
       Position: {x: 54, y: 8, z: -4}
-    - PrefabIndex: 7
-      Position: {x: 52, y: 10, z: -4}
-    - PrefabIndex: 7
-      Position: {x: 52, y: 12, z: -4}
-    - PrefabIndex: 7
-      Position: {x: 52, y: 14, z: -4}
-    - PrefabIndex: 7
-      Position: {x: 52, y: 16, z: -4}
-    - PrefabIndex: 7
-      Position: {x: 52, y: 18, z: -4}
     - PrefabIndex: 7
       Position: {x: 52, y: 10, z: -6}
     - PrefabIndex: 7
@@ -23576,38 +23514,6 @@ MonoBehaviour:
       Position: {x: 54, y: 12, z: -4}
     - PrefabIndex: 7
       Position: {x: 54, y: 10, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 20, z: -8}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 20, z: -8}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 20, z: -8}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 20, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 20, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 48, y: 20, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 48, y: 20, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 20, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 20, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 20, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 56, y: 20, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 56, y: 20, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 56, y: 20, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 20, z: 0}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 20, z: 0}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 20, z: 0}
     - PrefabIndex: 7
       Position: {x: 50, y: 12, z: -4}
     - PrefabIndex: 7
@@ -23621,10 +23527,6 @@ MonoBehaviour:
     - PrefabIndex: 7
       Position: {x: 52, y: 6, z: -2}
     - PrefabIndex: 2
-      Position: {x: 48, y: 20, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 18, z: -6}
-    - PrefabIndex: 2
       Position: {x: 52, y: 16, z: -6}
     - PrefabIndex: 2
       Position: {x: 54, y: 18, z: -4}
@@ -23635,35 +23537,13 @@ MonoBehaviour:
     - PrefabIndex: 2
       Position: {x: 52, y: 16, z: -2}
     - PrefabIndex: 2
-      Position: {x: 52, y: 22, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 22, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 22, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 22, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 22, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 22, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 22, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 22, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 22, z: -6}
-    - PrefabIndex: 2
       Position: {x: 52, y: 24, z: -4}
     - PrefabIndex: 2
       Position: {x: 52, y: 26, z: -4}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 28, z: -4}
     - PrefabIndex: 7
       Position: {x: 50, y: 8, z: -4}
     - PrefabIndex: 7
       Position: {x: 52, y: 8, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 50, y: 18, z: -4}
     - PrefabIndex: 2
       Position: {x: 50, y: 16, z: -4}
     - PrefabIndex: 7
@@ -23674,14 +23554,6 @@ MonoBehaviour:
       Position: {x: 54, y: 14, z: -4}
     - PrefabIndex: 7
       Position: {x: 52, y: 14, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 28, z: -2}
-    - PrefabIndex: 2
-      Position: {x: 52, y: 28, z: -6}
-    - PrefabIndex: 2
-      Position: {x: 54, y: 24, z: -4}
-    - PrefabIndex: 53
-      Position: {x: 52, y: 30, z: -4}
     - PrefabIndex: 8
       Position: {x: 22, y: 2, z: 4}
     - PrefabIndex: 8
@@ -23727,19 +23599,9 @@ MonoBehaviour:
     - PrefabIndex: 2
       Position: {x: 22, y: 2, z: 6}
     - PrefabIndex: 44
-      Position: {x: 36, y: 4, z: -30}
-    - PrefabIndex: 44
-      Position: {x: 36, y: 4, z: -28}
-    - PrefabIndex: 44
-      Position: {x: 36, y: 4, z: -26}
-    - PrefabIndex: 44
-      Position: {x: 44, y: 4, z: -30}
-    - PrefabIndex: 44
       Position: {x: 44, y: 4, z: -28}
     - PrefabIndex: 44
       Position: {x: 44, y: 4, z: -26}
-    - PrefabIndex: 7
-      Position: {x: 32, y: 8, z: -28}
     - PrefabIndex: 44
       Position: {x: 48, y: 2, z: -30}
     - PrefabIndex: 44
@@ -23790,10 +23652,6 @@ MonoBehaviour:
       Position: {x: 50, y: 2, z: -28}
     - PrefabIndex: 44
       Position: {x: 52, y: 2, z: -30}
-    - PrefabIndex: 7
-      Position: {x: 30, y: 8, z: -28}
-    - PrefabIndex: 7
-      Position: {x: 34, y: 8, z: -28}
     - PrefabIndex: 2
       Position: {x: 32, y: 10, z: -6}
     - PrefabIndex: 7
@@ -23826,6 +23684,492 @@ MonoBehaviour:
       Position: {x: 38, y: 2, z: -18}
     - PrefabIndex: 44
       Position: {x: 40, y: 2, z: -18}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 4, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 4, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 4, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 4, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 4, z: -24}
+    - PrefabIndex: 7
+      Position: {x: 38, y: 2, z: -26}
+    - PrefabIndex: 7
+      Position: {x: 38, y: 2, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 6, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 6, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 12, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 10, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 8, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 8, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 10, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 12, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 16, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 16, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 18, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 18, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 18, z: -22}
+    - PrefabIndex: 7
+      Position: {x: 32, y: 10, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 16, z: -22}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 12, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 10, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 8, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 6, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 10, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 8, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 10, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 12, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 14, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 16, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 16, z: -24}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 16, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 14, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 14, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 12, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 10, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 8, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 44, y: 6, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 6, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 14, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 12, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 10, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 8, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 6, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 14, z: -24}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 14, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 16, z: -24}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 16, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 16, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 18, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 16, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 16, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 16, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 18, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 18, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 20, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 16, z: -24}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 16, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 16, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 16, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 16, z: -24}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 16, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 18, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 18, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 16, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 14, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 18, z: -24}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 18, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 20, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 20, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 20, z: -22}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 18, z: -24}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 18, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 18, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 20, z: -26}
+    - PrefabIndex: 8
+      Position: {x: 46, y: 20, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 38, y: 20, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 18, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 20, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 22, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 24, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 24, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 36, y: 24, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 36, y: 24, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 24, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 24, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 24, z: -22}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 24, z: -22}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 24, z: -22}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 24, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 24, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 28, y: 24, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 28, y: 24, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 22, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 22, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 22, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 22, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 28, y: 22, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 38, y: 24, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 24, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 24, z: -30}
+    - PrefabIndex: 2
+      Position: {x: 36, y: 24, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 24, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 24, z: -30}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 24, z: -32}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 24, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 24, z: -30}
+    - PrefabIndex: 2
+      Position: {x: 28, y: 24, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 22, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 22, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 22, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 22, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 28, y: 24, z: -30}
+    - PrefabIndex: 2
+      Position: {x: 36, y: 24, z: -30}
+    - PrefabIndex: 2
+      Position: {x: 28, y: 24, z: -22}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 26, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 26, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 26, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 26, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 26, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 26, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 26, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 26, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 26, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 24, z: -20}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 24, z: -20}
+    - PrefabIndex: 2
+      Position: {x: 26, y: 24, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 26, y: 24, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 26, y: 24, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 24, z: -32}
+    - PrefabIndex: 2
+      Position: {x: 38, y: 24, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 20, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 30, y: 20, z: -26}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 20, z: -28}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 20, z: -26}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 12, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 20, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 18, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 20, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 20, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 20, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 22, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 22, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 22, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 24, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 24, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 24, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 22, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 22, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 24, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 24, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 22, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 22, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 22, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 24, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 24, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 24, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 22, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 22, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 22, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 22, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 22, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 22, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 22, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 22, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 22, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 22, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 22, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 22, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 22, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 22, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 22, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 22, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 24, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 24, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 24, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 24, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 24, z: -8}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 24, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 24, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 48, y: 24, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 24, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 24, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 24, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 24, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 24, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 24, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 56, y: 24, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 28, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 30, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 30, z: -2}
+    - PrefabIndex: 2
+      Position: {x: 52, y: 30, z: -6}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 18, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 50, y: 20, z: -4}
+    - PrefabIndex: 2
+      Position: {x: 36, y: 24, z: -22}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 24, z: -20}
+    - PrefabIndex: 2
+      Position: {x: 38, y: 24, z: -24}
+    - PrefabIndex: 2
+      Position: {x: 34, y: 24, z: -32}
+    - PrefabIndex: 2
+      Position: {x: 32, y: 28, z: -26}
+    - PrefabIndex: 7
+      Position: {x: 50, y: 4, z: -8}
+    - PrefabIndex: 7
+      Position: {x: 52, y: 4, z: -8}
+    - PrefabIndex: 7
+      Position: {x: 54, y: 4, z: -8}
+    - PrefabIndex: 7
+      Position: {x: 48, y: 4, z: -4}
+    - PrefabIndex: 7
+      Position: {x: 48, y: 4, z: -6}
+    - PrefabIndex: 7
+      Position: {x: 48, y: 4, z: -8}
+    - PrefabIndex: 7
+      Position: {x: 48, y: 4, z: -2}
+    - PrefabIndex: 7
+      Position: {x: 48, y: 4, z: 0}
+    - PrefabIndex: 7
+      Position: {x: 50, y: 4, z: 0}
+    - PrefabIndex: 7
+      Position: {x: 52, y: 4, z: 0}
+    - PrefabIndex: 7
+      Position: {x: 54, y: 4, z: 0}
+    - PrefabIndex: 7
+      Position: {x: 56, y: 4, z: -8}
+    - PrefabIndex: 7
+      Position: {x: 56, y: 4, z: -6}
+    - PrefabIndex: 7
+      Position: {x: 56, y: 4, z: -4}
+    - PrefabIndex: 7
+      Position: {x: 56, y: 4, z: -2}
+    - PrefabIndex: 7
+      Position: {x: 56, y: 4, z: 0}
+    - PrefabIndex: 2
+      Position: {x: 54, y: 26, z: -4}
+    - PrefabIndex: 44
+      Position: {x: 40, y: 10, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 18, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 16, z: -30}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 12, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 14, z: -28}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 12, z: -28}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 22, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 22, z: -8}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 24, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 24, z: -8}
+    - PrefabIndex: 44
+      Position: {x: 42, y: 14, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 26, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 24, z: -4}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 22, z: -4}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 24, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 22, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 22, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 24, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 18, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 16, z: -6}
+    - PrefabIndex: 53
+      Position: {x: 52, y: 32, z: -4}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 20, z: -4}
+    - PrefabIndex: 8
+      Position: {x: 44, y: 20, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 40, y: 20, z: -6}
+    - PrefabIndex: 8
+      Position: {x: 42, y: 20, z: -8}
     ParkourBlocksSaveData: []
   - MapName: P_Map_11_Waterfall_in_sky
     MapIndex: 10
@@ -23864,18 +24208,6 @@ MonoBehaviour:
       Position: {x: 44, y: 8, z: 8}
     - PrefabIndex: 35
       Position: {x: 44, y: 10, z: 8}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 2, z: -2}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 4, z: -2}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 6, z: -2}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 8, z: -2}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 10, z: -2}
-    - PrefabIndex: 35
-      Position: {x: 50, y: 12, z: -2}
     - PrefabIndex: 35
       Position: {x: 46, y: 2, z: -16}
     - PrefabIndex: 35
@@ -24051,17 +24383,7 @@ MonoBehaviour:
     - PrefabIndex: 44
       Position: {x: 50, y: 28, z: 6}
     - PrefabIndex: 44
-      Position: {x: 48, y: 28, z: 8}
-    - PrefabIndex: 44
-      Position: {x: 50, y: 28, z: 8}
-    - PrefabIndex: 44
-      Position: {x: 50, y: 28, z: 10}
-    - PrefabIndex: 44
       Position: {x: 50, y: 28, z: 4}
-    - PrefabIndex: 44
-      Position: {x: 52, y: 28, z: 6}
-    - PrefabIndex: 44
-      Position: {x: 62, y: 28, z: 4}
     - PrefabIndex: 9
       Position: {x: 64, y: 28, z: -8}
     - PrefabIndex: 16
@@ -25084,72 +25406,103 @@ MonoBehaviour:
       Position: {x: 66, y: 30, z: -6}
     - PrefabIndex: 16
       Position: {x: 66, y: 30, z: -10}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 4, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 6, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 8, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 10, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 48, y: 12, z: 0}
+    - PrefabIndex: 9
+      Position: {x: 50, y: 2, z: -2}
+    - PrefabIndex: 35
+      Position: {x: 46, y: 16, z: -16}
+    - PrefabIndex: 54
+      Position: {x: 4, y: 18, z: -18}
+    - PrefabIndex: 44
+      Position: {x: 50, y: 28, z: 8}
+    - PrefabIndex: 44
+      Position: {x: 52, y: 28, z: 4}
+    - PrefabIndex: 44
+      Position: {x: 48, y: 28, z: 4}
+    - PrefabIndex: 44
+      Position: {x: 50, y: 28, z: 2}
+    - PrefabIndex: 44
+      Position: {x: 52, y: 28, z: 2}
     ParkourBlocksSaveData:
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 29
+      BlockOnSceneIndex: 23
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 30
+      BlockOnSceneIndex: 24
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 31
+      BlockOnSceneIndex: 25
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0.615661, z: 0, w: -0.7880112}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 50
+      BlockOnSceneIndex: 44
       Speed: 3
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0.71934, z: 0, w: -0.6946582}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 52
+      BlockOnSceneIndex: 46
       Speed: 3
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 53
+      BlockOnSceneIndex: 47
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 54
+      BlockOnSceneIndex: 48
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 55
+      BlockOnSceneIndex: 49
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 56
+      BlockOnSceneIndex: 50
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 57
+      BlockOnSceneIndex: 51
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 58
+      BlockOnSceneIndex: 52
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: -0.43837106, z: 0, w: -0.8987941}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 88
+      BlockOnSceneIndex: 82
       Speed: 3
       InvertMoveCycle: 0
     - rotation: {x: -0.64085674, y: 0.29883552, z: -0.64085674, w: 0.29883552}
       Scale: {x: 6, y: 6, z: 6}
-      BlockOnSceneIndex: 106
+      BlockOnSceneIndex: 100
       Speed: 5
       InvertMoveCycle: 1
+    - rotation: {x: 0, y: 0, z: 0, w: 1}
+      Scale: {x: 2, y: 2, z: 2}
+      BlockOnSceneIndex: 622
+      Speed: 0
+      InvertMoveCycle: 0
   - MapName: P_Map_12_Dissociation
     MapIndex: 11
     SaveDate: 
@@ -26942,9 +27295,11 @@ MonoBehaviour:
     - PrefabIndex: 20
       Position: {x: 14, y: 4, z: -20}
     - PrefabIndex: 20
-      Position: {x: 18, y: 6, z: -22}
+      Position: {x: 18, y: 4, z: -24}
     - PrefabIndex: 20
       Position: {x: 18, y: 6, z: -24}
+    - PrefabIndex: 20
+      Position: {x: 18, y: 8, z: -24}
     ParkourBlocksSaveData:
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
