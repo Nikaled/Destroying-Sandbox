@@ -414,8 +414,8 @@ public class SerializeBlockManager : MonoBehaviour
     [ContextMenu("LoadBlocksAndChangeBlocks")]
     public void LoadBlocksAndChangeBlocks()
     {
-        int blockToChangeIndex = 44;
-        int blockWantChangeIndex = 7;
+        int blockToChangeIndex = 39;
+        int blockWantChangeIndex = 11;
         if (BlocksOnScene.Count > 0)
         {
             for (int i = 0; i < BlocksOnScene.Count; i++)

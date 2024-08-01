@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 2.33
+  m_AmbientIntensity: 2
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: da976b1a4f7ebb949b0f71341e4f1821, type: 2}
@@ -264,6 +264,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 449366339571460871, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611196942815783367, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 916506394246814921, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: mobile
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509275524843014356, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2005504957004966292, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
@@ -1422,6 +1434,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6912583509912471928, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7102758851291303444, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1470,6 +1486,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7535120787624582447, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_text
+      value: 99:99:999
+      objectReference: {fileID: 0}
     - target: {fileID: 7808985240678380142, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1517,6 +1537,18 @@ PrefabInstance:
     - target: {fileID: 8020022419237512093, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606349140601609308, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190.2411
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606349140601609308, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606349140601609308, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 9010482370581771934, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_AnchorMax.y

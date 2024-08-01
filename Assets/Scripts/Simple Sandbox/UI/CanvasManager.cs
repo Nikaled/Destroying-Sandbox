@@ -29,6 +29,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject UpLeftButtons;
     [SerializeField] public Button DoButton;
     [SerializeField] public Button InteracteButton;
+    [SerializeField] public Button JumpButton;
     [SerializeField] public Button SaveButton;
     [SerializeField] Image[] InteracteSymbolInButton;
     [SerializeField] Image DoButtonImageInIdle;
@@ -48,10 +49,10 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public Button ChangePhaseButton;
     [SerializeField] public GameObject UnlockWeaponUI;
     [SerializeField] GameObject[] WeaponInstructions;
+    [SerializeField] TextMeshProUGUI CurrentDestroyedText;
     [Header("Parkour")]
     [SerializeField] GameObject ParkourUI;
     [SerializeField] GameObject OnWinParkourMapUI;
-    [SerializeField] TextMeshProUGUI CurrentDestroyedText;
     [SerializeField] GameObject RewardUI;
     [SerializeField] Button LoadNextLevelButton;
     [SerializeField] TextMeshProUGUI RewardText;
@@ -250,6 +251,10 @@ public class CanvasManager : MonoBehaviour
             Geekplay.Instance.Save();
         }
 
+    }
+    public void JumpButtonUpScale()
+    {
+        JumpButton.gameObject.transform.localScale = new Vector3(2, 2, 2);
     }
     public void MapModeUISetup()
     {

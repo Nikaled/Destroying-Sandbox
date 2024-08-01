@@ -197,6 +197,8 @@ public class Player : MonoBehaviour
                     CanvasManager.instance.DoButton.gameObject.SetActive(false);
                     CanvasManager.instance.InteracteButton.gameObject.SetActive(false);
                     CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
+                    CanvasManager.instance.BuildingMenuButton.SetActive(false);
+                    CanvasManager.instance.JumpButtonUpScale();
                 }
                 else
                 {

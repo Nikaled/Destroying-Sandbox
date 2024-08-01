@@ -12,27 +12,30 @@ public class DisappearingBlock : MonoBehaviour, IMoveableParkour
     public float TimeToAppearAgain;
     private IEnumerator DisCor;
     public bool IsFrozen { get; set; }
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] BoxCollider TriggerCollider;
+    public void OnCollisionEnter(Collision collision)
     {
         //if (IsFrozen)
         //{
         //    return;
         //}
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Player"))
-        {
-       
-            if(IsDisappearing == false)
+        
+    }
+    public void StartDisappearing()
+    {
+
+            if (IsDisappearing == false)
             {
                 IsDisappearing = true;
-                if(DisCor != null)
+            TriggerCollider.enabled = false;
+                if (DisCor != null)
                 {
                     StopCoroutine(DisCor);
                 }
                 DisCor = Disappearing();
                 StartCoroutine(DisCor);
             }
-        }
     }
     private IEnumerator Disappearing()
     {
@@ -65,6 +68,7 @@ public class DisappearingBlock : MonoBehaviour, IMoveableParkour
         BlockCollider.enabled = true;
         BlockMesh.enabled = true;
         IsDisappearing = false;
+        TriggerCollider.enabled = true;
     }
     private void ChangeAlphaOnMaterial(Material mat, float alphaVal)
     {

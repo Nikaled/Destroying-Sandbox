@@ -38,6 +38,7 @@ public class ParkourSlotMenuManager : MonoBehaviour
                 for (int i = 0; i < parkourCells.Length; i++)
                 {
                     parkourCells[i].SetTimeToSlot(0);
+                    parkourCells[i].LoadDataFromSO(Data.ParkourMaps[i]);
                 }
             }
         }
@@ -46,6 +47,7 @@ public class ParkourSlotMenuManager : MonoBehaviour
             for (int i = 0; i < parkourCells.Length; i++)
             {
                 parkourCells[i].SetTimeToSlot(0);
+                parkourCells[i].LoadDataFromSO(Data.ParkourMaps[i]);
             }
         }
     }
