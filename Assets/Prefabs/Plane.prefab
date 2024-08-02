@@ -384,10 +384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da57f6423219064faab288597ef9862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpawnPoints:
-  - {fileID: 7058663591674385503}
-  - {fileID: 6792518854583279378}
-  bullet: {fileID: 868298531, guid: cfa9b245a40c7d34d88826a3dfa04b93, type: 3}
   FireAndExplodeSoundSource: {fileID: 8604315279737886443}
   FlySoundSource: {fileID: 2335033707453948296}
   ShootingClip: {fileID: 8300000, guid: ac54fab6b290a11478b0a483db34d2b9, type: 3}
@@ -1069,6 +1065,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 124172, guid: e2747da4d23f91740ac3d61a1ab55904, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 177540, guid: e2747da4d23f91740ac3d61a1ab55904, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -1151,6 +1151,10 @@ PrefabInstance:
     - target: {fileID: 124172, guid: e2747da4d23f91740ac3d61a1ab55904, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 124172, guid: e2747da4d23f91740ac3d61a1ab55904, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 177540, guid: e2747da4d23f91740ac3d61a1ab55904, type: 3}
       propertyPath: m_Layer

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -301,6 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 9062176}
   MeshObject: {fileID: 1895963688}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -310,6 +312,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &9062178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: blue_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &9062179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -366,6 +374,75 @@ Transform:
   - {fileID: 1895963694}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &28710855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5186990280035686546, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_Name
+      value: FlameThrower (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186990280035686546, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 53.935123
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.606518
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 39.56562
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6814836
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.008895718
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7315781
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.017161664
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 179.256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 85.953
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 182.087
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1897714626}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+--- !u!4 &28710856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7831588731089226230, guid: 9d51f4320eb8bdd4b842dc6365ca5133, type: 3}
+  m_PrefabInstance: {fileID: 28710855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &30250101
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 30250101}
   MeshObject: {fileID: 386318083}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -406,6 +485,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &30250103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +501,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Black_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &30250104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -512,6 +597,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263160843}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &31523385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -633,6 +719,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2057807386}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &35041900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -754,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.06798744, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.18245173, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -810,6 +897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 50643812}
   MeshObject: {fileID: 2055755176}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -819,6 +908,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &50643814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,6 +924,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: yellow_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &50643815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -925,6 +1020,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 341146490}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &61602807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1046,6 +1142,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1734032127}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &61668927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1167,6 +1264,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 700135420}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &62703024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1356,6 +1454,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1262480512}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &71827501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1477,6 +1576,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 9062178}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &74683110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1598,6 +1698,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1363830726}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &77188702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1719,6 +1820,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 838581674}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &79867132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1987,6 +2089,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1272124877}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &92614061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2108,6 +2211,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 746347940}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &101829174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2229,6 +2333,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 821524782}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &103168431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2350,6 +2455,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1817094613}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &105705079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2471,6 +2577,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1339290369}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &107994519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2592,6 +2699,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1363830726}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &107998488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2713,6 +2821,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2109437461}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &108504120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2834,6 +2943,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1162890829}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &118854172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2955,6 +3065,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 143557318}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &131913886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3076,6 +3187,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1465157502}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &134951037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3197,6 +3309,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 143557318}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &136930290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3318,6 +3431,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 838581674}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &137236509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3420,6 +3534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 143557316}
   MeshObject: {fileID: 222238612}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -3429,6 +3545,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &143557318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3442,6 +3561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Beacon
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &143557319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3535,6 +3657,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1162890829}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &143558569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3656,6 +3779,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1134991775}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &152304419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3777,6 +3901,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1096437639}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &155296347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3898,6 +4023,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1518565517}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &156820166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4019,6 +4145,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 379874069}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &171849185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4140,6 +4267,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1983068786}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &174350425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4261,6 +4389,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1465157502}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &177949938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4382,6 +4511,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1566045130}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &182818903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4503,6 +4633,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 630273043}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &185470115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4605,6 +4736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 190402290}
   MeshObject: {fileID: 1639300509}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -4614,6 +4747,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &190402292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4627,6 +4763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cracked_nether_bricks
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &190402293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4720,6 +4859,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 9062178}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &196144082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4841,6 +4981,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1420462674}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &200239615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4962,6 +5103,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 700135420}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &209105625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5083,6 +5225,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2070499998}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &212209402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5204,6 +5347,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 746347940}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &212519990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5325,6 +5469,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263145890}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &217911287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5446,6 +5591,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 143557318}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &221753585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5714,6 +5860,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1568954640}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &225215126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5908,6 +6055,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1134991775}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &235014355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6176,6 +6324,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2070499998}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &236761621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6297,6 +6446,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1261000685}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &237792336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6418,6 +6568,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1534914852}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &241000956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6539,6 +6690,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 190402292}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &255530581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6660,6 +6812,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2117157384}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &261049873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6781,6 +6934,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1261000685}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &263971951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6902,6 +7056,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 379874069}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &268635314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7023,6 +7178,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1734032127}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &270619962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7144,6 +7300,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1096437639}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &271684781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7265,6 +7422,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 190402292}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &272958362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7386,6 +7544,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 402920815}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &274982952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7654,6 +7813,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1595459638}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &279094829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7775,6 +7935,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2057807386}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &299010133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7896,6 +8057,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 402920815}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &303574330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8017,6 +8179,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1162890829}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &304904894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8138,6 +8301,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1534914852}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &309153336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8259,6 +8423,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344558592}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &323719919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8380,6 +8545,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 798811711}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &338714948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8482,6 +8648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 341146488}
   MeshObject: {fileID: 1921695476}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -8491,6 +8659,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &341146490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8504,6 +8675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cracked_polished_blackstone_bricks
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &341146491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8597,6 +8771,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1096437639}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &342271897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8699,6 +8874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 344263657}
   MeshObject: {fileID: 1584758079}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -8708,6 +8885,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &344263659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8721,6 +8901,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cracked_deepslate_bricks
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &344263660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8795,6 +8978,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 344558590}
   MeshObject: {fileID: 730715155}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -8804,6 +8989,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &344558592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8817,6 +9005,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: stone_bricks
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &344558593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9038,6 +9229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 352930292}
   MeshObject: {fileID: 1579404612}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -9047,6 +9240,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &352930294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9060,6 +9256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cobblestone
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &352930295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9153,6 +9352,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 50643814}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &353593502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9274,6 +9474,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 341146490}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &356675131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9492,6 +9693,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1272124879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &371058800
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4640988220346820758, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_Name
+      value: monster truck 3d model
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.049999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5286455
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.386135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -80.35391
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.85933197
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.012573849
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.51080734
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.021593777
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414393957288981036, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3937aa11a890984ea5d812df95b5678, type: 3}
 --- !u!1 &375251085
 GameObject:
   m_ObjectHideFlags: 0
@@ -9542,6 +9808,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 50643814}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &375251088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9644,6 +9911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 379874067}
   MeshObject: {fileID: 1210032635}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -9653,6 +9922,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &379874069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9666,6 +9938,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: red_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &379874070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9759,6 +10034,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2117157384}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &381341546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9880,6 +10156,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1273010011}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &381817637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10001,6 +10278,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 190402292}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &384863458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10269,6 +10547,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1134991775}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &390669716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10390,6 +10669,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1281620971}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &390818226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10511,6 +10791,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263145890}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &397527476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10779,6 +11060,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1363830726}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &399392507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10881,6 +11163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 402920813}
   MeshObject: {fileID: 1199683203}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -10890,6 +11174,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &402920815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10903,6 +11190,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: white_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &402920816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10996,6 +11286,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1568954640}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &407157857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11264,6 +11555,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1281620971}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &420892280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11385,6 +11677,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 352930294}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &427834545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11653,6 +11946,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 30250103}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &433556224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11774,6 +12068,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1281620971}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &441130084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11895,6 +12190,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1096437639}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &452256405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12016,6 +12312,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1817094613}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &456840876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12137,6 +12434,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2070499998}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &481490860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12258,6 +12556,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1518565517}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &486620174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12379,6 +12678,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 402920815}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &490065300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12647,6 +12947,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344263659}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &492492665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12768,6 +13069,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 190402292}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &499115857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12889,6 +13191,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1134991775}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &501113124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13010,6 +13313,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 746347940}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &501163358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13131,6 +13435,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344263659}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &503233029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13252,6 +13557,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1275981502}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &512054181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13373,6 +13679,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 9062178}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &540005366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13494,6 +13801,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2117157384}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &563922300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13615,6 +13923,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1420462674}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &573167766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13736,6 +14045,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1275981502}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &585466311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13857,6 +14167,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1566045130}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &587489810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13978,6 +14289,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1272124877}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &590040257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14099,6 +14411,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344263659}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &599024152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14220,6 +14533,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1595459638}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &600442128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14341,6 +14655,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1566045130}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &614041947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14462,6 +14777,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1262480512}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &619282469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14564,6 +14880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 630273041}
   MeshObject: {fileID: 3457596}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -14573,6 +14891,9 @@ MonoBehaviour:
   IsFireable: 1
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &630273043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14586,6 +14907,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Beehive_front
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &630273044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14679,6 +15003,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1096437639}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &636420545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14800,6 +15125,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 821524782}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &644935835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14921,6 +15247,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 798811711}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &646941590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15189,6 +15516,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2008893174}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &659000466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15310,6 +15638,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1363830726}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &663411549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15431,6 +15760,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263145890}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &665270136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15699,6 +16029,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1261000685}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &670299723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15820,6 +16151,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 630273043}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &675440773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15941,6 +16273,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2057807386}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &676512860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16062,6 +16395,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 402920815}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &678705212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16183,6 +16517,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1534914852}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &697126381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16285,6 +16620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 700135418}
   MeshObject: {fileID: 276750519}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -16294,6 +16631,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &700135420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16307,6 +16647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: magenta_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &700135421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16400,6 +16743,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1273010011}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &718214440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16521,6 +16865,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1162890829}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &723819786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16789,6 +17134,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1261000685}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &731990787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17099,6 +17445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 746347938}
   MeshObject: {fileID: 847170503}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -17108,6 +17456,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &746347940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17121,6 +17472,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Amethyst
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &746347941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17214,6 +17568,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1273010011}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &747788384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17335,6 +17690,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 9062178}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &751680173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17456,6 +17812,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 700135420}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &755887836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17577,6 +17934,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 821524782}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &759550472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17698,6 +18056,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2070499998}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &763276587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17819,6 +18178,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 50643814}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &764299911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17940,6 +18300,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1275981502}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &769930743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18061,6 +18422,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1273010011}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &779872831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18182,6 +18544,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1275981502}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &782387828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18303,6 +18666,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1534914852}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &782522558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18424,6 +18788,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1817094613}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &794147259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18545,6 +18910,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 838581674}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &796543183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18647,6 +19013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 798811709}
   MeshObject: {fileID: 414092381}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -18656,6 +19024,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &798811711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18669,6 +19040,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: sandstone
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &798811712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18762,6 +19136,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 50643814}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &808026652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18883,6 +19258,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 798811711}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &812999514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18985,6 +19361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 821524780}
   MeshObject: {fileID: 1634218945}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -18994,6 +19372,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &821524782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19007,6 +19388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: bricks
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &821524783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19100,6 +19484,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 143557318}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &828362741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19202,6 +19587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 838581672}
   MeshObject: {fileID: 1394387278}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -19211,6 +19598,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &838581674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19224,6 +19614,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cracked_deepslate_tiles
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &838581675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19267,6 +19660,102 @@ Transform:
   - {fileID: 1394387284}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &845205489
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8228959
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.3345957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.021209372
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4587356
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 32.088
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -23.799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -65.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237094961802206335, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_Name
+      value: Meteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237094961802206335, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096941354818434060, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096941354818434060, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096941354818434060, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1960010921}
+    - targetCorrespondingSourceObject: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 927287318}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+--- !u!4 &845205490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6816379414780328162, guid: 55f00b9888f7d5545bc32493b1c48cf1, type: 3}
+  m_PrefabInstance: {fileID: 845205489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &846320413
 GameObject:
   m_ObjectHideFlags: 0
@@ -19317,6 +19806,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2070499998}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &846320416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19658,6 +20148,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1480211687}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &850905570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20073,6 +20564,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1465157502}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &875544942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20194,6 +20686,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1983068786}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &892115347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20315,6 +20808,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344558592}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &892640931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20436,6 +20930,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1465157502}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &903510788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20557,6 +21052,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 798811711}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &903937444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20678,6 +21174,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1817094613}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &910986902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20799,6 +21296,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 352930294}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &920998443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20870,6 +21368,96 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920998440}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &927287317
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 845205490}
+    m_Modifications:
+    - target: {fileID: 1259762591101698, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Name
+      value: FX_FlameThrower_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259762591101698, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.45248863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45248863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.45248863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.429
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4207958
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.51763415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38410324
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6383185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -40.369
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -61.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 51.466
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199264920374470284, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199996472042573172, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+--- !u!4 &927287318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+  m_PrefabInstance: {fileID: 927287317}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &928703897
 GameObject:
   m_ObjectHideFlags: 0
@@ -20920,6 +21508,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 190402292}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &928703900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21041,6 +21630,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1595459638}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &947370100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21309,6 +21899,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 9062178}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &953395843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21430,6 +22021,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1262480512}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &959156211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21551,6 +22143,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1339290369}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &962407075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21672,6 +22265,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1518565517}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &963987597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21793,6 +22387,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1534914852}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &967039637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21914,6 +22509,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 700135420}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &979710008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22035,6 +22631,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1273010011}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &988962950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22156,6 +22753,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1480211687}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &995769009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22277,6 +22875,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1480211687}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &996345467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22398,6 +22997,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 30250103}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &999019563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22666,6 +23266,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 341146490}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1024018286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22787,6 +23388,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1568954640}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1025350244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22908,6 +23510,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2117157384}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1030250332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23121,6 +23724,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 798811711}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1039875025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23242,6 +23846,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 838581674}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1053724299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23363,6 +23968,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 30250103}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1088328377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23484,6 +24090,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1162890829}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1089515101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23605,6 +24212,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 700135420}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1090881576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23726,6 +24334,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1339290369}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1093063525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23828,6 +24437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1096437637}
   MeshObject: {fileID: 733971018}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -23837,6 +24448,9 @@ MonoBehaviour:
   IsFireable: 1
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1096437639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23850,6 +24464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: oak
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1096437640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23943,6 +24560,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2008893174}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1098369280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24064,6 +24682,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 630273043}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1105478366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24479,6 +25098,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1339290369}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1122159797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24581,6 +25201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1134991773}
   MeshObject: {fileID: 1418445505}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -24590,6 +25212,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1134991775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24603,6 +25228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: sand
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1134991776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24696,6 +25324,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 821524782}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1154787353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24817,6 +25446,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 50643814}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1162887227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24919,6 +25549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1162890827}
   MeshObject: {fileID: 1913451540}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -24928,6 +25560,9 @@ MonoBehaviour:
   IsFireable: 1
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1162890829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24941,6 +25576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: blue_ice
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1162890830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25034,6 +25672,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 352930294}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1164043823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25155,6 +25794,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1420462674}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1164118645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25276,6 +25916,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1261000685}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1174542732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25397,6 +26038,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1566045130}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1177746408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25518,6 +26160,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 341146490}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1182474200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25639,6 +26282,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 352930294}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1184467811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25760,6 +26404,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1363830726}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1190052699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26028,6 +26673,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2109437461}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1202607806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26443,6 +27089,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2109437461}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1212283512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26564,6 +27211,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 379874069}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1215702885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26685,6 +27333,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 379874069}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1218070460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26806,6 +27455,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263145890}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1218079213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26927,6 +27577,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 746347940}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1221465633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27195,6 +27846,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1817094613}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1230043982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27316,6 +27968,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1281620971}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1235487250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27418,6 +28071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1261000683}
   MeshObject: {fileID: 429720982}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -27427,6 +28082,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1261000685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27440,6 +28098,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: green_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1261000686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27514,6 +28175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1262480510}
   MeshObject: {fileID: 1436815203}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -27523,6 +28186,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1262480512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27536,6 +28202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: granite
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1262480513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27610,6 +28279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1263145888}
   MeshObject: {fileID: 347596998}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -27619,6 +28290,9 @@ MonoBehaviour:
   IsFireable: 1
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1263145890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27632,6 +28306,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: bamboo_large_leaves
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1263145891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27706,6 +28383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1263160841}
   MeshObject: {fileID: 1362705051}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -27715,6 +28394,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1263160843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27728,6 +28410,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: enchanting_table_bottom
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1263160844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27821,6 +28506,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344558592}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1271215636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27923,6 +28609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1272124875}
   MeshObject: {fileID: 369492429}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -27932,6 +28620,9 @@ MonoBehaviour:
   IsFireable: 1
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1272124877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27945,6 +28636,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Bee_nest_side
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1272124878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28019,6 +28713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1273010009}
   MeshObject: {fileID: 90188316}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -28028,6 +28724,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1273010011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28041,6 +28740,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: ice
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1273010012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28115,6 +28817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1275981500}
   MeshObject: {fileID: 1563694887}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -28124,6 +28828,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1275981502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28137,6 +28844,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: light_gray_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1275981503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28211,6 +28921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1281620969}
   MeshObject: {fileID: 491916268}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -28220,6 +28932,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1281620971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28233,6 +28948,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: coal_ore
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1281620972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28326,6 +29044,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1096437639}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1301188183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28447,6 +29166,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1734032127}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1301839165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28568,6 +29288,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1420462674}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1325414486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28689,6 +29410,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1420462674}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1333314540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28810,6 +29532,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 352930294}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1336518510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28912,6 +29635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1339290367}
   MeshObject: {fileID: 668177335}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -28921,6 +29646,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1339290369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28934,6 +29662,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Glass
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1339290370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29027,6 +29758,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 30250103}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1356033479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29276,6 +30008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1363830724}
   MeshObject: {fileID: 862196740}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -29285,6 +30019,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1363830726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29298,6 +30035,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cracked_stone_bricks
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1363830727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29391,6 +30131,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 190402292}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1370157494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29512,6 +30253,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1262480512}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1371751025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29633,6 +30375,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1534914852}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1374269963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29754,6 +30497,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263145890}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1375723048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29875,6 +30619,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 30250103}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1377921361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30205,6 +30950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403211986}
   - component: {fileID: 1403211985}
+  - component: {fileID: 1403211987}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -30289,6 +31035,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1403211987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403211984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1406329347
 GameObject:
   m_ObjectHideFlags: 0
@@ -30339,6 +31108,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1275981502}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1406329350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30460,6 +31230,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263160843}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1407677920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30581,6 +31352,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1566045130}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1413040024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30702,6 +31474,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1568954640}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1416511207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30951,6 +31724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1420462672}
   MeshObject: {fileID: 1205726312}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -30960,6 +31735,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1420462674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30973,6 +31751,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: lime_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1420462675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31066,6 +31847,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344263659}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1423266045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31334,6 +32116,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2117157384}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1439272119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31455,6 +32238,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344558592}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1445196253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31576,6 +32360,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2070499998}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1448302871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31697,6 +32482,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1339290369}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1450935215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31818,6 +32604,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 30250103}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1451789491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31939,6 +32726,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1272124877}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1454053372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32060,6 +32848,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344558592}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1461932014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32162,6 +32951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1465157500}
   MeshObject: {fileID: 1108475538}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -32171,6 +32962,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1465157502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32184,6 +32978,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cobbled_deepslate
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1465157503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32497,6 +33294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1480211685}
   MeshObject: {fileID: 1118323256}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -32506,6 +33305,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1480211687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32519,6 +33321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: orange_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1480211688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32612,6 +33417,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 352930294}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1493797690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32733,6 +33539,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1983068786}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1495647792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32854,6 +33661,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 9062178}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1498484449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32975,6 +33783,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 630273043}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1501995120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33096,6 +33905,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263145890}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1509292906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33198,6 +34008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1518565515}
   MeshObject: {fileID: 1724792936}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -33207,6 +34019,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1518565517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33220,6 +34035,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: light_blue_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1518565518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33441,6 +34259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1534914850}
   MeshObject: {fileID: 397868531}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -33450,6 +34270,9 @@ MonoBehaviour:
   IsFireable: 1
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1534914852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33463,6 +34286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cactus_side
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1534914853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33556,6 +34382,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1518565517}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1543979043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33805,6 +34632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1566045128}
   MeshObject: {fileID: 1627535940}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -33814,6 +34643,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1566045130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33827,6 +34659,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: gravel
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1566045131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33901,6 +34736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1568954638}
   MeshObject: {fileID: 951298542}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -33910,6 +34747,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1568954640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33923,6 +34763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: brown_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1568954641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34016,6 +34859,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 700135420}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1576605800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34284,6 +35128,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1363830726}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1584700926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34552,6 +35397,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 379874069}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1589872934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34654,6 +35500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1595459636}
   MeshObject: {fileID: 649011669}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -34663,6 +35511,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1595459638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34676,6 +35527,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Bedrock
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1595459639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34769,6 +35623,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1518565517}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1603602887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34890,6 +35745,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2008893174}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1605511437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35011,6 +35867,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2008893174}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1612384587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35132,6 +35989,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 746347940}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1618201209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35547,6 +36405,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1273010011}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1634657050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35668,6 +36527,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2109437461}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1636019126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35789,6 +36649,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 341146490}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1637971187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36057,6 +36918,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1480211687}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1646908801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36178,6 +37040,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 402920815}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1653323293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36446,6 +37309,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344263659}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1674734538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36567,6 +37431,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 821524782}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1678087782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36638,6 +37503,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678087779}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1679613098
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4526245508032928243, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_Name
+      value: Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526245508032928243, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5286455
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.386135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -80.35391
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.51080734
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.021593774
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.85933197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.012573848
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.026
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -241.456
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719674285484779461, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2.864
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e006e3ed31c6e2b42914e65e9cacfcd4, type: 3}
 --- !u!1 &1691678677
 GameObject:
   m_ObjectHideFlags: 0
@@ -36688,6 +37614,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 838581674}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1691678680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36809,6 +37736,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1262480512}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1697324716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36930,6 +37858,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1465157502}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1702281079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37051,6 +37980,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1262480512}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1707023374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37172,6 +38102,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1983068786}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1709915091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37421,6 +38352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1734032125}
   MeshObject: {fileID: 2086924653}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -37430,6 +38363,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1734032127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37443,6 +38379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: pink_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1734032128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37536,6 +38475,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1420462674}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1735313605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37657,6 +38597,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1568954640}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1735906714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37778,6 +38719,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1595459638}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1737067743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37899,6 +38841,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 821524782}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1741923689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38085,6 +39028,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 630273043}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1743212028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38206,6 +39150,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344263659}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1748227021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38327,6 +39272,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1518565517}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1756042967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38448,6 +39394,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 746347940}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1757136131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38569,6 +39516,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 402920815}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1766011915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38690,6 +39638,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1281620971}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1781637832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38811,6 +39760,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 50643814}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1788386960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38932,6 +39882,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1134991775}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1791190936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39034,6 +39985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1817094611}
   MeshObject: {fileID: 1227065597}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -39043,6 +39996,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1817094613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39056,6 +40012,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: Basalt
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1817094614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39149,6 +40108,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1983068786}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1820331191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39270,6 +40230,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 838581674}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1825798316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39391,6 +40352,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1272124877}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1830188196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39512,6 +40474,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1339290369}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1838087426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39583,6 +40546,91 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838087423}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1842835384
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1124142086514644181, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_Name
+      value: Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561464959775736468, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960604629424236657, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.932617
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.83984
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112209627644747389, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352561478984374809, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 582c3cd9899625a42a496c3dee3160d0, type: 3}
 --- !u!1 &1845084873
 GameObject:
   m_ObjectHideFlags: 0
@@ -39633,6 +40681,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 630273043}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1845084876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39754,6 +40803,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1480211687}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1851523166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39875,6 +40925,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1162890829}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1852013810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39996,6 +41047,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2057807386}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1862416586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40117,6 +41169,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263160843}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1862819444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40238,6 +41291,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1595459638}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1863908516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40359,6 +41413,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2057807386}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1869107579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40480,6 +41535,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1281620971}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1879823884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40601,6 +41657,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2117157384}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1885488591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40722,6 +41779,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1983068786}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1886026642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40843,6 +41901,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1275981502}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1888066211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41061,6 +42120,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9062180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1897714625
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 28710856}
+    m_Modifications:
+    - target: {fileID: 1259762591101698, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Name
+      value: FX_FlameThrower_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259762591101698, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199264920374470284, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199996472042573172, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+--- !u!4 &1897714626 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+  m_PrefabInstance: {fileID: 1897714625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1913451540
 GameObject:
   m_ObjectHideFlags: 0
@@ -41258,6 +42391,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 143557318}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1915419718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41379,6 +42513,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1566045130}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1916293761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41649,6 +42784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 5626961988973238541, guid: 7d835735fd8b1b5419c42834fb094ff5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41704,6 +42843,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1734032127}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1932147369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41825,6 +42965,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2109437461}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1940700732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41946,6 +43087,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1272124877}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1943815067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42067,6 +43209,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1734032127}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1947735060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42138,6 +43281,96 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947735057}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1960010920
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 845205490}
+    m_Modifications:
+    - target: {fileID: 1259762591101698, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Name
+      value: FX_FlameThrower_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4207958
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.51763415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38410324
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6383185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -40.369
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -61.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 51.466
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198015459346078236, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 199264920374470284, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199996472042573172, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+--- !u!4 &1960010921 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4846459981974822, guid: 8e2a14fca52401b469afc9a40253eb58, type: 3}
+  m_PrefabInstance: {fileID: 1960010920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1977775756
 GameObject:
   m_ObjectHideFlags: 0
@@ -42188,6 +43421,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2008893174}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1977775759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42290,6 +43524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 1983068784}
   MeshObject: {fileID: 1021155652}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -42299,6 +43535,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &1983068786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42312,6 +43551,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: coarse_dirt
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &1983068787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42405,6 +43647,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1480211687}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1990491875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42526,6 +43769,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263160843}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &1990950062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42628,6 +43872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 2008893172}
   MeshObject: {fileID: 235479638}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -42637,6 +43883,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &2008893174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42650,6 +43899,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: purple_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &2008893175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42743,6 +43995,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263160843}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2013093100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42864,6 +44117,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1134991775}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2015222363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42985,6 +44239,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 344558592}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2016359875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43106,6 +44361,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 798811711}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2022757997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43177,6 +44433,91 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022757994}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2030319068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 141250836509569355, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504598265959932260, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504598265959932260, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504598265959932260, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504598265959932260, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504598265959932260, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507319164877232354, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398340692404539599, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_Name
+      value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398340692404539599, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e7712c46383f1b46aa593823e6dd6e7, type: 3}
 --- !u!1 &2034906431
 GameObject:
   m_ObjectHideFlags: 0
@@ -43227,6 +44568,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 341146490}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2034906434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43348,6 +44690,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1465157502}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2038912426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43469,6 +44812,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1734032127}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2053621256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43718,6 +45062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 2057807384}
   MeshObject: {fileID: 860042679}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -43727,6 +45073,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &2057807386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43740,6 +45089,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: stone
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &2057807387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43833,6 +45185,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1817094613}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2061809874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43954,6 +45307,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1568954640}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2064797970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44056,6 +45410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 2070499996}
   MeshObject: {fileID: 1522440824}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -44065,6 +45421,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &2070499998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44078,6 +45437,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: gray_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &2070499999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44171,6 +45533,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 143557318}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2075717005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44439,6 +45802,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 379874069}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2102608205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44560,6 +45924,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2008893174}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2106354414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44735,6 +46100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 2109437459}
   MeshObject: {fileID: 1478050958}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -44744,6 +46111,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &2109437461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44757,6 +46127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: blast_furnace_top
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &2109437462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44850,6 +46223,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1272124877}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2110166793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44971,6 +46345,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2109437461}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2112841291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45092,6 +46467,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1263160843}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2114195605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45267,6 +46643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d0f0f7e746aba44a7e8943354212e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentSUKAAnimation: {fileID: 0}
+  parentSUKA: {fileID: 0}
   RootObject: {fileID: 2117157382}
   MeshObject: {fileID: 1672893245}
   DestroyAnimation: {fileID: 1056904543853562, guid: 4cf45cdce36e66e4a93614abb5ae7821, type: 3}
@@ -45276,6 +46654,9 @@ MonoBehaviour:
   IsFireable: 0
   IsUnit: 0
   ObjectIsDestroying: 0
+  smallBlocks: []
+  smallBlocksRb: []
+  smallBlocksColliders: []
 --- !u!114 &2117157384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45289,6 +46670,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: cyan_concrete
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &2117157385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45448,6 +46832,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1261000685}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2122052027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45569,6 +46954,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 1595459638}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2127143516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45690,6 +47076,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 2057807386}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!65 &2127718438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45824,3 +47211,9 @@ SceneRoots:
   - {fileID: 1742047626}
   - {fileID: 742647134}
   - {fileID: 1929188133}
+  - {fileID: 28710855}
+  - {fileID: 371058800}
+  - {fileID: 2030319068}
+  - {fileID: 1679613098}
+  - {fileID: 845205489}
+  - {fileID: 1842835384}

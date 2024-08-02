@@ -121,6 +121,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 8697880556486469003}
   offsetForNewBlock: {x: 0, y: 1, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &1083348215743537063
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +243,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 8697880556486469003}
   offsetForNewBlock: {x: 1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &3335802005737295969
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +365,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 8697880556486469003}
   offsetForNewBlock: {x: -1, y: 0, z: 0}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &4229202693198696361
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +428,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 82200403a5b987449999859616c18e71, type: 2}
+  - {fileID: 2100000, guid: 882528197aa72be47b630008944f38fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -589,6 +592,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 8697880556486469003}
   offsetForNewBlock: {x: 0, y: 0, z: -1}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &5626961988973238541
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameToSerializing: ParkourWinZone
+  saveBlockData:
+    PrefabIndex: 0
+    Position: {x: 0, y: 0, z: 0}
 --- !u!65 &555372943449247769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -797,6 +804,7 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 8697880556486469003}
   offsetForNewBlock: {x: 0, y: 0, z: 1}
+  CellSideMesh: {fileID: 0}
 --- !u!1 &8281864534386200887
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,3 +926,4 @@ MonoBehaviour:
   IsOccupied: 0
   parentBlock: {fileID: 8697880556486469003}
   offsetForNewBlock: {x: 0, y: -1, z: 0}
+  CellSideMesh: {fileID: 0}

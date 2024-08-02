@@ -109,7 +109,7 @@ namespace KinematicCharacterController.Examples
             }
             else
             {
-                lookInputVector = new Vector2(SwipeDetector.instance.swipeDelta.x * 2.5f, SwipeDetector.instance.swipeDelta.y * 2.5f);
+                lookInputVector = new Vector2(SwipeDetector.instance.swipeDelta.x * 2.5f *2, SwipeDetector.instance.swipeDelta.y * 2.5f *2);
                 //SwipeDetector.instance.swipeDelta = Vector2.zero;
             }
 
