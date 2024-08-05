@@ -168,6 +168,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkourMainMenuCell (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2048129436, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -881,6 +889,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkourMainMenuCell (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1687852452, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -1563,6 +1579,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b2c98bfbb087c4b05ba8430f094096d7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1841224313, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -1978,6 +2002,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b2c98bfbb087c4b05ba8430f094096d7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1943754523, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameEn
       value: Parkour Map
@@ -2118,6 +2150,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2003637692}
     m_Modifications:
+    - target: {fileID: 3406679859087224708, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406679859087224708, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1757623701, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 3406679859087224708, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3757938503315694829, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
       propertyPath: m_Name
       value: ChooseModeWindow (2)
@@ -2863,6 +2907,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b2c98bfbb087c4b05ba8430f094096d7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1757623701, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -3505,6 +3557,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2003637692}
     m_Modifications:
+    - target: {fileID: 3406679859087224708, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406679859087224708, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1139380, guid: 6e937e21f0f226247b1671a19fa65d0f, type: 3}
     - target: {fileID: 3757938503315694829, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
       propertyPath: m_Name
       value: ChooseModeWindow (1)
@@ -4894,6 +4954,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -58.71901
       objectReference: {fileID: 0}
+    - target: {fileID: 5466310534030636694, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
+      propertyPath: m_text
+      value: "\u041F\u0440\u0435\u0441\u0441"
+      objectReference: {fileID: 0}
     - target: {fileID: 7415816276684435353, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_Name
       value: WeaponSlotInShop (3)
@@ -5282,6 +5346,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkourMainMenuCell (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1337133822, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -5825,6 +5897,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b2c98bfbb087c4b05ba8430f094096d7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 736085142, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -6574,6 +6654,10 @@ PrefabInstance:
     - target: {fileID: 3995838007352487027, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -58.71901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466310534030636694, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
+      propertyPath: m_text
+      value: "\u041C\u0430\u0448\u0438\u043D\u0430"
       objectReference: {fileID: 0}
     - target: {fileID: 7415816276684435353, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_Name
@@ -7650,7 +7734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -75}
+  m_AnchoredPosition: {x: -0.000030518, y: -109}
   m_SizeDelta: {x: 1880.6119, y: 290.2271}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755154739
@@ -7737,6 +7821,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkourMainMenuCell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1600539008, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -9134,6 +9226,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b2c98bfbb087c4b05ba8430f094096d7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 882669706, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -10530,6 +10630,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b2c98bfbb087c4b05ba8430f094096d7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2079250754, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -11206,6 +11314,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkourMainMenuCell (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1755380651, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -12506,6 +12622,10 @@ PrefabInstance:
     - target: {fileID: 3995838007352487027, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -58.71901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466310534030636694, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
+      propertyPath: m_text
+      value: "\u041C\u0435\u0442\u0435\u043E\u0440\u0438\u0442"
       objectReference: {fileID: 0}
     - target: {fileID: 7415816276684435353, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_Name
@@ -14553,6 +14673,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b2c98bfbb087c4b05ba8430f094096d7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1767479288, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -14723,7 +14851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: 186.22}
+  m_AnchoredPosition: {x: -0.000030518, y: 202}
   m_SizeDelta: {x: 178.128, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1325989299
@@ -15012,6 +15140,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkourMainMenuCell (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2015701773, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -17348,6 +17484,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkourMainMenuCell (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -178348542, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -19548,7 +19692,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815045302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20301,8 +20445,8 @@ RectTransform:
   - {fileID: 1869615270}
   - {fileID: 749601938}
   - {fileID: 219044247}
-  - {fileID: 1927857154}
   - {fileID: 1815045303}
+  - {fileID: 1927857154}
   - {fileID: 1124861104}
   - {fileID: 2041436402}
   - {fileID: 830155578}
@@ -21170,6 +21314,10 @@ PrefabInstance:
     - target: {fileID: 3995838007352487027, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -58.71901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466310534030636694, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
+      propertyPath: m_text
+      value: "\u041A\u0440\u0438\u043F\u0435\u0440"
       objectReference: {fileID: 0}
     - target: {fileID: 7415816276684435353, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_Name
@@ -22278,7 +22426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: Platform
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: language
@@ -22503,6 +22651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144211491}
   - component: {fileID: 2144211490}
+  - component: {fileID: 2144211492}
   m_Layer: 0
   m_Name: PulsingButtons
   m_TagString: Untagged
@@ -22539,6 +22688,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2144211492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144211489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c633636fcfeab649bea5d681488b41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsUnlocked: 1
+  PulseObj: {fileID: 2059201901}
 --- !u!224 &444251265550871864 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2301969389616757157, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
@@ -22588,6 +22751,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2003637692}
     m_Modifications:
+    - target: {fileID: 3406679859087224708, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406679859087224708, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2129866198, guid: 2758d85b1854c5542b90bea0b0c1477d, type: 3}
     - target: {fileID: 3757938503315694829, guid: 5b5469f850d015140bc4c8307bcb1f0c, type: 3}
       propertyPath: m_Name
       value: ChooseModeWindow
@@ -24638,6 +24809,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -287.3786
       objectReference: {fileID: 0}
+    - target: {fileID: 2239205081581623207, guid: 833d1d54c3530db46af1ea87f9649c36, type: 3}
+      propertyPath: LoadSlots.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2239205081581623207, guid: 833d1d54c3530db46af1ea87f9649c36, type: 3}
+      propertyPath: LoadSlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 4392115808997864456}
+    - target: {fileID: 2239205081581623207, guid: 833d1d54c3530db46af1ea87f9649c36, type: 3}
+      propertyPath: LoadSlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 4392115808997864455}
+    - target: {fileID: 2239205081581623207, guid: 833d1d54c3530db46af1ea87f9649c36, type: 3}
+      propertyPath: LoadSlots.Array.data[2]
+      value: 
+      objectReference: {fileID: 4392115808997864454}
+    - target: {fileID: 2239205081581623207, guid: 833d1d54c3530db46af1ea87f9649c36, type: 3}
+      propertyPath: LoadSlots.Array.data[3]
+      value: 
+      objectReference: {fileID: 805758196}
     - target: {fileID: 2379988320113117847, guid: 833d1d54c3530db46af1ea87f9649c36, type: 3}
       propertyPath: m_Name
       value: ChooseLoadMap
@@ -25951,6 +26142,18 @@ PrefabInstance:
     - target: {fileID: 1859339820458596122, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: m_Name
       value: ParkourMainMenuCell
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1372142466, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts

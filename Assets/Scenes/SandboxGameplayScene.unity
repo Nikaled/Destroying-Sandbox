@@ -636,7 +636,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: JumpUpSpeed
-      value: 13
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: MaxAirMoveSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: AirAccelerationSpeed
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: BonusOrientationMethod
@@ -645,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: AllowJumpingWhenSliding
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: StableMovementSharpness
+      value: 11111
       objectReference: {fileID: 0}
     - target: {fileID: 3893347352930167301, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: JumpScalableForwardSpeed

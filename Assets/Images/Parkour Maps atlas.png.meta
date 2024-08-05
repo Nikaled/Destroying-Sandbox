@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -134,18 +134,348 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Parkour Maps atlas_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 3080
+        width: 1544
+        height: 870
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bb0c6841a1f7141a170d0a861b7b07
+      internalID: -1372142466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_1
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 3080
+        width: 1544
+        height: 870
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df0edc8a2714414d9b55fd8ea5596b3
+      internalID: -1943754523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_2
+      rect:
+        serializedVersion: 2
+        x: 3439
+        y: 3080
+        width: 1541
+        height: 870
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aaef706582448e4d84c8b01fe41f544
+      internalID: 1600539008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_3
+      rect:
+        serializedVersion: 2
+        x: 5161
+        y: 3080
+        width: 1541
+        height: 870
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b941784fd0354418a7bae847af5d9c
+      internalID: -1841224313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2044
+        width: 1544
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce7085bcea92df4882d69c7bec20f77
+      internalID: -1755380651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_5
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 2044
+        width: 1545
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58952a1a667b12a46abd4909f212f3c8
+      internalID: 736085142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_6
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 2044
+        width: 1544
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0280d90b72fe8eb4eb1e51e332727c87
+      internalID: -178348542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_7
+      rect:
+        serializedVersion: 2
+        x: 5232
+        y: 2044
+        width: 1543
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082e6d9278e6bd248b70f8c5211611dd
+      internalID: 1757623701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1007
+        width: 1544
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74225e9d4528608439468ab8c49c9b55
+      internalID: 2048129436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_9
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 1007
+        width: 1545
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0a47ad1407e804cbe135748a6c060b
+      internalID: 882669706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_10
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 1007
+        width: 1544
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9653a2d481f39a544bd3e075b3138b64
+      internalID: -1337133822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_11
+      rect:
+        serializedVersion: 2
+        x: 5232
+        y: 1007
+        width: 1543
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c91e0e006618e04abc7cd70a2d7d54a
+      internalID: 1767479288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 44
+        width: 1544
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24152195a23167a44ae36da80a39708f
+      internalID: 1687852452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_13
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 44
+        width: 1545
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ba0b6bf694b52448eaa24796972066
+      internalID: 2079250754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parkour Maps atlas_14
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 44
+        width: 1544
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7216571acd3fd45b17efe6a9e08c3d
+      internalID: 2015701773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Parkour Maps atlas_0: -1372142466
+      Parkour Maps atlas_1: -1943754523
+      Parkour Maps atlas_10: -1337133822
+      Parkour Maps atlas_11: 1767479288
+      Parkour Maps atlas_12: 1687852452
+      Parkour Maps atlas_13: 2079250754
+      Parkour Maps atlas_14: 2015701773
+      Parkour Maps atlas_2: 1600539008
+      Parkour Maps atlas_3: -1841224313
+      Parkour Maps atlas_4: -1755380651
+      Parkour Maps atlas_5: 736085142
+      Parkour Maps atlas_6: -178348542
+      Parkour Maps atlas_7: 1757623701
+      Parkour Maps atlas_8: 2048129436
+      Parkour Maps atlas_9: 882669706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -64,9 +64,12 @@ public class Meteor : MonoBehaviour
             }
         }
         SoundManager.instance.PlayMeteorCrushedSound();
+      
         yield return new WaitForSeconds(0.1f);
         FlyingSoundSource.Pause();
         Destroy(explosionForceChecker.gameObject);
+        //Time.timeScale = 0;
+        //Debug.Break();
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         yield return new WaitForSeconds(1);
         Destroy(gameObject);

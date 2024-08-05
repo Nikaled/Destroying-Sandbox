@@ -105,6 +105,12 @@ public class Player : MonoBehaviour
     }
     protected virtual void Start()
     {
+        //SpeedUpPlayer();
+
+
+
+
+
         if (Geekplay.Instance.mobile)
         {
             examplePlayer.Mobile = true;
@@ -148,10 +154,17 @@ public class Player : MonoBehaviour
     }
     private void SpeedUpPlayer()
     {
+        //characterController.MaxStableMoveSpeed = 20;
+        //characterController.MaxAirMoveSpeed = 11;
+        ////characterController.AirAccelerationSpeed = 66;
+        //characterController.AirAccelerationSpeed = 122;
+        characterController.StableMovementSharpness = 111111;
+
         characterController.MaxStableMoveSpeed = 20;
-        characterController.MaxAirMoveSpeed = 30;
-        characterController.AirAccelerationSpeed = 36;
-        //characterController.JumpUpSpeed = 20;
+        characterController.MaxAirMoveSpeed = 44;
+        characterController.AirAccelerationSpeed = 55;
+        characterController.JumpUpSpeed = 15;
+        characterController.Drag = 2.7f;
     }
     private void OnParkourPhaseStarted()
     {
@@ -199,6 +212,7 @@ public class Player : MonoBehaviour
                     CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
                     CanvasManager.instance.BuildingMenuButton.SetActive(false);
                     CanvasManager.instance.JumpButtonUpScale();
+                    CanvasManager.instance.SaveButton.gameObject.SetActive(false);
                 }
                 else
                 {

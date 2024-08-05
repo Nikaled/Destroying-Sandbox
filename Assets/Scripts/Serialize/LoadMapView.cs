@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadMapView : MonoBehaviour
 {
@@ -13,8 +14,23 @@ public class LoadMapView : MonoBehaviour
     [SerializeField] TextMeshProUGUI MapName4;
     private List<MapData> mapData;
     string EmptySlotText;
+    [SerializeField] Button[] LoadSlots;
     private void Start()
     {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            if (LoadSlots != null)
+            {
+                if (LoadSlots.Length > 0)
+                {
+                    for (int i = 0; i < LoadSlots.Length; i++)
+                    {
+                        LoadSlots[i].enabled = false;
+                    }
+                }
+            }
+        }
+       
         LocalizateNames();
        
         SetDateText();
@@ -79,6 +95,14 @@ public class LoadMapView : MonoBehaviour
                 if (string.IsNullOrEmpty(mapData[i].SaveDate) == false)
                 {
                     Dates[i].text = mapData[i].SaveDate;
+                    if(LoadSlots != null)
+                    {
+                        if(LoadSlots.Length > i)
+                        {
+                            LoadSlots[i].enabled = true;
+                        }
+                    }
+                   
                 }
             }
         }

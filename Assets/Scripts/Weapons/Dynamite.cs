@@ -52,6 +52,8 @@ public class Dynamite : MonoBehaviour
         explosionForceChecker.transform.parent = null;
         explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
         yield return new WaitForSeconds(0.05f);
+        //Time.timeScale = 0;
+        //Debug.Break();
         Destroy(explosionForceChecker.gameObject);
         Destroy(gameObject);
     }
