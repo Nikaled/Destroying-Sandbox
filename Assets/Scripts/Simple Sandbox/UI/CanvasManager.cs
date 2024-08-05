@@ -37,7 +37,7 @@ public class CanvasManager : MonoBehaviour
 
 
     [Header("DestroyingSandbox")]
-    [SerializeField]  GameObject BuildingInstruction;
+    [SerializeField] GameObject BuildingInstruction;
     [SerializeField] GameObject BlockSlots;
     [SerializeField] public GameObject BuildingMenuButton;
     [SerializeField] GameObject WeaponSlots;
@@ -50,6 +50,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public GameObject UnlockWeaponUI;
     [SerializeField] GameObject[] WeaponInstructions;
     [SerializeField] TextMeshProUGUI CurrentDestroyedText;
+    [SerializeField] CoinsRewardWinMap DoubleRewardButtonScript;
     [Header("Parkour")]
     [SerializeField] GameObject ParkourUI;
     [SerializeField] GameObject OnWinParkourMapUI;
@@ -57,6 +58,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] Button LoadNextLevelButton;
     [SerializeField] TextMeshProUGUI RewardText;
     [SerializeField] Button ReloadButtonOnWinPanel;
+    [SerializeField] GameObject OnWinButtonsGroup;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
     private bool BuildingMenuActive;
@@ -83,6 +85,20 @@ public class CanvasManager : MonoBehaviour
     {
         RewardUI.SetActive(Is);
         RewardText.text = Reward.ToString();
+        DoubleRewardButtonScript.SetReward(Reward);
+    }
+    public void ShowWinButtonsWithDelay(bool Is)
+    {
+        OnWinButtonsGroup.SetActive(false);
+        StartCoroutine(ShowButtons());
+        IEnumerator ShowButtons()
+        {
+            if (Is)
+            {
+                yield return new WaitForSeconds(2);
+            }
+            OnWinButtonsGroup.SetActive(true);
+        }
     }
     public void ShowBuildingInstruction(bool Is)
     {
@@ -132,6 +148,10 @@ public class CanvasManager : MonoBehaviour
     }
     public void OnWinMap()
     {
+        if (SerializeBlockManager.instance.OnlyDestroyingMap == false && SerializeBlockManager.instance.OnlyParkourMap == false)
+        {
+            ShowRewardAndSetRewardText(true, DestroyCounter.instance.GainedCoins);
+        }
         ShowWinMapUI(true);
     }
     public void ShowWinMapUI(bool Is)
@@ -146,6 +166,7 @@ public class CanvasManager : MonoBehaviour
             }
             SoundManager.instance.OnWinMapSound();
             TryShowNextLevelButton();
+            DoubleRewardButtonScript.CheckAvailableRewardAndShowButtons();
         }
     }
     public void ShowCurrentDestroyInterface(bool Is)
@@ -200,9 +221,9 @@ public class CanvasManager : MonoBehaviour
             //}
             if (Input.GetKeyDown(KeyCode.K))
             {
-                if(TutorialManager.instance == null)
+                if (TutorialManager.instance == null)
                 {
-                ShowSaveMapUI(!SaveMapUIActive);
+                    ShowSaveMapUI(!SaveMapUIActive);
                 }
             }
         }
@@ -225,7 +246,7 @@ public class CanvasManager : MonoBehaviour
     {
         Player.instance.examplePlayer.LockCursor(true);
         Geekplay.Instance.ShowInterstitialAd();
-        ShowRewardAndSetRewardText(false, 0);
+        //ShowRewardAndSetRewardText(false, 0);
         ChangeCoinsText(Geekplay.Instance.PlayerData.Coins);
         DestroyCounter.instance.DestroyBlockCountChanged += DestroyCountChanged;
         DestroyCounter.instance.AllBlockDestroyed += OnWinMap;
@@ -243,7 +264,7 @@ public class CanvasManager : MonoBehaviour
             AppShopButton.SetActive(false);
         }
         Geekplay.Instance.PlayerData.CoinsChanged += ChangeCoinsText;
-        Geekplay.Instance.LockCursorAfterAd += CheckActiveUnlockCursorWindows; 
+        Geekplay.Instance.LockCursorAfterAd += CheckActiveUnlockCursorWindows;
         if (Geekplay.Instance.PlayerData.IsFirstGameplay == false)
         {
             Geekplay.Instance.PlayerData.IsFirstGameplay = true;

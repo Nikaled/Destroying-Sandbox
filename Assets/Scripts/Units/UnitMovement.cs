@@ -79,7 +79,7 @@ public class UnitMovement : MonoBehaviour
             CurrentEnemy = Puncher;
             ResetTimeToFoundEnemy();
         }
-        if (AwaitForGroundAfterPunch == true)
+        if (AwaitForGroundAfterPunch == true || DestroyPhaseStarted == false)
         {
             return;
         }

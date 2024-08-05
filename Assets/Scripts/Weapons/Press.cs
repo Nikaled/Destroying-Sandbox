@@ -12,7 +12,7 @@ public class Press : MonoBehaviour
     Vector3 StartTransformPosition;
     float pressFindSpeed = 100;
     float pressActivatedSpeed = 2;
-    bool DestroyingBlocksState;
+    bool Reloading;
 
     private void Update()
     {
@@ -22,7 +22,14 @@ public class Press : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector3.down * pressActivatedSpeed;
+            if (Reloading == false)
+            {
+                rb.velocity = Vector3.down * pressActivatedSpeed;
+            }
+            else
+            {
+                rb.velocity = Vector3.down * pressActivatedSpeed/5;
+            }
             if (transform.position.y <= 0)
             {
                 Destroy(gameObject);
@@ -30,8 +37,19 @@ public class Press : MonoBehaviour
         }
         if (DestroyLimiter.IsDestroyedMaximum())
         {
-            Destroy(gameObject);
+            DestroyLimiter.ResetCurrentDestroyed();
+            pressCollider.enabled = false;
+            pressCollider.enabled = true;
+            Reloading = true;
+            StartCoroutine(ReloadPress());
         }
+    }
+    private IEnumerator ReloadPress()
+    {
+        yield return new WaitForSeconds(0.7f);
+        pressCollider.enabled = false;
+        pressCollider.enabled = true;
+        Reloading = false;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -45,7 +63,6 @@ public class Press : MonoBehaviour
             Debug.Log("Start position");
             rb.velocity = Vector3.zero;
             gameObject.transform.position = StartTransformPosition + new Vector3(0, 10, 0);
-            DestroyingBlocksState = true;
             for (int i = 0; i < pressMeshes.Length; i++)
             {
                 pressMeshes[i].enabled = true;

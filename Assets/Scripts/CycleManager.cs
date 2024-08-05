@@ -67,6 +67,10 @@ public class CycleManager : MonoBehaviour
     }
     public virtual void ActivateDestroyingPhase()
     {
+        if(SerializeBlockManager.instance.BlocksOnScene.Count == 0)
+        {
+            return;
+        }
         currentPhase = Phase.Destroying;
         DestroyCounter.instance.DestroyPhaseStarted();
         SerializeBlockManager.instance.SaveBlocks();

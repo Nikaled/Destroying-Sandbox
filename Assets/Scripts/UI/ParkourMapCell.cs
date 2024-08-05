@@ -23,9 +23,7 @@ public class ParkourMapCell : DestroyingMapCell
     }
     public void LoadParkourMap()
     {
-        ParkourRewardManager.instance.currentPressedCell = this;
-        ParkourRewardManager.instance.TryShowRewardWindow(this);
-
+        LoadMapLogic();
     }
     public void SetTimeToSlot(float TimeInSeconds)
     {

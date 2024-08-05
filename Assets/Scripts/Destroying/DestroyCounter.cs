@@ -12,6 +12,7 @@ public class DestroyCounter : MonoBehaviour
         {
             _destroyedCurrent = value;
             DestroyBlockCountChanged?.Invoke(value);
+            GainedCoins = value;
         }
     }
     private int _destroyedCurrent;
@@ -19,6 +20,7 @@ public class DestroyCounter : MonoBehaviour
     public Action<int> DestroyBlockCountChanged;
     public Action AllBlockDestroyed;
     public static DestroyCounter instance;
+    public int GainedCoins;
     private void Awake()
     {
         instance = this;

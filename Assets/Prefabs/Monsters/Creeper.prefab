@@ -234,7 +234,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 531488755263295102, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: EffectScale
-      value: 60
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 531488755263295102, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: DelayBeforeDeleting
@@ -262,15 +262,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 51.7
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 51.7
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 51.7
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,6 +311,10 @@ PrefabInstance:
     - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095005349911450897, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
