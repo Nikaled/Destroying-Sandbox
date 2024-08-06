@@ -18,10 +18,18 @@ public class AdWarning : MonoBehaviour
     {
         instance = this;
     }
-    private void Start()
+    public void ShowAdOnStart()
     {
+        Geekplay.Instance.ShowInterstitialAd();
+    }
+    public void SetupAdByModeAndStartTimer()
+    {
+        if (SerializeBlockManager.instance.OnlyParkourMap)
+        {
+            return;
+        }
         CashedBaseTimeToShowWarning = TimeToShowWarning;
-        if(AwaitWarningCor != null)
+        if (AwaitWarningCor != null)
         {
             StopCoroutine(AwaitWarningCor);
         }

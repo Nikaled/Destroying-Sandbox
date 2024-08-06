@@ -87,6 +87,7 @@ public class CycleManager : MonoBehaviour
 
     public void ActivateParkourPhase()  // if player taked restart
     {
+        Geekplay.Instance.ShowInterstitialAd();
         currentPhase = Phase.Parkour;
         CanvasManager.instance.ShowWinParkourUI(false);
         ParkourManager.instance.StartParkour();

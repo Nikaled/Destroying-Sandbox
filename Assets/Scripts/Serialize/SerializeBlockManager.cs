@@ -209,6 +209,7 @@ public class SerializeBlockManager : MonoBehaviour
             CycleManager.instance.ActivateDestroyingPhase();
             DestroyCounter.instance.AllBlockDestroyed += TryGetRewardForDestroyingMap;
         }
+        AdWarning.instance.SetupAdByModeAndStartTimer();
     }
     private void CheckMapIsLastInLevelList(int CurrentMapIndex, int ListCount)
     {

@@ -22,7 +22,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject CanvasPCInterface;
     [Header("Mobile Interfaces")]
     [SerializeField] GameObject CanvasMobileInterface;
-    [SerializeField] GameObject LeftButtonsZone;
+    //[SerializeField] GameObject LeftButtonsZone;
     [SerializeField] GameObject RightButtonsZone;
     [SerializeField] GameObject CarMobileInstruction;
     [SerializeField] GameObject AppShopButton;
@@ -86,6 +86,7 @@ public class CanvasManager : MonoBehaviour
         RewardUI.SetActive(Is);
         RewardText.text = Reward.ToString();
         DoubleRewardButtonScript.SetReward(Reward);
+        //DoubleRewardButtonScript.RewardButton.gameObject.SetActive(Is);
     }
     public void ShowWinButtonsWithDelay(bool Is)
     {
@@ -308,7 +309,7 @@ public class CanvasManager : MonoBehaviour
     }
     private void ShowMobileIdleButtons(bool Is)
     {
-        LeftButtonsZone.SetActive(Is);
+        //LeftButtonsZone.SetActive(Is);
         RightButtonsZone.SetActive(Is);
     }
     private void ShowWeaponSlotsUI(bool Is)

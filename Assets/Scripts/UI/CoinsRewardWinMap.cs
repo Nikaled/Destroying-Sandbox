@@ -15,7 +15,7 @@ public class CoinsRewardWinMap : MonoBehaviour
     }
     public void CheckAvailableRewardAndShowButtons()
     {
-        if (Geekplay.Instance.RewardLockTimer > 0)
+        if (Geekplay.Instance.RewardLockTimer > 0 || CurrentReward == 0)
         {
             CanvasManager.instance.ShowWinButtonsWithDelay(false);
             RewardButton.gameObject.SetActive(false);

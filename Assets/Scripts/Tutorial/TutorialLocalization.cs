@@ -79,11 +79,11 @@ public class TutorialLocalization : MonoBehaviour
     }
     private void RuPCLocalization()
     {
-        TutorialTextPhase1 = "Используй [W],[A],[S],[D] для ходьбы";
-        TutorialTextPhase2 = "Нажми на клавиатуре цифры от 1 до 0 чтобы выбрать блок";
-        TutorialTextPhase3 = "Нажми левой кнопкой мыши в зоне справа чтобы поставить блок";
+        TutorialTextPhase1 = "Используй <color=orange>[W]</color>,<color=orange>[A]</color>,<color=orange>[S]</color>,<color=orange>[D]</color> для ходьбы";
+        TutorialTextPhase2 = "Нажми на клавиатуре цифры от <color=orange>[1]</color> до <color=orange>[0]</color>, чтобы выбрать блок";
+        TutorialTextPhase3 = "Нажми <color=orange> левой кнопкой мыши</color> в зоне справа чтобы поставить блок";
         TutorialTextPhase4 = "В этой игре можно не только строить, но и разрушать! Иди вперед и попробуй сам!";
-        TutorialTextPhase5 = "Выбирай оружие на цифры и уничтожай блоки! (Инструкции над панелью оружия)";
+        TutorialTextPhase5 = "Выбирай оружие на цифры от <color=orange>[1]</color> до <color=orange>[0]</color> и уничтожай блоки! (Инструкции над панелью оружия)";
         TutorialTextPhase6 = "Нажми <color=orange>[M]</color> для перехода в режим разрушения и животные начнут ходить!";
         TutorialTextPhase7 = "Зайди в арку в конце дороги, чтобы закончить обучение. Приятной игры!";
     }

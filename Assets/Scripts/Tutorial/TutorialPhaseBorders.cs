@@ -27,7 +27,7 @@ public class TutorialPhaseBorders : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            TutorialManager.instance.TutorialPhaseText.SetActive(true);
+            TutorialManager.instance.OnBorderCompleted(ThisBorderPhase);
             if (ThisBorderPhase == PhaseBorders.PhaseBorderWeaponDemonstrated)
             {
                 TutorialManager.instance.OpenPhase(TutorialManager.instance.PhaseName4);
@@ -40,10 +40,6 @@ public class TutorialPhaseBorders : MonoBehaviour
                 {
                     CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(true);
                 }
-            }
-            if (ThisBorderPhase != PhaseBorders.PhaseBorderBlockPlaced)
-            {
-                TutorialManager.instance.GoForwardText.SetActive(false);
             }
             SendAnalyticsPlayerGoThrough();
             gameObject.SetActive(false);

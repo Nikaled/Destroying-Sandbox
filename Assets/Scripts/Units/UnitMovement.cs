@@ -219,7 +219,6 @@ public class UnitMovement : MonoBehaviour
                         if (Time.time - timeFromPunching > PunchInterval)
                         {
                             timeFromPunching = Time.time;
-                            Debug.Log("timeFromPunching:" + timeFromPunching);
                             if (Type != UnitType.Creeper)
                             {
                                 bool IsEnemyPunched = EnemyHP.TryGetPunch(gameObject);

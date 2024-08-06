@@ -18530,7 +18530,7 @@ MonoBehaviour:
   - MapName: P_Map_01
     MapIndex: 0
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 10
     SavedBlocks:
     - PrefabIndex: 21
       Position: {x: 24, y: 2, z: -2}
@@ -18796,7 +18796,7 @@ MonoBehaviour:
   - MapName: Map_02
     MapIndex: 1
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 10
     SavedBlocks:
     - PrefabIndex: 22
       Position: {x: 18, y: 2, z: 0}
@@ -19008,7 +19008,7 @@ MonoBehaviour:
   - MapName: P_Map_3_Blue_Yellow_Disappear
     MapIndex: 2
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 20
     SavedBlocks:
     - PrefabIndex: 54
       Position: {x: 10, y: 2, z: 0}
@@ -19132,7 +19132,7 @@ MonoBehaviour:
   - MapName: P_Map_4_Rainbow_on_ground
     MapIndex: 3
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 30
     SavedBlocks:
     - PrefabIndex: 2
       Position: {x: 32, y: 2, z: 0}
@@ -19828,7 +19828,7 @@ MonoBehaviour:
   - MapName: P_Map_5_Roaming_Row
     MapIndex: 4
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 30
     SavedBlocks:
     - PrefabIndex: 5
       Position: {x: 8, y: 2, z: 0}
@@ -20252,7 +20252,7 @@ MonoBehaviour:
   - MapName: P_Map_6_Red_Green_Glass
     MapIndex: 5
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 30
     SavedBlocks:
     - PrefabIndex: 29
       Position: {x: 18, y: 6, z: 10}
@@ -20910,7 +20910,7 @@ MonoBehaviour:
   - MapName: P_Map_7_Ore_Pillars
     MapIndex: 6
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 20
     SavedBlocks:
     - PrefabIndex: 53
       Position: {x: 32, y: 18, z: -14}
@@ -21404,7 +21404,7 @@ MonoBehaviour:
   - MapName: P_Map_8_Red_Pillars_White_Constructon
     MapIndex: 7
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 50
     SavedBlocks:
     - PrefabIndex: 22
       Position: {x: 44, y: 2, z: -6}
@@ -22102,7 +22102,7 @@ MonoBehaviour:
   - MapName: P_Map_9_Forest
     MapIndex: 8
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 30
     SavedBlocks:
     - PrefabIndex: 35
       Position: {x: 24, y: 2, z: -6}
@@ -22704,7 +22704,7 @@ MonoBehaviour:
   - MapName: "P_Map_10_\u0421hess"
     MapIndex: 9
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 50
     SavedBlocks:
     - PrefabIndex: 44
       Position: {x: 28, y: 2, z: -8}
@@ -23406,7 +23406,7 @@ MonoBehaviour:
   - MapName: P_Map_11_Waterfall_in_sky
     MapIndex: 10
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 70
     SavedBlocks:
     - PrefabIndex: 16
       Position: {x: 14, y: 2, z: 0}
@@ -23696,8 +23696,6 @@ MonoBehaviour:
       Position: {x: 16, y: 14, z: -22}
     - PrefabIndex: 35
       Position: {x: 16, y: 14, z: -20}
-    - PrefabIndex: 35
-      Position: {x: 18, y: 4, z: 0}
     - PrefabIndex: 9
       Position: {x: 28, y: 2, z: 0}
     - PrefabIndex: 9
@@ -24144,6 +24142,20 @@ MonoBehaviour:
       Position: {x: 42, y: 2, z: -2}
     - PrefabIndex: 16
       Position: {x: 42, y: 2, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 22, y: 4, z: -2}
+    - PrefabIndex: 35
+      Position: {x: 22, y: 4, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 18, y: 4, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 30, y: 6, z: -2}
+    - PrefabIndex: 35
+      Position: {x: 30, y: 6, z: 0}
+    - PrefabIndex: 35
+      Position: {x: 24, y: 4, z: -2}
+    - PrefabIndex: 35
+      Position: {x: 24, y: 4, z: 0}
     ParkourBlocksSaveData:
     - rotation: {x: 0, y: 0.615661, z: 0, w: -0.7880112}
       Scale: {x: 2, y: 2, z: 2}
@@ -24160,16 +24172,21 @@ MonoBehaviour:
       BlockOnSceneIndex: 28
       Speed: 3
       InvertMoveCycle: 0
-    - rotation: {x: 0, y: 0, z: 0, w: 1}
-      Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 257
-      Speed: 0
-      InvertMoveCycle: 0
     - rotation: {x: -0.64085674, y: 0.29883552, z: -0.64085674, w: 0.29883552}
       Scale: {x: 6, y: 6, z: 6}
       BlockOnSceneIndex: 37
       Speed: 5
       InvertMoveCycle: 1
+    - rotation: {x: 0, y: 0, z: 0, w: 1}
+      Scale: {x: 2, y: 2, z: 2}
+      BlockOnSceneIndex: 256
+      Speed: 0
+      InvertMoveCycle: 0
+    - rotation: {x: 0, y: 0, z: 0, w: 1}
+      Scale: {x: 2, y: 2, z: 2}
+      BlockOnSceneIndex: 257
+      Speed: 0
+      InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
       BlockOnSceneIndex: 258
@@ -24182,7 +24199,7 @@ MonoBehaviour:
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 260
+      BlockOnSceneIndex: 276
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -24202,7 +24219,7 @@ MonoBehaviour:
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
       Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 280
+      BlockOnSceneIndex: 313
       Speed: 0
       InvertMoveCycle: 0
     - rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -24210,15 +24227,10 @@ MonoBehaviour:
       BlockOnSceneIndex: 314
       Speed: 0
       InvertMoveCycle: 0
-    - rotation: {x: 0, y: 0, z: 0, w: 1}
-      Scale: {x: 2, y: 2, z: 2}
-      BlockOnSceneIndex: 315
-      Speed: 0
-      InvertMoveCycle: 0
   - MapName: P_Map_12_Dissociation
     MapIndex: 11
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 50
     SavedBlocks:
     - PrefabIndex: 3
       Position: {x: 16, y: 2, z: 2}
@@ -24548,7 +24560,7 @@ MonoBehaviour:
   - MapName: P_Map_13_Only_Disappearing
     MapIndex: 12
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 80
     SavedBlocks:
     - PrefabIndex: 54
       Position: {x: 8, y: 2, z: 0}
@@ -24712,7 +24724,7 @@ MonoBehaviour:
   - MapName: P_Map_14_Purple_Citadel
     MapIndex: 13
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 60
     SavedBlocks:
     - PrefabIndex: 20
       Position: {x: 8, y: 2, z: 4}
@@ -25448,7 +25460,7 @@ MonoBehaviour:
   - MapName: P_Map_15_Well
     MapIndex: 14
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 40
     SavedBlocks:
     - PrefabIndex: 17
       Position: {x: 46, y: 2, z: 2}

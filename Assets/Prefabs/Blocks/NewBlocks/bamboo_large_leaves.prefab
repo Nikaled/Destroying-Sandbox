@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: NameToSerializing
       value: bamboo_large_leaves
       objectReference: {fileID: 0}
+    - target: {fileID: 2145122526933248788, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588268643744703738, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2687442584709033528, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Name
       value: bamboo_large_leaves
@@ -60,10 +68,26 @@ PrefabInstance:
       propertyPath: IsFireable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6758476338637848125, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: IsTransparent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960426622774526629, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7020539944299386795, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 72ac9e30a9a16324c970257c7e60cb3c, type: 2}
+    - target: {fileID: 7653454805292905868, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145851303404388890, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8402763102718128752, guid: 5a2f3af1c0f20804da3d6626a869443f, type: 3}
       propertyPath: outlineWidth
       value: 4.95

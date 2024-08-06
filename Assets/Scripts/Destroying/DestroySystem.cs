@@ -16,6 +16,7 @@ public class DestroySystem : MonoBehaviour
     private readonly string AnalyticsDestroyObject = "ObjectDestroyed";
     public bool IsFireable;
     public bool IsUnit;
+    public bool IsTransparent;
     public event Action OnDied;
     public bool ObjectIsDestroying;
     private Vector3 ProjectilePosition;
@@ -161,6 +162,10 @@ public class DestroySystem : MonoBehaviour
         SoundManager.instance.PlayBlockCrushedSound();
         for (int i = 0; i < smallBlocks.Length; i++)
         {
+            if (IsTransparent)
+            {
+                smallBlocks[i].SetActive(true);
+            }
             smallBlocksColliders[i].enabled = true;
             //smallBlocks[i].SetActive(true);
             float RandomSpawnModifier = UnityEngine.Random.Range(-1.3f, 1.3f);

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
+using UnityEngine.UI;
 public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager instance;
@@ -33,9 +35,27 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] TutorialLocalization TutorLoc;
     public GameObject GoForwardText;
     public GameObject TutorialPhaseText;
+    [SerializeField] GameObject BlockPanel;
+    [SerializeField] GameObject PlaceBlockButton;
+    [SerializeField] GameObject ChangeModeButton;
+    GameObject currentPulsingObject;
+    IEnumerator PulseCor;
+    [SerializeField] Image[] DoButtonImages;
     private void Awake()
     {
         instance = this;
+    }
+    private IEnumerator Pulsing(Transform PulseObj)
+    {
+        while (true)
+        {
+
+            PulseObj.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.75f).OnKill(()=> PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.75f));
+            //PulseObj.DOScale(new Vector3(1.15f, 1.15f, 1.15f), 0.75f).OnKill(()=> PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.75f));
+            yield return new WaitForSeconds(1.5f);
+            //PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.75f).OnKill(() => PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.1f));
+            //yield return new WaitForSeconds(0.8f);
+        }
     }
     void Start()
     {
@@ -76,6 +96,44 @@ public class TutorialManager : MonoBehaviour
             }
         }
     }
+
+    public void OnBorderCompleted(TutorialPhaseBorders.PhaseBorders BorderEnum) 
+    {
+        TutorialPhaseText.SetActive(true);
+        GoForwardText.SetActive(false);
+
+        switch (BorderEnum)
+        {
+            case TutorialPhaseBorders.PhaseBorders.PhaseBorderBlockOnPanelSelected:
+                PulseCor = Pulsing(PlaceBlockButton.transform);
+                StartCoroutine(PulseCor);
+                for (int i = 0; i < DoButtonImages.Length; i++)
+                {
+                    DoButtonImages[i].color = Color.yellow;
+                }
+                break;
+            case TutorialPhaseBorders.PhaseBorders.PhaseBorderWeaponDemonstrated:
+                   OpenPhase(PhaseName4);
+                break;
+            case TutorialPhaseBorders.PhaseBorders.PhaseBorderWeaponUsed:
+                CycleManager.instance.ActivateBuildingPhase();
+                AnimalZoneReached = true;
+                if (Geekplay.Instance.mobile)
+                {
+                    CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(true);
+                }
+
+                PulseCor = Pulsing(ChangeModeButton.transform);
+                StartCoroutine(PulseCor);
+                break;
+           
+            case TutorialPhaseBorders.PhaseBorders.PhaseBorderBlockPlaced:
+                GoForwardText.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
     private void OnPhaseCompleted(int PhaseIndex)
     {
         TutorialPhaseText.SetActive(false);
@@ -97,6 +155,11 @@ public class TutorialManager : MonoBehaviour
                     Analytics.instance.SendEvent("Tutorial_1_PhaseCompleted_Movement");
                 }
                     TutorialPhaseText.SetActive(true);
+
+                PulseCor = Pulsing(BlockPanel.transform);
+                currentPulsingObject = BlockPanel;
+                StartCoroutine(PulseCor);
+
                 break;
             case 1:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[1] == false)
@@ -105,6 +168,12 @@ public class TutorialManager : MonoBehaviour
                     Analytics.instance.SendEvent("Tutorial_2_PhaseCompleted_BlockSelected");
                 }
                 PhaseBorders[0].UnlockNewPhasePath();
+
+                StopCoroutine(PulseCor);
+                DOTween.Kill(BlockPanel);
+                //BlockPanel.transform.DOScale(new Vector3(1, 1, 1), 0);
+              
+
                 GoForwardText.SetActive(true);
                 break;
             case 2:
@@ -117,10 +186,27 @@ public class TutorialManager : MonoBehaviour
                 Phase4Objects.SetActive(true);
                 TutorialPhaseText.SetActive(true);
                 GoForwardText.SetActive(true);
+
+                StopCoroutine(PulseCor);
+                DOTween.Kill(PlaceBlockButton);
+                //PlaceBlockButton.transform.DOScale(new Vector3(1, 1, 1), 0);
+
+                for (int i = 0; i < DoButtonImages.Length; i++)
+                {
+                    DoButtonImages[i].color = Color.white;
+                }
+
                 break;
             case 3:
                 CycleManager.instance.ActivateDestroyingPhase();
                 TutorialPhaseText.SetActive(true);
+
+                PulseCor = Pulsing(PlaceBlockButton.transform);
+                StartCoroutine(PulseCor);
+                for (int i = 0; i < DoButtonImages.Length; i++)
+                {
+                    DoButtonImages[i].color = Color.yellow;
+                }
                 break;
             case 4:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[4] == false)
@@ -128,6 +214,15 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[4] = true;
                     Analytics.instance.SendEvent("Tutorial_5_PhaseCompleted_BlockDestroyed");
                 }
+
+                StopCoroutine(PulseCor);
+                DOTween.Kill(PlaceBlockButton);
+                for (int i = 0; i < DoButtonImages.Length; i++)
+                {
+                    DoButtonImages[i].color = Color.white;
+                }
+                //PlaceBlockButton.transform.DOScale(new Vector3(1, 1, 1), 0);
+
                 GoForwardText.SetActive(true);
                 PhaseBorders[3].UnlockNewPhasePath();
                 Phase6Objects.SetActive(true);
@@ -139,6 +234,10 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[5] = true;
                     Analytics.instance.SendEvent("Tutorial_6_PhaseCompleted_StateSwitched");
                 }
+                StopCoroutine(PulseCor);
+                DOTween.Kill(ChangeModeButton);
+                //ChangeModeButton.transform.DOScale(new Vector3(1, 1, 1), 0);
+
                 GoForwardText.SetActive(true);
                 Phase7Objects.SetActive(true);
                 AbleToEndTutorial = true;

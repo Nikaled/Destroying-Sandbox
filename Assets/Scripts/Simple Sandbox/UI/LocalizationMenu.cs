@@ -41,6 +41,11 @@ public class LocalizationMenu : MonoBehaviour
     [Header("WeaponAndAppShop")]
     [SerializeField] TextMeshProUGUI YourBalanceWeapon;
     [SerializeField] TextMeshProUGUI YourBalanceApp;
+    [SerializeField] TextMeshProUGUI WeaponName1;
+    [SerializeField] TextMeshProUGUI WeaponName2;
+    [SerializeField] TextMeshProUGUI WeaponName3;
+    [SerializeField] TextMeshProUGUI WeaponName4;
+    [SerializeField] TextMeshProUGUI WeaponName5;
     [Header("TutorialUI")]
     [SerializeField] TextMeshProUGUI TutorialAsk;
     [SerializeField] TextMeshProUGUI TutorialDecline;
@@ -98,6 +103,11 @@ public class LocalizationMenu : MonoBehaviour
         TutorialAsk.text = "Хотите пройти обучение?";
         TutorialDecline.text = "НЕТ";
         TutorialConfirm.text = "ДА";
+        WeaponName1.text = "Динамит";
+        WeaponName2.text = "Машина";
+        WeaponName3.text = "Метеорит";
+        WeaponName4.text = "Пресс";
+        WeaponName5.text = "Крипер";
     }
     private void EnLocalization()
     {
@@ -132,9 +142,14 @@ public class LocalizationMenu : MonoBehaviour
         YourBalanceWeapon.text = "Your balance:";
         YourBalanceApp.text = "Your balance:";
         TutorialButton.text = "TUTORIAL";
-        TutorialAsk.text = "Do you want to complete tutorial?";
+        TutorialAsk.text = "Do you want to start tutorial?";
         TutorialDecline.text = "NO";
         TutorialConfirm.text = "YES";
+        WeaponName1.text = "Dynamite";
+        WeaponName2.text = "Monster Truck";
+        WeaponName3.text = "Meteor";
+        WeaponName4.text = "Press";
+        WeaponName5.text = "Creeper";
     }
     private void TrLocalization()
     {
@@ -172,5 +187,10 @@ public class LocalizationMenu : MonoBehaviour
         TutorialAsk.text = "Eğitim almak ister misiniz?";
         TutorialDecline.text = "HAYIR";
         TutorialConfirm.text = "EVET";
+        WeaponName1.text = "Dinamit";
+        WeaponName2.text = "Makine";
+        WeaponName3.text = "Göktaşı";
+        WeaponName4.text = "Basın";
+        WeaponName5.text = "Sarmaşık";
     }
 }
