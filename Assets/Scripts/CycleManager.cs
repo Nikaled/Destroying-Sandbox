@@ -37,7 +37,13 @@ public class CycleManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             if (Player.instance.currentState == Player.PlayerState.Idle || Player.instance.currentState == Player.PlayerState.Building)
+            {
                 SwitchPhase();
+            }
+            if(Player.instance.currentState == Player.PlayerState.Parkour)
+            {
+                ActivateParkourPhase();
+            }
         }
     }
     public virtual void SwitchPhase()

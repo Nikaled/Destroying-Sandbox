@@ -243,7 +243,7 @@ public class SerializeBlockManager : MonoBehaviour
     private void TryGetRewardForDestroyingMap()
     {
         CurrentReward = 0;
-        CanvasManager.instance.ShowRewardAndSetRewardText(false, 0);
+        CanvasManager.instance.ShowRewardAndSetRewardText(true, 0);
         string forAnalytics = EndedDestroyMap + Geekplay.Instance.PlayerData.CurrentDestructionMapIndex;
         Analytics.instance.SendEvent(forAnalytics);
         var DList = Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList;
@@ -291,7 +291,7 @@ public class SerializeBlockManager : MonoBehaviour
     }
     public void TryGetRewardForParkourMap()
     {
-        CanvasManager.instance.ShowRewardAndSetRewardText(false, 0);
+        CanvasManager.instance.ShowRewardAndSetRewardText(true, 0);
         string forAnalytics = EndedParkourMap + Geekplay.Instance.PlayerData.CurrentParkourMapIndex;
         Analytics.instance.SendEvent(forAnalytics);
         var DList = Geekplay.Instance.PlayerData.parkourMapPlayerDataList;

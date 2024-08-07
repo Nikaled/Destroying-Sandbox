@@ -75,7 +75,28 @@ public class GameplayLocalization : MonoBehaviour
     public TextMeshProUGUI InventoryButton;
     public TextMeshProUGUI BuildPhaseButton;
     public TextMeshProUGUI DestroyPhaseButton;
+     [Header("ParkourInsturction")]
+    public TextMeshProUGUI ReloadButtonInCorner;
+    public TextMeshProUGUI ParkourInstructionR;
+    public TextMeshProUGUI ParkourInstructionM;
 
+    public static GameplayLocalization instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    public void SetupReloadInstruction()
+    {
+        ParkourInstructionR.text = $"<color=orange>[M]</color> {TryAgain.text}";
+        ReloadButtonInCorner.text = TryAgain.text;
+        ParkourInstructionM.text = InMenu.text;
+    }
+    public void SetupInventoryAndChangeModeButtons_PC()
+    {
+        InventoryButton.text = $"[I] \n {InventoryButton.text}";
+        BuildPhaseButton.text = $"[M] \n {BuildPhaseButton.text}";
+        DestroyPhaseButton.text = $"[M] \n {DestroyPhaseButton.text}";
+    }
     private void Start()
     {
        

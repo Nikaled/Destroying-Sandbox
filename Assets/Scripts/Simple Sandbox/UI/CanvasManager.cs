@@ -56,9 +56,12 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject OnWinParkourMapUI;
     [SerializeField] GameObject RewardUI;
     [SerializeField] Button LoadNextLevelButton;
+    [SerializeField] Button WinPanelMenuButton;
     [SerializeField] TextMeshProUGUI RewardText;
     [SerializeField] Button ReloadButtonOnWinPanel;
     [SerializeField] GameObject OnWinButtonsGroup;
+    [SerializeField] GameObject ParkourInsturction;
+    [SerializeField] Button ReloadButtonInCorner;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
     private bool BuildingMenuActive;
@@ -68,8 +71,18 @@ public class CanvasManager : MonoBehaviour
     private IEnumerator cursorLocker;
     private readonly string FirstLoadedInGameplay = "FirstTimeLoadedInGameplay";
     private readonly string InventoryOpened = "InventoryOpened";
-
+    [Header("Bigger Instructions")]
+    [SerializeField] Transform BiggerInstructionsPCPos;
+    [SerializeField] GameObject BiggerInstructions;
     #region DestroyingSandbox
+    private void SetupBiggerInstructions()
+    {
+        if(Geekplay.Instance.mobile == false)
+        {
+            BiggerInstructions.transform.position = BiggerInstructionsPCPos.position;
+            GameplayLocalization.instance.SetupInventoryAndChangeModeButtons_PC();
+        }
+    }
     public void TryShowNextLevelButton()
     {
         if ((SerializeBlockManager.instance.OnlyDestroyingMap || SerializeBlockManager.instance.OnlyParkourMap) && SerializeBlockManager.instance.IsCurrentMapLast == false)
@@ -96,7 +109,10 @@ public class CanvasManager : MonoBehaviour
         {
             if (Is)
             {
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(1);
+                OnWinButtonsGroup.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0f);
+                OnWinButtonsGroup.SetActive(true);
+                OnWinButtonsGroup.transform.DOScale(new Vector3(1,1,1), 1f);
             }
             OnWinButtonsGroup.SetActive(true);
         }
@@ -263,6 +279,7 @@ public class CanvasManager : MonoBehaviour
             CanvasMobileInterface.SetActive(false);
             CanvasPCInterface.SetActive(true);
             AppShopButton.SetActive(false);
+            SetupBiggerInstructions();
         }
         Geekplay.Instance.PlayerData.CoinsChanged += ChangeCoinsText;
         Geekplay.Instance.LockCursorAfterAd += CheckActiveUnlockCursorWindows;
@@ -272,12 +289,12 @@ public class CanvasManager : MonoBehaviour
             Analytics.instance.SendEvent(FirstLoadedInGameplay);
             Geekplay.Instance.Save();
         }
-
     }
     public void JumpButtonUpScale()
     {
         JumpButton.gameObject.transform.localScale = new Vector3(2, 2, 2);
     }
+
     public void MapModeUISetup()
     {
         if (SerializeBlockManager.instance.OnlyParkourMap)
@@ -286,10 +303,24 @@ public class CanvasManager : MonoBehaviour
             ParkourWinZone.instance.WinParkour += OnWinParkourMap;
             ReloadButtonOnWinPanel.onClick.RemoveAllListeners();
             ReloadButtonOnWinPanel.onClick.AddListener(delegate { CycleManager.instance.ActivateParkourPhase(); });
+            ReloadButtonInCorner.onClick.AddListener(delegate { CycleManager.instance.ActivateParkourPhase(); });
+            ParkourInsturction.SetActive(true);
+            ReloadButtonInCorner.gameObject.SetActive(true);
+            GameplayLocalization.instance.SetupReloadInstruction();
         }
         else
         {
+            if (SerializeBlockManager.instance.OnlyDestroyingMap)
+            {
+                ReloadButtonInCorner.gameObject.SetActive(true);
+                GameplayLocalization.instance.SetupReloadInstruction();
+            }
+            else
+            {
+                ReloadButtonInCorner.gameObject.SetActive(false);
+            }
             ParkourUI.SetActive(false);
+            ReloadButtonInCorner.onClick.AddListener(delegate { CycleManager.instance.ActivateBuildingPhase(); });
             ReloadButtonOnWinPanel.onClick.AddListener(delegate { CycleManager.instance.ActivateBuildingPhase(); });
         }
     }
@@ -309,7 +340,6 @@ public class CanvasManager : MonoBehaviour
     }
     private void ShowMobileIdleButtons(bool Is)
     {
-        //LeftButtonsZone.SetActive(Is);
         RightButtonsZone.SetActive(Is);
     }
     private void ShowWeaponSlotsUI(bool Is)
