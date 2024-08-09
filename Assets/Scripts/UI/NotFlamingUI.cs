@@ -7,6 +7,7 @@ public class NotFlamingUI : MonoBehaviour
     public static NotFlamingUI instance;
     public GameObject NotFlamingWarning;
     Sequence ShowSeq;
+    public List<GameObject> FiringObjects = new();
     void Start()
     {
          
@@ -23,7 +24,20 @@ public class NotFlamingUI : MonoBehaviour
     {
         NotFlamingWarning.SetActive(false);
     }
-    public void ShowWarning()
+
+    public void TryShowWarning()
+    {
+        StartCoroutine(WaitForFlameOtherBlock());
+        IEnumerator WaitForFlameOtherBlock()
+        {
+            yield return new WaitForSeconds(0.3f);
+            if (FiringObjects.Count == 0)
+            {
+                ShowWarning();
+            }
+        }
+    }
+    private void ShowWarning()
     {
         if(ShowSeq != null)
         {

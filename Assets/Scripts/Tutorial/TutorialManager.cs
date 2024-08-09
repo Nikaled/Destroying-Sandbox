@@ -38,6 +38,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject BlockPanel;
     [SerializeField] GameObject PlaceBlockButton;
     [SerializeField] GameObject ChangeModeButton;
+    [SerializeField] Transform TutorialGoForwPhase4Pos;
+    private Vector3 DefaultGoForwPos;
     GameObject currentPulsingObject;
     IEnumerator PulseCor;
     [SerializeField] Image[] DoButtonImages;
@@ -59,6 +61,7 @@ public class TutorialManager : MonoBehaviour
     }
     void Start()
     {
+        DefaultGoForwPos = GoForwardText.transform.position;
         PhasesNames = new string[] { PhaseName1, PhaseName2, PhaseName3, PhaseName4, PhaseName5, PhaseName6, PhaseName7 };
         Phases = new bool[] { Phase1, Phase2, Phase3, Phase4, Phase5, Phase6, Phase7 };
         if (Geekplay.Instance.mobile)
@@ -66,6 +69,7 @@ public class TutorialManager : MonoBehaviour
             CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(false);
         }
         GoForwardText.SetActive(false);
+        CanvasManager.instance.ShowBiggerButtons(false);
     }
 
     public void OpenPhase(string PhaseName)
@@ -117,6 +121,7 @@ public class TutorialManager : MonoBehaviour
                 break;
             case TutorialPhaseBorders.PhaseBorders.PhaseBorderWeaponUsed:
                 CycleManager.instance.ActivateBuildingPhase();
+                CanvasManager.instance.ShowBiggerButtons(true);
                 AnimalZoneReached = true;
                 if (Geekplay.Instance.mobile)
                 {
@@ -186,7 +191,7 @@ public class TutorialManager : MonoBehaviour
                 Phase4Objects.SetActive(true);
                 TutorialPhaseText.SetActive(true);
                 GoForwardText.SetActive(true);
-
+                GoForwardText.transform.position = TutorialGoForwPhase4Pos.position;
                 StopCoroutine(PulseCor);
                 DOTween.Kill(PlaceBlockButton);
                 //PlaceBlockButton.transform.DOScale(new Vector3(1, 1, 1), 0);
@@ -214,7 +219,7 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[4] = true;
                     Analytics.instance.SendEvent("Tutorial_5_PhaseCompleted_BlockDestroyed");
                 }
-
+                GoForwardText.transform.position = DefaultGoForwPos;
                 StopCoroutine(PulseCor);
                 DOTween.Kill(PlaceBlockButton);
                 for (int i = 0; i < DoButtonImages.Length; i++)
@@ -239,6 +244,7 @@ public class TutorialManager : MonoBehaviour
                 //ChangeModeButton.transform.DOScale(new Vector3(1, 1, 1), 0);
 
                 GoForwardText.SetActive(true);
+                GoForwardText.transform.position = TutorialGoForwPhase4Pos.position;
                 Phase7Objects.SetActive(true);
                 AbleToEndTutorial = true;
                 TutorialPhaseText.SetActive(true);

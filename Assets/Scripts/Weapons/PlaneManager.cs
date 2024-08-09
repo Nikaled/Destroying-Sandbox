@@ -11,10 +11,10 @@ public class PlaneManager : MonoBehaviour
         Vector3 PlaneUp = new Vector3(0, 50, 0);
         currentPlane = Instantiate(PlanePrefab, PlaneUp, Quaternion.identity);
         Player.instance.gameObject.SetActive(false);
-        currentPlane.GetComponent<Plane>().planeManager = this;
+        currentPlane.GetComponent<PlaneWeapon>().planeManager = this;
         if (Geekplay.Instance.mobile)
         {
-            CanvasManager.instance.DoButton.onClick.AddListener(delegate { currentPlane.GetComponent<Plane>().Fire(); });
+            CanvasManager.instance.DoButton.onClick.AddListener(delegate { currentPlane.GetComponent<PlaneWeapon>().Fire(); });
         }
     }
     private void OnDisable()

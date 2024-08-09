@@ -206,6 +206,7 @@ public class Player : MonoBehaviour
                 AdWarning.instance.ShowAdOnStart();
                 CanvasManager.instance.ShowBlockSlotsAndHideWeapons(false);
                 CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(false);
+                CanvasManager.instance.ShowBiggerButtons(false);
                 if (Geekplay.Instance.mobile)
                 {
                     CanvasManager.instance.DoButton.gameObject.SetActive(false);

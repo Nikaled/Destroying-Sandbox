@@ -54,13 +54,14 @@ public class CanvasManager : MonoBehaviour
     [Header("Parkour")]
     [SerializeField] GameObject ParkourUI;
     [SerializeField] GameObject OnWinParkourMapUI;
+    [SerializeField] GameObject ParkourInsturction;
+    [Header("WinPanel")]
     [SerializeField] GameObject RewardUI;
     [SerializeField] Button LoadNextLevelButton;
-    [SerializeField] Button WinPanelMenuButton;
+    [SerializeField] Button ToMenuButton;
     [SerializeField] TextMeshProUGUI RewardText;
     [SerializeField] Button ReloadButtonOnWinPanel;
     [SerializeField] GameObject OnWinButtonsGroup;
-    [SerializeField] GameObject ParkourInsturction;
     [SerializeField] Button ReloadButtonInCorner;
     private bool InAppShopActive;
     private bool SaveMapUIActive;
@@ -109,10 +110,14 @@ public class CanvasManager : MonoBehaviour
         {
             if (Is)
             {
+                ToMenuButton.image.DOFade(0, 0);
+                LoadNextLevelButton.image.DOFade(0, 0);
+                ReloadButtonOnWinPanel.image.DOFade(0, 0);
                 yield return new WaitForSeconds(1);
-                OnWinButtonsGroup.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 0f);
                 OnWinButtonsGroup.SetActive(true);
-                OnWinButtonsGroup.transform.DOScale(new Vector3(1,1,1), 1f);
+                ToMenuButton.image.DOFade(1, 1);
+                LoadNextLevelButton.image.DOFade(1, 1);
+                ReloadButtonOnWinPanel.image.DOFade(1, 1);
             }
             OnWinButtonsGroup.SetActive(true);
         }
@@ -289,6 +294,10 @@ public class CanvasManager : MonoBehaviour
             Analytics.instance.SendEvent(FirstLoadedInGameplay);
             Geekplay.Instance.Save();
         }
+    }
+    public void ShowBiggerButtons(bool Is)
+    {
+        BiggerInstructions.SetActive(Is);
     }
     public void JumpButtonUpScale()
     {

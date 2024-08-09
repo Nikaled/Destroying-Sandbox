@@ -72,8 +72,8 @@ public class TutorialLocalization : MonoBehaviour
         TutorialTextPhase1 = "Используй джойстик в левой части экрана для передвижения";
         TutorialTextPhase2 = "Нажми на панель блоков снизу, чтобы выбрать нужный блок";
         TutorialTextPhase3 = "Нажми на кнопку справа, чтобы поставить блок в зоне";
-        TutorialTextPhase4 = "В этой игре можно не только строить, но и разрушать! Иди вперед и попробуй сам!";
-        TutorialTextPhase5 = "Переключайся между оружиями с помощью панели и уничтожай блоки!";
+        TutorialTextPhase4 = "В этой игре можно не только строить, но и разрушать!";
+        TutorialTextPhase5 = "А теперь попробуй сам! Переключайся между оружиями с помощью панели и уничтожай блоки!";
         TutorialTextPhase6 = "Нажми кнопку над панелью блоков для перехода в режим разрушения и животные начнут ходить!";
         TutorialTextPhase7 = "Зайди в арку в конце дороги, чтобы закончить обучение. Приятной игры!";
     }
@@ -82,8 +82,8 @@ public class TutorialLocalization : MonoBehaviour
         TutorialTextPhase1 = "Используй <color=orange>[W]</color>,<color=orange>[A]</color>,<color=orange>[S]</color>,<color=orange>[D]</color> для ходьбы";
         TutorialTextPhase2 = "Нажми на клавиатуре цифры от <color=orange>[1]</color> до <color=orange>[0]</color>, чтобы выбрать блок";
         TutorialTextPhase3 = "Нажми <color=orange> левой кнопкой мыши</color> в зоне справа чтобы поставить блок";
-        TutorialTextPhase4 = "В этой игре можно не только строить, но и разрушать! Иди вперед и попробуй сам!";
-        TutorialTextPhase5 = "Выбирай оружие на цифры от <color=orange>[1]</color> до <color=orange>[0]</color> и уничтожай блоки! (Инструкции над панелью оружия)";
+        TutorialTextPhase4 = "В этой игре можно не только строить, но и разрушать!";
+        TutorialTextPhase5 = "А теперь попробуй сам! Выбирай оружие на цифры от <color=orange>[1]</color> до <color=orange>[0]</color> и уничтожай блоки! (Инструкции над панелью оружия)";
         TutorialTextPhase6 = "Нажми <color=orange>[M]</color> для перехода в режим разрушения и животные начнут ходить!";
         TutorialTextPhase7 = "Зайди в арку в конце дороги, чтобы закончить обучение. Приятной игры!";
     }

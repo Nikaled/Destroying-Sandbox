@@ -208,6 +208,11 @@ public class SerializeBlockManager : MonoBehaviour
         {
             CycleManager.instance.ActivateDestroyingPhase();
             DestroyCounter.instance.AllBlockDestroyed += TryGetRewardForDestroyingMap;
+            GameplayLocalization.instance.SetupReloadInstructionsOnOnlyDestroyed(true);
+        }
+        else
+        {
+            GameplayLocalization.instance.SetupReloadInstructionsOnOnlyDestroyed(false);
         }
         AdWarning.instance.SetupAdByModeAndStartTimer();
     }

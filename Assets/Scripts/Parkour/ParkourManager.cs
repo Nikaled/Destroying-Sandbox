@@ -44,15 +44,22 @@ public class ParkourManager : MonoBehaviour
     {
         CountDownOnStartPanel.SetActive(true);
         SoundSoure.clip = ParkourCountdown;
-        SoundSoure.Play();
 
+        float startPitch = 0.6f;
         int Timer = 4;
         while (Timer != 1)
         {
             Timer--;
+            //startPitch += 0.05f;
+            SoundSoure.pitch = startPitch;
+            SoundSoure.Play();
             CountDownTimer.text = Timer.ToString();
             yield return new WaitForSeconds(1f);
+           
         }
+        startPitch += 0.6f;
+        SoundSoure.pitch = startPitch;
+        SoundSoure.Play();
         Geekplay.Instance.Save();
         CountDownOnStartPanel.SetActive(false);
         Player.instance.InterfaceActive = false;

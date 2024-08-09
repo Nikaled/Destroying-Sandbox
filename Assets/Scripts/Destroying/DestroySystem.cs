@@ -77,7 +77,7 @@ public class DestroySystem : MonoBehaviour
         {
             if (Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
             {
-                NotFlamingUI.instance.ShowWarning();
+                NotFlamingUI.instance.TryShowWarning();
             }
             return;
         }
@@ -85,6 +85,11 @@ public class DestroySystem : MonoBehaviour
         {
             return;
         }
+        if (Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
+        {
+            NotFlamingUI.instance.FiringObjects.Add(gameObject);
+        }
+       
         SoundManager.instance.PlayBlockBurningSound();
         ObjectIsDestroying = true;
         var Fire = Instantiate(FireAnimation, transform.position, transform.rotation);
@@ -106,6 +111,10 @@ public class DestroySystem : MonoBehaviour
                 Fire.transform.parent = null;
                 Destroy(Fire);
                 UnitDieAnimation(ResizeModifier);
+            }
+            if (Player.instance.CurrentWeapon == Player.WeaponType.FlameThrower)
+            {
+                NotFlamingUI.instance.FiringObjects.Remove(gameObject);
             }
             ObjectDies();
         }

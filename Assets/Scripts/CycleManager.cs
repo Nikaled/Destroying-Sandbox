@@ -40,7 +40,7 @@ public class CycleManager : MonoBehaviour
             {
                 SwitchPhase();
             }
-            if(Player.instance.currentState == Player.PlayerState.Parkour)
+            if (Player.instance.currentState == Player.PlayerState.Parkour)
             {
                 ActivateParkourPhase();
             }
@@ -54,7 +54,7 @@ public class CycleManager : MonoBehaviour
         }
         else if (currentPhase == Phase.Building)
         {
-             ActivateDestroyingPhase();
+            ActivateDestroyingPhase();
         }
     }
     protected void ChangePhaseButtonFunc(Phase newPhase)
@@ -73,7 +73,7 @@ public class CycleManager : MonoBehaviour
     }
     public virtual void ActivateDestroyingPhase()
     {
-        if(SerializeBlockManager.instance.BlocksOnScene.Count == 0)
+        if (SerializeBlockManager.instance.BlocksOnScene.Count == 0)
         {
             return;
         }
@@ -83,11 +83,11 @@ public class CycleManager : MonoBehaviour
         Player.instance.OnDestroyingPhaseActivated();
         CanvasManager.instance.ShowCurrentDestroyInterface(true);
         DestroyingPhaseStarted?.Invoke();
+        CanvasManager.instance.ChangePhaseButtonIcon(0);
+        CanvasManager.instance.ChangeDoButtonImageToMode(false);
         if (Geekplay.Instance.mobile)
         {
             ChangePhaseButtonFunc(Phase.Destroying);
-            CanvasManager.instance.ChangePhaseButtonIcon(0);
-            CanvasManager.instance.ChangeDoButtonImageToMode(false);
         }
     }
 
@@ -108,11 +108,11 @@ public class CycleManager : MonoBehaviour
         CanvasManager.instance.ShowWinMapUI(false);
         CanvasManager.instance.ShowCurrentDestroyInterface(false);
         BuildingPhaseStarted?.Invoke();
+        CanvasManager.instance.ChangePhaseButtonIcon(1);
+        CanvasManager.instance.ChangeDoButtonImageToMode(true);
         if (Geekplay.Instance.mobile)
         {
             ChangePhaseButtonFunc(Phase.Building);
-            CanvasManager.instance.ChangePhaseButtonIcon(1);
-            CanvasManager.instance.ChangeDoButtonImageToMode(true);
         }
         if (SerializeBlockManager.instance.OnlyDestroyingMap)
         {

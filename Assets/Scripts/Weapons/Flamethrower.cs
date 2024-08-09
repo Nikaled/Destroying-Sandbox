@@ -46,6 +46,7 @@ public class Flamethrower : MonoBehaviour
     private void ActivateFire()
     {    
         HitCollider.enabled = true;
+        NotFlamingUI.instance.FiringObjects.Clear();
     }
     public void EndFire()
     {

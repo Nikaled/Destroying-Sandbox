@@ -41,11 +41,11 @@ public class TutorialCycleManager : CycleManager
         SerializeBlockManager.instance.SaveBlocks();
         Player.instance.OnDestroyingPhaseActivated();
         DestroyingPhaseStarted?.Invoke();
+            CanvasManager.instance.ChangePhaseButtonIcon(0);
+            CanvasManager.instance.ChangeDoButtonImageToMode(false);
         if (Geekplay.Instance.mobile)
         {
             ChangePhaseButtonFunc(Phase.Destroying);
-            CanvasManager.instance.ChangePhaseButtonIcon(0);
-            CanvasManager.instance.ChangeDoButtonImageToMode(false);
         }
     }
     public override void ActivateBuildingPhase()
@@ -55,10 +55,11 @@ public class TutorialCycleManager : CycleManager
         SerializeBlockManager.instance.LoadBlocks();
         BuildingPhaseStarted?.Invoke();
         Player.instance.OnBuildingPhaseActivated();
+        ChangePhaseButtonFunc(Phase.Building);
+        CanvasManager.instance.ChangePhaseButtonIcon(1);
         if (Geekplay.Instance.mobile)
         {
-            ChangePhaseButtonFunc(Phase.Building);
-            CanvasManager.instance.ChangePhaseButtonIcon(1);
+           
             CanvasManager.instance.ChangeDoButtonImageToMode(true);
         }
     }

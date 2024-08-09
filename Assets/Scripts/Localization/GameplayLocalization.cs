@@ -75,7 +75,7 @@ public class GameplayLocalization : MonoBehaviour
     public TextMeshProUGUI InventoryButton;
     public TextMeshProUGUI BuildPhaseButton;
     public TextMeshProUGUI DestroyPhaseButton;
-     [Header("ParkourInsturction")]
+    [Header("ParkourInsturction")]
     public TextMeshProUGUI ReloadButtonInCorner;
     public TextMeshProUGUI ParkourInstructionR;
     public TextMeshProUGUI ParkourInstructionM;
@@ -91,20 +91,53 @@ public class GameplayLocalization : MonoBehaviour
         ReloadButtonInCorner.text = TryAgain.text;
         ParkourInstructionM.text = InMenu.text;
     }
+    public void SetupReloadInstructionsOnOnlyDestroyed(bool Is)
+    {
+        if (Is)
+        {
+            Pistol2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            Molotov2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            FlameThrow2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            Plane3.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            Lightning2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            DynamiteInstruction4.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            Car2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            Meteor2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            Press2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+            Creeper2.text = $"<color=orange>[M]</color> {TryAgain.text}";
+        }
+        else
+        {
+            Pistol2.transform.parent.gameObject.SetActive(false);
+            Pistol2.transform.parent.gameObject.SetActive(false);
+            Molotov2.transform.parent.gameObject.SetActive(false);
+            FlameThrow2.transform.parent.gameObject.SetActive(false);
+            Plane3.transform.parent.gameObject.SetActive(false);
+            Lightning2.transform.parent.gameObject.SetActive(false);
+            DynamiteInstruction4.transform.parent.gameObject.SetActive(false);
+            Car2.transform.parent.gameObject.SetActive(false);
+            Meteor2.transform.parent.gameObject.SetActive(false);
+            Press2.transform.parent.gameObject.SetActive(false);
+            Creeper2.transform.parent.gameObject.SetActive(false);
+        }
+    }
     public void SetupInventoryAndChangeModeButtons_PC()
     {
         InventoryButton.text = $"[I] \n {InventoryButton.text}";
         BuildPhaseButton.text = $"[M] \n {BuildPhaseButton.text}";
         DestroyPhaseButton.text = $"[M] \n {DestroyPhaseButton.text}";
+
+
+
     }
     private void Start()
     {
-       
+
         if (Geekplay.Instance.language == "ru")
         {
-        RuLocalization();
+            RuLocalization();
         }
-        if(Geekplay.Instance.language == "en")
+        if (Geekplay.Instance.language == "en")
         {
             EnLocalization();
         }

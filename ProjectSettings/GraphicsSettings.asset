@@ -37,6 +37,7 @@ GraphicsSettings:
   - {fileID: 4800000, guid: c27b9971cccd87340a587547f278a443, type: 3}
   - {fileID: -6465566751694194690, guid: cf3c048019ef82146b383756abdb03a5, type: 3}
   - {fileID: -6465566751694194690, guid: 3ff3a0c52571cbf49baa1b3e4add9d3d, type: 3}
+  - {fileID: 4800000, guid: d624111405c5e4a95ac63f8fc67adeb8, type: 3}
   m_PreloadedShaders: []
   m_PreloadShadersBatchTimeLimit: -1
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
