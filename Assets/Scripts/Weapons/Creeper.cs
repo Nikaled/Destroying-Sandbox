@@ -108,6 +108,8 @@ public class Creeper : MonoBehaviour
         }
         DestroyArea.GetComponent<SphereCollider>().enabled = false;
         yield return new WaitForSeconds(0.03f);
+        SoundSource.clip = explosion;
+        SoundSource.Play();
         explosionForceChecker.GetComponent<SphereCollider>().enabled = false;
         creeperModel.SetActive(false);
         yield return new WaitForSeconds(1f);

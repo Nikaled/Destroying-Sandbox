@@ -12,4 +12,8 @@ public class TutorialBlockDestroySystem : DestroySystem
     {
         return false;
     }
+    protected override bool CheckDestroyNotAvailable()
+    {
+        return false;
+    }
 }

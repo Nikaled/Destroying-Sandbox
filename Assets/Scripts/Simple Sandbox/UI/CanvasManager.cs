@@ -174,6 +174,7 @@ public class CanvasManager : MonoBehaviour
         {
             ShowRewardAndSetRewardText(true, DestroyCounter.instance.GainedCoins);
         }
+        MusicManager.instance.StopMusic();
         ShowWinMapUI(true);
     }
     public void ShowWinMapUI(bool Is)

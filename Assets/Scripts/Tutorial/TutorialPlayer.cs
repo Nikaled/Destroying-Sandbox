@@ -32,6 +32,7 @@ public class TutorialPlayer : Player
     }
     public override void SwitchPlayerState(PlayerState newPlayerState, float Delay = 0.1f)
     {
+        EndBuildingPosition = transform.position;
         base.SwitchPlayerState(newPlayerState, Delay);
         if (Geekplay.Instance.mobile)
         {

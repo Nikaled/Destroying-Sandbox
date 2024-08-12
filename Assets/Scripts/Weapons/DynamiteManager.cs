@@ -16,6 +16,7 @@ public class DynamiteManager : MonoBehaviour
     public static Action ExplodeDynamite;
     public static Action StateSwitched;
     KeyCode ExplodeButton = KeyCode.T;
+    Queue<Dynamite> PlacedDynamite = new();
     private void Start()
     {
         player = Player.instance;
@@ -25,6 +26,8 @@ public class DynamiteManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        PlacedDynamite.Clear();
+        DestroyLimiter.ResetCurrentDestroyed();
         if (Geekplay.Instance.mobile)
         {
             CanvasManager.instance.DoButton.onClick.AddListener(delegate { PlaceDynamite(); });
@@ -145,6 +148,7 @@ public class DynamiteManager : MonoBehaviour
             {
                 BuildCellManager.instance.PlayPlaceBlockSound();
                 Dynamite newDynamite = Instantiate(DynamitePrefab, pos, Quaternion.identity);
+                PlacedDynamite.Enqueue(newDynamite);
                 newDynamite.SubscribeOnExplosion();
                 newDynamite.SubscribeOnSwitchState();
             }
@@ -152,12 +156,19 @@ public class DynamiteManager : MonoBehaviour
     }
     private void DeleteDynamite()
     {
+        PlacedDynamite.Dequeue();
         BuildCellManager.instance.PlayDeleteBlockSound();
         Destroy(currentCell.transform.parent.gameObject);
     }
     private void DoExplostion()
     {
+        if(PlacedDynamite.Count == 0)
+        {
+            return;
+        }
+        DestroyLimiter.ResetCurrentDestroyed();
         ExplodeDynamite?.Invoke();
+        PlacedDynamite.Clear();
         SoundManager.instance.PlayDynamiteSound();
     }
 }

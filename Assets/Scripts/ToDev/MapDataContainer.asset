@@ -9912,7 +9912,7 @@ MonoBehaviour:
   - MapName: Bomb
     MapIndex: 6
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 7
       Position: {x: 50, y: 10, z: -11}
@@ -10255,7 +10255,7 @@ MonoBehaviour:
   - MapName: Amogus
     MapIndex: 7
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 39
       Position: {x: 50, y: 6, z: -13}
@@ -11092,7 +11092,7 @@ MonoBehaviour:
   - MapName: BlackWhiteVilla
     MapIndex: 8
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 8
       Position: {x: 48, y: 2, z: -4}
@@ -13243,7 +13243,7 @@ MonoBehaviour:
   - MapName: HunterHouse
     MapIndex: 9
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 16
       Position: {x: 72, y: 2, z: 0}
@@ -14020,7 +14020,7 @@ MonoBehaviour:
   - MapName: ArcherTower
     MapIndex: 10
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 22
       Position: {x: 42, y: 2, z: -4}
@@ -14867,7 +14867,7 @@ MonoBehaviour:
   - MapName: Bee
     MapIndex: 11
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 45
       Position: {x: 42, y: 4, z: -2}
@@ -15588,7 +15588,7 @@ MonoBehaviour:
   - MapName: Bridge
     MapIndex: 12
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 17
       Position: {x: 38, y: 2, z: 2}
@@ -16421,7 +16421,7 @@ MonoBehaviour:
   - MapName: Bunker
     MapIndex: 13
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 8
       Position: {x: 40, y: 2, z: 0}
@@ -17508,7 +17508,7 @@ MonoBehaviour:
   - MapName: Skyscraper
     MapIndex: 14
     SaveDate: 
-    RewardForComplete: 0
+    RewardForComplete: 55
     SavedBlocks:
     - PrefabIndex: 43
       Position: {x: 50, y: 2, z: 2}

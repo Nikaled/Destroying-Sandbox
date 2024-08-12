@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
     public bool InterfaceActive;
     private Vector3 parkourStartPosition;
     private Quaternion parkourStartRotation;
+    protected Vector3 EndBuildingPosition;
     public enum PlayerState
     {
         InTransport,
@@ -189,6 +190,8 @@ public class Player : MonoBehaviour
 
                 animator.SetBool("PistolAiming", false);
                 CanvasManager.instance.ShowBuildingInstruction(false);
+                EndBuildingPosition = transform.position;
+                MusicManager.instance.StartDestroyingPhaseMusic();
                 break;
             case PlayerState.Building:
                 HideAllWeapons();
@@ -200,6 +203,11 @@ public class Player : MonoBehaviour
                 {
                     CanvasManager.instance.ShowCurrentWeaponInstruction(0, HideAll: true);
                     CanvasManager.instance.ShowBuildingInstruction(true);
+                }
+                MusicManager.instance.StartBuildingPhaseMusic();
+                if(currentState == PlayerState.Idle)
+                {
+                    motor.SetPosition(EndBuildingPosition);
                 }
                 break;
             case PlayerState.Parkour:
@@ -357,7 +365,7 @@ public class Player : MonoBehaviour
     }
     public virtual void ChangeWeaponInput()
     {
-        if (currentState != PlayerState.Idle)
+        if (currentState != PlayerState.Idle || AdWarningActive || CanvasManager.instance.OnWinMapUI.activeInHierarchy)
         {
             return;
         }

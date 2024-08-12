@@ -49,9 +49,21 @@ public class DestroySystem : MonoBehaviour
         }
         return false;
     }
+    protected virtual bool CheckDestroyNotAvailable()
+    {
+        if (CheckPhaseNotDestroying() || DestroyLimiter.AvailableToDestroyAndAddCount() == false)
+        {
+            return true;
+        }
+        return false;
+    }
     public void DamageTaked(Vector3 position)
     {
-        if (CheckPhaseNotDestroying() || ObjectIsDestroying || DestroyLimiter.AvailableToDestroyAndAddCount() == false)
+        if (CheckDestroyNotAvailable())
+        {
+            return;
+        }
+        if (ObjectIsDestroying)
         {
             return;
         }
@@ -191,7 +203,7 @@ public class DestroySystem : MonoBehaviour
             smallBlocks[i].transform.DOScale(0, AnimationTime).SetDelay(1f).SetEase(Ease.InCirc);
             // smallBlocks[i].GetComponent<Rigidbody>().AddForce((RandomVector + Vector3.up * RandomModifierPower) * 100 * 100);
         }
-        GameObject objToSpawn = new GameObject("BlockFragmentDestroyer");
+        //GameObject objToSpawn = new GameObject("BlockFragmentDestroyer");
         //BlockDestroyingAnimation smallBlockParent = objToSpawn.AddComponent<BlockDestroyingAnimation>();
 
        // parentSUKAAnimation.smallBlocks = smallBlocks;

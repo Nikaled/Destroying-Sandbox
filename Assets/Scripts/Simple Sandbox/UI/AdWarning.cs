@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class AdWarning : MonoBehaviour
 {
     public int TimeToShowWarning;
@@ -11,6 +11,7 @@ public class AdWarning : MonoBehaviour
     public TextMeshProUGUI WarningText;
     public TextMeshProUGUI YouWillGetRewardText;
     [SerializeField] GameObject AddCoinsConfirmUI;
+    [SerializeField] AudioMixerGroup MasterAudioMixer;
     public static AdWarning instance;
     private int CurrentTimeToShowWarning;
     private IEnumerator AwaitWarningCor;
@@ -83,6 +84,7 @@ public class AdWarning : MonoBehaviour
         Geekplay.Instance.IsAdWarningShowing = true;
         Time.timeScale = 0f;
         int Timer = 5;
+        MasterAudioMixer.audioMixer.SetFloat("Master", -100);
         while (Timer != 0)
         {
             LocalizateText(Timer);
@@ -104,6 +106,7 @@ public class AdWarning : MonoBehaviour
         }
         AwaitWarningCor = AwaitAndShowWarningPanel();
         StartCoroutine(AwaitWarningCor);
+        MasterAudioMixer.audioMixer.SetFloat("Master", 0);
         //#if UNITY_EDITOR
         //        CanvasManager.instance.CheckActiveUnlockCursorWindows();
         //#endif

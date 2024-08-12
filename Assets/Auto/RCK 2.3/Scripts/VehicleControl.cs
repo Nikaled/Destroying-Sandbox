@@ -1127,7 +1127,7 @@ public class VehicleControl : MonoBehaviour
 
         if (Pitch == 1)
         {
-            carSounds.IdleEngine.volume = Mathf.Lerp(carSounds.IdleEngine.volume, 1.0f, 0.1f);
+            carSounds.IdleEngine.volume = Mathf.Lerp(carSounds.IdleEngine.volume, 0.8f, 0.1f);
             carSounds.LowEngine.volume = Mathf.Lerp(carSounds.LowEngine.volume, 0.5f, 0.1f);
             carSounds.HighEngine.volume = Mathf.Lerp(carSounds.HighEngine.volume, 0.0f, 0.1f);
 
@@ -1135,13 +1135,13 @@ public class VehicleControl : MonoBehaviour
         else
         {
 
-            carSounds.IdleEngine.volume = Mathf.Lerp(carSounds.IdleEngine.volume, 1.8f - Pitch, 0.1f);
+            carSounds.IdleEngine.volume = Mathf.Lerp(carSounds.IdleEngine.volume, 1.6f - Pitch, 0.1f);
 
 
             if ((Pitch > PitchDelay || accel > 0) && shiftTime == 0.0f)
             {
                 carSounds.LowEngine.volume = Mathf.Lerp(carSounds.LowEngine.volume, 0.0f, 0.2f);
-                carSounds.HighEngine.volume = Mathf.Lerp(carSounds.HighEngine.volume, 1.0f, 0.1f);
+                carSounds.HighEngine.volume = Mathf.Lerp(carSounds.HighEngine.volume, 0.8f, 0.1f);
             }
             else
             {

@@ -45,7 +45,7 @@ public class PlaneWeapon : MonoBehaviour
     }
     private void OnDisable()
     {
-        LockCursor(false);
+        LockCursor(true);
         //for (int i = 0; i < bulletPool.Count; i++)
         //{
         //   var bulletInPool = bulletPool.Dequeue();

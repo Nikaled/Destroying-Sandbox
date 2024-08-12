@@ -41,7 +41,6 @@ public class GameplayLocalization : MonoBehaviour
     [SerializeField] TextMeshProUGUI FlameThrow3;
     [Header("PlaneInstruction")]
     [SerializeField] TextMeshProUGUI Plane1;
-    [SerializeField] TextMeshProUGUI Plane2;
     [SerializeField] TextMeshProUGUI Plane3;
     [SerializeField] TextMeshProUGUI Plane4;
     [Header("LightningInstruction")]
@@ -123,12 +122,15 @@ public class GameplayLocalization : MonoBehaviour
     }
     public void SetupInventoryAndChangeModeButtons_PC()
     {
-        InventoryButton.text = $"[I] \n {InventoryButton.text}";
-        BuildPhaseButton.text = $"[M] \n {BuildPhaseButton.text}";
-        DestroyPhaseButton.text = $"[M] \n {DestroyPhaseButton.text}";
-
-
-
+        StartCoroutine(SetAfterDelay());
+         IEnumerator SetAfterDelay()
+        {
+            yield return new WaitForSeconds(0.1f);
+            InventoryButton.text = $"[I] \n {InventoryButton.text}";
+            BuildPhaseButton.text = $"[M] \n {BuildPhaseButton.text}";
+            DestroyPhaseButton.text = $"[M] \n {DestroyPhaseButton.text}";
+        }
+       
     }
     private void Start()
     {
@@ -178,7 +180,6 @@ public class GameplayLocalization : MonoBehaviour
         FlameThrow2.text = "<color=orange>[M]</color> Building mode";
         FlameThrow3.text = "<color=orange>[Tab]</color> To Menu";
         Plane1.text = "<color=orange>[Mouse]</color> Turns";
-        Plane2.text = "<color=orange>[LMB]</color> Shoot";
         Plane3.text = "<color=orange>[M]</color> Building mode";
         Plane4.text = "<color=orange>[Tab]</color> To Menu";
         Lightning1.text = "<color=orange>[LMB]</color> Summon lightning";
@@ -237,7 +238,6 @@ public class GameplayLocalization : MonoBehaviour
         FlameThrow2.text = "<color=orange>[M]</color> İnşaat modu";
         FlameThrow3.text = "<color=orange>[Tab]</color> Menüde";
         Plane1.text = "<color=orange>[Fare]</color> Dоnüşler";
-        Plane2.text = "<color=orange>[LKM]</color> Ateş etmek";
         Plane3.text = "<color=orange>[M]</color> İnşaat modu";
         Plane4.text = "<color=orange>[Tab]</color> Menüde";
         Lightning1.text = "<color=orange>[LKM]</color> Yıldırımı ara";
@@ -296,7 +296,6 @@ public class GameplayLocalization : MonoBehaviour
         FlameThrow2.text = "<color=orange>[М]</color> Режим строительства";
         FlameThrow3.text = "<color=orange>[Tab]</color>  В Меню";
         Plane1.text = "<color=orange>[Мышь]</color> Повороты";
-        Plane2.text = "<color=orange>[ЛКМ]</color> Стрелять";
         Plane3.text = "<color=orange>[М]</color> Режим строительства";
         Plane4.text = "<color=orange>[Tab]</color>  В Меню";
         Lightning1.text = "<color=orange>[ЛКМ]</color> Вызвать молнию";

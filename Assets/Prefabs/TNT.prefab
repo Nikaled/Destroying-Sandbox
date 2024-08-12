@@ -982,7 +982,9 @@ MonoBehaviour:
   DestroyAnimation: {fileID: 1816854927924612721}
   ExplosionScale: 3
   explosionForceChecker: {fileID: 1488203332065153035}
+  explosionForceCheckerCollider: {fileID: 2517743787226040548}
   DamageSphere: {fileID: 9189608123411559731}
+  DamageSphereCollider: {fileID: 3948293311525068989}
 --- !u!135 &2316573712605101022
 SphereCollider:
   m_ObjectHideFlags: 0
