@@ -19,6 +19,7 @@ public class ParkourManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI CountDownTimer;
     [SerializeField] AudioSource SoundSoure;
     [SerializeField] AudioClip ParkourCountdown;
+    [SerializeField] AudioClip ParkourCountdownEnd;
 
     private void Awake()
     {
@@ -45,20 +46,16 @@ public class ParkourManager : MonoBehaviour
         CountDownOnStartPanel.SetActive(true);
         SoundSoure.clip = ParkourCountdown;
 
-        float startPitch = 0.6f;
         int Timer = 4;
         while (Timer != 1)
         {
             Timer--;
-            //startPitch += 0.05f;
-            SoundSoure.pitch = startPitch;
             SoundSoure.Play();
             CountDownTimer.text = Timer.ToString();
             yield return new WaitForSeconds(1f);
            
         }
-        startPitch += 0.6f;
-        SoundSoure.pitch = startPitch;
+        SoundSoure.clip = ParkourCountdownEnd;
         SoundSoure.Play();
         Geekplay.Instance.Save();
         CountDownOnStartPanel.SetActive(false);
@@ -67,7 +64,7 @@ public class ParkourManager : MonoBehaviour
         WinMap = false;
         CountDown = false;
     }
-    public float GetTimeInSeconds()
+public float GetTimeInSeconds()
     {
         return minutes * 60 + seconds + milliseconds / 1000;
     }

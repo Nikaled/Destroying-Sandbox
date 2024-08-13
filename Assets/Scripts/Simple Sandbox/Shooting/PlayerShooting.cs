@@ -8,15 +8,16 @@ public class PlayerShooting : MonoBehaviour
     [Header("Shoot parametres")]
     [SerializeField] private float normalSensitivity;
     [SerializeField] private LayerMask aimColliderLayerMask;
-    [SerializeField] private Transform RaycastOrigin;
     [SerializeField] private Transform PistolProjectileSpawnPoint;
     [SerializeField] private Transform GunProjectileSpawnPoint;
+    [SerializeField] private Transform RotatePlayerStartPoint;
     [SerializeField] ShootingProjectile projectile;
     [SerializeField] public Image Crosshair;
     [SerializeField] Player player;
     [SerializeField] MeleeAttackHitbox handHitbox;
     [SerializeField] Flamethrower flameThrower;
     public Vector3 AimDirection;
+    public Vector3 RotateDirection;
     [HideInInspector] public Vector3 CrosshairWorldPosition;
     [HideInInspector] public Vector3 MouseWorldPosition;
     float GunTimer;
@@ -38,19 +39,9 @@ public class PlayerShooting : MonoBehaviour
     {
         CrosshairWorldPosition = Vector3.zero;
         Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
-        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 5000, aimColliderLayerMask))
         {
             CrosshairWorldPosition = raycastHit.point;
-            //if (player.CurrentWeapon == Player.WeaponType.Pistol)
-            //{
-            //    lineRenderer.SetPosition(0, PistolProjectileSpawnPoint.position);
-            //}
-            //if (player.CurrentWeapon == Player.WeaponType.Gun)
-            //{
-            //    lineRenderer.SetPosition(0, GunProjectileSpawnPoint.position);
-            //}
-            //lineRenderer.SetPosition(1, raycastHit.point);
         }
         else
         {
@@ -58,13 +49,14 @@ public class PlayerShooting : MonoBehaviour
         }
 
         AimDirection = (CrosshairWorldPosition - PistolProjectileSpawnPoint.position).normalized;
-
+        RotateDirection = (CrosshairWorldPosition - RotatePlayerStartPoint.position).normalized; 
     }
     public void Fire(Player.WeaponType currentWeapon)
     {
         if (currentWeapon == Player.WeaponType.Pistol)
         {
             Vector3 aimDirection = (CrosshairWorldPosition - PistolProjectileSpawnPoint.position).normalized;
+            Vector3 rotateDirection = (CrosshairWorldPosition - RotatePlayerStartPoint.position).normalized;
             player.RotatePlayerOnShoot(aimDirection);
             ShootingProjectile proj = Instantiate(projectile, PistolProjectileSpawnPoint.position, Quaternion.LookRotation(aimDirection, Vector3.up));
             LockPlayerMovement(0.7f);
@@ -103,7 +95,6 @@ public class PlayerShooting : MonoBehaviour
     }
     public void LockPlayerMovement(float HoldingTime = 1f)
     {
-        //var cor = player.LockPositionOnShoot(HoldingTime);
         if (HoldingCoroutine != null)
         {
             StopCoroutine(HoldingCoroutine);
@@ -158,11 +149,4 @@ public class PlayerShooting : MonoBehaviour
 
         handHitbox.EndAttack();
     }
-
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
-    //    Gizmos.DrawRay(RaycastOrigin.position, ray.direction * 999);
-    //}
 }

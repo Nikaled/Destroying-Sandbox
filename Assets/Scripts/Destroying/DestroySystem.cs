@@ -111,6 +111,10 @@ public class DestroySystem : MonoBehaviour
         ParentPivot.transform.position = transform.position - new Vector3(0, 1f, 0);
         gameObject.transform.parent = ParentPivot.transform;
         float ResizeModifier = 2;
+        if (IsUnit)
+        {
+            ResizeModifier = 1;
+        }
         ParentPivot.transform.DOScale(ParentPivot.transform.localScale / ResizeModifier, 1.7f).OnComplete(OnEndFire);
 
 
@@ -146,16 +150,16 @@ public class DestroySystem : MonoBehaviour
         for (int j = 0; j < Renderers.Length; j++)
         {
             Renderers[j].material = UnitDieMaterial;
-            //for (int i = 0; i < Renderers[j].materials.Length; i++)
-            //{
-            //    Renderers[j].materials[i] = UnitDieMaterial;
-            //    Renderers[j].materials[i] = null;
-            //}
-            //Material[] RedMats = new Material[Renderers[j].materials.Length];
-            //for (int i = 0; i < Renderers[j].materials.Length; i++)
-            //{
-            //    RedMats[i] = UnitDieMaterial;
-            //}
+            for (int i = 0; i < Renderers[j].materials.Length; i++)
+            {
+                Renderers[j].materials[i] = UnitDieMaterial;
+                Renderers[j].materials[i] = null;
+            }
+            Material[] RedMats = new Material[Renderers[j].materials.Length];
+            for (int i = 0; i < Renderers[j].materials.Length; i++)
+            {
+                RedMats[i] = UnitDieMaterial;
+            }
         }
 
         var DieScirpt = GhostUnit.AddComponent<UnitDieAnimation>();

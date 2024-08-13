@@ -177,6 +177,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2048129436, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Branch to Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041E\u0442 \u0432\u0435\u0442\u043A\u0438 \u043A \u0432\u0435\u0442\u043A\u0435"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: Daldan dala
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
       objectReference: {fileID: 0}
@@ -898,6 +910,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1687852452, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Everything disappears
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0412\u0441\u0435 \u0438\u0441\u0447\u0435\u0437\u0430\u0435\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "Her \u015Fey kayboluyor"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
       objectReference: {fileID: 0}
@@ -1599,6 +1623,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1841224313, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Colorful world
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041A\u0440\u0430\u0441\u043E\u0447\u043D\u044B\u0439 \u043C\u0438\u0440"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "Renkli d\xFCnya"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
       objectReference: {fileID: 0}
@@ -2005,15 +2041,15 @@ PrefabInstance:
       objectReference: {fileID: -1943754523, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameEn
-      value: Parkour Map
+      value: Stone jumping
       objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameRu
-      value: "\u041F\u0430\u0440\u043A\u0443\u0440 \u041A\u0430\u0440\u0442\u0430"
+      value: "\u041F\u0440\u044B\u0436\u043A\u0438 \u043F\u043E \u043A\u0430\u043C\u043D\u044F\u043C"
       objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameTr
-      value: Parkour tr
+      value: "Ta\u015F atlama"
       objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
@@ -2908,6 +2944,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1757623701, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Building site
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0421\u0442\u0440\u043E\u0439\u043A\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: Yapma
+      objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -5273,6 +5321,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1337133822, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Waterfall in the sky
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0412\u043E\u0434\u043E\u043F\u0430\u0434 \u0432 \u043D\u0435\u0431\u0435"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "G\xF6ky\xFCz\xFCnde \u015Felale"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
       objectReference: {fileID: 0}
@@ -5823,6 +5883,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 736085142, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Red-green
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041A\u0440\u0430\u0441\u043D\u044B\u0439-\u0437\u0435\u043B\u0435\u043D\u044B\u0439"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "K\u0131rm\u0131z\u0131-ye\u015Fil"
+      objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -7748,6 +7820,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1600539008, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Rush
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0421\u043F\u0435\u0448\u043A\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: Acele
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
       objectReference: {fileID: 0}
@@ -9152,6 +9236,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 882669706, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Chess
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0428\u0430\u0445\u043C\u0430\u0442\u044B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "Satran\xE7"
+      objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -10568,6 +10664,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2079250754, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Hellish Ruins
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0410\u0434\u0441\u043A\u0438\u0435 \u0440\u0443\u0438\u043D\u044B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "Cehennem kal\u0131nt\u0131lar\u0131"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
       objectReference: {fileID: 0}
@@ -11117,6 +11225,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1755380651, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Test of courage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0418\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0435 \u0441\u043C\u0435\u043B\u043E\u0441\u0442\u0438"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: Cesaret testi
+      objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -14165,6 +14285,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1767479288, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Confusion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0417\u0430\u043C\u0435\u0448\u0430\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u043E"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "Kar\u0131\u015F\u0131kl\u0131k"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
       objectReference: {fileID: 0}
@@ -14497,6 +14629,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2015701773, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: High well
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041A\u043E\u043B\u043E\u0434\u0435\u0446"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "Y\xFCksek kuyu"
+      objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -16680,6 +16824,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -178348542, guid: 63d9c17ff6064b949b94c9e6a04323e7, type: 3}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: Gold in ore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0417\u043E\u043B\u043E\u0442\u043E \u0432 \u0440\u0443\u0434\u0435"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "Cevherdeki alt\u0131n"
+      objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts
       value: Run
@@ -22756,6 +22912,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 290532574}
     m_Modifications:
+    - target: {fileID: 75128473912132548, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Skyscraper
+      objectReference: {fileID: 0}
+    - target: {fileID: 75128473912132548, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041D\u0435\u0431\u043E\u0441\u043A\u0440\u0435\u0431"
+      objectReference: {fileID: 0}
+    - target: {fileID: 75128473912132548, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "G\xF6kdelen"
+      objectReference: {fileID: 0}
     - target: {fileID: 175116939318340385, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -22819,6 +22987,18 @@ PrefabInstance:
     - target: {fileID: 368090515676706629, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 24.133186
+      objectReference: {fileID: 0}
+    - target: {fileID: 401947872979764474, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Fountain
+      objectReference: {fileID: 0}
+    - target: {fileID: 401947872979764474, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0424\u043E\u043D\u0442\u0430\u043D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 401947872979764474, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "\xC7e\u015Fme"
       objectReference: {fileID: 0}
     - target: {fileID: 516195960497742127, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_Type
@@ -23028,6 +23208,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2616676776659543888, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Amogus
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616676776659543888, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0410\u043C\u043E\u0433\u0443\u0441"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616676776659543888, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: Amogus
+      objectReference: {fileID: 0}
     - target: {fileID: 2635215134787184526, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_Type
       value: 0
@@ -23036,6 +23228,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1448094328, guid: 15a0f1b5bfcccb846b1dd0ea39eb49fe, type: 3}
+    - target: {fileID: 2751644653355942491, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751644653355942491, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041B\u0438\u0441\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751644653355942491, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: Tilki
+      objectReference: {fileID: 0}
     - target: {fileID: 2805084657850581637, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_Type
       value: 0
@@ -23099,6 +23303,18 @@ PrefabInstance:
     - target: {fileID: 3230587000193959943, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 24.133186
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325966486010588660, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Archer's Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325966486010588660, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0411\u0430\u0448\u043D\u044F \u043B\u0443\u0447\u043D\u0438\u043A\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325966486010588660, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "Ok\xE7u Kulesi"
       objectReference: {fileID: 0}
     - target: {fileID: 3375942801464241085, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -23172,6 +23388,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4086268715008397008, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Villa
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086268715008397008, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0412\u0438\u043B\u043B\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086268715008397008, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: Villa
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172046494847097329, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Bunker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172046494847097329, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0411\u0443\u043D\u043A\u0435\u0440"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172046494847097329, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "S\u0131\u011F\u0131nak"
+      objectReference: {fileID: 0}
     - target: {fileID: 4181789853882870533, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_Type
       value: 0
@@ -23195,6 +23435,18 @@ PrefabInstance:
     - target: {fileID: 4537373200413336429, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 24.133186
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614259914224083655, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Rubik's Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614259914224083655, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041A\u0443\u0431\u0438\u043A-\u0440\u0443\u0431\u0438\u043A\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614259914224083655, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "Rubik k\xFCp\xFC"
       objectReference: {fileID: 0}
     - target: {fileID: 4790712051965682055, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -23236,6 +23488,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 173914618, guid: 15a0f1b5bfcccb846b1dd0ea39eb49fe, type: 3}
+    - target: {fileID: 5639932865749216427, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Bridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639932865749216427, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041C\u043E\u0441\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639932865749216427, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "K\xF6pr\xFC"
+      objectReference: {fileID: 0}
     - target: {fileID: 5677535157242765076, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 38.8496
@@ -23308,6 +23572,30 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -12557956, guid: 15a0f1b5bfcccb846b1dd0ea39eb49fe, type: 3}
+    - target: {fileID: 6216377363141867416, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216377363141867416, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041C\u0435\u0447"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216377363141867416, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "K\u0131l\u0131\xE7"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305039312640525982, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Hunter's house
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305039312640525982, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0414\u043E\u043C \u043E\u0445\u043E\u0442\u043D\u0438\u043A\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305039312640525982, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "Avc\u0131n\u0131n evi"
+      objectReference: {fileID: 0}
     - target: {fileID: 6520108846647163572, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -23344,6 +23632,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 24.133186
       objectReference: {fileID: 0}
+    - target: {fileID: 7315934074978299987, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315934074978299987, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0417\u0435\u043C\u043B\u044F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315934074978299987, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "D\xFCnya"
+      objectReference: {fileID: 0}
     - target: {fileID: 7435782155253671223, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_Name
       value: DestroyingMainMenuGrid
@@ -23356,6 +23656,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -863052841, guid: 15a0f1b5bfcccb846b1dd0ea39eb49fe, type: 3}
+    - target: {fileID: 7461321719112766441, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461321719112766441, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0411\u043E\u043C\u0431\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461321719112766441, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: Bomba
+      objectReference: {fileID: 0}
     - target: {fileID: 7619665549375667583, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -23504,6 +23816,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 24.133186
       objectReference: {fileID: 0}
+    - target: {fileID: 8478401997502052483, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Bee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478401997502052483, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041F\u0447\u0435\u043B\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478401997502052483, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "Ar\u0131"
+      objectReference: {fileID: 0}
     - target: {fileID: 8580678604563225942, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_Type
       value: 0
@@ -23543,6 +23867,18 @@ PrefabInstance:
     - target: {fileID: 8791894324999844173, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -549.34216
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052681443541791167, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameEn
+      value: Creeper's head
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052681443541791167, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameRu
+      value: "\u0413\u043E\u043B\u043E\u0432\u0430 \u041A\u0440\u0438\u043F\u0435\u0440\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052681443541791167, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
+      propertyPath: MapNameTr
+      value: "Creeper ba\u015F\u0131"
       objectReference: {fileID: 0}
     - target: {fileID: 9159320841875313770, guid: e4bb932f51522a143a006a5326d0523e, type: 3}
       propertyPath: m_Type
@@ -25045,6 +25381,18 @@ PrefabInstance:
     - target: {fileID: 4413578133925717120, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: m_PreserveAspect
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameEn
+      value: First steps
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameRu
+      value: "\u041F\u0435\u0440\u0432\u044B\u0435 \u0448\u0430\u0433\u0438"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
+      propertyPath: MapNameTr
+      value: "\u0130lk ad\u0131mlar"
       objectReference: {fileID: 0}
     - target: {fileID: 6864149584220742394, guid: fc23c078439a02245ab1a07e196adaca, type: 3}
       propertyPath: MapNameForScripts

@@ -545,6 +545,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   ObstructionSharpness: 10000
   IgnoredColliders: []
+  MyFraming: -1
+  MyFramingVector: {x: 0, y: 0, z: 0}
 --- !u!114 &2567273048321685626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,6 +779,37 @@ Transform:
   - {fileID: 2457477144787042918}
   m_Father: {fileID: 2453284387854040224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8935355950273001670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3285377758128104085}
+  m_Layer: 10
+  m_Name: RotateStartPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3285377758128104085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935355950273001670}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.02, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2457477143845304582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2457477143804728296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -922,6 +955,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 43330286, guid: d295472d4ce25404e9aed2627c34801f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2457477143361875709}
+    - targetCorrespondingSourceObject: {fileID: 43330286, guid: d295472d4ce25404e9aed2627c34801f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3285377758128104085}
     - targetCorrespondingSourceObject: {fileID: 4036232530805280, guid: d295472d4ce25404e9aed2627c34801f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2457477144284961857}
@@ -985,33 +1021,16 @@ MonoBehaviour:
   animator: {fileID: 2457477144275186659}
   examplePlayer: {fileID: 2457477143248813946}
   normalCamera: {fileID: 2562471167507051782}
-  GunModel: {fileID: 2457477143842066733}
+  FlameThrowerModel: {fileID: 0}
   PistolModel: {fileID: 2457477144473864977}
   KnifeModel: {fileID: 380923062062930941}
   GrenadeModel: {fileID: 6362000292162632964}
   CharacterModel: {fileID: 2458488461052915890}
-  SwapCitizenAudioSource: {fileID: 0}
+  CreeperModel: {fileID: 0}
   DeletingModeButton: 110
-  BuildingModeButton: 9
   RotatingModeButton: 109
   IsFirstView: 0
   AdWarningActive: 0
-  CurrentCitizenMesh: {fileID: 2457477144279463205}
-  PlayerMeshes:
-  - {fileID: 2457477144279463205}
-  - {fileID: 2457477144279255091}
-  - {fileID: 2457477144279469129}
-  - {fileID: 2457477144279259697}
-  - {fileID: 2457477144279260481}
-  - {fileID: 2457477144279316345}
-  - {fileID: 2457477144279463833}
-  - {fileID: 2457477144279272703}
-  - {fileID: 2457477144279305645}
-  - {fileID: 2457477144279486357}
-  - {fileID: 2457477144279466563}
-  - {fileID: 2457477144279291187}
-  - {fileID: 2457477144279460059}
-  - {fileID: 2457477144279275807}
   BlocksInSlots:
   - {fileID: 8697880556486469003, guid: 5d2c21cc36c39d94b9a41aa7230cc3d0, type: 3}
   - {fileID: 8697880556486469003, guid: a1cb651260e8e074e8d29d953d3afadb, type: 3}
@@ -1025,7 +1044,7 @@ MonoBehaviour:
   - {fileID: 8697880556486469003, guid: 37090cdee2d99e5428fa4fe06def122d, type: 3}
   CurrentBlock: {fileID: 0}
   CurrentBlockIndex: 0
-  WeaponsInSlots: []
+  WeaponModelsInHand: []
   CurrentWeaponIndex: 0
   InterfaceActive: 0
 --- !u!114 &2457477143286662069
@@ -1044,23 +1063,21 @@ MonoBehaviour:
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 769
-  RaycastOrigin: {fileID: 2457477144787042918}
   PistolProjectileSpawnPoint: {fileID: 2457477143361875709}
   GunProjectileSpawnPoint: {fileID: 2457477143361875709}
+  RotatePlayerStartPoint: {fileID: 0}
   projectile: {fileID: 868298531, guid: 7474afd020e99a34a96ad7c26b048d30, type: 3}
   Crosshair: {fileID: 0}
   player: {fileID: 2457477143286662064}
   handHitbox: {fileID: 5597698150390402285}
+  flameThrower: {fileID: 0}
   AimDirection: {x: 0, y: 0, z: 0}
+  RotateDirection: {x: 0, y: 0, z: 0}
   CrosshairWorldPosition: {x: 0, y: 0, z: 0}
   MouseWorldPosition: {x: 0, y: 0, z: 0}
   FireAudioSource: {fileID: 4203773412735447147}
   PistolSound: {fileID: 0}
-  GunSound: {fileID: 0}
-  HandAttackSound: {fileID: 0}
-  HandAttackHitObjectSound: {fileID: 0}
-  KnifeAttackSound: {fileID: 0}
-  KnifeAttackHitObjectSound: {fileID: 0}
+  FlamethrowSound: {fileID: 0}
   GrenadeThrowSound: {fileID: 0}
 --- !u!82 &4203773412735447147
 AudioSource:
@@ -1987,76 +2004,6 @@ PrefabInstance:
 --- !u!95 &2457477144275186659 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279255091 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13700784, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279259697 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13704370, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279260481 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13704130, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279272703 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13716092, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279275807 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13721500, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279291187 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13734832, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279305645 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13749038, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279316345 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13758970, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279460059 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13774424, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279463205 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13775782, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279463833 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13775130, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279466563 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13780160, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279469129 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13781706, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
-  m_PrefabInstance: {fileID: 2457477144284563075}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &2457477144279486357 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13797654, guid: 7b10bd239bd6ca94e8fd30395b8a7d93, type: 3}
   m_PrefabInstance: {fileID: 2457477144284563075}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2457477144284528737 stripped

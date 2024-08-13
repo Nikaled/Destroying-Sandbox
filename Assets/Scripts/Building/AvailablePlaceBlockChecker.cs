@@ -6,6 +6,7 @@ public class AvailablePlaceBlockChecker : MonoBehaviour
 {
     public bool PlayerInCell;
     public bool BlockInCell;
+    public bool InMapBorder;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +21,10 @@ public class AvailablePlaceBlockChecker : MonoBehaviour
         if(other.gameObject.layer == 6)
         {
             BlockInCell = true;
+        }
+        if(other.gameObject.layer == 14)
+        {
+            InMapBorder = true;
         }
     }
 }

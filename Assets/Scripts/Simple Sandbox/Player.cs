@@ -652,7 +652,7 @@ public class Player : MonoBehaviour
     {
         examplePlayer.MyLockOnShoot = true;
         animator.SetTrigger("GunFire");
-        RotatePlayerOnShoot(playerShooting.AimDirection);
+        RotatePlayerOnShoot(playerShooting.RotateDirection);
     }
     #endregion
     private void FireInput()

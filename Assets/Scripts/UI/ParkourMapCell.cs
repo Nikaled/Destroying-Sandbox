@@ -20,7 +20,7 @@ public class ParkourMapCell : DestroyingMapCell
         Geekplay.Instance.PlayerData.CurrentParkourMapIndex = IndexOfMap;
         Analytics.instance.SendEvent(forEvent);
         SceneManager.LoadScene(1);
-    }
+    }   
     public void LoadParkourMap()
     {
         LoadMapLogic();

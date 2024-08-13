@@ -58,7 +58,7 @@ public class DestroyingMapCell : MonoBehaviour
 
 
 
-        MapNameText.text = MapNameForScripts;
+        //MapNameText.text = MapNameForScripts;
     }
     public void SetMapRewardTextOnCompleted(bool IsCompleted)
     {

@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class AppShopCell : MonoBehaviour
 {
     public string PurName;
-    //public int PurGold;
     public Button BuyGoldButton;
     [SerializeField] TextMeshProUGUI GoldCount;
     [Header("Only Reward")]
@@ -15,7 +14,6 @@ public class AppShopCell : MonoBehaviour
     [SerializeField] TextMeshProUGUI RewardTimerText;
     private void OnEnable()
     {
-        SubscribeOnPurchase();
         GoldCount.text = Rewarder.instance.GetGoldCountByName(PurName).ToString();
         if (RewardBlocker != null && RewardTimerText !=null)
         {
@@ -30,6 +28,10 @@ public class AppShopCell : MonoBehaviour
         {
             Rewarder.instance.RewardShowed += RewardOperation;
         }
+    }
+    private void Start()
+    {
+        SubscribeOnPurchase();
     }
     private void OnDisable()
     {
@@ -77,21 +79,6 @@ public class AppShopCell : MonoBehaviour
         {
             RewardBlocker.SetActive(false);
             BuyGoldButton.enabled = true;
-        }
-    }
-    //private void GetGold()
-    //{
-    //    Geekplay.Instance.PlayerData.Coins += PurGold;
-    //    AppShop.instance.ShowConfirmRewardWindow(PurGold);
-    //}
-    private IEnumerator BlockRewardOnTimeByGeekplay()
-    {
-        Geekplay.Instance.RewardLockTimer = 90;
-        while(Geekplay.Instance.RewardLockTimer > 0)
-        {
-        yield return new WaitForSeconds(1);
-            Geekplay.Instance.RewardLockTimer--;
-            Geekplay.Instance.RewardLockTimeUpdate?.Invoke(Geekplay.Instance.RewardLockTimer);
         }
     }
 }
