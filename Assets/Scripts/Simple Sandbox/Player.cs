@@ -305,12 +305,6 @@ public class Player : MonoBehaviour
     }
     protected virtual void Update()
     {
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            SwitchView();
-        }
-#endif
         if (AdWarningActive)
         {
             return;

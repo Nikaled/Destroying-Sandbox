@@ -25,6 +25,7 @@ public class AvailablePlaceBlockChecker : MonoBehaviour
         if(other.gameObject.layer == 14)
         {
             InMapBorder = true;
+            Debug.Log("Block In Border");
         }
     }
 }

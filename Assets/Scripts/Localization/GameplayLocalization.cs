@@ -86,38 +86,43 @@ public class GameplayLocalization : MonoBehaviour
     }
     public void SetupReloadInstruction()
     {
-        ParkourInstructionR.text = $"<color=orange>[M]</color> {TryAgain.text}";
-        ReloadButtonInCorner.text = TryAgain.text;
-        ParkourInstructionM.text = InMenu.text;
+        //ParkourInstructionR.text = $"<color=orange>[M]</color> {TryAgain.text}";
+        //ReloadButtonInCorner.text = TryAgain.text;
+        //ParkourInstructionM.text = InMenu.text;
     }
     public void SetupReloadInstructionsOnOnlyDestroyed(bool Is)
     {
-        if (Is)
+        StartCoroutine(SetAfterDelay());
+        IEnumerator SetAfterDelay()
         {
-            Pistol2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            Molotov2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            FlameThrow2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            Plane3.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            Lightning2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            DynamiteInstruction4.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            Car2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            Meteor2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            Press2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-            Creeper2.text = $"<color=orange>[M]</color> {TryAgain.text}";
-        }
-        else
-        {
-            Pistol2.transform.parent.gameObject.SetActive(false);
-            Pistol2.transform.parent.gameObject.SetActive(false);
-            Molotov2.transform.parent.gameObject.SetActive(false);
-            FlameThrow2.transform.parent.gameObject.SetActive(false);
-            Plane3.transform.parent.gameObject.SetActive(false);
-            Lightning2.transform.parent.gameObject.SetActive(false);
-            DynamiteInstruction4.transform.parent.gameObject.SetActive(false);
-            Car2.transform.parent.gameObject.SetActive(false);
-            Meteor2.transform.parent.gameObject.SetActive(false);
-            Press2.transform.parent.gameObject.SetActive(false);
-            Creeper2.transform.parent.gameObject.SetActive(false);
+            yield return new WaitForFixedUpdate();
+            if (Is)
+            {
+                Pistol2.text = ParkourInstructionR.text;
+                Molotov2.text = ParkourInstructionR.text;
+                FlameThrow2.text = ParkourInstructionR.text;
+                Plane3.text = ParkourInstructionR.text;
+                Lightning2.text = ParkourInstructionR.text;
+                DynamiteInstruction4.text = ParkourInstructionR.text;
+                Car2.text = ParkourInstructionR.text;
+                Meteor2.text = ParkourInstructionR.text;
+                Press2.text = ParkourInstructionR.text;
+                Creeper2.text = ParkourInstructionR.text;
+            }
+            else
+            {
+                Pistol2.transform.parent.gameObject.SetActive(false);
+                Pistol2.transform.parent.gameObject.SetActive(false);
+                Molotov2.transform.parent.gameObject.SetActive(false);
+                FlameThrow2.transform.parent.gameObject.SetActive(false);
+                Plane3.transform.parent.gameObject.SetActive(false);
+                Lightning2.transform.parent.gameObject.SetActive(false);
+                DynamiteInstruction4.transform.parent.gameObject.SetActive(false);
+                Car2.transform.parent.gameObject.SetActive(false);
+                Meteor2.transform.parent.gameObject.SetActive(false);
+                Press2.transform.parent.gameObject.SetActive(false);
+                Creeper2.transform.parent.gameObject.SetActive(false);
+            }
         }
     }
     public void SetupInventoryAndChangeModeButtons_PC()
@@ -125,7 +130,7 @@ public class GameplayLocalization : MonoBehaviour
         StartCoroutine(SetAfterDelay());
          IEnumerator SetAfterDelay()
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForFixedUpdate();
             InventoryButton.text = $"[I] \n {InventoryButton.text}";
             BuildPhaseButton.text = $"[M] \n {BuildPhaseButton.text}";
             DestroyPhaseButton.text = $"[M] \n {DestroyPhaseButton.text}";
@@ -152,8 +157,8 @@ public class GameplayLocalization : MonoBehaviour
     {
         DestroyedBarHeader.text = "Destroyed:";
         YouWon.text = "You've won!";
-        TryAgain.text = "Again";
-        ToMenu.text = "To menu";
+        TryAgain.text = "AGAIN";
+        ToMenu.text = "TO MENU";
 
         BuildingMenu1.text = "Blocks";
         BuildingMenu2.text = "Animals";
@@ -205,13 +210,17 @@ public class GameplayLocalization : MonoBehaviour
         InventoryButton.text = "INVENTORY";
         BuildPhaseButton.text = "BUILD";
         DestroyPhaseButton.text = "DESTROY";
+
+        ParkourInstructionR.text = $"<color=orange>[M]</color> Reload";
+        ReloadButtonInCorner.text = TryAgain.text;
+        ParkourInstructionM.text = InMenu.text;
     }
     private void TrLocalization()
     {
         DestroyedBarHeader.text = "Yok edildi:";
         YouWon.text = "Kazandınız!";
-        TryAgain.text = "Yeniden başlat";
-        ToMenu.text = "Menüde";
+        TryAgain.text = "YENİDEN";
+        ToMenu.text = "MENÜYE";
 
         BuildingMenu1.text = "Bloklar";
         BuildingMenu2.text = "Hayvanlar";
@@ -263,13 +272,17 @@ public class GameplayLocalization : MonoBehaviour
         InventoryButton.text = "ENVANTER";
         BuildPhaseButton.text = "İNŞA ETMEK";
         DestroyPhaseButton.text = "YOK ET";
+
+        ParkourInstructionR.text = $"<color=orange>[M]</color> Yeniden";
+        ReloadButtonInCorner.text = TryAgain.text;
+        ParkourInstructionM.text = InMenu.text;
     }
     private void RuLocalization()
     {
         DestroyedBarHeader.text = "Уничтожено:";
         YouWon.text = "Вы выиграли!";
-        TryAgain.text = "Заново";
-        ToMenu.text = "В меню";
+        TryAgain.text = "ЗАНОВО";
+        ToMenu.text = "В МЕНЮ";
 
         BuildingMenu1.text = "Блоки";
         BuildingMenu2.text = "Животные";
@@ -321,5 +334,9 @@ public class GameplayLocalization : MonoBehaviour
         InventoryButton.text = "ИНВЕНТАРЬ";
         BuildPhaseButton.text = "СТРОИТЬ";
         DestroyPhaseButton.text = "РАЗРУШИТЬ";
+
+        ParkourInstructionR.text = $"<color=orange>[M]</color> Заново";
+        ReloadButtonInCorner.text = TryAgain.text;
+        ParkourInstructionM.text = InMenu.text;
     }
 }

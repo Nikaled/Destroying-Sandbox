@@ -53,6 +53,10 @@ public class Press : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.layer == 14)
+        {
+            return;
+        }
         if (StartPosFounded == false)
         {
             StartCoroutine(ActivateColliderWithDelay());

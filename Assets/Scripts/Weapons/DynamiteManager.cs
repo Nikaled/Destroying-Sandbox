@@ -133,7 +133,7 @@ public class DynamiteManager : MonoBehaviour
             Vector3 pos = currentCell.GetPositionToPlace();
             var Checker = Instantiate(placeChecker, pos, Quaternion.identity);
             yield return new WaitForSeconds(0.05f);
-            if (Checker.PlayerInCell == false && Checker.InMapBorder == false)
+            if (Checker.PlayerInCell == false && Checker.BlockInCell == false && Checker.InMapBorder == false)
             {
                 PlaceLogic();
             }
@@ -142,8 +142,6 @@ public class DynamiteManager : MonoBehaviour
                 Debug.Log("Игрок или другой блок в клетке для установки!");
             }
             Destroy(Checker.gameObject);
-
-            PlaceLogic();
             void PlaceLogic()
             {
                 BuildCellManager.instance.PlayPlaceBlockSound();

@@ -52,7 +52,6 @@ public class BuildCellManager : MonoBehaviour
     {
         if(currentCell != null)
         {
-            Vector3 pos = currentCell.GetPositionToPlace();
             StartCoroutine(waitPlaceCheckerCallback());
           
         }

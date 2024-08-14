@@ -105,7 +105,6 @@ MonoBehaviour:
   - {fileID: 4561464959775736468}
   - {fileID: 4960604629424236657}
   pressCollider: {fileID: 7896853151985427145}
-  SoundSource: {fileID: 0}
 --- !u!65 &7896853151985427145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,7 +118,7 @@ BoxCollider:
     m_Bits: 192
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -146,7 +145,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
