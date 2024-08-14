@@ -50,7 +50,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public GameObject UnlockWeaponUI;
     [SerializeField] GameObject[] WeaponInstructions;
     [SerializeField] TextMeshProUGUI CurrentDestroyedText;
-    [SerializeField] CoinsRewardWinMap DoubleRewardButtonScript;
+    [SerializeField] public CoinsRewardWinMap DoubleRewardButtonScript;
     [Header("Parkour")]
     [SerializeField] GameObject ParkourUI;
     [SerializeField] GameObject OnWinParkourMapUI;
@@ -95,11 +95,16 @@ public class CanvasManager : MonoBehaviour
             LoadNextLevelButton.gameObject.SetActive(false);
         }
     }
-    public void ShowRewardAndSetRewardText(bool Is, int Reward)
+    public void ShowRewardAndSetRewardText(bool Is, int Reward, bool CalledAfterRewardButton = false)
     {
         RewardUI.SetActive(Is);
         RewardText.text = Reward.ToString();
-        DoubleRewardButtonScript.SetReward(Reward);
+        if (CalledAfterRewardButton == false)
+        {
+            DoubleRewardButtonScript.SetReward(Reward);
+            DoubleRewardButtonScript.CheckAvailableRewardAndShowButtons();
+        }
+     
         //DoubleRewardButtonScript.RewardButton.gameObject.SetActive(Is);
     }
     public void ShowWinButtonsWithDelay(bool Is)
@@ -189,7 +194,7 @@ public class CanvasManager : MonoBehaviour
             }
             SoundManager.instance.OnWinMapSound();
             TryShowNextLevelButton();
-            DoubleRewardButtonScript.CheckAvailableRewardAndShowButtons();
+            //DoubleRewardButtonScript.CheckAvailableRewardAndShowButtons();
         }
     }
     public void ShowCurrentDestroyInterface(bool Is)

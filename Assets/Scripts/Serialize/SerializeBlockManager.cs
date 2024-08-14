@@ -248,7 +248,6 @@ public class SerializeBlockManager : MonoBehaviour
     private void TryGetRewardForDestroyingMap()
     {
         CurrentReward = 0;
-        CanvasManager.instance.ShowRewardAndSetRewardText(true, 0);
         string forAnalytics = EndedDestroyMap + Geekplay.Instance.PlayerData.CurrentDestructionMapIndex;
         Analytics.instance.SendEvent(forAnalytics);
         var DList = Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList;
@@ -268,7 +267,6 @@ public class SerializeBlockManager : MonoBehaviour
                             DList[i].IsCompleted = true;
                             Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
                             CurrentReward = currentMapData.RewardForComplete;
-                            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
                             Geekplay.Instance.Save();
                         }
                     }
@@ -289,14 +287,15 @@ public class SerializeBlockManager : MonoBehaviour
             Geekplay.Instance.PlayerData.DestroyingMapPlayerDataList.Add(dmData);
             Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
             CurrentReward = currentMapData.RewardForComplete;
-            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
             Geekplay.Instance.Save();
         }
+        CanvasManager.instance.ShowRewardAndSetRewardText(true, CurrentReward);
 
     }
     public void TryGetRewardForParkourMap()
     {
-        CanvasManager.instance.ShowRewardAndSetRewardText(true, 0);
+        CurrentReward = 0;
+
         string forAnalytics = EndedParkourMap + Geekplay.Instance.PlayerData.CurrentParkourMapIndex;
         Analytics.instance.SendEvent(forAnalytics);
         var DList = Geekplay.Instance.PlayerData.parkourMapPlayerDataList;
@@ -317,7 +316,6 @@ public class SerializeBlockManager : MonoBehaviour
                             DList[i].IsCompleted = true;
                             Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
                             CurrentReward = currentMapData.RewardForComplete;
-                            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
                             Geekplay.Instance.Save();
                         }
                     }
@@ -338,11 +336,10 @@ public class SerializeBlockManager : MonoBehaviour
             Geekplay.Instance.PlayerData.parkourMapPlayerDataList.Add(dmData);
             Geekplay.Instance.PlayerData.Coins += currentMapData.RewardForComplete;
             CurrentReward = currentMapData.RewardForComplete;
-            CanvasManager.instance.ShowRewardAndSetRewardText(true, currentMapData.RewardForComplete);
             Geekplay.Instance.Save();
         }
 
-
+        CanvasManager.instance.ShowRewardAndSetRewardText(true, CurrentReward);
     }
     private string WriteDate()
     {

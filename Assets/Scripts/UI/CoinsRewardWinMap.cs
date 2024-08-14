@@ -19,6 +19,7 @@ public class CoinsRewardWinMap : MonoBehaviour
         {
             CanvasManager.instance.ShowWinButtonsWithDelay(false);
             RewardButton.gameObject.SetActive(false);
+            Debug.Log("Current Reward:"+CurrentReward);
         }
         else
         {
@@ -38,7 +39,7 @@ public class CoinsRewardWinMap : MonoBehaviour
     private void DoubleCoins()
     {
         Geekplay.Instance.PlayerData.Coins += CurrentReward;
-        CanvasManager.instance.ShowRewardAndSetRewardText(true, CurrentReward * 2);
+        CanvasManager.instance.ShowRewardAndSetRewardText(true, CurrentReward * 2, true);
         RewardButton.gameObject.SetActive(false);
     }
 }

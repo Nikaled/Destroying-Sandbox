@@ -907,6 +907,8 @@ public class Geekplay : MonoBehaviour
         AudioListener.volume = silence ? 0 : 1;
         Time.timeScale = silence ? 0 : 1;
 
+        AudioListener.pause = silence;
+
         if (adOpen || IsAdWarningShowing)
         {
             Time.timeScale = 0;

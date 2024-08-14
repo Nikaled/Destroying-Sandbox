@@ -80,36 +80,50 @@ public class AdWarning : MonoBehaviour
         Player.instance.AdWarningActive = true;
         bool InterfaceState = Player.instance.InterfaceActive;
         Player.instance.InterfaceActive = true;
+
         Cursor.lockState = CursorLockMode.None;
         Geekplay.Instance.IsAdWarningShowing = true;
+        //MasterAudioMixer.audioMixer.SetFloat("Master", -100);
+        //StartCoroutine(FadeOutMixer(MasterAudioMixer.audioMixer, 1));
         Time.timeScale = 0f;
-        int Timer = 5;
-        MasterAudioMixer.audioMixer.SetFloat("Master", -100);
+
+        AudioListener.volume = 0;
+        AudioListener.pause = true;
+
+        int Timer = 3;
         while (Timer != 0)
         {
             LocalizateText(Timer);
             Timer--;
             yield return new WaitForSecondsRealtime(1f);
         }
+
+        AudioListener.volume = 1;
+        AudioListener.pause = false;
+
         Geekplay.Instance.ShowInterstitialAd();
         Geekplay.Instance.IsAdWarningShowing = false;
-        Geekplay.Instance.PlayerData.Coins++;
+        Geekplay.Instance.PlayerData.Coins+=50;
         Geekplay.Instance.Save();
+
         WarningPanel.SetActive(false);
         AddCoinsConfirmUI.SetActive(true);
         Player.instance.AdWarningActive = false;
+
         //Player.instance.InterfaceActive = InterfaceState;
         Cursor.lockState = CursorLockMode.None;
+        //StartCoroutine(FadeUpMixer(MasterAudioMixer.audioMixer, 1));
+        //MasterAudioMixer.audioMixer.SetFloat("Master", 0);
         if (AwaitWarningCor != null)
         {
             StopCoroutine(AwaitWarningCor);
         }
         AwaitWarningCor = AwaitAndShowWarningPanel();
         StartCoroutine(AwaitWarningCor);
-        MasterAudioMixer.audioMixer.SetFloat("Master", 0);
-        //#if UNITY_EDITOR
-        //        CanvasManager.instance.CheckActiveUnlockCursorWindows();
-        //#endif
+#if UNITY_EDITOR
+        AudioListener.volume = 1;
+        AudioListener.pause = false;
+#endif
     }
     public void ConfirmCoinButton()
     {
@@ -127,11 +141,42 @@ public class AdWarning : MonoBehaviour
     private void LocalizateText(int Timer)
     {
         if (Geekplay.Instance.language == "ru")
-            WarningText.text = $"реклама через: {Timer}";
+            WarningText.text = $"Реклама через: {Timer}";
         if (Geekplay.Instance.language == "en")
             WarningText.text = $"Advertisement in: {Timer}";
         if (Geekplay.Instance.language == "tr")
             WarningText.text = $"Saniye sonra reklam verin: {Timer}";
 
+    }
+
+    IEnumerator FadeOutMixer(AudioMixer mixer, float duration)
+    {
+        float currentTime = 0;
+        float currentVolume;
+        float steps = 20;
+        mixer.GetFloat("Master", out currentVolume);
+        while (currentTime < duration)
+        {
+            currentTime += duration / steps;
+            float newVolume = Mathf.Lerp(currentVolume, -100, currentTime / duration);
+            mixer.SetFloat("Master", newVolume);
+            yield return new WaitForSecondsRealtime(duration / steps);
+        }
+        mixer.SetFloat("Master", -100); // Убедитесь, что громкость точно установлена в минимальное значение
+    }
+    IEnumerator FadeUpMixer(AudioMixer mixer, float duration)
+    {
+        float currentTime = 0;
+        float currentVolume;
+        float steps = 20;
+        mixer.GetFloat("Master", out currentVolume);
+        while (currentTime < duration)
+        {
+            currentTime += duration / steps;
+            float newVolume = Mathf.Lerp(currentVolume, 0, currentTime / duration);
+            mixer.SetFloat("Master", newVolume);
+            yield return new WaitForSecondsRealtime(duration / steps);
+        }
+        mixer.SetFloat("Master", 0);
     }
 }

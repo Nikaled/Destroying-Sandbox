@@ -211,9 +211,12 @@ public class GameplayLocalization : MonoBehaviour
         BuildPhaseButton.text = "BUILD";
         DestroyPhaseButton.text = "DESTROY";
 
-        ParkourInstructionR.text = $"<color=orange>[M]</color> Reload";
-        ReloadButtonInCorner.text = TryAgain.text;
-        ParkourInstructionM.text = InMenu.text;
+        if (ParkourInstructionR != null)
+        {
+            ParkourInstructionR.text = $"<color=orange>[M]</color> Reload";
+            ReloadButtonInCorner.text = TryAgain.text;
+            ParkourInstructionM.text = InMenu.text;
+        }
     }
     private void TrLocalization()
     {
@@ -273,9 +276,12 @@ public class GameplayLocalization : MonoBehaviour
         BuildPhaseButton.text = "İNŞA ETMEK";
         DestroyPhaseButton.text = "YOK ET";
 
-        ParkourInstructionR.text = $"<color=orange>[M]</color> Yeniden";
-        ReloadButtonInCorner.text = TryAgain.text;
-        ParkourInstructionM.text = InMenu.text;
+        if (ParkourInstructionR != null)
+        {
+            ParkourInstructionR.text = $"<color=orange>[M]</color> Yeniden";
+            ReloadButtonInCorner.text = TryAgain.text;
+            ParkourInstructionM.text = InMenu.text;
+        }
     }
     private void RuLocalization()
     {
@@ -335,8 +341,11 @@ public class GameplayLocalization : MonoBehaviour
         BuildPhaseButton.text = "СТРОИТЬ";
         DestroyPhaseButton.text = "РАЗРУШИТЬ";
 
-        ParkourInstructionR.text = $"<color=orange>[M]</color> Заново";
-        ReloadButtonInCorner.text = TryAgain.text;
-        ParkourInstructionM.text = InMenu.text;
+        if(ParkourInstructionR != null)
+        {
+            ParkourInstructionR.text = $"<color=orange>[M]</color> Заново";
+            ReloadButtonInCorner.text = TryAgain.text;
+            ParkourInstructionM.text = InMenu.text;
+        }
     }
 }

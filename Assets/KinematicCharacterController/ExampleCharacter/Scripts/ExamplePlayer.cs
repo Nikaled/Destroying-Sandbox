@@ -125,11 +125,11 @@ namespace KinematicCharacterController.Examples
             CharacterCamera.UpdateWithInput(Time.deltaTime, scrollInput, lookInputVector);
 
             // Handle toggling zoom level
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                SwitchCamera();
-                //CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
-            }
+            //if (Input.GetKeyDown(KeyCode.Q))
+            //{
+            //    SwitchCamera();
+            //    //CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
+            //}
         }
         public void SwitchCamera()
         {
