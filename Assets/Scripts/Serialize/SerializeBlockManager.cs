@@ -290,7 +290,6 @@ public class SerializeBlockManager : MonoBehaviour
             Geekplay.Instance.Save();
         }
         CanvasManager.instance.ShowRewardAndSetRewardText(true, CurrentReward);
-
     }
     public void TryGetRewardForParkourMap()
     {
