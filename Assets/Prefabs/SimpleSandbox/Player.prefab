@@ -645,6 +645,7 @@ MonoBehaviour:
   linePoints: 111
   timeIntervalinPoints: 0.1
   GrenadeMass: 1
+  playerCamera: {fileID: 2476196551308546402}
 --- !u!120 &2268488933609901845
 LineRenderer:
   serializedVersion: 2

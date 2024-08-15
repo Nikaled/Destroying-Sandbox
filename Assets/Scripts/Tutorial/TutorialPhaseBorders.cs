@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class TutorialPhaseBorders : MonoBehaviour
 {
@@ -19,9 +20,15 @@ public class TutorialPhaseBorders : MonoBehaviour
     }
     public void UnlockNewPhasePath()
     {
-        BedrockCollider.enabled = false;
-        BedrockMesh.enabled = false;
+
         InvisibleCollider.isTrigger = true;
+        BedrockMesh.gameObject.transform.DOMove(BedrockMesh.gameObject.transform.position + new Vector3(0, -10.3f, 0), 1.3f).SetEase(Ease.InCubic)/*.OnComplete(OnMoveEnded)*/;
+
+        void OnMoveEnded()
+        {
+            //BedrockMesh.enabled = false;
+            //BedrockCollider.enabled = false;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

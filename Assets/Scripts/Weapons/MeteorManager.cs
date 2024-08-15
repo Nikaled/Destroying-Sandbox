@@ -43,7 +43,9 @@ public class MeteorManager : MonoBehaviour
                 DestroyLimiter.ResetCurrentDestroyed();
                 CurrentReloadTime = Time.time;
                 CrosshairWorldPosition = raycastHit.point;
-                Vector3 MeteorUpPosition = new Vector3(20, 50, 20);
+                int RandomX = UnityEngine.Random.Range(-20, 21);
+                int RandomZ = UnityEngine.Random.Range(-20, 21);
+                Vector3 MeteorUpPosition = new Vector3(RandomX, 50, RandomZ);
                 var Meteor = Instantiate(MeteorPrefab, CrosshairWorldPosition+ MeteorUpPosition, Quaternion.identity);
                 Meteor.Fire(CrosshairWorldPosition);
                 Meteor.SubscribeOnSwitchState();

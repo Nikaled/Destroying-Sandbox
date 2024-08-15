@@ -235,11 +235,21 @@ public class Player : MonoBehaviour
         if (currentState == PlayerState.Building && newPlayerState == PlayerState.Idle)
         {
             CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(true);
+            if (Geekplay.Instance.mobile)
+            {
+                CanvasManager.instance.DoButton.gameObject.SetActive(true);
+                CanvasManager.instance.JumpButton.gameObject.SetActive(true);
+            }
         }
         if (currentState == PlayerState.Idle && newPlayerState == PlayerState.Building)
         {
             CanvasManager.instance.ShowBlockSlotsAndHideWeapons(true);
             WeaponSelector.instance.HideAllWeapons();
+            if (Geekplay.Instance.mobile)
+            {
+                CanvasManager.instance.DoButton.gameObject.SetActive(true);
+                CanvasManager.instance.JumpButton.gameObject.SetActive(true);
+            }
         }
         if (Delay > 0)
         {
@@ -420,6 +430,7 @@ public class Player : MonoBehaviour
         {
             CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
             CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = false;
+            CanvasManager.instance.DoButton.gameObject.SetActive(true);
         }
         else
         {
@@ -453,6 +464,11 @@ public class Player : MonoBehaviour
             if (InterfaceActive == false)
             {
                 examplePlayer.LockCursor(true);
+            }
+            if (Geekplay.Instance.mobile)
+            {
+                CanvasManager.instance.DoButton.gameObject.SetActive(true);
+                CanvasManager.instance.JumpButton.gameObject.SetActive(true);
             }
         }
         if (CurrentWeapon == WeaponType.FlameThrower)
@@ -491,6 +507,11 @@ public class Player : MonoBehaviour
             case 4:
                 CurrentWeapon = WeaponType.Plane;
                 WeaponSelector.instance.SelectWeapon(5);
+                if (Geekplay.Instance.mobile)
+                {
+                    CanvasManager.instance.DoButton.gameObject.SetActive(false);
+                    CanvasManager.instance.JumpButton.gameObject.SetActive(false);
+                }
                 break;
             case 5:
                 CurrentWeapon = WeaponType.None;
@@ -601,6 +622,7 @@ public class Player : MonoBehaviour
         animator.SetBool("AimingGrenade", true);
         currentState = PlayerState.AimingGrenade;
         grenadeLauncher.GrenadeInput();
+        grenadeLauncher.DrawTrajectory();
         examplePlayer.MyLockOnShoot = true;
     }
     public void LaunchGrenadeOnMobile()

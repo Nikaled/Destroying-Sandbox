@@ -260,14 +260,14 @@ public class VehicleCamera : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if(Player.instance.AdWarningActive == false)
-            {
-                Switch++;
-                if (Switch > cameraSwitchView.Count) { Switch = 0; }
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    if(Player.instance.AdWarningActive == false)
+        //    {
+        //        Switch++;
+        //        if (Switch > cameraSwitchView.Count) { Switch = 0; }
+        //    }
+        //}
 
 
 

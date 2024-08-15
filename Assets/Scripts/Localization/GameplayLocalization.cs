@@ -214,7 +214,7 @@ public class GameplayLocalization : MonoBehaviour
         if (ParkourInstructionR != null)
         {
             ParkourInstructionR.text = $"<color=orange>[M]</color> Reload";
-            ReloadButtonInCorner.text = TryAgain.text;
+            ReloadButtonInCorner.text = "Reload";
             ParkourInstructionM.text = InMenu.text;
         }
     }
@@ -279,7 +279,7 @@ public class GameplayLocalization : MonoBehaviour
         if (ParkourInstructionR != null)
         {
             ParkourInstructionR.text = $"<color=orange>[M]</color> Yeniden";
-            ReloadButtonInCorner.text = TryAgain.text;
+            ReloadButtonInCorner.text = "Yeniden";
             ParkourInstructionM.text = InMenu.text;
         }
     }
@@ -344,7 +344,7 @@ public class GameplayLocalization : MonoBehaviour
         if(ParkourInstructionR != null)
         {
             ParkourInstructionR.text = $"<color=orange>[M]</color> Заново";
-            ReloadButtonInCorner.text = TryAgain.text;
+            ReloadButtonInCorner.text = "Заново";
             ParkourInstructionM.text = InMenu.text;
         }
     }

@@ -33,8 +33,8 @@ public class SoundManager : MonoBehaviour
     }
     public void PlayLightningSound()
     {
-        WeaponSoundSoure.clip = Lightning;
-        WeaponSoundSoure.Play();
+        //WeaponSoundSoure.clip = Lightning;
+        WeaponSoundSoure.PlayOneShot(Lightning);
     }
     public void PlayDynamiteSound()
     {

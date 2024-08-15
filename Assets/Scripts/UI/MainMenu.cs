@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI CoinsTextInPromo;
     [SerializeField] TextMeshProUGUI CoinsTextInOurGames;
     [SerializeField] GameObject TutorialWindow;
+    [SerializeField] AudioSource MenuMusic;
     private void Start()
     {
         Geekplay.Instance.ShowInterstitialAd();
@@ -30,7 +31,7 @@ public class MainMenu : MonoBehaviour
         CoinsTextInPromo.text = Geekplay.Instance.PlayerData.Coins.ToString();
         CoinsTextInOurGames.text = Geekplay.Instance.PlayerData.Coins.ToString();
 
-        
+        MenuMusic.Play();
     }
     private void Update()
     {

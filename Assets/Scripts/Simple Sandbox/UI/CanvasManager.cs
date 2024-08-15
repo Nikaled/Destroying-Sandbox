@@ -282,7 +282,6 @@ public class CanvasManager : MonoBehaviour
         {
             CanvasMobileInterface.SetActive(true);
             CanvasPCInterface.SetActive(false);
-            InteracteButton.gameObject.SetActive(true);
             ShowMobileIdleButtons(true);
         }
         else

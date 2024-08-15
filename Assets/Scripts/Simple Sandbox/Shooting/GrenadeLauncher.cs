@@ -15,7 +15,9 @@ public class GrenadeLauncher : MonoBehaviour
     private Vector3 crossPosition;
     private Vector3 aimDirection;
 
+    private Vector3 EndAimingVelocity;
     public float GrenadeMass = 1;
+    [SerializeField] Camera playerCamera;
     public void GrenadeInput()
     {
         crossPosition = PlayerShooting.instance.CrosshairWorldPosition;
@@ -33,12 +35,20 @@ public class GrenadeLauncher : MonoBehaviour
         }
         Player.instance.RotatePlayerOnShoot(aimDirection);
     }
+    private void Update()
+    {
+        if(Player.instance.currentState == Player.PlayerState.AimingGrenade)
+        {
+        DrawTrajectory();
+        }
+    }
     public void LaunchGrenade()
     {
         Debug.Log("Launch grenade");
         var _projectile = Instantiate(Projectile, LaunchPoint.transform.position, LaunchPoint.transform.rotation);
         //_projectile.GetComponent<Rigidbody>().velocity = LaunchSpeed * LaunchPoint.up;
-        _projectile.GetComponent<Rigidbody>().velocity = LaunchSpeed * Camera.main.transform.forward + (Vector3.up * 10);
+        //_projectile.GetComponent<Rigidbody>().velocity = LaunchSpeed * playerCamera.transform.forward + (Vector3.up * 10);
+        _projectile.GetComponent<Rigidbody>().velocity = EndAimingVelocity;
         _projectile.GetComponent<CapsuleCollider>().enabled = true;
         _projectile.GetComponent<Rigidbody>().useGravity = true;
         if (_projectile.GetComponent<Grenade>() != null)
@@ -56,9 +66,21 @@ public class GrenadeLauncher : MonoBehaviour
     }
     public void DrawTrajectory()
     {
+        aimDirection = PlayerShooting.instance.AimDirection;
+        lineRenderer.positionCount = 0;
         Vector3 origin = LaunchPoint.position;
         //Vector3 startVelocity = LaunchSpeed * Camera.main.transform.forward;
-        Vector3 startVelocity = LaunchSpeed * Camera.main.transform.forward + (Vector3.up * 10);
+        //Vector3 startVelocity = LaunchSpeed * Camera.main.transform.forward + (Vector3.up * 10);
+        Vector3 startVelocity = Vector3.forward;
+        if (Geekplay.Instance.mobile)
+        {
+           startVelocity = LaunchSpeed * aimDirection+(Vector3)SwipeDetector.instance.swipeDelta -new Vector3(0, 0.5f, 0) /*+ (Vector3.up * 10)*/;
+        }
+        else
+        {
+            startVelocity = LaunchSpeed * Camera.main.transform.forward + (Vector3.up * 10);
+        }
+        EndAimingVelocity = startVelocity;
         lineRenderer.positionCount = linePoints;
         float time = 0;
         for (int i = 0; i < linePoints; i++)
