@@ -52,7 +52,7 @@ public class PlayerData
     /////Tutorial////
     public bool[] TutorialPhasesCompleted;
     public bool[] TutorialBordersCompleted;
-
+    public bool IsTutorialAborted;
     public List<int> Codes;
     /////InApps//////
     public string lastBuy;

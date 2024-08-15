@@ -42,7 +42,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] public GameObject BuildingMenuButton;
     [SerializeField] GameObject WeaponSlots;
     [SerializeField] GameObject CurrentDestroyBarUI;
-    [SerializeField] GameObject CurrentDestroyBarFilledImage;
+    [SerializeField] Image CurrentDestroyBarFilledImage;
     [SerializeField] public GameObject OnWinMapUI;
     [SerializeField] GameObject[] PhaseButtonImages;
     [SerializeField] public Button WeaponSpecialInteracteButton;
@@ -75,13 +75,16 @@ public class CanvasManager : MonoBehaviour
     [Header("Bigger Instructions")]
     [SerializeField] Transform BiggerInstructionsPCPos;
     [SerializeField] GameObject BiggerInstructions;
+    private Vector2 CashedDestroySize;
     #region DestroyingSandbox
     private void SetupBiggerInstructions()
     {
-        if(Geekplay.Instance.mobile == false)
+        if (Geekplay.Instance.mobile == false)
         {
             BiggerInstructions.transform.position = BiggerInstructionsPCPos.position;
             GameplayLocalization.instance.SetupInventoryAndChangeModeButtons_PC();
+            BuildingMenuButton.GetComponent<Button>().enabled = false;
+            ChangePhaseButton.enabled = false;
         }
     }
     public void TryShowNextLevelButton()
@@ -104,7 +107,7 @@ public class CanvasManager : MonoBehaviour
             DoubleRewardButtonScript.SetReward(Reward);
             DoubleRewardButtonScript.CheckAvailableRewardAndShowButtons();
         }
-     
+
         //DoubleRewardButtonScript.RewardButton.gameObject.SetActive(Is);
     }
     public void ShowWinButtonsWithDelay(bool Is)
@@ -170,8 +173,18 @@ public class CanvasManager : MonoBehaviour
     public void DestroyCountChanged(int CurrentDestroyed)
     {
         CurrentDestroyedText.text = $"{CurrentDestroyed} / {DestroyCounter.instance.DestroyedMax}";
-        if (DestroyCounter.instance.DestroyedMax > 0)
-            CurrentDestroyBarFilledImage.transform.DOScaleX((float)CurrentDestroyed / DestroyCounter.instance.DestroyedMax, 0);
+        if (CurrentDestroyed > 0)
+        {
+            CurrentDestroyBarFilledImage.enabled = true;
+          
+        }
+        else
+        {
+            CurrentDestroyBarFilledImage.enabled = false;
+        }
+        float xSize = (float)CurrentDestroyed / DestroyCounter.instance.DestroyedMax;
+        CurrentDestroyBarFilledImage.rectTransform.sizeDelta = new Vector2(CashedDestroySize.x * xSize, CashedDestroySize.y);
+        //CurrentDestroyBarFilledImage.transform.DOScaleX((float)CurrentDestroyed / DestroyCounter.instance.DestroyedMax, 0);
     }
     public void OnWinMap()
     {
@@ -230,6 +243,7 @@ public class CanvasManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        CashedDestroySize = CurrentDestroyBarFilledImage.rectTransform.sizeDelta;
     }
     private void Update()
     {
@@ -265,8 +279,48 @@ public class CanvasManager : MonoBehaviour
                     return;
                 }
 #endif
+                CheckTutorialAborted();
+
+
                 Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene(0);
+            }
+        }
+    }
+    public void CheckTutorialAborted()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            if (TutorialManager.instance.AbleToEndTutorial == false)
+            {
+                if (Geekplay.Instance.PlayerData.IsTutorialAborted == false)
+                {
+                    if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted != null)
+                    {
+                        if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted.Length > 0)
+                        {
+                            if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[^1] == false)
+                            {
+                                Analytics.instance.SendEvent("TutorialAborted");
+                                Geekplay.Instance.PlayerData.IsTutorialAborted = true;
+                                Geekplay.Instance.Save();
+                            }
+                        }
+                        else
+                        {
+                            Analytics.instance.SendEvent("TutorialAborted");
+                            Geekplay.Instance.PlayerData.IsTutorialAborted = true;
+                            Geekplay.Instance.Save();
+                        }
+                    }
+                    else
+                    {
+                        Analytics.instance.SendEvent("TutorialAborted");
+                        Geekplay.Instance.PlayerData.IsTutorialAborted = true;
+                        Geekplay.Instance.Save();
+                    }
+                }
+
             }
         }
     }
