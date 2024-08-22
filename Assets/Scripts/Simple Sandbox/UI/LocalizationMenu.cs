@@ -50,7 +50,10 @@ public class LocalizationMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI TutorialAsk;
     [SerializeField] TextMeshProUGUI TutorialDecline;
     [SerializeField] TextMeshProUGUI TutorialConfirm;
-
+    [Header("MoreCoinsUI")]
+    [SerializeField] TextMeshProUGUI MoreCoinsAsk;
+    [SerializeField] TextMeshProUGUI MoreCoinsDecline;
+    [SerializeField] TextMeshProUGUI MoreCoinsConfirm;
     private void Start()
     {
         if (Geekplay.Instance.language == "ru")
@@ -108,6 +111,9 @@ public class LocalizationMenu : MonoBehaviour
         WeaponName3.text = "Метеорит";
         WeaponName4.text = "Пресс";
         WeaponName5.text = "Крипер";
+        MoreCoinsAsk.text = "Недостаточно монет! Хотите получить больше?";
+        MoreCoinsDecline.text  = "НЕТ";
+        MoreCoinsConfirm.text =  "ДА";
     }
     private void EnLocalization()
     {
@@ -150,6 +156,9 @@ public class LocalizationMenu : MonoBehaviour
         WeaponName3.text = "Meteor";
         WeaponName4.text = "Press";
         WeaponName5.text = "Creeper";
+        MoreCoinsAsk.text = "Not enough coins! Do you want to get more?";
+        MoreCoinsDecline.text = "NO";
+        MoreCoinsConfirm.text = "YES";
     }
     private void TrLocalization()
     {
@@ -192,5 +201,8 @@ public class LocalizationMenu : MonoBehaviour
         WeaponName3.text = "Göktaşı";
         WeaponName4.text = "Basın";
         WeaponName5.text = "Sarmaşık";
+        MoreCoinsAsk.text = "Yeterli para yok! Daha fazlasını almak ister misiniz?";
+        MoreCoinsDecline.text = "HAYIR";
+        MoreCoinsConfirm.text = "EVET";
     }
 }

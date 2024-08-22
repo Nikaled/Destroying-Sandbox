@@ -17,21 +17,6 @@ public class WeaponSlotManager : MonoBehaviour
             WeaponSlots[i].SetLockView(WeaponUnlockedArray[i]);
         }
     }
-    //private void OnEnable()
-    //{
-    //    if (Player.instance != null)
-    //    {
-    //        Player.instance.SwitchedWeapon += OnWeaponSwitched;
-    //    }
-
-    //}
-    //private void OnDisable()
-    //{
-    //    if (Player.instance != null)
-    //    {
-    //        Player.instance.SwitchedWeapon -= OnWeaponSwitched;
-    //    }
-    //}
     private void OnWeaponSwitched(int PressedNumber)
     {
         Debug.Log("Weapon Switched:" + PressedNumber);

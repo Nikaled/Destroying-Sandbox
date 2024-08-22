@@ -78,7 +78,8 @@ public class GameplayLocalization : MonoBehaviour
     public TextMeshProUGUI ReloadButtonInCorner;
     public TextMeshProUGUI ParkourInstructionR;
     public TextMeshProUGUI ParkourInstructionM;
-
+    [Header("NotFlamingUI")]
+    public TextMeshProUGUI NotFlamingWarning;
     public static GameplayLocalization instance;
     private void Awake()
     {
@@ -210,7 +211,7 @@ public class GameplayLocalization : MonoBehaviour
         InventoryButton.text = "INVENTORY";
         BuildPhaseButton.text = "BUILD";
         DestroyPhaseButton.text = "DESTROY";
-
+        NotFlamingWarning.text = "This block if fireproof!";
         if (ParkourInstructionR != null)
         {
             ParkourInstructionR.text = $"<color=orange>[M]</color> Reload";
@@ -273,9 +274,9 @@ public class GameplayLocalization : MonoBehaviour
         Creeper2.text = "<color=orange>[M]</color> İnşaat modu";
         Creeper3.text = "<color=orange>[Tab]</color> Menüde";
         InventoryButton.text = "ENVANTER";
-        BuildPhaseButton.text = "İNŞA ETMEK";
+        BuildPhaseButton.text = "İNşA ETMEK";
         DestroyPhaseButton.text = "YOK ET";
-
+        NotFlamingWarning.text = "Bu blok ateşe verilmiyor!";
         if (ParkourInstructionR != null)
         {
             ParkourInstructionR.text = $"<color=orange>[M]</color> Yeniden";
@@ -340,8 +341,8 @@ public class GameplayLocalization : MonoBehaviour
         InventoryButton.text = "ИНВЕНТАРЬ";
         BuildPhaseButton.text = "СТРОИТЬ";
         DestroyPhaseButton.text = "РАЗРУШИТЬ";
-
-        if(ParkourInstructionR != null)
+        NotFlamingWarning.text = "Этот блок не горит!";
+        if (ParkourInstructionR != null)
         {
             ParkourInstructionR.text = $"<color=orange>[M]</color> Заново";
             ReloadButtonInCorner.text = "Заново";

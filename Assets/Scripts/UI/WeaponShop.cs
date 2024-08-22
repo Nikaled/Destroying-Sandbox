@@ -8,6 +8,7 @@ public class WeaponShop : MonoBehaviour
     public static WeaponShop instance;
     public WeaponShopCell[] shopCells;
     public TextMeshProUGUI CoinsText;
+    [SerializeField] GameObject GetMoneyAdviceWindow;
     private void Awake()
     {
         instance = this;
@@ -59,6 +60,10 @@ public class WeaponShop : MonoBehaviour
             Geekplay.Instance.Save();
             int CellIndex = currentWeaponIndex - 5;
             shopCells[CellIndex].LoadBuyStatusPriceAndIndex(550, OpenedWeapons[CellIndex], CellIndex);
+        }
+        else
+        {
+            GetMoneyAdviceWindow.SetActive(true);
         }
     }
 }

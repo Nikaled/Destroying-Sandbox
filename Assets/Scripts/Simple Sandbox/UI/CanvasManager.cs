@@ -160,7 +160,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void SwitchPlayerWeapon()
     {
-        Player.instance.SwitchWeapon(Player.instance.CurrentWeaponIndex);
+        Player.instance.SwitchWeapon(1);
     }
     public void ShowWinParkourUI(bool Is)
     {
@@ -409,10 +409,6 @@ public class CanvasManager : MonoBehaviour
     private void ShowMobileIdleButtons(bool Is)
     {
         RightButtonsZone.SetActive(Is);
-    }
-    private void ShowWeaponSlotsUI(bool Is)
-    {
-        WeaponSlotsUI.SetActive(Is);
     }
 
     public void ShowCurrentInteracteButton(int ButtonIndex)

@@ -413,6 +413,32 @@ public class Player : MonoBehaviour
         {
             SwitchWeapon(10);
         }
+            float scroll = Input.GetAxis("Mouse ScrollWheel");
+        Debug.Log("scroll Input:" + scroll);
+            if (scroll > 0.0f)
+            {
+                int nextindex = CurrentWeaponIndex - 1;
+                if (nextindex > 0)
+                {
+                SwitchWeapon(CurrentWeaponIndex-1);
+                }
+                else
+                {
+                SwitchWeapon(10);
+                }
+            }
+            if (scroll < 0.0f)
+            {
+                int nextindex = CurrentWeaponIndex + 1;
+                if (nextindex <= 10)
+                {
+                SwitchWeapon(CurrentWeaponIndex +1);
+                }
+                else
+                {
+                SwitchWeapon(1);
+                }
+            }
     }
 
     private void HideAllWeapons()
@@ -441,6 +467,8 @@ public class Player : MonoBehaviour
         if (WeaponSelector.instance.IsWeaponAvailable(PressedNumber) == false)
         {
             SwitchedWeapon?.Invoke(PressedNumber);
+
+            CurrentWeaponIndex = PressedNumber;
             return;
         }
         else
@@ -606,6 +634,36 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             SwitchActiveBlockSlot(10);
+        }
+
+        if (InterfaceActive == false)
+        {
+            float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+            if (scroll > 0.0f)
+            {
+                int nextindex = CurrentBlockIndex - 1;
+                if (nextindex >= 0)
+                {
+                    SwitchActiveBlockSlot(CurrentBlockIndex);
+                }
+                else
+                {
+                    SwitchActiveBlockSlot(10);
+                }
+            }
+            if (scroll < 0.0f)
+            {
+                int nextindex = CurrentBlockIndex + 1;
+                if (nextindex <= 9)
+                {
+                    SwitchActiveBlockSlot(CurrentBlockIndex + 2);
+                }
+                else
+                {
+                    SwitchActiveBlockSlot(1);
+                }
+            }
         }
     }
 

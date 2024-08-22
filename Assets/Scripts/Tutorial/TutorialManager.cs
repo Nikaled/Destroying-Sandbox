@@ -43,6 +43,7 @@ public class TutorialManager : MonoBehaviour
     GameObject currentPulsingObject;
     IEnumerator PulseCor;
     [SerializeField] Image[] DoButtonImages;
+    [SerializeField] TutorialArrowManager tutorArrow;
     private void Awake()
     {
         instance = this;
@@ -180,6 +181,7 @@ public class TutorialManager : MonoBehaviour
               
 
                 GoForwardText.SetActive(true);
+                tutorArrow.SetNewArrowDestination();
                 break;
             case 2:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[2] == false)
@@ -200,7 +202,7 @@ public class TutorialManager : MonoBehaviour
                 {
                     DoButtonImages[i].color = Color.white;
                 }
-
+                tutorArrow.SetNewArrowDestination();
                 break;
             case 3:
                 CycleManager.instance.ActivateDestroyingPhase();
@@ -212,6 +214,8 @@ public class TutorialManager : MonoBehaviour
                 {
                     DoButtonImages[i].color = Color.yellow;
                 }
+
+                tutorArrow.SetNewArrowDestination();
                 break;
             case 4:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[4] == false)
@@ -232,6 +236,7 @@ public class TutorialManager : MonoBehaviour
                 PhaseBorders[3].UnlockNewPhasePath();
                 Phase6Objects.SetActive(true);
                 AbleToChangeMode = true;
+                tutorArrow.SetNewArrowDestination();
                 break;
             case 5:
                 if (Geekplay.Instance.PlayerData.TutorialPhasesCompleted[5] == false)
@@ -239,6 +244,7 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[5] = true;
                     Analytics.instance.SendEvent("Tutorial_6_PhaseCompleted_StateSwitched");
                 }
+                tutorArrow.SetNewArrowDestination();
                 StopCoroutine(PulseCor);
                 DOTween.Kill(ChangeModeButton);
                 //ChangeModeButton.transform.DOScale(new Vector3(1, 1, 1), 0);
@@ -248,6 +254,7 @@ public class TutorialManager : MonoBehaviour
                 Phase7Objects.SetActive(true);
                 AbleToEndTutorial = true;
                 TutorialPhaseText.SetActive(true);
+                tutorArrow.SetNewArrowDestination();
                 break;
         }
         Geekplay.Instance.Save();
