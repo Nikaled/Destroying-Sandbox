@@ -36,6 +36,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4901185092765377828}
   - {fileID: 6209083804806526646}
   - {fileID: 2454545286831500814}
   - {fileID: 1209589645714106999}
@@ -155,6 +156,8 @@ MonoBehaviour:
   DestroyAnimation: {fileID: 8493767651756421400}
   ExplosionScale: 0.5
   Source: {fileID: 9145188485724541115}
+  DamageSphere: {fileID: 7439553096503284377}
+  DamageSphereCollider: {fileID: 379961321423432003}
   explosionForceChecker: {fileID: 1721609417389044721}
 --- !u!135 &2253238092017262361
 SphereCollider:
@@ -200,6 +203,73 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.035273597, z: 0.00000017881393}
+--- !u!1 &7491258385038466602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4901185092765377828}
+  - component: {fileID: 379961321423432003}
+  - component: {fileID: 7439553096503284377}
+  m_Layer: 3
+  m_Name: DestroyArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4901185092765377828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491258385038466602}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 6973970911524525760}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &379961321423432003
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491258385038466602}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7439553096503284377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491258385038466602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6355f107f4d66040b34ebdb6f8163da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetsInExplosion: []
 --- !u!1 &8839911143730999891
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +323,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 7
+  m_Radius: 13
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1721609417389044721
 MonoBehaviour:
@@ -391,6 +461,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6973970911524525760}
     m_Modifications:
+    - target: {fileID: 531488755263295102, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
+      propertyPath: EffectScale
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2349537945447355841, guid: 8f80cde5832196f409774f0acdd5f32c, type: 3}
       propertyPath: m_Name
       value: DestroyEffect

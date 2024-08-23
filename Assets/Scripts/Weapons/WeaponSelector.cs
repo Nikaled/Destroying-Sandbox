@@ -129,7 +129,7 @@ public class WeaponSelector : MonoBehaviour
         Player.instance.SwitchWeapon(CurrentIndexToOpen + 1);
         Geekplay.Instance.Save();
     }
-    public void UnlockWeaponOneTime()
+    public void UnlockWeaponOneTime(UnlockWeaponButton rewardButton)
     {
         if (UnlockOneTime == null)
         {
@@ -138,6 +138,7 @@ public class WeaponSelector : MonoBehaviour
         UnlockOneTime[CurrentIndexToOpen] = true;
         SetUnlockImages(Geekplay.Instance.PlayerData.WeaponOpenedArray);
         Player.instance.SwitchWeapon(CurrentIndexToOpen + 1);
+        rewardButton.ActivateTimer();
 
     }
 }

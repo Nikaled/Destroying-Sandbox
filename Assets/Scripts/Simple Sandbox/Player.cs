@@ -485,6 +485,7 @@ public class Player : MonoBehaviour
         if (CurrentWeapon == WeaponType.Grenade)
         {
             animator.SetBool("AimingGrenade", false);
+            examplePlayer.MyLockOnShoot = false;
             grenadeLauncher.ClearTrajectory();
         }
         if (CurrentWeapon == WeaponType.Plane)
@@ -519,6 +520,7 @@ public class Player : MonoBehaviour
             case 2:
                 CurrentWeapon = WeaponType.Grenade;
                 GrenadeModel.SetActive(true);
+                
                 if (Geekplay.Instance.mobile)
                 {
                     CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;

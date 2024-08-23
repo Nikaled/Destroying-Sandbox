@@ -53,7 +53,7 @@ public class UnlockWeaponButton : MonoBehaviour
     }
     private void UnlockWeaponOneTime()
     {
-        WeaponSelector.instance.UnlockWeaponOneTime();
+        WeaponSelector.instance.UnlockWeaponOneTime(this);
     }
     public void SubscribeOnPurchase()
     {
@@ -76,8 +76,15 @@ public class UnlockWeaponButton : MonoBehaviour
         {
             AdWarning.instance.AddTimeToShowWarning(15);
         }
+        //Geekplay.Instance.RunBlockRewardCoroutine();
+        ////WeaponSelector.instance.UnlockWeaponOneTime();
+        //RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
+        //RewardBlocker.SetActive(true);
+        //UnlockButton.enabled = false;
+    }
+    public void ActivateTimer()
+    {
         Geekplay.Instance.RunBlockRewardCoroutine();
-        //WeaponSelector.instance.UnlockWeaponOneTime();
         RewardTimerText.text = string.Format("{0:00}:{1:00}", 01, 30);
         RewardBlocker.SetActive(true);
         UnlockButton.enabled = false;

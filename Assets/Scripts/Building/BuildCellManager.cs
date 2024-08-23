@@ -50,6 +50,10 @@ public class BuildCellManager : MonoBehaviour
     }
     private void PlaceBlock()
     {
+        if (Player.instance.InterfaceActive)
+        {
+            return;
+        }
         if(currentCell != null)
         {
             StartCoroutine(waitPlaceCheckerCallback());

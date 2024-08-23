@@ -11,6 +11,9 @@ public class GameplayLocalization : MonoBehaviour
     [SerializeField] TextMeshProUGUI YouWon;
     [SerializeField] TextMeshProUGUI TryAgain;
     [SerializeField] TextMeshProUGUI ToMenu;
+    [SerializeField] TextMeshProUGUI YourRewardWin;
+    [SerializeField] TextMeshProUGUI NextLevelWin;
+    [SerializeField] TextMeshProUGUI DoubleCoinsOnWin;
     [Header("BuildingMenu")]
     [SerializeField] TextMeshProUGUI BuildingMenu1;
     [SerializeField] TextMeshProUGUI BuildingMenu2;
@@ -78,6 +81,7 @@ public class GameplayLocalization : MonoBehaviour
     public TextMeshProUGUI ReloadButtonInCorner;
     public TextMeshProUGUI ParkourInstructionR;
     public TextMeshProUGUI ParkourInstructionM;
+    [SerializeField] TextMeshProUGUI ToMenuInCorner;
     [Header("NotFlamingUI")]
     public TextMeshProUGUI NotFlamingWarning;
     public static GameplayLocalization instance;
@@ -160,13 +164,18 @@ public class GameplayLocalization : MonoBehaviour
         YouWon.text = "You've won!";
         TryAgain.text = "AGAIN";
         ToMenu.text = "TO MENU";
+        YourRewardWin.text = "Your reward:";
+        NextLevelWin.text = "NEXT LEVEL";
+        DoubleCoinsOnWin.text = "DOUBLE";
+        ToMenuInCorner.text = "To menu";
+
 
         BuildingMenu1.text = "Blocks";
         BuildingMenu2.text = "Animals";
         BuildingMenu3.text = "Monsters";
 
         WeaponClosed.text = "Weapon closed!";
-        UnlockOneTimeButton.text = "Unlock 1 time per advertisement";
+        UnlockOneTimeButton.text = "Unlock 1 time with advertisement";
         UnlockForeverButton.text = "Unlock forever";
 
 
@@ -225,6 +234,11 @@ public class GameplayLocalization : MonoBehaviour
         YouWon.text = "Kazandınız!";
         TryAgain.text = "YENİDEN";
         ToMenu.text = "MENÜYE";
+        YourRewardWin.text = "Ödülünüz:";
+        NextLevelWin.text = "SONRAKİ SEVİYE";
+        DoubleCoinsOnWin.text = "ARTIRMAK";
+        ToMenuInCorner.text = "Menüye";
+
 
         BuildingMenu1.text = "Bloklar";
         BuildingMenu2.text = "Hayvanlar";
@@ -290,6 +304,10 @@ public class GameplayLocalization : MonoBehaviour
         YouWon.text = "Вы выиграли!";
         TryAgain.text = "ЗАНОВО";
         ToMenu.text = "В МЕНЮ";
+        YourRewardWin.text = "Ваша награда:";
+        NextLevelWin.text = "СЛЕДУЮЩИЙ УРОВЕНЬ";
+        DoubleCoinsOnWin.text = "УДВОИТЬ";
+        ToMenuInCorner.text = "В меню";
 
         BuildingMenu1.text = "Блоки";
         BuildingMenu2.text = "Животные";

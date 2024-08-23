@@ -156,9 +156,10 @@ public class UnitMovement : MonoBehaviour
         WalkSequence = DOTween.Sequence();
         if (IsZombie == false)
         {
-            WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f)).SetEase(Ease.InExpo);
-            WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenStartLocalPosition, 1f).SetEase(Ease.InOutExpo));
-            WalkSequence.SetLoops(10000);
+            float randomModifier = Random.Range(0.7f, 1.2f);
+            WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenUnit.transform.localPosition + new Vector3(0, 1, 0), 0.15f* randomModifier)).SetEase(Ease.InExpo);
+            WalkSequence.Append(ChildrenUnit.transform.DOLocalMove(ChildrenStartLocalPosition, 1f* randomModifier).SetEase(Ease.InOutExpo));
+            WalkSequence.SetLoops(-1);
         }
         else
         {

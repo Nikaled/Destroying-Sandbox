@@ -10,12 +10,17 @@ public class Molotov : MonoBehaviour
     [SerializeField] DestroyEffect DestroyAnimation;
     [SerializeField] float ExplosionScale = 3;
     [SerializeField] AudioExplosion Source;
+    [SerializeField] DamageArea DamageSphere;
+    [SerializeField] SphereCollider DamageSphereCollider;
     [SerializeField] ExplosionForceChecker explosionForceChecker;
     private IEnumerator Explosion()
     {
         yield return new WaitForSeconds(DelayBeforeExplosion);
         Source.PlayExplosionSound();
+
         GetComponent<SphereCollider>().enabled = true;
+        DamageSphereCollider.enabled = true;
+
         explosionForceChecker.transform.parent = null;
         explosionForceChecker.GetComponent<SphereCollider>().enabled = true;
         DestroyAnimation.transform.parent = null;
@@ -26,6 +31,11 @@ public class Molotov : MonoBehaviour
         {
             if (targetsInExplosion[i] != null)
                 targetsInExplosion[i].TakeFire();
+        }
+        for (int i = 0; i < DamageSphere.targetsInExplosion.Count; i++)
+        {
+            if (DamageSphere.targetsInExplosion[i] != null)
+                DamageSphere.targetsInExplosion[i].TakeDamage(transform.position);
         }
         Destroy(explosionForceChecker.gameObject);
         Destroy(gameObject);

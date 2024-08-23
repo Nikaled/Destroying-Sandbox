@@ -436,14 +436,15 @@ public class CanvasManager : MonoBehaviour
     {
         SaveMapUIActive = Is;
         SaveMapUI.SetActive(Is);
-        if (Is)
-        {
-            Player.instance.examplePlayer.LockCursor(false);
-        }
-        else
-        {
-            CheckActiveUnlockCursorWindows();
-        }
+        CheckActiveUnlockCursorWindows();
+        //if (Is)
+        //{
+        //    Player.instance.examplePlayer.LockCursor(false);
+        //}
+        //else
+        //{
+        //    CheckActiveUnlockCursorWindows();
+        //}
     }
     public void ShowCarMobileInstruction(bool Is)
     {
