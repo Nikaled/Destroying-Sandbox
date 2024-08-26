@@ -13,7 +13,6 @@ public class DestroySystem : MonoBehaviour
     [SerializeField] AudioExplosion AudioExplosionPrefab;
     [SerializeField] Material UnitDieMaterial;
     [SerializeField] GameObject FireAnimation;
-    private readonly string AnalyticsDestroyObject = "ObjectDestroyed";
     public bool IsFireable;
     public bool IsUnit;
     public bool IsTransparent;
@@ -194,24 +193,22 @@ public class DestroySystem : MonoBehaviour
             smallBlocksColliders[i].enabled = true;
             //smallBlocks[i].SetActive(true);
             float RandomSpawnModifier = UnityEngine.Random.Range(-1.3f, 1.3f);
+            
             Vector3 RandomPosition = new Vector3(MeshObject.transform.position.x + RandomSpawnModifier, MeshObject.transform.position.y + RandomSpawnModifier, MeshObject.transform.position.z + RandomSpawnModifier);
             //smallBlocks[i].transform.parent = null;
             smallBlocks[i].transform.position = RandomPosition;
             float RandomModifierX = UnityEngine.Random.Range(-1, 1);
             float RandomModifierY = UnityEngine.Random.Range(-1, 1);
             float RandomModifierZ = UnityEngine.Random.Range(-1, 1);
-            float RandomModifierPower = UnityEngine.Random.Range(0, 4);
+            float RandomModifierPower = UnityEngine.Random.Range(1f, 4);
             Vector3 RandomVector = new Vector3(RandomModifierX, RandomModifierY, RandomModifierZ) * RandomModifierPower;
             smallBlocksRb[i].isKinematic = false;
+            smallBlocksRb[i].useGravity = true;
+            //smallBlocksRb[i].mass = 1;
             smallBlocksRb[i].AddForce((RandomVector + Vector3.up * RandomModifierPower) * 100);
             smallBlocks[i].transform.DOScale(0, AnimationTime).SetDelay(1f).SetEase(Ease.InCirc);
             // smallBlocks[i].GetComponent<Rigidbody>().AddForce((RandomVector + Vector3.up * RandomModifierPower) * 100 * 100);
         }
-        //GameObject objToSpawn = new GameObject("BlockFragmentDestroyer");
-        //BlockDestroyingAnimation smallBlockParent = objToSpawn.AddComponent<BlockDestroyingAnimation>();
-
-       // parentSUKAAnimation.smallBlocks = smallBlocks;
-       // parentSUKAAnimation.BlockDisappearing();
         Destroy(parentSUKA.gameObject, 2.5f);
     }
     private void AddRigidbodyWhenForcing()
@@ -225,8 +222,6 @@ public class DestroySystem : MonoBehaviour
         Geekplay.Instance.PlayerData.Coins += 1;
         Geekplay.Instance.PlayerData.DestroyCount += 1;
         DestroyCounter.instance.ObjectDestroyed();
-        //Geekplay.Instance.Save();
-        //Geekplay.Instance.Leaderboard("Destroy", Geekplay.Instance.PlayerData.DestroyCount);
     }
     private void ObjectDies()
     {

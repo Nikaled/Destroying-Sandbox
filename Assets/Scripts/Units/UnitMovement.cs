@@ -132,17 +132,17 @@ public class UnitMovement : MonoBehaviour
         }
 
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(GizPos, GizDir);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.DrawLine(GizPos, GizDir);
+    //}
     private void ChangeAlphaOnMaterial(Material mat, float alphaVal)
     {
         Color oldColor = mat.color;
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
         //mat.SetColor("_Color", newColor);
         mat.color = newColor;
-        Debug.Log("Alpha changed to " + alphaVal);
+        //Debug.Log("Alpha changed to " + alphaVal);
 
     }
     private void OnActivatedDestroyingPhase()
@@ -244,6 +244,10 @@ public class UnitMovement : MonoBehaviour
     }
     public void CreeperExplosion()
     {
+        if(charController == null)
+        {
+            return;
+        }
         WalkSequence.Kill();
         charController.enabled = false;
         DestroyPhaseStarted = false;

@@ -14928,7 +14928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187733888219652294, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3188956131490574081, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
@@ -18470,14 +18470,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 3941000944661782182, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
-      propertyPath: ParkourCountdown
-      value: 
-      objectReference: {fileID: 8300000, guid: b02108ce5b098cc4b8a0170037632ad2, type: 3}
-    - target: {fileID: 3941000944661782182, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
-      propertyPath: ParkourCountdownEnd
-      value: 
-      objectReference: {fileID: 8300000, guid: 40bf20c5e7796d04d8852605553083c5, type: 3}
     - target: {fileID: 3941010246723034724, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -35655,8 +35647,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 631d0ffe43f3431418f06160df7146ca, type: 2}
     - target: {fileID: 7535120787624582447, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2106042746327020958, guid: 631d0ffe43f3431418f06160df7146ca, type: 2}
+    - target: {fileID: 7535120787624582447, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536857734517675267, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer

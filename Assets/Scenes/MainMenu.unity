@@ -21088,7 +21088,7 @@ PrefabInstance:
     - target: {fileID: 3100714111121364877, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -199399113, guid: d6c6e70bd3c297247b5f3c791f4709da, type: 3}
+      objectReference: {fileID: -1371278075, guid: 92323926636e154418ad6cb9c2211ed2, type: 3}
     - target: {fileID: 3100714111121364877, guid: 02b256c0376df4b41860fe4103a418ad, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -22253,7 +22253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: language
-      value: tr
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5023734575896185641, guid: 275f8a7c89da8458f9efd280784a4bfe, type: 3}
       propertyPath: rewardsList.Array.size
@@ -27223,6 +27223,7 @@ MonoBehaviour:
   - {fileID: 1000529177}
   - {fileID: 1352713956}
   Data: {fileID: 11400000, guid: 6649f5f1efb310d40b284deebc00e153, type: 2}
+  _mapNames: {fileID: 11400000, guid: 1464acef39dec1c49b455fb24c0c71a4, type: 2}
 --- !u!222 &8019510270171792175
 CanvasRenderer:
   m_ObjectHideFlags: 0

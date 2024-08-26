@@ -211,7 +211,6 @@ public class Player : MonoBehaviour
                 }
                 break;
             case PlayerState.Parkour:
-                AdWarning.instance.ShowAdOnStart();
                 CanvasManager.instance.ShowBlockSlotsAndHideWeapons(false);
                 CanvasManager.instance.ShowWeaponSlotsAndHideBlocks(false);
                 CanvasManager.instance.ShowBiggerButtons(false);
@@ -543,7 +542,7 @@ public class Player : MonoBehaviour
                     CanvasManager.instance.JumpButton.gameObject.SetActive(false);
                 }
                 break;
-            case 5:
+            case 10:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(0);
                 DestroyLimiter.IsWeaponWithLimit = true;
@@ -556,7 +555,6 @@ public class Player : MonoBehaviour
             case 7:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(4);
-
                 break;
             case 8:
                 CurrentWeapon = WeaponType.None;
@@ -568,7 +566,7 @@ public class Player : MonoBehaviour
                 WeaponSelector.instance.SelectWeapon(6);
                 DestroyLimiter.IsWeaponWithLimit = true;
                 break;
-            case 10:
+            case 5:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(3);
                 break;

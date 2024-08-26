@@ -15,6 +15,11 @@ public class TutorialArrowManager : MonoBehaviour
             TutorContorlPoints[i].gameObject.SetActive(false);
             TutorEndPoints[i].gameObject.SetActive(false);
         }
+        SetNewArrowDestination();
+    }
+    public void HideArrow()
+    {
+        _bezierCurve.HideArrow();
     }
     public void SetNewArrowDestination()
     {

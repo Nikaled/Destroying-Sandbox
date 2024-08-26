@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioSource MusicSource;
     [SerializeField] AudioClip BuildingTheme;
     [SerializeField] AudioClip DestroyingTheme;
+    [SerializeField] AudioClip ParkourTheme;
     void Awake()
     {
         instance = this;
@@ -24,12 +25,21 @@ public class MusicManager : MonoBehaviour
             MusicSource.loop = true;
         }
     }
+    public void StartParkourMusic()
+    {
+        MusicSource.Stop();
+        MusicSource.clip = ParkourTheme;
+        MusicSource.Play();
+        MusicSource.volume = 0.8f;
+        MusicSource.loop = true;
+        MusicSource.pitch = 3;
+    }
     public void StartDestroyingPhaseMusic()
     {
         MusicSource.Stop();
         MusicSource.clip = DestroyingTheme;
         MusicSource.Play();
-        MusicSource.volume = 0.2f;
+        MusicSource.volume = 0.4f;
         MusicSource.loop = true;
     }
     public void StopMusic()

@@ -20,7 +20,9 @@ public class ParkourManager : MonoBehaviour
     [SerializeField] AudioSource SoundSoure;
     [SerializeField] AudioClip ParkourCountdown;
     [SerializeField] AudioClip ParkourCountdownEnd;
-
+    [SerializeField] TextMeshProUGUI _mapName;
+    [SerializeField] GameObject _mapNameObj;
+    [SerializeField] ParkourMapNamesSO _mapNamesData;
     private void Awake()
     {
         instance = this;
@@ -31,15 +33,33 @@ public class ParkourManager : MonoBehaviour
         {
             StartParkour();
             ParkourWinZone.instance.WinParkour += OnWinParkour;
+            SetParkourNameView();
+        }
+    }
+    private void SetParkourNameView() 
+    {
+        if(Geekplay.Instance.language == "ru")
+        {
+            _mapName.text = _mapNamesData.RusNames[Geekplay.Instance.PlayerData.CurrentParkourMapIndex];
+        }
+        if (Geekplay.Instance.language == "en")
+        {
+            _mapName.text = _mapNamesData.EngNames[Geekplay.Instance.PlayerData.CurrentParkourMapIndex];
+        }
+        if (Geekplay.Instance.language == "tr")
+        {
+            _mapName.text = _mapNamesData.TrNames[Geekplay.Instance.PlayerData.CurrentParkourMapIndex];
         }
     }
     public void StartParkour()
     {
+        _mapNameObj.SetActive(false);
         CountDown = true;
         Player.instance.examplePlayer.LockCursor(true);
         Player.instance.InterfaceActive = true;
         timerText.text = string.Format("{0:00}:{1:00}:{2:00}", 0, 0, 0);
         StartCoroutine(CountDownOnStart());
+       
     }
     private IEnumerator CountDownOnStart()
     {
@@ -63,6 +83,8 @@ public class ParkourManager : MonoBehaviour
         StartTime = Time.time;
         WinMap = false;
         CountDown = false;
+        MusicManager.instance.StartParkourMusic();
+        _mapNameObj.SetActive(true);
     }
 public float GetTimeInSeconds()
     {
@@ -80,6 +102,7 @@ public float GetTimeInSeconds()
     {
         WinMap = true;
         SerializeBlockManager.instance.TryGetRewardForParkourMap();
+        MusicManager.instance.StopMusic();
         Debug.Log("Win parkour");
     }
     private void Update()

@@ -10,6 +10,7 @@ public class ParkourSlotMenuManager : MonoBehaviour
     private int GridIndex = 0;
     private int MapsInPage = 15;
     [SerializeField] MapDataSO Data;
+    [SerializeField] ParkourMapNamesSO _mapNames;
     private void Start()
     {
 
@@ -23,7 +24,7 @@ public class ParkourSlotMenuManager : MonoBehaviour
 
                     parkourCells[i].LoadDataFromSO(Data.ParkourMaps[i]);
                     parkourCells[i].SetTimeToSlot(0);
-                    parkourCells[i].IndexOfMap = i+ (MapsInPage* GridIndex) + 1;
+                    parkourCells[i].IndexOfMap = i+ (MapsInPage* GridIndex);
                     for (int j = 0; j < playerMapData.Count; j++)
                     {
                         if(parkourCells[i].MapNameForScripts == playerMapData[j].MapName)
@@ -51,4 +52,21 @@ public class ParkourSlotMenuManager : MonoBehaviour
             }
         }
     }
+#if UNITY_EDITOR
+    [ContextMenu("SetNamesToSO")]
+    public void SetNamesToSO()
+    {
+        _mapNames.RusNames = new string[parkourCells.Length];
+        _mapNames.EngNames = new string[parkourCells.Length];
+        _mapNames.TrNames = new string[parkourCells.Length];
+        for (int i = 0; i < parkourCells.Length; i++)
+        {
+            _mapNames.RusNames[i] = parkourCells[i].MapNameRu;
+            _mapNames.EngNames[i] = parkourCells[i].MapNameEn;
+            _mapNames.TrNames[i] = parkourCells[i].MapNameTr;
+        }
+        UnityEditor.EditorUtility.SetDirty(_mapNames);
+        UnityEditor.AssetDatabase.SaveAssets();
+    }
+#endif
 }

@@ -110,7 +110,7 @@ public class LocalizationMenu : MonoBehaviour
         WeaponName2.text = "Машина";
         WeaponName3.text = "Метеорит";
         WeaponName4.text = "Пресс";
-        WeaponName5.text = "Крипер";
+        WeaponName5.text = "Молния";
         MoreCoinsAsk.text = "Недостаточно монет! Хотите получить больше?";
         MoreCoinsDecline.text  = "НЕТ";
         MoreCoinsConfirm.text =  "ДА";
@@ -155,7 +155,7 @@ public class LocalizationMenu : MonoBehaviour
         WeaponName2.text = "Monster Truck";
         WeaponName3.text = "Meteor";
         WeaponName4.text = "Press";
-        WeaponName5.text = "Creeper";
+        WeaponName5.text = "Lightning";
         MoreCoinsAsk.text = "Not enough coins! Do you want to get more?";
         MoreCoinsDecline.text = "NO";
         MoreCoinsConfirm.text = "YES";
@@ -200,7 +200,7 @@ public class LocalizationMenu : MonoBehaviour
         WeaponName2.text = "Makine";
         WeaponName3.text = "Göktaşı";
         WeaponName4.text = "Basın";
-        WeaponName5.text = "Sarmaşık";
+        WeaponName5.text = "Yıldırım";
         MoreCoinsAsk.text = "Yeterli para yok! Daha fazlasını almak ister misiniz?";
         MoreCoinsDecline.text = "HAYIR";
         MoreCoinsConfirm.text = "EVET";

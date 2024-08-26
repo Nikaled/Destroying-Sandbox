@@ -121,7 +121,7 @@ public class CanvasManager : MonoBehaviour
                 ToMenuButton.image.DOFade(0, 0);
                 LoadNextLevelButton.image.DOFade(0, 0);
                 ReloadButtonOnWinPanel.image.DOFade(0, 0);
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(1.7f);
                 OnWinButtonsGroup.SetActive(true);
                 ToMenuButton.image.DOFade(1, 1);
                 LoadNextLevelButton.image.DOFade(1, 1);
@@ -327,7 +327,7 @@ public class CanvasManager : MonoBehaviour
     private void Start()
     {
         Player.instance.examplePlayer.LockCursor(true);
-        Geekplay.Instance.ShowInterstitialAd();
+        AdWarning.instance.ShowAdOnStart();
         //ShowRewardAndSetRewardText(false, 0);
         ChangeCoinsText(Geekplay.Instance.PlayerData.Coins);
         DestroyCounter.instance.DestroyBlockCountChanged += DestroyCountChanged;

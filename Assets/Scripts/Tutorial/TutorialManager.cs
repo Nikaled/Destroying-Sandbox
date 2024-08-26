@@ -44,6 +44,8 @@ public class TutorialManager : MonoBehaviour
     IEnumerator PulseCor;
     [SerializeField] Image[] DoButtonImages;
     [SerializeField] TutorialArrowManager tutorArrow;
+    [SerializeField] TutorialBlackoutWindow _blackoutManager;
+
     private void Awake()
     {
         instance = this;
@@ -53,7 +55,7 @@ public class TutorialManager : MonoBehaviour
         while (true)
         {
 
-            PulseObj.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.75f).OnKill(()=> PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.75f));
+            PulseObj.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.75f).OnKill(() => PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.75f));
             //PulseObj.DOScale(new Vector3(1.15f, 1.15f, 1.15f), 0.75f).OnKill(()=> PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.75f));
             yield return new WaitForSeconds(1.5f);
             //PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.75f).OnKill(() => PulseObj.DOScale(new Vector3(1f, 1f, 1f), 0.1f));
@@ -102,7 +104,7 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    public void OnBorderCompleted(TutorialPhaseBorders.PhaseBorders BorderEnum) 
+    public void OnBorderCompleted(TutorialPhaseBorders.PhaseBorders BorderEnum)
     {
         TutorialPhaseText.SetActive(true);
         GoForwardText.SetActive(false);
@@ -118,12 +120,13 @@ public class TutorialManager : MonoBehaviour
                 }
                 break;
             case TutorialPhaseBorders.PhaseBorders.PhaseBorderWeaponDemonstrated:
-                   OpenPhase(PhaseName4);
+                OpenPhase(PhaseName4);
                 break;
             case TutorialPhaseBorders.PhaseBorders.PhaseBorderWeaponUsed:
                 CycleManager.instance.ActivateBuildingPhase();
                 CanvasManager.instance.ShowBiggerButtons(true);
                 AnimalZoneReached = true;
+                _blackoutManager.ShowBlackoutOnChangeMode();
                 if (Geekplay.Instance.mobile)
                 {
                     CanvasManager.instance.ChangePhaseButton.gameObject.SetActive(true);
@@ -132,7 +135,7 @@ public class TutorialManager : MonoBehaviour
                 PulseCor = Pulsing(ChangeModeButton.transform);
                 StartCoroutine(PulseCor);
                 break;
-           
+
             case TutorialPhaseBorders.PhaseBorders.PhaseBorderBlockPlaced:
                 GoForwardText.SetActive(true);
                 break;
@@ -160,8 +163,10 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[0] = true;
                     Analytics.instance.SendEvent("Tutorial_1_PhaseCompleted_Movement");
                 }
-                    TutorialPhaseText.SetActive(true);
+                _blackoutManager.ShowBlackoutOnChooseBlock();
 
+                tutorArrow.HideArrow();
+                TutorialPhaseText.SetActive(true);
                 PulseCor = Pulsing(BlockPanel.transform);
                 currentPulsingObject = BlockPanel;
                 StartCoroutine(PulseCor);
@@ -173,12 +178,13 @@ public class TutorialManager : MonoBehaviour
                     Geekplay.Instance.PlayerData.TutorialPhasesCompleted[1] = true;
                     Analytics.instance.SendEvent("Tutorial_2_PhaseCompleted_BlockSelected");
                 }
+                _blackoutManager.HideBlackoutOnChooseBlock();
                 PhaseBorders[0].UnlockNewPhasePath();
 
                 StopCoroutine(PulseCor);
                 DOTween.Kill(BlockPanel);
                 //BlockPanel.transform.DOScale(new Vector3(1, 1, 1), 0);
-              
+
 
                 GoForwardText.SetActive(true);
                 tutorArrow.SetNewArrowDestination();
@@ -248,7 +254,7 @@ public class TutorialManager : MonoBehaviour
                 StopCoroutine(PulseCor);
                 DOTween.Kill(ChangeModeButton);
                 //ChangeModeButton.transform.DOScale(new Vector3(1, 1, 1), 0);
-
+                _blackoutManager.HideBlackoutOnChangeMode();
                 GoForwardText.SetActive(true);
                 GoForwardText.transform.position = TutorialGoForwPhase4Pos.position;
                 Phase7Objects.SetActive(true);
@@ -258,7 +264,7 @@ public class TutorialManager : MonoBehaviour
                 break;
         }
         Geekplay.Instance.Save();
-        TutorLoc.SetNewText(PhaseIndex+1);
+        TutorLoc.SetNewText(PhaseIndex + 1);
     }
 
     private void Update()
