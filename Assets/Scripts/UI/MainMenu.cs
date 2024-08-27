@@ -33,17 +33,17 @@ public class MainMenu : MonoBehaviour
 
         MenuMusic.Play();
     }
-    private void Update()
-    {
+    //private void Update()
+    //{
 
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightShift))
-        {
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                Geekplay.Instance.PlayerData.Coins += 500;
-            }
-        }
-    }
+    //    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightShift))
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.I))
+    //        {
+    //            Geekplay.Instance.PlayerData.Coins += 500;
+    //        }
+    //    }
+    //}
     private void OnDisable()
     {
         Geekplay.Instance.PlayerData.CoinsChanged -= SetCoinsInPromo;

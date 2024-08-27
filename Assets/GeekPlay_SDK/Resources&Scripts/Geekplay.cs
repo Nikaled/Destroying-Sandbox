@@ -264,13 +264,13 @@ public class Geekplay : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightShift))
-        {
-            PlayerData = new PlayerData();
-            Geekplay.Instance.Save();
-        }
+        //if (Input.GetKeyDown(KeyCode.P) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightShift))
+        //{
+        //    PlayerData = new PlayerData();
+        //    Geekplay.Instance.Save();
+        //}
 
-        // remainingTimeUntilUpdateLeaderboard -= Time.deltaTime;
+        //remainingTimeUntilUpdateLeaderboard -= Time.deltaTime;
     }
 
     IEnumerator CanReward()
