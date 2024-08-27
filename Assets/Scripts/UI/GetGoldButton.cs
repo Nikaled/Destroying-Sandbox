@@ -19,7 +19,7 @@ public class GetGoldButton : MonoBehaviour
     }
     private void OnEnable()
     {
-      
+
         if (RewardBlocker != null && RewardTimerText != null)
         {
             Geekplay.Instance.RewardLockTimeUpdate += SetNewTimerTextAndCheckEnd;
@@ -38,7 +38,14 @@ public class GetGoldButton : MonoBehaviour
             }
         }
     }
-
+     private void OnDisable()
+    {
+        if (RewardBlocker != null && RewardTimerText != null)
+        {
+            Geekplay.Instance.RewardLockTimeUpdate -= SetNewTimerTextAndCheckEnd;
+            StopPulsing();
+        }
+    }
     public void ShowButton(bool Is)
     {
         BuyGoldButton.image.enabled = Is;
@@ -60,14 +67,7 @@ public class GetGoldButton : MonoBehaviour
         //    ObjectPulse.IsUnlocked = false;
         //}
     }
-    private void OnDisable()
-    {
-        if (RewardBlocker != null && RewardTimerText != null)
-        {
-            Geekplay.Instance.RewardLockTimeUpdate -= SetNewTimerTextAndCheckEnd;
-            StopPulsing();
-        }
-    }
+   
     public void SubscribeOnPurchase()
     {
         BuyGoldButton.onClick.AddListener(delegate { InAppOperation(); });
@@ -112,11 +112,6 @@ public class GetGoldButton : MonoBehaviour
             ShowButton(true);
             StartPulsing();
         }
-    }
-    private void GetGold()
-    {
-        //Geekplay.Instance.PlayerData.Coins += PurGold;
-        //Geekplay.Instance.Save();
     }
     private IEnumerator BlockRewardOnTimeByGeekplay()
     {

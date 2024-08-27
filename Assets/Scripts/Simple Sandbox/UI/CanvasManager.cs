@@ -223,6 +223,7 @@ public class CanvasManager : MonoBehaviour
             BuildingMenuButton.SetActive(true);
             SaveButton.gameObject.SetActive(true);
             //ShowWeaponSlotsAndHideBlocks(false);
+            ChangePhaseButton.transform.localPosition = new Vector3(134, ChangePhaseButton.transform.localPosition.y);
         }
     }
     public void ShowWeaponSlotsAndHideBlocks(bool Is)
@@ -233,6 +234,8 @@ public class CanvasManager : MonoBehaviour
             BlockSlots.SetActive(false);
             BuildingMenuButton.SetActive(false);
             SaveButton.gameObject.SetActive(false);
+
+            ChangePhaseButton.transform.localPosition = new Vector3(-180, ChangePhaseButton.transform.localPosition.y);
         }
     }
     private void OnWinParkourMap()

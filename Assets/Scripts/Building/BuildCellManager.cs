@@ -19,7 +19,7 @@ public class BuildCellManager : MonoBehaviour
     public static BuildCellManager instance;
 
     private readonly string FirstBlock = "FirstBlockPlaced";
-
+    CycleManager _cycleManager;
     private void Awake()
     {
         instance = this;
@@ -27,6 +27,7 @@ public class BuildCellManager : MonoBehaviour
     private void Start()
     {
         player = Player.instance;
+        _cycleManager = CycleManager.instance;
     }
     //private void DevPort()
     //{
@@ -100,36 +101,45 @@ public class BuildCellManager : MonoBehaviour
     {
 
     }
-////#if UNITY_EDITOR
-//    private void Update()
-//    {
-//        CrosshairWorldPosition = Vector3.zero;
-//        Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
-//        if (Physics.Raycast(ray, out RaycastHit raycastHit, 26, AbleToBuildMask))
-//        {
-//            if (currentCell != null)
-//            {
-//                currentCell.ShowCellMesh(false);
-//            }
-//            CrosshairWorldPosition = raycastHit.point;
-//            currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
-//            if (currentCell != null)
-//            {
-//                currentCell.ShowCellMesh(true);
-//            }
-//        }
-//        else
-//        {
-//            if (currentCell != null)
-//            {
-//                CrosshairWorldPosition = ray.GetPoint(19);
-//                currentCell.ShowCellMesh(false);
-//            }
-//            currentCell = null;
-//        }
-//        DevPort();
-//    }
-////#endif
+    //#if UNITY_EDITOR
+    private void Update()
+    {
+       
+        if(_cycleManager.currentPhase != CycleManager.Phase.Destroying)
+        {
+            return;
+        }
+        if(player.CurrentWeapon == Player.WeaponType.Pistol || player.CurrentWeapon == Player.WeaponType.FlameThrower)
+        {
+            CrosshairWorldPosition = Vector3.zero;
+            Ray ray = Camera.main.ScreenPointToRay(Crosshair.transform.position);
+            if (Physics.Raycast(ray, out RaycastHit raycastHit, 26, AbleToBuildMask))
+            {
+                if (currentCell != null)
+                {
+                    currentCell.ShowCellMesh(false);
+                }
+                CrosshairWorldPosition = raycastHit.point;
+                currentCell = raycastHit.collider.gameObject.GetComponent<BuildCellSide>();
+                if (currentCell != null)
+                {
+                    currentCell.ShowCellMesh(true);
+                }
+            }
+            else
+            {
+                if (currentCell != null)
+                {
+                    CrosshairWorldPosition = ray.GetPoint(19);
+                    currentCell.ShowCellMesh(false);
+                }
+                currentCell = null;
+            }
+        }
+      
+        //DevPort();
+    }
+    //#endif
     public void PlayDeleteBlockSound()
     {
         SoundSource.clip = DeleteBlockSound;

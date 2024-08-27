@@ -449,6 +449,7 @@ public class Player : MonoBehaviour
     }
     public void SwitchWeapon(int PressedNumber)
     {
+        BuildCellManager.instance.DisableBlockOutline();
         DestroyLimiter.ResetCurrentDestroyed();
         DestroyLimiter.IsWeaponWithLimit = false;
         if (Geekplay.Instance.mobile)

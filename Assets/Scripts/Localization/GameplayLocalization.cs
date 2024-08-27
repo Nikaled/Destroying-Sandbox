@@ -85,6 +85,7 @@ public class GameplayLocalization : MonoBehaviour
     [Header("NotFlamingUI")]
     public TextMeshProUGUI NotFlamingWarning;
     public static GameplayLocalization instance;
+    private string _reloadOnlyDestructionText;
     private void Awake()
     {
         instance = this;
@@ -103,16 +104,16 @@ public class GameplayLocalization : MonoBehaviour
             yield return new WaitForFixedUpdate();
             if (Is)
             {
-                Pistol2.text = ParkourInstructionR.text;
-                Molotov2.text = ParkourInstructionR.text;
-                FlameThrow2.text = ParkourInstructionR.text;
-                Plane3.text = ParkourInstructionR.text;
-                Lightning2.text = ParkourInstructionR.text;
-                DynamiteInstruction4.text = ParkourInstructionR.text;
-                Car2.text = ParkourInstructionR.text;
-                Meteor2.text = ParkourInstructionR.text;
-                Press2.text = ParkourInstructionR.text;
-                Creeper2.text = ParkourInstructionR.text;
+                Pistol2.text = _reloadOnlyDestructionText;
+                Molotov2.text = _reloadOnlyDestructionText;
+                FlameThrow2.text = _reloadOnlyDestructionText;
+                Plane3.text = _reloadOnlyDestructionText;
+                Lightning2.text = _reloadOnlyDestructionText;
+                DynamiteInstruction4.text = _reloadOnlyDestructionText;
+                Car2.text = _reloadOnlyDestructionText;
+                Meteor2.text = _reloadOnlyDestructionText;
+                Press2.text = _reloadOnlyDestructionText;
+                Creeper2.text = _reloadOnlyDestructionText;
             }
             else
             {
@@ -223,10 +224,11 @@ public class GameplayLocalization : MonoBehaviour
         NotFlamingWarning.text = "This block if fireproof!";
         if (ParkourInstructionR != null)
         {
-            ParkourInstructionR.text = $"<color=orange>[M]</color> Reload";
+            ParkourInstructionR.text = $"<color=orange>[R]</color> Reload";
             ReloadButtonInCorner.text = "Reload";
             ParkourInstructionM.text = InMenu.text;
         }
+            _reloadOnlyDestructionText = $"<color=orange>[M]</color> Reload";
     }
     private void TrLocalization()
     {
@@ -293,10 +295,11 @@ public class GameplayLocalization : MonoBehaviour
         NotFlamingWarning.text = "Bu blok ateşe verilmiyor!";
         if (ParkourInstructionR != null)
         {
-            ParkourInstructionR.text = $"<color=orange>[M]</color> Yeniden";
+            ParkourInstructionR.text = $"<color=orange>[R]</color> Yeniden";
             ReloadButtonInCorner.text = "Yeniden";
             ParkourInstructionM.text = InMenu.text;
         }
+            _reloadOnlyDestructionText = $"<color=orange>[M]</color> Yeniden";
     }
     private void RuLocalization()
     {
@@ -362,9 +365,10 @@ public class GameplayLocalization : MonoBehaviour
         NotFlamingWarning.text = "Этот блок не горит!";
         if (ParkourInstructionR != null)
         {
-            ParkourInstructionR.text = $"<color=orange>[M]</color> Заново";
+            ParkourInstructionR.text = $"<color=orange>[R]</color> Заново";
             ReloadButtonInCorner.text = "Заново";
             ParkourInstructionM.text = InMenu.text;
         }
+        _reloadOnlyDestructionText = $"<color=orange>[M]</color> Заново";
     }
 }
