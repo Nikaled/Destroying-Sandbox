@@ -87,7 +87,7 @@ public class WeaponSelector : MonoBehaviour
         if (Geekplay.Instance.PlayerData.WeaponOpenedArray == null)
         {
             Geekplay.Instance.PlayerData.WeaponOpenedArray = new bool[10];
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }
@@ -96,7 +96,7 @@ public class WeaponSelector : MonoBehaviour
         else if (Geekplay.Instance.PlayerData.WeaponOpenedArray.Length < 9)
         {
             Geekplay.Instance.PlayerData.WeaponOpenedArray = new bool[10];
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }

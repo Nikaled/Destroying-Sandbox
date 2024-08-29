@@ -29,19 +29,19 @@ public class BuildCellManager : MonoBehaviour
         player = Player.instance;
         _cycleManager = CycleManager.instance;
     }
-    //private void DevPort()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.X))
-    //    {
-    //        if(currentCell != null)
-    //        {
-    //            //PlaceBlock();
-    //        Player.instance.motor.SetPosition(currentCell.parentBlock.transform.position + new Vector3(0,2,0));
-    //        }
+    private void DevPort()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (currentCell != null)
+            {
+                //PlaceBlock();
+                Player.instance.motor.SetPosition(currentCell.parentBlock.transform.position + new Vector3(0, 2, 0));
+            }
 
 
-    //    }
-    //}
+        }
+    }
     public void SetButtonsToBuildMode()
     {
         CanvasManager.instance.DoButton.onClick.RemoveAllListeners();
@@ -136,8 +136,8 @@ public class BuildCellManager : MonoBehaviour
                 currentCell = null;
             }
         }
-      
-        //DevPort();
+
+        DevPort();
     }
     //#endif
     public void PlayDeleteBlockSound()

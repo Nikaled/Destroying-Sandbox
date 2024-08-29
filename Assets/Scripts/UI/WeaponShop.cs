@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class WeaponShop : MonoBehaviour
 {
-  [HideInInspector]  public bool[] OpenedWeapons; // 5-9 is buyable;
+  [HideInInspector]  public bool[] OpenedWeapons; // 4-9 are buyable;
     public static WeaponShop instance;
     public WeaponShopCell[] shopCells;
     public TextMeshProUGUI CoinsText;
@@ -20,7 +20,7 @@ public class WeaponShop : MonoBehaviour
         LoadWeaponInfo();
         for (int i = 0; i < shopCells.Length; i++)
         {
-            int WeaponIndexInArray = i + 5;
+            int WeaponIndexInArray = i + 4;
             shopCells[i].LoadBuyStatusPriceAndIndex(550, OpenedWeapons[WeaponIndexInArray], WeaponIndexInArray);
         }
     }
@@ -34,7 +34,7 @@ public class WeaponShop : MonoBehaviour
         if (Geekplay.Instance.PlayerData.WeaponOpenedArray == null)
         {
             Geekplay.Instance.PlayerData.WeaponOpenedArray = new bool[10];
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }
@@ -43,13 +43,33 @@ public class WeaponShop : MonoBehaviour
         else if (Geekplay.Instance.PlayerData.WeaponOpenedArray.Length < 9)
         {
             Geekplay.Instance.PlayerData.WeaponOpenedArray = new bool[10];
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 Geekplay.Instance.PlayerData.WeaponOpenedArray[i] = true;
             }
             Geekplay.Instance.Save();
         }
         OpenedWeapons = Geekplay.Instance.PlayerData.WeaponOpenedArray;
+    }
+
+    public void UnlockWeaponByInApp(int index)
+    {
+        Geekplay.Instance.PlayerData.WeaponOpenedArray[index] = true;
+        Geekplay.Instance.Save();
+        int CellIndex = index - 4;
+        shopCells[CellIndex].LoadBuyStatusPriceAndIndex(550, OpenedWeapons[CellIndex], CellIndex);
+    }
+    public void UnlockAllWeapon()
+    {
+        int currentWeaponIndex = 4;
+        for (int i = 0; i < shopCells.Length; i++)
+        {
+            Geekplay.Instance.PlayerData.WeaponOpenedArray[currentWeaponIndex] = true;
+            int CellIndex = currentWeaponIndex - 4;
+            shopCells[CellIndex].LoadBuyStatusPriceAndIndex(0, OpenedWeapons[CellIndex], CellIndex);
+            currentWeaponIndex++;
+        }
+        Geekplay.Instance.Save();
     }
     public void UnlockWeapon(int price, int currentWeaponIndex)
     {
@@ -58,7 +78,7 @@ public class WeaponShop : MonoBehaviour
             Geekplay.Instance.PlayerData.Coins -= price;
             Geekplay.Instance.PlayerData.WeaponOpenedArray[currentWeaponIndex] = true;
             Geekplay.Instance.Save();
-            int CellIndex = currentWeaponIndex - 5;
+            int CellIndex = currentWeaponIndex - 4;
             shopCells[CellIndex].LoadBuyStatusPriceAndIndex(550, OpenedWeapons[CellIndex], CellIndex);
         }
         else

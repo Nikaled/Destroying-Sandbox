@@ -41,6 +41,7 @@ public class LocalizationMenu : MonoBehaviour
     [Header("WeaponAndAppShop")]
     [SerializeField] TextMeshProUGUI YourBalanceWeapon;
     [SerializeField] TextMeshProUGUI YourBalanceApp;
+    [SerializeField] TextMeshProUGUI WeaponName0;
     [SerializeField] TextMeshProUGUI WeaponName1;
     [SerializeField] TextMeshProUGUI WeaponName2;
     [SerializeField] TextMeshProUGUI WeaponName3;
@@ -106,6 +107,7 @@ public class LocalizationMenu : MonoBehaviour
         TutorialAsk.text = "Хотите пройти обучение?";
         TutorialDecline.text = "НЕТ";
         TutorialConfirm.text = "ДА";
+        WeaponName0.text = "Самолет";
         WeaponName1.text = "Динамит";
         WeaponName2.text = "Машина";
         WeaponName3.text = "Метеорит";
@@ -151,6 +153,7 @@ public class LocalizationMenu : MonoBehaviour
         TutorialAsk.text = "Do you want to start tutorial?";
         TutorialDecline.text = "NO";
         TutorialConfirm.text = "YES";
+        WeaponName0.text = "Plane";
         WeaponName1.text = "Dynamite";
         WeaponName2.text = "Monster Truck";
         WeaponName3.text = "Meteor";
@@ -196,6 +199,7 @@ public class LocalizationMenu : MonoBehaviour
         TutorialAsk.text = "Eğitim almak ister misiniz?";
         TutorialDecline.text = "HAYIR";
         TutorialConfirm.text = "EVET";
+        WeaponName0.text = "Uçak";
         WeaponName1.text = "Dinamit";
         WeaponName2.text = "Makine";
         WeaponName3.text = "Göktaşı";

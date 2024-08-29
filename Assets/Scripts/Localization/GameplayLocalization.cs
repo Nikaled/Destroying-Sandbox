@@ -228,7 +228,7 @@ public class GameplayLocalization : MonoBehaviour
             ReloadButtonInCorner.text = "Reload";
             ParkourInstructionM.text = InMenu.text;
         }
-            _reloadOnlyDestructionText = $"<color=orange>[M]</color> Reload";
+            _reloadOnlyDestructionText = $"<color=orange>[R]</color> Reload";
     }
     private void TrLocalization()
     {
@@ -299,7 +299,7 @@ public class GameplayLocalization : MonoBehaviour
             ReloadButtonInCorner.text = "Yeniden";
             ParkourInstructionM.text = InMenu.text;
         }
-            _reloadOnlyDestructionText = $"<color=orange>[M]</color> Yeniden";
+            _reloadOnlyDestructionText = $"<color=orange>[R]</color> Yeniden";
     }
     private void RuLocalization()
     {
@@ -369,6 +369,6 @@ public class GameplayLocalization : MonoBehaviour
             ReloadButtonInCorner.text = "Заново";
             ParkourInstructionM.text = InMenu.text;
         }
-        _reloadOnlyDestructionText = $"<color=orange>[M]</color> Заново";
+        _reloadOnlyDestructionText = $"<color=orange>[R]</color> Заново";
     }
 }

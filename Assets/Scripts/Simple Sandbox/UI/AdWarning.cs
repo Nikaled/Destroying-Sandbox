@@ -98,11 +98,11 @@ public class AdWarning : MonoBehaviour
             yield return new WaitForSecondsRealtime(1f);
         }
 
-        AudioListener.volume = 1;
-        AudioListener.pause = false;
+
 
         Geekplay.Instance.ShowInterstitialAd();
         Geekplay.Instance.IsAdWarningShowing = false;
+
         Geekplay.Instance.PlayerData.Coins+=50;
         Geekplay.Instance.Save();
 

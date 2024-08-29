@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,7 +14,21 @@ public class AppShopCell : MonoBehaviour
     [SerializeField] TextMeshProUGUI RewardTimerText;
     private void OnEnable()
     {
-        GoldCount.text = Rewarder.instance.GetGoldCountByName(PurName).ToString();
+        int GetGoldCount = Rewarder.instance.GetGoldCountByName(PurName);
+        if(GetGoldCount != -1)
+        {
+        GoldCount.text = GetGoldCount.ToString();
+        }
+        else
+        {
+            LastSlotLocalization();
+        }
+
+        if (GetGoldCount == -2)
+        {
+            WeaponPackLoc();
+        }
+       
         if (RewardBlocker != null && RewardTimerText !=null)
         {
             Geekplay.Instance.RewardLockTimeUpdate += SetNewTimerTextAndCheckEnd;
@@ -27,6 +41,37 @@ public class AppShopCell : MonoBehaviour
         if(Rewarder.instance != null)
         {
             Rewarder.instance.RewardShowed += RewardOperation;
+        }
+    }
+
+    private void LastSlotLocalization()
+    {
+        if(Geekplay.Instance.language == "ru")
+        {
+            GoldCount.text = "Все оружие";
+        }
+        if (Geekplay.Instance.language == "en")
+        {
+            GoldCount.text = "All weapons";
+        }
+        if (Geekplay.Instance.language == "tr")
+        {
+            GoldCount.text = "Tüm silahlar";
+        }
+    }
+    private void WeaponPackLoc()
+    {
+        if (Geekplay.Instance.language == "ru")
+        {
+            GoldCount.text = "1000 + оружие";
+        }
+        if (Geekplay.Instance.language == "en")
+        {
+            GoldCount.text = "1000 + weapons";
+        }
+        if (Geekplay.Instance.language == "tr")
+        {
+            GoldCount.text = "1000 + silahlar";
         }
     }
     private void Start()

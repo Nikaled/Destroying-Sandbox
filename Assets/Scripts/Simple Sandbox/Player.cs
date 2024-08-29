@@ -534,7 +534,7 @@ public class Player : MonoBehaviour
                     CanvasManager.instance.DoButton.GetComponent<MobileShootButton>().enabled = true;
                 }
                 break;
-            case 4:
+            case 5:
                 CurrentWeapon = WeaponType.Plane;
                 WeaponSelector.instance.SelectWeapon(5);
                 if (Geekplay.Instance.mobile)
@@ -548,26 +548,26 @@ public class Player : MonoBehaviour
                 WeaponSelector.instance.SelectWeapon(0);
                 DestroyLimiter.IsWeaponWithLimit = true;
                 break;
-            case 6:
+            case 8:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(1);
                 DestroyLimiter.IsWeaponWithLimit = true;
                 break;
-            case 7:
+            case 6:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(4);
                 break;
-            case 8:
+            case 9:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(2);
                 DestroyLimiter.IsWeaponWithLimit = true;
                 break;
-            case 9:
+            case 7:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(6);
                 DestroyLimiter.IsWeaponWithLimit = true;
                 break;
-            case 5:
+            case 4:
                 CurrentWeapon = WeaponType.None;
                 WeaponSelector.instance.SelectWeapon(3);
                 break;

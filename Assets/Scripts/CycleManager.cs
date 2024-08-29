@@ -38,6 +38,11 @@ public class CycleManager : MonoBehaviour
         {
             if (Player.instance.currentState == Player.PlayerState.Idle || Player.instance.currentState == Player.PlayerState.Building)
             {
+                if (SerializeBlockManager.instance.OnlyDestroyingMap || SerializeBlockManager.instance.OnlyParkourMap)
+                {
+                    return;
+                }
+
                 SwitchPhase();
             } 
         }
@@ -46,6 +51,10 @@ public class CycleManager : MonoBehaviour
             if (Player.instance.currentState == Player.PlayerState.Parkour)
             {
                 ActivateParkourPhase();
+            }
+            if (SerializeBlockManager.instance.OnlyDestroyingMap)
+            {
+                SwitchPhase();
             }
         }
     }

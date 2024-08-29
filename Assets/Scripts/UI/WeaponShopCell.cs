@@ -8,12 +8,16 @@ public class WeaponShopCell : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI PriceText;
     [SerializeField] Button BuyButton;
+    [SerializeField] Button InAppBuyButton;
     [SerializeField] Image CoinsImage;
     [SerializeField] Image BoughtMarkImage;
+    [SerializeField] string InAppName;
     private int _price;
     private int WeaponSlotIndex;
     private string BoughtText;
-    private void Awake()
+    private bool IsBought;
+    [SerializeField] int WeaponPrice;
+    private void LocalizationBought()
     {
            
         if(Geekplay.Instance.language == "ru")
@@ -29,12 +33,12 @@ public class WeaponShopCell : MonoBehaviour
             BoughtText = "Satın Alındı";
         }
     }
-    public void LoadBuyStatusPriceAndIndex(int price, bool IsBought, int WeaponIndex)
+    private void OnEnable()
     {
-        _price = price;
-        if(IsBought== false)
+        LocalizationBought();
+        if (IsBought == false)
         {
-            PriceText.text = price.ToString();
+            PriceText.text = _price.ToString();
             BuyButton.enabled = true;
             CoinsImage.gameObject.SetActive(true);
             BoughtMarkImage.gameObject.SetActive(false);
@@ -45,11 +49,37 @@ public class WeaponShopCell : MonoBehaviour
             BuyButton.enabled = false;
             CoinsImage.gameObject.SetActive(false);
             BoughtMarkImage.gameObject.SetActive(true);
+            InAppBuyButton.gameObject.SetActive(false);
+        }
+    }
+    public void LoadBuyStatusPriceAndIndex(int price, bool IsBought, int WeaponIndex)
+    {
+        this.IsBought = IsBought;
+        _price = WeaponPrice;
+        if(IsBought== false)
+        {
+            PriceText.text = _price.ToString();
+            BuyButton.enabled = true;
+            CoinsImage.gameObject.SetActive(true);
+            BoughtMarkImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            PriceText.text = BoughtText;
+            BuyButton.enabled = false;
+            CoinsImage.gameObject.SetActive(false);
+            BoughtMarkImage.gameObject.SetActive(true);
+            InAppBuyButton.gameObject.SetActive(false);
         }
         WeaponSlotIndex = WeaponIndex;
     }
+
     public void BuyItem()
     {
         WeaponShop.instance.UnlockWeapon(_price, WeaponSlotIndex);
+    }
+    public void BuyItemInApp()
+    {
+        Geekplay.Instance.RealBuyItem(InAppName);
     }
 }

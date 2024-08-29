@@ -43,7 +43,6 @@ public class DestroyingMapCell : MonoBehaviour
     {
         Geekplay.Instance.PlayerData.IsLoadingDestructionMap = true;
         Geekplay.Instance.PlayerData.CurrentDestructionMapName = MapNameForScripts;
-        Geekplay.Instance.ShowInterstitialAd();
         string forEvent = StartedDestroyMap + IndexOfMap;
         Geekplay.Instance.PlayerData.CurrentDestructionMapIndex = IndexOfMap;
         Analytics.instance.SendEvent(forEvent);

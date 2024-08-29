@@ -117,8 +117,8 @@ public float GetTimeInSeconds()
         }
         CurrentTime = Time.time - StartTime;
         minutes = Mathf.Floor(CurrentTime / 60F);
-        seconds = Mathf.RoundToInt(CurrentTime % 60);
-        milliseconds = (int)(Time.timeSinceLevelLoad * 1000f) % 1000;
+        seconds =(int) CurrentTime - minutes * 60;
+        milliseconds = (int)(Time.timeSinceLevelLoad * 100f) % 100;
         timerText.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
     }
 }

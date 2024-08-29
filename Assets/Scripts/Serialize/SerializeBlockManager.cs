@@ -37,9 +37,9 @@ public class SerializeBlockManager : MonoBehaviour
     {
         BlocksOnScene = new();
         Vector3 StartPoint = new Vector3(50, 2, 2);
-        int width = 6;
-        int lenght = 5;
-        int height = 26;
+        int width = 10;
+        int lenght = 10;
+        int height = 10;
         int Sdvig = 2;
         for (int i = 0; i < width; i++)
         {
@@ -47,11 +47,11 @@ public class SerializeBlockManager : MonoBehaviour
             {
                 for (int y = 0; y < height; y++)
                 {
-                    if ((i > 0 && i < lenght - 1) && (j > 0 && j < width - 2) && (y != 0 && y%4 !=0)/*y != height - 1)*/)
+                    if ((i > 0 && i < lenght - 1) && (j > 0 && j < width - 1) && (y != 0 && y != height - 1))
                     {
                         continue;
                     }
-                    var newBlock = Instantiate(BlocksPrefab[43], StartPoint + new Vector3(Sdvig * j, Sdvig * y, Sdvig * i), Quaternion.identity);
+                    var newBlock = Instantiate(BlocksPrefab[7], StartPoint + new Vector3(Sdvig * j, Sdvig * y, Sdvig * i), Quaternion.identity);
                     BlocksOnScene.Add(newBlock);
                 }
             }

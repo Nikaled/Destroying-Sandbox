@@ -15,7 +15,6 @@ public class ParkourMapCell : DestroyingMapCell
     {
         Geekplay.Instance.PlayerData.IsLoadingParkourMap = true;
         Geekplay.Instance.PlayerData.CurrentParkourMapName = MapNameForScripts;
-        Geekplay.Instance.ShowInterstitialAd();
         string forEvent = StartedParkourMap + IndexOfMap;
         Geekplay.Instance.PlayerData.CurrentParkourMapIndex = IndexOfMap;
         Analytics.instance.SendEvent(forEvent);
