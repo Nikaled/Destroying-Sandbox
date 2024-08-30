@@ -33,6 +33,7 @@ public class AdWarning : MonoBehaviour
         if (AwaitWarningCor != null)
         {
             StopCoroutine(AwaitWarningCor);
+            AwaitWarningCor = null;
         }
         AwaitWarningCor = AwaitAndShowWarningPanel();
         StartCoroutine(AwaitWarningCor);
@@ -54,6 +55,7 @@ public class AdWarning : MonoBehaviour
         if (AwaitWarningCor != null)
         {
             StopCoroutine(AwaitWarningCor);
+            AwaitWarningCor = null;
         }
         TimeToShowWarning = CurrentTimeToShowWarning + plusTime;
         AwaitWarningCor = AwaitAndShowWarningPanel();
@@ -117,6 +119,7 @@ public class AdWarning : MonoBehaviour
         if (AwaitWarningCor != null)
         {
             StopCoroutine(AwaitWarningCor);
+            AwaitWarningCor = null;
         }
         AwaitWarningCor = AwaitAndShowWarningPanel();
         StartCoroutine(AwaitWarningCor);

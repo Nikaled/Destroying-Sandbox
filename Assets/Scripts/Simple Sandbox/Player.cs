@@ -413,7 +413,6 @@ public class Player : MonoBehaviour
             SwitchWeapon(10);
         }
             float scroll = Input.GetAxis("Mouse ScrollWheel");
-        Debug.Log("scroll Input:" + scroll);
             if (scroll > 0.0f)
             {
                 int nextindex = CurrentWeaponIndex - 1;
@@ -805,10 +804,10 @@ public class Player : MonoBehaviour
     }
     public void RotatePlayerOnShoot(Vector3 aimDirection)
     {
-        Debug.Log("Aim direction:" + aimDirection);
+        //Debug.Log("Aim direction:" + aimDirection);
         Quaternion targetRotation = Quaternion.LookRotation(aimDirection);
         Quaternion OnlyY = new Quaternion(0, targetRotation.y, 0, targetRotation.w);
-        Debug.Log("Rotate char to:" + OnlyY);
+        //Debug.Log("Rotate char to:" + OnlyY);
         motor.RotateCharacter(OnlyY);
     }
 }

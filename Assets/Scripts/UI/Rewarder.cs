@@ -24,6 +24,8 @@ public class Rewarder : MonoBehaviour
     public int PurchaseForWeaponPack = 1000;
     [HideInInspector] public int currentUnlockWeaponIndex;
     public Action RewardShowed;
+    public Action WeaponPackBought;
+    public Action WeaponAllBought;
      Dictionary<string, int> OperationNameAndReward = new();
     private void Awake()
     {
@@ -68,12 +70,14 @@ public class Rewarder : MonoBehaviour
 
     private void UnlockWeapon_All()
     {
-        WeaponShop.instance.UnlockAllWeapon();
+        WeaponShop.instance.UnlockAllWeapon ();
+        WeaponAllBought?.Invoke();
     }
     private void UnlockWeapon_Pack()
     {
         WeaponShop.instance.UnlockWeaponByInApp(5);
         WeaponShop.instance.UnlockWeaponByInApp(7);
+        WeaponPackBought?.Invoke();
     }
     private void UnlockWeapon_Plane()
     {

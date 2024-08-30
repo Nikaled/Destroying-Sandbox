@@ -10822,6 +10822,10 @@ PrefabInstance:
       propertyPath: PurName
       value: AppUnlockWeapon_Pack
       objectReference: {fileID: 0}
+    - target: {fileID: 6333192077129588625, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: IsWeaponPack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9096108888772112222, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -74.727
@@ -11089,7 +11093,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +50
+  m_text: +150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631d0ffe43f3431418f06160df7146ca, type: 2}
   m_sharedMaterial: {fileID: -2106042746327020958, guid: 631d0ffe43f3431418f06160df7146ca, type: 2}
@@ -11510,6 +11514,10 @@ PrefabInstance:
       propertyPath: PurName
       value: AppUnlockWeapon_All
       objectReference: {fileID: 0}
+    - target: {fileID: 6333192077129588625, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: IsWeaponAll
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7583443501913823227, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11525,6 +11533,10 @@ PrefabInstance:
     - target: {fileID: 9172904420688659302, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
       propertyPath: m_Name
       value: AppShopSlot (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172904420688659302, guid: 92b277ad17b9ed84cad7b7ef97b9b531, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16951,7 +16963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +50
+  m_text: +150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631d0ffe43f3431418f06160df7146ca, type: 2}
   m_sharedMaterial: {fileID: -2106042746327020958, guid: 631d0ffe43f3431418f06160df7146ca, type: 2}

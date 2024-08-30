@@ -16,7 +16,7 @@ MonoBehaviour:
   - MapName: Sword
     MapIndex: 0
     SaveDate: 
-    RewardForComplete: 1
+    RewardForComplete: 100
     SavedBlocks:
     - PrefabIndex: 7
       Position: {x: 24, y: 2, z: -2}
@@ -203,7 +203,7 @@ MonoBehaviour:
   - MapName: Bomb
     MapIndex: 1
     SaveDate: 
-    RewardForComplete: 2
+    RewardForComplete: 150
     SavedBlocks:
     - PrefabIndex: 7
       Position: {x: 50, y: 10, z: -11}
@@ -546,7 +546,7 @@ MonoBehaviour:
   - MapName: Fountain
     MapIndex: 2
     SaveDate: 
-    RewardForComplete: 3
+    RewardForComplete: 175
     SavedBlocks:
     - PrefabIndex: 22
       Position: {x: 30, y: 4, z: -3}
@@ -901,7 +901,7 @@ MonoBehaviour:
   - MapName: Bee
     MapIndex: 3
     SaveDate: 
-    RewardForComplete: 4
+    RewardForComplete: 200
     SavedBlocks:
     - PrefabIndex: 45
       Position: {x: 42, y: 4, z: -2}
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   - MapName: HunterHouse
     MapIndex: 4
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 220
     SavedBlocks:
     - PrefabIndex: 16
       Position: {x: 72, y: 2, z: 0}
@@ -2399,7 +2399,7 @@ MonoBehaviour:
   - MapName: Bridge
     MapIndex: 5
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 250
     SavedBlocks:
     - PrefabIndex: 17
       Position: {x: 38, y: 2, z: 2}
@@ -3232,7 +3232,7 @@ MonoBehaviour:
   - MapName: Amogus
     MapIndex: 6
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 300
     SavedBlocks:
     - PrefabIndex: 39
       Position: {x: 50, y: 6, z: -13}
@@ -4069,7 +4069,7 @@ MonoBehaviour:
   - MapName: ArcherTower
     MapIndex: 7
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 350
     SavedBlocks:
     - PrefabIndex: 22
       Position: {x: 42, y: 2, z: -4}
@@ -4916,7 +4916,7 @@ MonoBehaviour:
   - MapName: Fox
     MapIndex: 8
     SaveDate: 
-    RewardForComplete: 222
+    RewardForComplete: 375
     SavedBlocks:
     - PrefabIndex: 7
       Position: {x: 60, y: 2, z: -4}
@@ -5863,7 +5863,7 @@ MonoBehaviour:
   - MapName: Skyscraper
     MapIndex: 9
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 400
     SavedBlocks:
     - PrefabIndex: 43
       Position: {x: 50, y: 2, z: 2}
@@ -6884,7 +6884,7 @@ MonoBehaviour:
   - MapName: Bunker
     MapIndex: 10
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 425
     SavedBlocks:
     - PrefabIndex: 8
       Position: {x: 40, y: 2, z: 0}
@@ -7971,7 +7971,7 @@ MonoBehaviour:
   - MapName: KubikRubik
     MapIndex: 11
     SaveDate: 
-    RewardForComplete: 11
+    RewardForComplete: 475
     SavedBlocks:
     - PrefabIndex: 7
       Position: {x: 50, y: 5, z: -8}
@@ -9384,7 +9384,7 @@ MonoBehaviour:
   - MapName: Earth
     MapIndex: 12
     SaveDate: 
-    RewardForComplete: 333
+    RewardForComplete: 500
     SavedBlocks:
     - PrefabIndex: 10
       Position: {x: 50, y: 2, z: -7}
@@ -10991,7 +10991,7 @@ MonoBehaviour:
   - MapName: BlackWhiteVilla
     MapIndex: 13
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 575
     SavedBlocks:
     - PrefabIndex: 8
       Position: {x: 48, y: 2, z: -4}
@@ -13142,7 +13142,7 @@ MonoBehaviour:
   - MapName: CreepersHead
     MapIndex: 14
     SaveDate: 
-    RewardForComplete: 55
+    RewardForComplete: 600
     SavedBlocks:
     - PrefabIndex: 7
       Position: {x: 76, y: 2, z: 10}
@@ -15506,7 +15506,7 @@ MonoBehaviour:
   - MapName: P_Map_01
     MapIndex: 0
     SaveDate: 
-    RewardForComplete: 10
+    RewardForComplete: 60
     SavedBlocks:
     - PrefabIndex: 21
       Position: {x: 24, y: 2, z: -2}
@@ -15772,7 +15772,7 @@ MonoBehaviour:
   - MapName: Map_02
     MapIndex: 1
     SaveDate: 
-    RewardForComplete: 10
+    RewardForComplete: 80
     SavedBlocks:
     - PrefabIndex: 22
       Position: {x: 18, y: 2, z: 0}
@@ -15984,7 +15984,7 @@ MonoBehaviour:
   - MapName: P_Map_3_Blue_Yellow_Disappear
     MapIndex: 2
     SaveDate: 
-    RewardForComplete: 20
+    RewardForComplete: 100
     SavedBlocks:
     - PrefabIndex: 54
       Position: {x: 10, y: 2, z: 0}
@@ -16108,7 +16108,7 @@ MonoBehaviour:
   - MapName: P_Map_4_Rainbow_on_ground
     MapIndex: 3
     SaveDate: 
-    RewardForComplete: 30
+    RewardForComplete: 120
     SavedBlocks:
     - PrefabIndex: 2
       Position: {x: 32, y: 2, z: 0}
@@ -16804,7 +16804,7 @@ MonoBehaviour:
   - MapName: P_Map_5_Roaming_Row
     MapIndex: 4
     SaveDate: 
-    RewardForComplete: 30
+    RewardForComplete: 140
     SavedBlocks:
     - PrefabIndex: 5
       Position: {x: 8, y: 2, z: 0}
@@ -17228,7 +17228,7 @@ MonoBehaviour:
   - MapName: P_Map_6_Red_Green_Glass
     MapIndex: 5
     SaveDate: 
-    RewardForComplete: 30
+    RewardForComplete: 160
     SavedBlocks:
     - PrefabIndex: 29
       Position: {x: 18, y: 6, z: 10}
@@ -17886,7 +17886,7 @@ MonoBehaviour:
   - MapName: P_Map_7_Ore_Pillars
     MapIndex: 6
     SaveDate: 
-    RewardForComplete: 20
+    RewardForComplete: 180
     SavedBlocks:
     - PrefabIndex: 53
       Position: {x: 32, y: 18, z: -14}
@@ -18380,7 +18380,7 @@ MonoBehaviour:
   - MapName: P_Map_8_Red_Pillars_White_Constructon
     MapIndex: 7
     SaveDate: 
-    RewardForComplete: 50
+    RewardForComplete: 200
     SavedBlocks:
     - PrefabIndex: 22
       Position: {x: 44, y: 2, z: -6}
@@ -19078,7 +19078,7 @@ MonoBehaviour:
   - MapName: P_Map_9_Forest
     MapIndex: 8
     SaveDate: 
-    RewardForComplete: 30
+    RewardForComplete: 220
     SavedBlocks:
     - PrefabIndex: 35
       Position: {x: 24, y: 2, z: -6}
@@ -19680,7 +19680,7 @@ MonoBehaviour:
   - MapName: "P_Map_10_\u0421hess"
     MapIndex: 9
     SaveDate: 
-    RewardForComplete: 50
+    RewardForComplete: 240
     SavedBlocks:
     - PrefabIndex: 44
       Position: {x: 28, y: 2, z: -8}
@@ -20382,7 +20382,7 @@ MonoBehaviour:
   - MapName: P_Map_11_Waterfall_in_sky
     MapIndex: 10
     SaveDate: 
-    RewardForComplete: 70
+    RewardForComplete: 260
     SavedBlocks:
     - PrefabIndex: 16
       Position: {x: 14, y: 2, z: 0}
@@ -21206,7 +21206,7 @@ MonoBehaviour:
   - MapName: P_Map_12_Dissociation
     MapIndex: 11
     SaveDate: 
-    RewardForComplete: 50
+    RewardForComplete: 280
     SavedBlocks:
     - PrefabIndex: 3
       Position: {x: 16, y: 2, z: 2}
@@ -21536,7 +21536,7 @@ MonoBehaviour:
   - MapName: P_Map_13_Only_Disappearing
     MapIndex: 12
     SaveDate: 
-    RewardForComplete: 80
+    RewardForComplete: 300
     SavedBlocks:
     - PrefabIndex: 54
       Position: {x: 8, y: 2, z: 0}
@@ -21700,7 +21700,7 @@ MonoBehaviour:
   - MapName: P_Map_14_Purple_Citadel
     MapIndex: 13
     SaveDate: 
-    RewardForComplete: 60
+    RewardForComplete: 320
     SavedBlocks:
     - PrefabIndex: 20
       Position: {x: 8, y: 2, z: 4}
@@ -22436,7 +22436,7 @@ MonoBehaviour:
   - MapName: P_Map_15_Well
     MapIndex: 14
     SaveDate: 
-    RewardForComplete: 40
+    RewardForComplete: 340
     SavedBlocks:
     - PrefabIndex: 17
       Position: {x: 46, y: 2, z: 2}

@@ -12,8 +12,22 @@ public class AppShopCell : MonoBehaviour
     [Header("Only Reward")]
     [SerializeField] GameObject RewardBlocker;
     [SerializeField] TextMeshProUGUI RewardTimerText;
+    [SerializeField] bool IsWeaponPack;
+    [SerializeField] bool IsWeaponAll;
     private void OnEnable()
     {
+        CheckIsCellActual();
+
+        if (IsWeaponPack)
+        {
+            Rewarder.instance.WeaponPackBought += CheckIsCellActual;
+        }
+        if (IsWeaponAll)
+        {
+            Rewarder.instance.WeaponAllBought += CheckIsCellActual;
+        }
+
+
         int GetGoldCount = Rewarder.instance.GetGoldCountByName(PurName);
         if(GetGoldCount != -1)
         {
@@ -44,6 +58,43 @@ public class AppShopCell : MonoBehaviour
         }
     }
 
+
+    private void CheckIsCellActual()
+    {
+        if (IsWeaponPack)
+        {
+           if(Geekplay.Instance.PlayerData.WeaponOpenedArray != null)
+            {
+                if(Geekplay.Instance.PlayerData.WeaponOpenedArray.Length > 1)
+                {
+                    if(Geekplay.Instance.PlayerData.WeaponOpenedArray[5] && Geekplay.Instance.PlayerData.WeaponOpenedArray[7])
+                    {
+                        gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
+        if (IsWeaponAll)
+        {
+            if (Geekplay.Instance.PlayerData.WeaponOpenedArray != null)
+            {
+                if (Geekplay.Instance.PlayerData.WeaponOpenedArray.Length > 1)
+                {
+                    bool AllWeaponUnlocked = true;
+                    for (int i = 0; i < Geekplay.Instance.PlayerData.WeaponOpenedArray.Length; i++)
+                    {
+                        if(Geekplay.Instance.PlayerData.WeaponOpenedArray[i] == false)
+                        {
+                            AllWeaponUnlocked = false;
+                            break;
+                        }
+                       
+                    }
+                    gameObject.SetActive(!AllWeaponUnlocked);
+                }
+            }
+        }
+    }
     private void LastSlotLocalization()
     {
         if(Geekplay.Instance.language == "ru")
@@ -84,6 +135,14 @@ public class AppShopCell : MonoBehaviour
         {
         Geekplay.Instance.RewardLockTimeUpdate -= SetNewTimerTextAndCheckEnd;
         }
+        if (IsWeaponPack)
+        {
+            Rewarder.instance.WeaponPackBought -= CheckIsCellActual;
+        }
+        if (IsWeaponAll)
+        {
+            Rewarder.instance.WeaponAllBought -= CheckIsCellActual;
+        }
     }
     public void SubscribeOnPurchase()
     {
@@ -96,6 +155,7 @@ public class AppShopCell : MonoBehaviour
     private void InAppOperation()
     {
         Geekplay.Instance.RealBuyItem(PurName);
+        CheckIsCellActual();
     }
     private void RewardOperation()
     {

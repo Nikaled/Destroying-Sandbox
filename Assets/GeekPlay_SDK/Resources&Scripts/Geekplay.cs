@@ -87,6 +87,9 @@ public class Geekplay : MonoBehaviour
 
     public OurGameWindow OurGame;
 
+
+    private bool IsGuardedFromDoubleAd;
+   
     public void RunBlockRewardCoroutine()
     {
         if(BlockRewardCor != null)
@@ -223,8 +226,30 @@ public class Geekplay : MonoBehaviour
         canShowAd = true;
     }
 
+
+    public bool DoubleAdGuard() // ------------------------------ МОЙ МЕТОД ЗАЩИТЫ ОТ ДВОЙНОЙ РЕКЛАМЫ
+    {
+        if(IsGuardedFromDoubleAd == false)
+        {
+            IsGuardedFromDoubleAd = true;
+            StartCoroutine(DoubleAdDefendCor());
+            return false;
+        }
+        return true;
+
+
+         IEnumerator DoubleAdDefendCor()
+        {
+            yield return new WaitForSeconds(4);
+            IsGuardedFromDoubleAd = false;
+        }
+    }
     public void ShowInterstitialAd() //МЕЖСТРАНИЧНАЯ РЕКЛАМА - ПОКАЗАТЬ
     {
+        if (DoubleAdGuard() == true)
+        {
+            return;
+        }
         switch (Platform)
         {
             case Platform.Editor:
@@ -264,11 +289,11 @@ public class Geekplay : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.P) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightShift))
-        //{
-        //    PlayerData = new PlayerData();
-        //    Geekplay.Instance.Save();
-        //}
+        if (Input.GetKeyDown(KeyCode.P) && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.RightShift))
+        {
+            PlayerData = new PlayerData();
+            Geekplay.Instance.Save();
+        }
 
         //remainingTimeUntilUpdateLeaderboard -= Time.deltaTime;
     }
@@ -914,6 +939,8 @@ public class Geekplay : MonoBehaviour
             Time.timeScale = 0;
             AudioListener.volume = 0;
         }
+
+        Debug.Log("ON SILENCE - " + silence);
     }
 
     public void ItIsMobile()
