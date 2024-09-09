@@ -137,7 +137,7 @@ public class BuildCellManager : MonoBehaviour
             }
         }
 
-        DevPort();
+        //DevPort();
     }
     //#endif
     public void PlayDeleteBlockSound()

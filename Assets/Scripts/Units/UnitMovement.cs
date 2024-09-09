@@ -123,7 +123,6 @@ public class UnitMovement : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit HittedBlock, Distance, OnPunchedRayCollider))
             {
 
-                Debug.Log("Punch Raycast hitted:" + HittedBlock.collider.name);
                 Vector3 GoodPoint = Vector3.Lerp(transform.position, HittedBlock.point, 0.8f);
                 EndPosition = GoodPoint;
                 GizPos = transform.position;
@@ -142,7 +141,6 @@ public class UnitMovement : MonoBehaviour
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
         //mat.SetColor("_Color", newColor);
         mat.color = newColor;
-        //Debug.Log("Alpha changed to " + alphaVal);
 
     }
     private void OnActivatedDestroyingPhase()

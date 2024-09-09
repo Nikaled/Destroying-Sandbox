@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 19409758004784006, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 20872951706767865, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -22600,7 +22604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797396417449089289, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4798579639438483270, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
@@ -24921,6 +24925,10 @@ PrefabInstance:
     - target: {fileID: 5316150850676774177, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5317135066237308415, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5318998014557404192, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
@@ -27389,6 +27397,10 @@ PrefabInstance:
     - target: {fileID: 5851389470996118019, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851960836217127976, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5854484715236072275, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
@@ -42201,6 +42213,10 @@ PrefabInstance:
     - target: {fileID: 8910558698605541650, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911115042826922896, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8914212241032137147, guid: 981c4ff9ac876e54da99c62bd55ce35b, type: 3}
       propertyPath: m_Layer

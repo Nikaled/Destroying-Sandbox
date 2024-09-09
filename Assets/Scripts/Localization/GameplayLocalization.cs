@@ -82,6 +82,7 @@ public class GameplayLocalization : MonoBehaviour
     public TextMeshProUGUI ParkourInstructionR;
     public TextMeshProUGUI ParkourInstructionM;
     [SerializeField] TextMeshProUGUI ToMenuInCorner;
+    [SerializeField] TextMeshProUGUI SaveInCorner;
     [Header("NotFlamingUI")]
     public TextMeshProUGUI NotFlamingWarning;
     public static GameplayLocalization instance;
@@ -134,14 +135,14 @@ public class GameplayLocalization : MonoBehaviour
     public void SetupInventoryAndChangeModeButtons_PC()
     {
         StartCoroutine(SetAfterDelay());
-         IEnumerator SetAfterDelay()
+        IEnumerator SetAfterDelay()
         {
             yield return new WaitForFixedUpdate();
             InventoryButton.text = $"[I] \n {InventoryButton.text}";
             BuildPhaseButton.text = $"[M] \n {BuildPhaseButton.text}";
             DestroyPhaseButton.text = $"[M] \n {DestroyPhaseButton.text}";
         }
-       
+
     }
     private void Start()
     {
@@ -228,7 +229,8 @@ public class GameplayLocalization : MonoBehaviour
             ReloadButtonInCorner.text = "Reload";
             ParkourInstructionM.text = InMenu.text;
         }
-            _reloadOnlyDestructionText = $"<color=orange>[R]</color> Reload";
+        _reloadOnlyDestructionText = $"<color=orange>[R]</color> Reload";
+        SaveInCorner.text = "Save";
     }
     private void TrLocalization()
     {
@@ -299,7 +301,9 @@ public class GameplayLocalization : MonoBehaviour
             ReloadButtonInCorner.text = "Yeniden";
             ParkourInstructionM.text = InMenu.text;
         }
-            _reloadOnlyDestructionText = $"<color=orange>[R]</color> Yeniden";
+        _reloadOnlyDestructionText = $"<color=orange>[R]</color> Yeniden";
+        SaveInCorner.text = "Kaydetmek";
+
     }
     private void RuLocalization()
     {
@@ -370,5 +374,6 @@ public class GameplayLocalization : MonoBehaviour
             ParkourInstructionM.text = InMenu.text;
         }
         _reloadOnlyDestructionText = $"<color=orange>[R]</color> Заново";
+        SaveInCorner.text = "Сохранить";
     }
 }

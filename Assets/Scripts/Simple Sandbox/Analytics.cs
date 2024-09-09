@@ -10,9 +10,16 @@ public class Analytics : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
 
-        DontDestroyOnLoad(this);
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
