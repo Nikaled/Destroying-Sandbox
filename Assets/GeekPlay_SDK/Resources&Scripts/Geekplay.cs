@@ -87,7 +87,7 @@ public class Geekplay : MonoBehaviour
 
     public OurGameWindow OurGame;
 
-
+    public bool GameIsReady;
     private bool IsGuardedFromDoubleAd;
    
     public void RunBlockRewardCoroutine()
@@ -101,12 +101,12 @@ public class Geekplay : MonoBehaviour
     }
     private IEnumerator BlockRewardOnTimeByGeekplay()
     {
-        Geekplay.Instance.RewardLockTimer = 90;
-        while (Geekplay.Instance.RewardLockTimer > 0)
+       RewardLockTimer = 90;
+        while (RewardLockTimer > 0)
         {
             yield return new WaitForSeconds(1);
-            Geekplay.Instance.RewardLockTimer--;
-            Geekplay.Instance.RewardLockTimeUpdate?.Invoke(Geekplay.Instance.RewardLockTimer);
+            RewardLockTimer--;
+           RewardLockTimeUpdate?.Invoke(RewardLockTimer);
         }
     }
     public void SubscribeOnReward(string idOrTags , UnityAction action)
@@ -143,8 +143,9 @@ public class Geekplay : MonoBehaviour
 
     private void Start()
     {
-        GameReady();
-
+       
+        GameStart();
+        GameStop();
         //ShowInterstitialAd();
     }
     public void OnRewarded() //ВОЗНАГРАЖДЕНИЕ ПОСЛЕ ПРОСМОТРА РЕКЛАМЫ
@@ -914,6 +915,10 @@ public class Geekplay : MonoBehaviour
         AudioListener.volume = 1;
         Time.timeScale = 1;
         LockCursorAfterAd?.Invoke();
+        if (GameIsReady)
+        {
+            GameReady();
+        }
     }
 
     //ФОКУС И ЗВУК
@@ -950,7 +955,19 @@ public class Geekplay : MonoBehaviour
 
     public void GameReady()
     {
+        GameIsReady = true;
         if (Platform == Platform.Yandex)
             Utils.GameReady();
+    }
+    public void GameStop()
+    {
+        GameIsReady = false;
+        if (Platform == Platform.Yandex)
+            Utils.GameStop();
+    }
+    public void GameStart()
+    {
+        if (Platform == Platform.Yandex)
+            Utils.GameStart();
     }
 }

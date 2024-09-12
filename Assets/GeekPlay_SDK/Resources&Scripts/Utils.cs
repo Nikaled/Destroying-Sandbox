@@ -147,7 +147,13 @@ public class Utils : MonoBehaviour
     public static extern void CheckBuyItem(string idOrTag);
 
     [DllImport("__Internal")]
+    public static extern void GameStart();
+
+    [DllImport("__Internal")]
     public static extern void GameReady();
+
+    [DllImport("__Internal")]
+    public static extern void GameStop();
 
     [DllImport("__Internal")]
     public static extern void GetLeaderboard(string type, int number, string name);

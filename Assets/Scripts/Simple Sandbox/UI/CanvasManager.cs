@@ -329,6 +329,10 @@ public class CanvasManager : MonoBehaviour
     }
     private void Start()
     {
+        if(Geekplay.Instance != null)
+        {
+            Geekplay.Instance.GameReady();
+        }
         Player.instance.examplePlayer.LockCursor(true);
         AdWarning.instance.ShowAdOnStart();
         //ShowRewardAndSetRewardText(false, 0);
