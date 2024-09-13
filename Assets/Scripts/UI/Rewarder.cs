@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 public class Rewarder : MonoBehaviour
 {
+
     public static Rewarder instance;
     [SerializeField] string RewardForGold = "GetGold";
     [SerializeField] string AppForGold1 = "AppForGold1";
@@ -27,8 +29,12 @@ public class Rewarder : MonoBehaviour
     public Action WeaponPackBought;
     public Action WeaponAllBought;
      Dictionary<string, int> OperationNameAndReward = new();
+    public string[] WeaponInAppNames;
+
+
     private void Awake()
     {
+        WeaponInAppNames = new string[] { AppUnlockWeapon1, AppUnlockWeapon2, AppUnlockWeapon3, AppUnlockWeapon4, AppUnlockWeapon5, AppUnlockWeapon6 };
         OperationNameAndReward.Add(RewardForGold, RewardForGoldGold);
         OperationNameAndReward.Add(AppForGold1, PurchaseForGoldGold1);
         OperationNameAndReward.Add(AppForGold2, PurchaseForGoldGold2);
@@ -81,27 +87,69 @@ public class Rewarder : MonoBehaviour
     }
     private void UnlockWeapon_Plane()
     {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
         WeaponShop.instance.UnlockWeaponByInApp(4);
+        }
+        else
+        {
+            WeaponSelector.instance.UnlockWeaponInApp(4);
+        }
     }
     private void UnlockWeapon_Car()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
         WeaponShop.instance.UnlockWeaponByInApp(5);
+        }
+        else
+        {
+            WeaponSelector.instance.UnlockWeaponInApp(5);
+        }
     }
     private void UnlockWeapon_Press()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
         WeaponShop.instance.UnlockWeaponByInApp(6);
+        }
+        else
+        {
+            WeaponSelector.instance.UnlockWeaponInApp(6);
+        }
     }
     private void UnlockWeapon_Dynamite()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
         WeaponShop.instance.UnlockWeaponByInApp(7);
+        }
+        else
+        {
+            WeaponSelector.instance.UnlockWeaponInApp(7);
+        }
     }
     private void UnlockWeapon_Meteor()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
         WeaponShop.instance.UnlockWeaponByInApp(8);
+        }
+        else
+        {
+            WeaponSelector.instance.UnlockWeaponInApp(8);
+        }
     }
     private void UnlockWeapon_Lightning()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
         WeaponShop.instance.UnlockWeaponByInApp(9);
+        }
+        else
+        {
+            WeaponSelector.instance.UnlockWeaponInApp(9);
+        }
     }
     private void GetGoldReward()
     {

@@ -23,7 +23,6 @@ public class UnlockWeaponButton : MonoBehaviour
     }
     private void OnEnable()
     {
-      
         if (RewardBlocker != null && RewardTimerText != null)
         {
             Geekplay.Instance.RewardLockTimeUpdate += SetNewTimerTextAndCheckEnd;
@@ -47,17 +46,13 @@ public class UnlockWeaponButton : MonoBehaviour
             Geekplay.Instance.RewardLockTimeUpdate -= SetNewTimerTextAndCheckEnd;
         }
     }
-    private void UnlockWeapon()
-    {
-        WeaponSelector.instance.UnlockWeapon();
-    }
     private void UnlockWeaponOneTime()
     {
         WeaponSelector.instance.UnlockWeaponOneTime(this);
     }
     public void SubscribeOnPurchase()
     {
-        Geekplay.Instance.SubscribeOnPurchase("UnlockWeapon", UnlockWeapon);
+        UnlockButton.onClick.RemoveAllListeners();
         UnlockButton.onClick.AddListener(delegate { InAppOperation(); });
     }
     public void SubscribeOnReward()
@@ -67,7 +62,8 @@ public class UnlockWeaponButton : MonoBehaviour
     }
     private void InAppOperation()
     {
-        Geekplay.Instance.RealBuyItem("UnlockWeapon");
+        string name = (WeaponSelector.instance.CurrentWeaponInAppName);
+        Geekplay.Instance.RealBuyItem(name);
     }
     private void RewardOperation()
     {

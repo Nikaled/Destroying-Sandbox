@@ -9,8 +9,19 @@ public class WeaponSelector : MonoBehaviour
     [SerializeField] WeaponSlotManager WeaponManager;
     public int CurrentIndexToOpen;
     private bool[] UnlockOneTime;
+    public string CurrentWeaponInAppName;
+
+    // 0 - light, 1 - dynamite, 2 - meteor, 3 - creeper, 4 - car, 5 - plane, 6 - press
+    private Dictionary<int, int> SlotIndexToArrayIndex = new();
     private void Awake()
     {
+        SlotIndexToArrayIndex.Add(0, 9);
+        SlotIndexToArrayIndex.Add(1, 7);
+        SlotIndexToArrayIndex.Add(2, 8);
+        SlotIndexToArrayIndex.Add(3, 3);
+        SlotIndexToArrayIndex.Add(4, 5);
+        SlotIndexToArrayIndex.Add(5, 4);
+        SlotIndexToArrayIndex.Add(6, 6);
         instance = this;
     }
     public void UnlockAllWeaponForTutorial()
@@ -27,7 +38,10 @@ public class WeaponSelector : MonoBehaviour
     }
     public void SelectWeapon(int WeaponsInChildIndex)
     {
+        int WeaponIndexinBaseArray = SlotIndexToArrayIndex[WeaponsInChildIndex];
         HideAllWeapons();
+        CurrentWeaponInAppName = Rewarder.instance.WeaponInAppNames[WeaponIndexinBaseArray-4];
+        Debug.Log(CurrentWeaponInAppName);
         WeaponsInChild[WeaponsInChildIndex].SetActive(true);
     }
     public void HideAllWeapons()
@@ -128,6 +142,14 @@ public class WeaponSelector : MonoBehaviour
         Geekplay.Instance.PlayerData.WeaponOpenedArray[CurrentIndexToOpen] = true;
         Player.instance.SwitchWeapon(CurrentIndexToOpen + 1);
         Geekplay.Instance.Save();
+        SetUnlockImages(Geekplay.Instance.PlayerData.WeaponOpenedArray);
+    }
+    public void UnlockWeaponInApp(int UnlockIndex)
+    {
+        Geekplay.Instance.PlayerData.WeaponOpenedArray[UnlockIndex] = true;
+        Player.instance.SwitchWeapon(UnlockIndex+1);
+        Geekplay.Instance.Save();
+        SetUnlockImages(Geekplay.Instance.PlayerData.WeaponOpenedArray);
     }
     public void UnlockWeaponOneTime(UnlockWeaponButton rewardButton)
     {

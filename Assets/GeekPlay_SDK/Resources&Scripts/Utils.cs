@@ -157,9 +157,16 @@ public class Utils : MonoBehaviour
 
     [DllImport("__Internal")]
     public static extern void GetLeaderboard(string type, int number, string name);
+    [DllImport("__Internal")]
+    public static extern void GetLeaderboard2(string type, int number, string name);
+    [DllImport("__Internal")]
+    public static extern void GetLeaderboard3(string type, int number, string name);
 
     [DllImport("__Internal")]
     public static extern string CheckPlayGame(int id);
+
+    [DllImport("__Internal")]
+    public static extern void GetValueCode();
 
     //МЕТОДЫ YANDEX//
 }

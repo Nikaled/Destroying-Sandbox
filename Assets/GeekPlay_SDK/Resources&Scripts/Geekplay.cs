@@ -62,17 +62,39 @@ public class Geekplay : MonoBehaviour
     private bool canAd;
     string colorDebug = "yellow"; //Цвет Дебага
 
+
     public bool canReward;
 
+    public string YanValueType;
+
     //ЗНАЧЕНИЯ ЛИДЕРБОРДА
-    public List<string> lS;
-    public List<string> lN;
+    public LeaderboardInGame leaderboardInGame;
+
+    public string[] l;
+    public string[] lN;
     public int leaderNumber;
     public int leaderNumberN;
+
+    public LeaderboardInGame leaderboardInGame2;
+
+    public string[] l2;
+    public string[] lN2;
+    public int leaderNumber2;
+    public int leaderNumberN2;
+
+    public LeaderboardInGame leaderboardInGame3;
+
+    public string[] l3;
+    public string[] lN3;
+    public int leaderNumber3;
+    public int leaderNumberN3;
+
     //public LeaderboardInGame leaderboardInGame;
     public float remainingTimeUntilUpdateLeaderboard;
-    public float timeToUpdateLeaderboard = 60;
+    public float timeToUpdateLeaderboard = 180;
     public string lastLeaderText;
+    public string lastLeaderText2;
+    public string lastLeaderText3;
 
 
     // Alex fields
@@ -143,10 +165,19 @@ public class Geekplay : MonoBehaviour
 
     private void Start()
     {
-       
+        Utils.GetValueCode();
         GameStart();
         GameStop();
         //ShowInterstitialAd();
+
+    }
+    public void ChangeYanType()
+    {
+        YanValueType = "YEN";
+        //if (SceneManager.GetActiveScene().name != "MainMenu")
+        //{
+        //    LocalizationGameplay.lG.Localization();
+        //}
     }
     public void OnRewarded() //ВОЗНАГРАЖДЕНИЕ ПОСЛЕ ПРОСМОТРА РЕКЛАМЫ
     {
@@ -166,48 +197,83 @@ public class Geekplay : MonoBehaviour
         cor = AdOff();
         StartCoroutine(cor);
     }
-    public void GetLeadersScore(string valueAndName)
-    {
-        string[] parts = valueAndName.Split(',');
-        string value = parts[0];
-        string leaderboardName = parts[1];
 
-        lS.Add(value);
+    public void GetLeaders(string value)
+    {
+        l[leaderNumber] = value;
 
         if (leaderNumber < 9)
         {
             leaderNumber += 1;
-            Utils.GetLeaderboard("score", leaderNumber, leaderboardName);
+            Utils.GetLeaderboard("score", leaderNumber, "Build");
         }
-        else if (leaderNumber == 9)
-        {
-            EndGetLeaderboardsValue();
-        }
+
+        leaderboardInGame.SetText();
     }
-
-    public void GetLeadersName(string valueAndName)
+    public void GetLeadersName(string value)
     {
-        string[] parts = valueAndName.Split(',');
-        string value = parts[0];
-        string leaderboardName = parts[1];
-
-        lN.Add(value);
+        lN[leaderNumberN] = value;
 
         if (leaderNumberN < 9)
         {
             leaderNumberN += 1;
-            Utils.GetLeaderboard("name", leaderNumberN, leaderboardName);
+            Utils.GetLeaderboard("name", leaderNumberN, "Build");
         }
-    }
-    public void EndGetLeaderboardsValue()
-    {
-        LeaderboardValuesReady?.Invoke();
-        lN.Clear();
-        lS.Clear();
-        //if (leaderboard == null) Debug.Log("Leaderboard is null");
 
-        //leaderboard.SetLeadersView(lN.ToArray(), lS.ToArray(), lS.Count);
+        leaderboardInGame.SetText();
     }
+
+    public void GetLeaders2(string value)
+    {
+        l2[leaderNumber2] = value;
+
+        if (leaderNumber2 < 9)
+        {
+            leaderNumber2 += 1;
+            Utils.GetLeaderboard("score", leaderNumber2, "Destroy");
+        }
+
+        leaderboardInGame2.SetText();
+    }
+    public void GetLeadersName2(string value)
+    {
+        lN2[leaderNumberN2] = value;
+
+        if (leaderNumberN2 < 9)
+        {
+            leaderNumberN2 += 1;
+            Utils.GetLeaderboard("name", leaderNumberN2, "Destroy");
+        }
+
+        leaderboardInGame2.SetText();
+    }
+
+    public void GetLeaders3(string value)
+    {
+        l3[leaderNumber3] = value;
+
+        if (leaderNumber3 < 9)
+        {
+            leaderNumber3 += 1;
+            Utils.GetLeaderboard("score", leaderNumber3, "Donat");
+        }
+
+        leaderboardInGame3.SetText();
+    }
+    public void GetLeadersName3(string value)
+    {
+        lN3[leaderNumberN3] = value;
+
+        if (leaderNumberN3 < 9)
+        {
+            leaderNumberN3 += 1;
+            Utils.GetLeaderboard("name", leaderNumberN3, "Donat");
+        }
+
+        leaderboardInGame3.SetText();
+    }
+
+
     IEnumerator AdOff() //ТАЙМЕР С ВЫКЛЮЧЕНИЕМ РЕКЛАМЫ
     {
         canAd = false;
