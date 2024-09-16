@@ -6674,6 +6674,13 @@ MonoBehaviour:
   vehicleControl: {fileID: 2373024108776319982}
   tankShooting: {fileID: 0}
   IsTank: 0
+  CarSources:
+  - {fileID: 4536101220703831565}
+  - {fileID: 16851628225052079}
+  - {fileID: 402410210902068904}
+  - {fileID: 3674096154204353493}
+  - {fileID: 1008586083766496036}
+  - {fileID: 206340944039512604}
 --- !u!1 &4507309338378376901
 GameObject:
   m_ObjectHideFlags: 0

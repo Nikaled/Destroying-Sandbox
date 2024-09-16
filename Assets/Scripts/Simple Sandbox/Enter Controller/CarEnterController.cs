@@ -10,6 +10,20 @@ public class CarEnterController : EnterController
     [Header("Tank Only")]
     [SerializeField] TankShooting tankShooting;
     public bool IsTank;
+    [SerializeField] AudioSource[] CarSources;
+    public static CarEnterController instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+    public void DisableSounds(bool Is)
+    {
+        for (int i = 0; i < CarSources.Length; i++)
+        {
+            CarSources[i].gameObject.SetActive(Is);
+        }
+    }
     private void Start()
     {
         ActivateTransport();

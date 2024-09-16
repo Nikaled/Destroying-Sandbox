@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class WeaponSelector : MonoBehaviour
 {
@@ -10,9 +12,12 @@ public class WeaponSelector : MonoBehaviour
     public int CurrentIndexToOpen;
     private bool[] UnlockOneTime;
     public string CurrentWeaponInAppName;
-
+    public int CurrentWeaponCost;
     // 0 - light, 1 - dynamite, 2 - meteor, 3 - creeper, 4 - car, 5 - plane, 6 - press
     private Dictionary<int, int> SlotIndexToArrayIndex = new();
+    [SerializeField] TextMeshProUGUI GoldCostText;
+    [SerializeField] TextMeshProUGUI YanCostText;
+    [SerializeField] Button BuyByGoldButton;
     private void Awake()
     {
         SlotIndexToArrayIndex.Add(0, 9);
@@ -32,7 +37,7 @@ public class WeaponSelector : MonoBehaviour
         }
         for (int i = 0; i < UnlockOneTime.Length; i++)
         {
-        UnlockOneTime[i] = true;
+            UnlockOneTime[i] = true;
         }
         SetUnlockImages(Geekplay.Instance.PlayerData.WeaponOpenedArray);
     }
@@ -40,7 +45,7 @@ public class WeaponSelector : MonoBehaviour
     {
         int WeaponIndexinBaseArray = SlotIndexToArrayIndex[WeaponsInChildIndex];
         HideAllWeapons();
-        CurrentWeaponInAppName = Rewarder.instance.WeaponInAppNames[WeaponIndexinBaseArray-4];
+        //CurrentWeaponInAppName = Rewarder.instance.WeaponInAppNames[WeaponIndexinBaseArray-4];
         Debug.Log(CurrentWeaponInAppName);
         WeaponsInChild[WeaponsInChildIndex].SetActive(true);
     }
@@ -97,6 +102,14 @@ public class WeaponSelector : MonoBehaviour
     }
     public bool IsWeaponAvailable(int WeaponPressedNumber)
     {
+        if (WeaponPressedNumber >= 5)
+        {
+            CurrentWeaponInAppName = Rewarder.instance.WeaponInAppNames[WeaponPressedNumber - 5];
+            CurrentWeaponCost = Rewarder.instance.WeaponGoldCost[WeaponPressedNumber - 5];
+            int WeaponYanCost = Rewarder.instance.WeaponYanCost[WeaponPressedNumber - 5];
+            SetupCost(CurrentWeaponCost, WeaponYanCost);
+        }
+        Debug.Log("Current Weapon Cost:" + CurrentWeaponCost);
         int WeaponIndex = WeaponPressedNumber - 1;
         if (Geekplay.Instance.PlayerData.WeaponOpenedArray == null)
         {
@@ -137,6 +150,19 @@ public class WeaponSelector : MonoBehaviour
             return false;
         }
     }
+    private void SetupCost(int GoldCost, int YanCost)
+    {
+        GoldCostText.text = GoldCost.ToString();
+        YanCostText.text = YanCost.ToString();
+        if (Geekplay.Instance.PlayerData.Coins >= CurrentWeaponCost)
+        {
+            BuyByGoldButton.interactable = true;
+        }
+        else
+        {
+            BuyByGoldButton.interactable = false;
+        }
+    }
     public void UnlockWeapon()
     {
         Geekplay.Instance.PlayerData.WeaponOpenedArray[CurrentIndexToOpen] = true;
@@ -147,9 +173,17 @@ public class WeaponSelector : MonoBehaviour
     public void UnlockWeaponInApp(int UnlockIndex)
     {
         Geekplay.Instance.PlayerData.WeaponOpenedArray[UnlockIndex] = true;
-        Player.instance.SwitchWeapon(UnlockIndex+1);
+        Player.instance.SwitchWeapon(UnlockIndex + 1);
         Geekplay.Instance.Save();
         SetUnlockImages(Geekplay.Instance.PlayerData.WeaponOpenedArray);
+    }
+    public void UnlockWeaponByGold()
+    {
+        if(Geekplay.Instance.PlayerData.Coins >= CurrentWeaponCost)
+        {
+            Geekplay.Instance.PlayerData.Coins -= CurrentWeaponCost;
+            UnlockWeapon();
+        }
     }
     public void UnlockWeaponOneTime(UnlockWeaponButton rewardButton)
     {

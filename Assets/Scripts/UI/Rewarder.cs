@@ -28,13 +28,16 @@ public class Rewarder : MonoBehaviour
     public Action RewardShowed;
     public Action WeaponPackBought;
     public Action WeaponAllBought;
-     Dictionary<string, int> OperationNameAndReward = new();
+    Dictionary<string, int> OperationNameAndReward = new();
     public string[] WeaponInAppNames;
-
+    public int[] WeaponGoldCost;
+    public int[] WeaponYanCost;
 
     private void Awake()
     {
         WeaponInAppNames = new string[] { AppUnlockWeapon1, AppUnlockWeapon2, AppUnlockWeapon3, AppUnlockWeapon4, AppUnlockWeapon5, AppUnlockWeapon6 };
+        WeaponGoldCost = new int[] { 500, 750, 1000, 1500, 2000, 3000 };
+        WeaponYanCost = new int[] { 7, 11, 15, 20, 25, 35 };
         OperationNameAndReward.Add(RewardForGold, RewardForGoldGold);
         OperationNameAndReward.Add(AppForGold1, PurchaseForGoldGold1);
         OperationNameAndReward.Add(AppForGold2, PurchaseForGoldGold2);
@@ -61,11 +64,11 @@ public class Rewarder : MonoBehaviour
     {
         try
         {
-            if(Name == AppUnlockWeapon_Pack)
+            if (Name == AppUnlockWeapon_Pack)
             {
                 return -2;
             }
-       return OperationNameAndReward[Name];
+            return OperationNameAndReward[Name];
         }
         catch
         {
@@ -76,80 +79,88 @@ public class Rewarder : MonoBehaviour
 
     private void UnlockWeapon_All()
     {
-        WeaponShop.instance.UnlockAllWeapon ();
+        WeaponShop.instance.UnlockAllWeapon();
         WeaponAllBought?.Invoke();
+        SetupDonatCount(60);
     }
     private void UnlockWeapon_Pack()
     {
         WeaponShop.instance.UnlockWeaponByInApp(5);
         WeaponShop.instance.UnlockWeaponByInApp(7);
         WeaponPackBought?.Invoke();
+        SetupDonatCount(40);
     }
     private void UnlockWeapon_Plane()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-        WeaponShop.instance.UnlockWeaponByInApp(4);
+            WeaponShop.instance.UnlockWeaponByInApp(4);
         }
         else
         {
             WeaponSelector.instance.UnlockWeaponInApp(4);
         }
+        SetupDonatCount(7);
     }
     private void UnlockWeapon_Car()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-        WeaponShop.instance.UnlockWeaponByInApp(5);
+            WeaponShop.instance.UnlockWeaponByInApp(5);
         }
         else
         {
             WeaponSelector.instance.UnlockWeaponInApp(5);
         }
+        SetupDonatCount(11);
     }
     private void UnlockWeapon_Press()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-        WeaponShop.instance.UnlockWeaponByInApp(6);
+            WeaponShop.instance.UnlockWeaponByInApp(6);
         }
         else
         {
             WeaponSelector.instance.UnlockWeaponInApp(6);
         }
+        SetupDonatCount(15);
     }
     private void UnlockWeapon_Dynamite()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-        WeaponShop.instance.UnlockWeaponByInApp(7);
+            WeaponShop.instance.UnlockWeaponByInApp(7);
         }
         else
         {
             WeaponSelector.instance.UnlockWeaponInApp(7);
         }
+        SetupDonatCount(20);
     }
     private void UnlockWeapon_Meteor()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-        WeaponShop.instance.UnlockWeaponByInApp(8);
+            WeaponShop.instance.UnlockWeaponByInApp(8);
         }
         else
         {
             WeaponSelector.instance.UnlockWeaponInApp(8);
         }
+        SetupDonatCount(25);
     }
     private void UnlockWeapon_Lightning()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-        WeaponShop.instance.UnlockWeaponByInApp(9);
+            WeaponShop.instance.UnlockWeaponByInApp(9);
         }
         else
         {
             WeaponSelector.instance.UnlockWeaponInApp(9);
         }
+        SetupDonatCount(30);
     }
     private void GetGoldReward()
     {
@@ -159,21 +170,21 @@ public class Rewarder : MonoBehaviour
     private void GetGoldPur1()
     {
         Geekplay.Instance.PlayerData.Coins += PurchaseForGoldGold1;
-        Geekplay.Instance.PlayerData.DonatCount += PurchaseForGoldGold1;
-        Geekplay.Instance.Leaderboard("Donat", Geekplay.Instance.PlayerData.DonatCount);
-        Geekplay.Instance.Save();
+        SetupDonatCount(15);
     }
     private void GetGoldPur2()
     {
         Geekplay.Instance.PlayerData.Coins += PurchaseForGoldGold2;
-        Geekplay.Instance.PlayerData.DonatCount += PurchaseForGoldGold2;
-        Geekplay.Instance.Leaderboard("Donat", Geekplay.Instance.PlayerData.DonatCount);
-        Geekplay.Instance.Save();
+        SetupDonatCount(25);
     }
     private void GetGoldPur3()
     {
         Geekplay.Instance.PlayerData.Coins += PurchaseForGoldGold3;
-        Geekplay.Instance.PlayerData.DonatCount += PurchaseForGoldGold3;
+        SetupDonatCount(35);
+    }
+    private void SetupDonatCount(int DonatedYan)
+    {
+        Geekplay.Instance.PlayerData.DonatCount += DonatedYan;
         Geekplay.Instance.Leaderboard("Donat", Geekplay.Instance.PlayerData.DonatCount);
         Geekplay.Instance.Save();
     }

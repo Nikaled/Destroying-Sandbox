@@ -87,6 +87,7 @@ public class GameplayLocalization : MonoBehaviour
     public TextMeshProUGUI NotFlamingWarning;
     public static GameplayLocalization instance;
     private string _reloadOnlyDestructionText;
+    [SerializeField] TextMeshProUGUI YanText;
     private void Awake()
     {
         instance = this;
@@ -96,6 +97,10 @@ public class GameplayLocalization : MonoBehaviour
         //ParkourInstructionR.text = $"<color=orange>[M]</color> {TryAgain.text}";
         //ReloadButtonInCorner.text = TryAgain.text;
         //ParkourInstructionM.text = InMenu.text;
+    }
+    public void YanLocalization()
+    {
+        YanText.text = Geekplay.Instance.YanValueType;
     }
     public void SetupReloadInstructionsOnOnlyDestroyed(bool Is)
     {
@@ -159,6 +164,7 @@ public class GameplayLocalization : MonoBehaviour
         {
             TrLocalization();
         }
+        YanLocalization();
     }
     private void EnLocalization()
     {

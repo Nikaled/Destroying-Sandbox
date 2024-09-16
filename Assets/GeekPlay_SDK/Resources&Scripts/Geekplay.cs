@@ -178,6 +178,14 @@ public class Geekplay : MonoBehaviour
         //{
         //    LocalizationGameplay.lG.Localization();
         //}
+        if(LocalizationMenu.instance != null)
+        {
+            LocalizationMenu.instance.YanLocalization();
+        }
+        if(GameplayLocalization.instance != null)
+        {
+            GameplayLocalization.instance.YanLocalization();
+        }
     }
     public void OnRewarded() //ВОЗНАГРАЖДЕНИЕ ПОСЛЕ ПРОСМОТРА РЕКЛАМЫ
     {

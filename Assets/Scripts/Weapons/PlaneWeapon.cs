@@ -6,8 +6,8 @@ public class PlaneWeapon : MonoBehaviour
 {
     //[SerializeField] Transform[] BulletSpawnPoints;
     //[SerializeField] ShootingProjectile bullet;
-    [SerializeField] AudioSource FireAndExplodeSoundSource;
-    [SerializeField] AudioSource FlySoundSource;
+    public AudioSource FireAndExplodeSoundSource;
+    public AudioSource FlySoundSource;
     [SerializeField] AudioClip ShootingClip;
     [SerializeField] AudioClip ExplosionClip;
     float GunTimer;

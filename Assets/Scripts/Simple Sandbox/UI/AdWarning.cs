@@ -91,7 +91,7 @@ public class AdWarning : MonoBehaviour
 
         AudioListener.volume = 0;
         AudioListener.pause = true;
-
+        StartCoroutine(DisableSoundsWithDelay(true));
         int Timer = 3;
         while (Timer != 0)
         {
@@ -101,7 +101,7 @@ public class AdWarning : MonoBehaviour
         }
 
 
-
+       
         Geekplay.Instance.ShowInterstitialAd();
         Geekplay.Instance.IsAdWarningShowing = false;
 
@@ -123,6 +123,7 @@ public class AdWarning : MonoBehaviour
         }
         AwaitWarningCor = AwaitAndShowWarningPanel();
         StartCoroutine(AwaitWarningCor);
+        StartCoroutine(DisableSoundsWithDelay(false));
 #if UNITY_EDITOR
         AudioListener.volume = 1;
         AudioListener.pause = false;
@@ -131,6 +132,21 @@ public class AdWarning : MonoBehaviour
     public void ConfirmCoinButton()
     {
         Time.timeScale = 1f;
+    }
+    private IEnumerator DisableSoundsWithDelay(bool Is)
+    {
+        if (!Is)
+        {
+        yield return new WaitForSeconds(0.5f);
+        }
+        if (CarEnterController.instance != null)
+        {
+            CarEnterController.instance.DisableSounds(Is);
+        }
+        if(PlaneManager.instance != null)
+        {
+        PlaneManager.instance.DisableSounds(Is);
+        }
     }
     private void LocalizeReward()
     {

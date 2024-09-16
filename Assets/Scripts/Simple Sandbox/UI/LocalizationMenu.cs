@@ -55,6 +55,14 @@ public class LocalizationMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI MoreCoinsAsk;
     [SerializeField] TextMeshProUGUI MoreCoinsDecline;
     [SerializeField] TextMeshProUGUI MoreCoinsConfirm;
+    [SerializeField] TextMeshProUGUI[] YanTexts;
+    private string YanString;
+
+    public static LocalizationMenu instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         if (Geekplay.Instance.language == "ru")
@@ -68,6 +76,15 @@ public class LocalizationMenu : MonoBehaviour
         else if (Geekplay.Instance.language == "tr")
         {
             TrLocalization();
+        }
+        YanLocalization();
+    }
+    public void YanLocalization()
+    {
+        YanString = Geekplay.Instance.YanValueType;
+        for (int i = 0; i < YanTexts.Length; i++)
+        {
+            YanTexts[i].text = YanString;
         }
     }
     private void RuLocalization()
